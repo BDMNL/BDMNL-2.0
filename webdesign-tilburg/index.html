@@ -87,6 +87,7 @@
   <body>
     <a class="skip-link" href="#main">Direct naar inhoud</a>
     <div class="page-grain" aria-hidden="true"></div>
+    <div class="cursor-glow" data-cursor-glow aria-hidden="true"></div>
     <div class="ambient ambient-one" aria-hidden="true"></div>
     <div class="ambient ambient-two" aria-hidden="true"></div>
 
@@ -96,6 +97,11 @@
           <span class="brand-mark">BD</span>
           <span class="brand-text">BDMNL</span>
         </a>
+
+        <div class="nav-status" aria-hidden="true">
+          <span></span>
+          Premium SEO pages
+        </div>
 
         <button
           class="nav-toggle"
@@ -110,11 +116,11 @@
         </button>
 
         <div class="nav-links" id="primary-navigation" data-nav-menu>
-          <a href="#diensten">Diensten</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#proces">Proces</a>
-          <a href="#faq">FAQ</a>
-          <a class="nav-cta" href="#contact">Plan strategiegesprek</a>
+          <a href="#diensten" data-magnetic>Diensten</a>
+          <a href="#portfolio" data-magnetic>Portfolio</a>
+          <a href="#proces" data-magnetic>Proces</a>
+          <a href="#faq" data-magnetic>FAQ</a>
+          <a class="nav-cta" href="#contact" data-magnetic>Plan strategiegesprek</a>
         </div>
         <div class="nav-backdrop" data-nav-backdrop></div>
       </nav>
@@ -135,8 +141,17 @@
             <p class="hero-lead">BDMNL ontwerpt snelle, SEO-geoptimaliseerde landingspagina&#x27;s voor Tilburg met de visuele klasse van een high-end agency website en de structuur die bezoekers overtuigt.</p>
 
             <div class="hero-actions" aria-label="Belangrijkste acties">
-              <a class="btn btn-primary" href="#contact">Start met Tilburg</a>
-              <a class="btn btn-secondary" href="#portfolio">Bekijk aanpak</a>
+              <a class="btn btn-primary" href="#contact" data-magnetic>Start met Tilburg</a>
+              <a class="btn btn-secondary" href="#portfolio" data-magnetic>Bekijk aanpak</a>
+            </div>
+
+            <div class="hero-proof" aria-label="BDMNL vertrouwen">
+              <div class="avatar-stack" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p><strong>4.9/5</strong> beoordeeld door ambitieuze groeiteams</p>
             </div>
 
             <dl class="hero-metrics" aria-label="BDMNL resultaten voor Tilburg">
@@ -196,17 +211,27 @@
                 </div>
               </div>
             </div>
-            <div class="floating-card floating-card-top glass-card">
+            <div class="floating-card floating-card-top glass-card" data-float>
               <span>SEO score</span>
               <strong data-count-to="97" data-count-suffix="/100">0/100</strong>
             </div>
-            <div class="floating-card floating-card-bottom glass-card">
+            <div class="floating-card floating-card-bottom glass-card" data-float>
               <span>Tilburg leads</span>
               <strong data-count-to="94" data-count-prefix="+" data-count-suffix="%">+0%</strong>
             </div>
-            <div class="floating-card floating-card-side glass-card">
+            <div class="floating-card floating-card-side glass-card" data-float>
               <span>Launch-ready</span>
               <strong>SEO + UX</strong>
+            </div>
+            <div class="mockup-layer mockup-layer-left glass-card" data-float>
+              <span>Intent match</span>
+              <strong>Tilburg</strong>
+              <em>Lokale content + CTA flow</em>
+            </div>
+            <div class="mockup-layer mockup-layer-right glass-card" data-float>
+              <span>Conversion path</span>
+              <strong>3 stappen</strong>
+              <em>Hero -> proof -> intake</em>
             </div>
           </div>
         </div>
@@ -236,12 +261,27 @@
       <section class="logo-section" aria-label="BDMNL trust indicators voor Tilburg">
         <div class="container logo-panel reveal">
           <p>Gebouwd voor teams die premium willen overkomen in Tilburg</p>
-          <div class="logo-row" aria-hidden="true">
-            <span>Scale-ups</span>
-            <span>Agencies</span>
-            <span>SaaS</span>
-            <span>MKB+</span>
-            <span>Consultancy</span>
+          <div class="logo-marquee" aria-hidden="true">
+            <div class="logo-track">
+              <span>Scale-ups</span>
+              <span>Agencies</span>
+              <span>SaaS</span>
+              <span>MKB+</span>
+              <span>Consultancy</span>
+              <span>Lokale SEO</span>
+              <span>Premium UX</span>
+              <span>Lead flow</span>
+            </div>
+            <div class="logo-track" aria-hidden="true">
+              <span>Scale-ups</span>
+              <span>Agencies</span>
+              <span>SaaS</span>
+              <span>MKB+</span>
+              <span>Consultancy</span>
+              <span>Lokale SEO</span>
+              <span>Premium UX</span>
+              <span>Lead flow</span>
+            </div>
           </div>
         </div>
       </section>
@@ -274,18 +314,21 @@
           <div class="card-grid service-grid">
             <article class="service-card reveal">
               <span class="card-number">01</span>
+              <div class="service-icon" aria-hidden="true"></div>
               <h3>Lokale SEO strategie</h3>
               <p>Zoekintentie, contentblokken en interne links worden afgestemd op Tilburg, Spoorzone, Centrum, Reeshof en bedrijventerreinen Zuid en de diensten waar jouw ideale klant actief naar zoekt.</p>
               <a href="#contact" aria-label="Bespreek lokale SEO strategie voor Tilburg">Bespreek strategie</a>
             </article>
             <article class="service-card reveal">
               <span class="card-number">02</span>
+              <div class="service-icon" aria-hidden="true"></div>
               <h3>High-end UX design</h3>
               <p>Ruime layouts, premium micro-interacties en een moderne visuele hierarchie geven jouw merk in Tilburg direct meer autoriteit.</p>
               <a href="#portfolio" aria-label="Bekijk UX voorbeelden voor Tilburg">Bekijk voorbeelden</a>
             </article>
             <article class="service-card reveal">
               <span class="card-number">03</span>
+              <div class="service-icon" aria-hidden="true"></div>
               <h3>Conversiegerichte CTA's</h3>
               <p>CTA&#x27;s, proof points en FAQ&#x27;s worden slim geplaatst zodat bezoekers uit Tilburg logisch doorgroeien naar aanvraag, intake of offerte.</p>
               <a href="#contact" aria-label="Optimaliseer CTA's voor Tilburg">Optimaliseer CTA's</a>
@@ -300,6 +343,10 @@
           <div class="section-heading reveal">
             <p class="eyebrow"><span></span>Portfolio</p>
             <h2>Visuele richting voor Tilburg city pages met agency-level uitstraling.</h2>
+            <p>
+              Een visuele preview van hoe lokale SEO content kan aanvoelen als een high-end
+              agency ervaring, met sterke mockups, trust en conversieritme.
+            </p>
           </div>
 
           <div class="portfolio-grid">
@@ -374,6 +421,7 @@
       </section>
 
       <section class="section testimonials" aria-label="Klantreacties over BDMNL city landing pages">
+        <div class="section-divider" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered reveal">
             <p class="eyebrow"><span></span>Testimonials</p>

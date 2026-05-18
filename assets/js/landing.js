@@ -6,6 +6,10 @@ const revealItems = document.querySelectorAll(".reveal");
 const faqItems = document.querySelectorAll(".faq-item");
 const statItems = document.querySelectorAll("[data-count-to]");
 const tiltCards = document.querySelectorAll("[data-tilt-card]");
+const cursorGlow = document.querySelector("[data-cursor-glow]");
+const magneticItems = document.querySelectorAll("[data-magnetic]");
+const floatingItems = document.querySelectorAll("[data-float]");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const updateHeader = () => {
   header?.classList.toggle("is-scrolled", window.scrollY > 12);
@@ -13,6 +17,19 @@ const updateHeader = () => {
 
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
+
+if (cursorGlow && !prefersReducedMotion.matches && window.matchMedia("(pointer: fine)").matches) {
+  document.body.classList.add("has-pointer");
+
+  window.addEventListener(
+    "pointermove",
+    (event) => {
+      document.documentElement.style.setProperty("--cursor-x", `${event.clientX}px`);
+      document.documentElement.style.setProperty("--cursor-y", `${event.clientY}px`);
+    },
+    { passive: true },
+  );
+}
 
 const closeNavigation = () => {
   navToggle?.setAttribute("aria-expanded", "false");
@@ -142,7 +159,7 @@ faqItems.forEach((item) => {
 
 tiltCards.forEach((card) => {
   card.addEventListener("pointermove", (event) => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (prefersReducedMotion.matches) {
       return;
     }
 
@@ -156,4 +173,26 @@ tiltCards.forEach((card) => {
   card.addEventListener("pointerleave", () => {
     card.style.transform = "";
   });
+});
+
+magneticItems.forEach((item) => {
+  item.addEventListener("pointermove", (event) => {
+    if (prefersReducedMotion.matches || !window.matchMedia("(pointer: fine)").matches) {
+      return;
+    }
+
+    const rect = item.getBoundingClientRect();
+    const x = event.clientX - rect.left - rect.width / 2;
+    const y = event.clientY - rect.top - rect.height / 2;
+
+    item.style.transform = `translate3d(${x * 0.08}px, ${y * 0.12}px, 0)`;
+  });
+
+  item.addEventListener("pointerleave", () => {
+    item.style.transform = "";
+  });
+});
+
+floatingItems.forEach((item, index) => {
+  item.style.setProperty("--float-delay", `${index * -0.7}s`);
 });
