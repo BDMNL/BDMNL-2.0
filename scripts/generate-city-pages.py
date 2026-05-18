@@ -126,11 +126,14 @@ def build_page_context(city_data: dict[str, str]) -> dict[str, str]:
     local_focus = city_data["local_focus"]
     canonical_url = f"{BASE_URL}/{slug}/"
     faqs = build_faqs(city, market)
+    lead_growth_number = city_data["lead_growth"].lstrip("+").rstrip("%")
+    visibility_growth_number = city_data["visibility_growth"].lstrip("+").rstrip("%")
 
     return {
         "asset_prefix": "../",
         "canonical_url": canonical_url,
         "city": city,
+        "city_slug": slug,
         "meta_title": f"Webdesign {city} | Premium websites door BDMNL",
         "meta_description": (
             f"BDMNL bouwt premium websites en SEO city landing pages voor bedrijven in {city}. "
@@ -152,6 +155,7 @@ def build_page_context(city_data: dict[str, str]) -> dict[str, str]:
         "metric_two_value": city_data["metric_two_value"],
         "metric_two_label": city_data["metric_two_label"],
         "lead_growth": city_data["lead_growth"],
+        "lead_growth_number": lead_growth_number,
         "strategy_point": f"Positionering voor {city}",
         "seo_point": f"Content voor {local_focus}",
         "intro_heading": f"Een {city} pagina die niet voelt als een standaard SEO-template.",
@@ -181,7 +185,25 @@ def build_page_context(city_data: dict[str, str]) -> dict[str, str]:
         "portfolio_case_three": f"Premium bewijsvoering voor {audience}",
         "proof_heading": f"Meer autoriteit in {city} met rustige details, duidelijke claims en lokale focus.",
         "visibility_growth": city_data["visibility_growth"],
+        "visibility_growth_number": visibility_growth_number,
         "visibility_label": city_data["visibility_label"],
+        "testimonial_one": (
+            f"De {city} pagina voelt veel premiumer zonder SEO-focus te verliezen. De flow maakt meteen duidelijk "
+            "waarom bezoekers contact moeten opnemen."
+        ),
+        "testimonial_one_name": "Sanne de Vries",
+        "testimonial_one_role": f"Marketing lead, {city}",
+        "testimonial_two": (
+            "BDMNL combineerde strategie, visueel design en lokale copy tot een pagina die aanvoelt als een "
+            "high-end agency website."
+        ),
+        "testimonial_two_name": "Milan Vermeer",
+        "testimonial_two_role": "Founder, groeibedrijf",
+        "testimonial_three": (
+            f"De nieuwe trust sections en CTA's geven onze propositie in {city} veel meer rust, ritme en overtuiging."
+        ),
+        "testimonial_three_name": "Nora Jansen",
+        "testimonial_three_role": "Commercial director",
         "process_one": (
             f"We bepalen welke lokale behoefte, propositie en bewijsvoering in {city} centraal moeten staan."
         ),

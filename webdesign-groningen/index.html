@@ -86,6 +86,9 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Direct naar inhoud</a>
+    <div class="page-grain" aria-hidden="true"></div>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
 
     <header class="site-header" data-header>
       <nav class="nav container" aria-label="Hoofdnavigatie">
@@ -113,6 +116,7 @@
           <a href="#faq">FAQ</a>
           <a class="nav-cta" href="#contact">Plan strategiegesprek</a>
         </div>
+        <div class="nav-backdrop" data-nav-backdrop></div>
       </nav>
     </header>
 
@@ -151,33 +155,58 @@
             </dl>
           </div>
 
-          <div class="hero-visual reveal" aria-label="Preview van BDMNL landingspagina voor Groningen">
-            <div class="browser-card tilt-card">
+          <div class="hero-visual reveal" aria-label="Premium mockup van BDMNL landingspagina voor Groningen">
+            <div class="mockup-halo" aria-hidden="true"></div>
+            <div class="browser-card tilt-card" data-tilt-card>
               <div class="browser-bar">
                 <span></span>
                 <span></span>
                 <span></span>
+                <div class="browser-url">bdmnl.nl/webdesign-groningen</div>
               </div>
               <div class="browser-content">
-                <div class="visual-pill">Groningen</div>
-                <div class="visual-heading"></div>
-                <div class="visual-heading short"></div>
-                <div class="visual-body"></div>
-                <div class="visual-body narrow"></div>
+                <div class="visual-topline">
+                  <div class="visual-pill">Groningen</div>
+                  <div class="visual-score">SEO 97</div>
+                </div>
+                <div class="visual-layout">
+                  <div>
+                    <div class="visual-heading"></div>
+                    <div class="visual-heading short"></div>
+                    <div class="visual-body"></div>
+                    <div class="visual-body narrow"></div>
+                  </div>
+                  <div class="visual-radar" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <strong>32%</strong>
+                  </div>
+                </div>
                 <div class="visual-card-row">
-                  <div></div>
-                  <div></div>
-                  <div></div>
+                  <div><span>01</span><strong>SEO</strong></div>
+                  <div><span>02</span><strong>UX</strong></div>
+                  <div><span>03</span><strong>CTA</strong></div>
+                </div>
+                <div class="visual-chart" aria-hidden="true">
+                  <span style="--height: 42%"></span>
+                  <span style="--height: 62%"></span>
+                  <span style="--height: 52%"></span>
+                  <span style="--height: 78%"></span>
+                  <span style="--height: 92%"></span>
                 </div>
               </div>
             </div>
-            <div class="floating-card floating-card-top">
+            <div class="floating-card floating-card-top glass-card">
               <span>SEO score</span>
-              <strong>97/100</strong>
+              <strong data-count-to="97" data-count-suffix="/100">0/100</strong>
             </div>
-            <div class="floating-card floating-card-bottom">
+            <div class="floating-card floating-card-bottom glass-card">
               <span>Groningen leads</span>
-              <strong>+103%</strong>
+              <strong data-count-to="103" data-count-prefix="+" data-count-suffix="%">+0%</strong>
+            </div>
+            <div class="floating-card floating-card-side glass-card">
+              <span>Launch-ready</span>
+              <strong>SEO + UX</strong>
             </div>
           </div>
         </div>
@@ -204,6 +233,19 @@
         </div>
       </section>
 
+      <section class="logo-section" aria-label="BDMNL trust indicators voor Groningen">
+        <div class="container logo-panel reveal">
+          <p>Gebouwd voor teams die premium willen overkomen in Groningen</p>
+          <div class="logo-row" aria-hidden="true">
+            <span>Scale-ups</span>
+            <span>Agencies</span>
+            <span>SaaS</span>
+            <span>MKB+</span>
+            <span>Consultancy</span>
+          </div>
+        </div>
+      </section>
+
       <section class="section section-transition">
         <div class="container split-section">
           <div class="section-intro reveal">
@@ -218,6 +260,7 @@
       </section>
 
       <section class="section services" id="diensten">
+        <div class="section-divider" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered reveal">
             <p class="eyebrow"><span></span>Diensten</p>
@@ -252,6 +295,7 @@
       </section>
 
       <section class="section portfolio" id="portfolio">
+        <div class="section-divider section-divider-offset" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading reveal">
             <p class="eyebrow"><span></span>Portfolio</p>
@@ -261,6 +305,13 @@
           <div class="portfolio-grid">
             <article class="portfolio-card portfolio-large reveal">
               <div class="portfolio-preview premium-preview">
+                <div class="preview-nav"></div>
+                <div class="preview-hero"></div>
+                <div class="preview-grid">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </div>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -272,7 +323,9 @@
               </div>
             </article>
             <article class="portfolio-card reveal">
-              <div class="portfolio-preview orange-preview"></div>
+              <div class="portfolio-preview orange-preview">
+                <div class="preview-phone"></div>
+              </div>
               <div class="portfolio-content">
                 <p>CTA concept</p>
                 <h3>Compacte lead flow voor mobiele bezoekers in Groningen</h3>
@@ -280,7 +333,13 @@
               </div>
             </article>
             <article class="portfolio-card reveal">
-              <div class="portfolio-preview clean-preview"></div>
+              <div class="portfolio-preview clean-preview">
+                <div class="preview-proof">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
               <div class="portfolio-content">
                 <p>Trust section</p>
                 <h3>Premium bewijsvoering voor kennisbedrijven, zorgorganisaties en lokale groeiers</h3>
@@ -299,17 +358,57 @@
           </div>
           <div class="proof-stats">
             <div>
-              <strong>4.9/5</strong>
+              <strong data-count-to="4.9" data-count-decimals="1" data-count-suffix="/5">0/5</strong>
               <span>Gemiddelde klantwaardering</span>
             </div>
             <div>
-              <strong>+55%</strong>
+              <strong data-count-to="55" data-count-prefix="+" data-count-suffix="%">+0%</strong>
               <span>Meer regionale zichtbaarheid</span>
             </div>
             <div>
               <strong>24/7</strong>
               <span>Pagina's gebouwd voor snelheid</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials" aria-label="Klantreacties over BDMNL city landing pages">
+        <div class="container">
+          <div class="section-heading centered reveal">
+            <p class="eyebrow"><span></span>Testimonials</p>
+            <h2>Premium ervaring vanaf strategie tot livegang.</h2>
+            <p>
+              Rustige visual storytelling, heldere lokale copy en meetbare CTA's maken de pagina
+              direct sterker voor bezoekers en zoekmachines.
+            </p>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-card reveal">
+              <div class="quote-mark">"</div>
+              <p>De Groningen pagina voelt veel premiumer zonder SEO-focus te verliezen. De flow maakt meteen duidelijk waarom bezoekers contact moeten opnemen.</p>
+              <div>
+                <strong>Sanne de Vries</strong>
+                <span>Marketing lead, Groningen</span>
+              </div>
+            </article>
+            <article class="testimonial-card featured reveal">
+              <div class="quote-mark">"</div>
+              <p>BDMNL combineerde strategie, visueel design en lokale copy tot een pagina die aanvoelt als een high-end agency website.</p>
+              <div>
+                <strong>Milan Vermeer</strong>
+                <span>Founder, groeibedrijf</span>
+              </div>
+            </article>
+            <article class="testimonial-card reveal">
+              <div class="quote-mark">"</div>
+              <p>De nieuwe trust sections en CTA&#x27;s geven onze propositie in Groningen veel meer rust, ritme en overtuiging.</p>
+              <div>
+                <strong>Nora Jansen</strong>
+                <span>Commercial director</span>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -353,6 +452,11 @@
               <p class="eyebrow light"><span></span>Start jouw premium city page</p>
               <h2>Klaar om in Groningen meer vertrouwen en betere leads te winnen?</h2>
               <p>Laat BDMNL een landingspagina voor Groningen ontwerpen die er premium uitziet, technisch strak staat en bezoekers richting actie brengt.</p>
+            </div>
+            <div class="cta-visual" aria-hidden="true">
+              <span></span>
+              <strong>Groningen</strong>
+              <em>Premium SEO sprint</em>
             </div>
             <form class="cta-form" action="#" method="post">
               <label for="email">Zakelijk e-mailadres</label>
