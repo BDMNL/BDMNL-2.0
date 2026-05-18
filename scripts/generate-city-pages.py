@@ -14,7 +14,6 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "seo-system.json"
 LAYOUT_PATH = ROOT / "templates" / "layout.html"
-PAGE_TEMPLATE_PATH = ROOT / "templates" / "pages" / "seo-cluster-page.html"
 RECOVERY_TEMPLATE_PATH = ROOT / "templates" / "pages" / "recovery-page.html"
 HEADER_PATH = ROOT / "templates" / "components" / "header.html"
 FOOTER_PATH = ROOT / "templates" / "components" / "footer.html"
@@ -77,7 +76,7 @@ def build_faqs(service: dict[str, Any], city: dict[str, Any]) -> list[dict[str, 
             ),
             (
                 f"Wordt mijn website geoptimaliseerd voor lokale vindbaarheid in {city_name}?",
-                f"Ja. We verwerken lokale zoekintentie, interne links, technische SEO en content voor gebieden zoals {areas}.",
+                f"Ja. We verwerken lokale vragen, duidelijke verwijzingen en content voor gebieden zoals {areas}.",
             ),
             (
                 "Kan BDMNL ook teksten en CTA's verzorgen?",
@@ -134,7 +133,7 @@ def build_service_cards(service: dict[str, Any], city: dict[str, Any]) -> str:
         (
             "01",
             "Lokale strategie",
-            f"We vertalen de zoekintentie in {city['name']} naar een paginaflow met duidelijke propositie, trust en CTA's.",
+            f"We vertalen de lokale vraag in {city['name']} naar een heldere opbouw met duidelijke propositie, vertrouwen en vervolgstappen.",
         ),
         (
             "02",
@@ -865,9 +864,9 @@ RECOVERY_SERVICE_PROFILES = {
         "short": "SEO",
         "service_type": "SEO en zoekmachine optimalisatie",
         "title": "{keyword} {city} | SEO en vindbaarheid door BDMNL",
-        "description": "{keyword} in {city}? BDMNL helpt met technische SEO, snelle pagina's, lokale content en een duidelijke structuur voor betere vindbaarheid.",
+        "description": "{keyword} in {city}? BDMNL helpt met snelle websites, sterke lokale content en een duidelijke structuur voor betere vindbaarheid.",
         "h1": "{keyword} {city} voor betere lokale vindbaarheid.",
-        "hero": "BDMNL helpt bedrijven in {city} beter gevonden worden met een praktische SEO-aanpak: techniek op orde, sterke pagina's, lokale content en interne links die logisch aanvoelen.",
+        "hero": "BDMNL helpt bedrijven in {city} beter gevonden worden met een praktische SEO-aanpak: een snelle website, sterke lokale content en duidelijke routes naar contact.",
         "cta": "Plan een SEO-gesprek",
         "faq_focus": "seo",
     },
@@ -978,10 +977,10 @@ CONTENT_RECOVERY_PAGES = [
         "description": "Vraag een gratis SEO scan aan bij BDMNL en ontdek waar je website kansen laat liggen op techniek, snelheid, content en vindbaarheid.",
         "eyebrow": "Gratis SEO scan",
         "h1": "Ontdek waar je website SEO-kansen laat liggen.",
-        "intro": "Met een SEO scan kijkt BDMNL naar de technische basis, snelheid, contentstructuur en lokale vindbaarheid van je website. Je krijgt praktische aandachtspunten waar je direct mee verder kunt.",
+        "intro": "Met een SEO scan kijkt BDMNL naar snelheid, content, lokale vindbaarheid en gebruiksgemak. Je krijgt praktische aandachtspunten waar je direct mee verder kunt.",
         "sections": [
-            ("Techniek en snelheid", "We kijken of je website snel laadt, logisch is opgebouwd en geen technische drempels heeft voor Google of bezoekers."),
-            ("Content en structuur", "Goede SEO begint met duidelijke pagina's. We bekijken headings, interne links, lokale zoekintentie en CTA's."),
+            ("Snelheid en gebruiksgemak", "We kijken of je website snel laadt, logisch is opgebouwd en prettig werkt voor bezoekers."),
+            ("Content en structuur", "Goede SEO begint met duidelijke teksten, lokale vragen en een logische route naar contact."),
             ("Praktisch advies", "Geen lange rapporten vol ruis, maar concrete verbeterpunten voor meer zichtbaarheid en betere aanvragen."),
         ],
     },
@@ -995,7 +994,7 @@ CONTENT_RECOVERY_PAGES = [
         "intro": "Webdesign gaat bij BDMNL verder dan een mooi ontwerp. Een goede website is snel, duidelijk, vindbaar en gebouwd om bezoekers naar de juiste actie te begeleiden.",
         "sections": [
             ("Webflow als flexibele basis", "Webflow maakt het mogelijk om snel professionele websites te bouwen met veel aandacht voor structuur, animatie en beheerbaarheid."),
-            ("Snelheid en SEO", "Een trage website kost aanvragen. Daarom kijken we naar performance, contentstructuur en technische SEO als onderdeel van het ontwerp."),
+            ("Snelheid en SEO", "Een trage website kost aanvragen. Daarom kijken we naar snelheid, contentstructuur en vindbaarheid als onderdeel van het ontwerp."),
             ("Conversiegericht ontwerp", "Bezoekers moeten snel begrijpen wat je doet, waarom ze je kunnen vertrouwen en welke stap ze kunnen zetten."),
         ],
     },
@@ -1006,7 +1005,7 @@ CONTENT_RECOVERY_PAGES = [
         "description": "BDMNL bouwt websites, branding, SEO en online marketing voor bedrijven die online sterker willen groeien.",
         "eyebrow": "BDMNL",
         "h1": "Alles voor een sterke online uitstraling.",
-        "intro": "BDMNL helpt bedrijven groeien met moderne websites, webshops, branding, social media en online marketing. Deze herstelpagina verwijst bezoekers naar de belangrijkste BDMNL diensten en contactmogelijkheden.",
+        "intro": "BDMNL helpt bedrijven groeien met moderne websites, webshops, branding, social media en online marketing. Vanuit Brielle werken we aan digitale oplossingen die duidelijk, snel en professioneel aanvoelen.",
         "sections": [
             ("Websites & webshops", "Snelle websites en webshops met een duidelijke structuur, sterke uitstraling en aandacht voor conversie."),
             ("SEO & online marketing", "Van lokale vindbaarheid tot campagnes en content: BDMNL zorgt dat online kanalen beter samenwerken."),
@@ -1022,8 +1021,8 @@ CONTENT_RECOVERY_PAGES = [
         "h1": "Content marketing: zichtbaar worden met inhoud die klopt.",
         "intro": "Content marketing werkt wanneer je antwoord geeft op echte vragen van je doelgroep. Voor BDMNL betekent dat: praktische teksten, duidelijke structuur en content die aansluit op SEO en conversie.",
         "sections": [
-            ("Begin bij zoekintentie", "Goede content begint met begrijpen waar je doelgroep naar zoekt. Daarna bepaal je welke pagina of welk artikel het beste antwoord geeft."),
-            ("Koppel content aan je website", "Blogartikelen, landingspagina's en dienstenpagina's moeten elkaar versterken via interne links en duidelijke CTA's."),
+            ("Begin bij de vraag van je klant", "Goede content begint met begrijpen waar je doelgroep naar zoekt. Daarna bepaal je welke pagina of welk artikel het beste antwoord geeft."),
+            ("Koppel content aan je website", "Blogartikelen, landingspagina's en dienstenpagina's moeten elkaar versterken met logische verwijzingen en duidelijke vervolgstappen."),
             ("Schrijf menselijk", "Vermijd vage marketingtaal. Leg helder uit wat je doet, waarom het relevant is en welke stap bezoekers kunnen zetten."),
         ],
     },
@@ -1064,9 +1063,9 @@ CONTENT_RECOVERY_PAGES = [
         "h1": "Hoe vaak moet je je website updaten?",
         "intro": "Een website is nooit echt af. Content, techniek en zoekgedrag veranderen. Daarom is regelmatig updaten belangrijk voor veiligheid, snelheid en vindbaarheid.",
         "sections": [
-            ("Technische updates", "Controleer regelmatig of je website veilig, snel en goed werkend blijft. Zeker bij systemen met plugins is onderhoud belangrijk."),
+            ("Onderhoud en veiligheid", "Controleer regelmatig of je website veilig, snel en goed werkend blijft. Zeker bij websites met extra koppelingen is onderhoud belangrijk."),
             ("Content bijwerken", "Diensten, prijzen, cases en contactinformatie moeten actueel blijven. Verouderde content kost vertrouwen."),
-            ("SEO verbeteren", "Nieuwe zoekvragen en lokale kansen kunnen aanleiding zijn om pagina's uit te breiden of interne links te verbeteren."),
+            ("SEO verbeteren", "Nieuwe zoekvragen en lokale kansen kunnen aanleiding zijn om content uit te breiden of belangrijke pagina's beter met elkaar te verbinden."),
         ],
     },
     {
@@ -1076,10 +1075,10 @@ CONTENT_RECOVERY_PAGES = [
         "description": "Leer hoe je een eigen blog begint met een duidelijk doel, goede structuur, SEO en content die past bij je doelgroep.",
         "eyebrow": "Blog",
         "h1": "Hoe kun je een eigen blog beginnen?",
-        "intro": "Een blog werkt het beste wanneer je vooraf bepaalt wie je wilt bereiken en welke vragen je wilt beantwoorden. Daarna bouw je een vaste structuur voor onderwerpen, interne links en CTA's.",
+        "intro": "Een blog werkt het beste wanneer je vooraf bepaalt wie je wilt bereiken en welke vragen je wilt beantwoorden. Daarna bouw je een vaste structuur voor onderwerpen, verwijzingen en vervolgstappen.",
         "sections": [
             ("Kies een helder thema", "Begin met onderwerpen die direct aansluiten op je diensten, klanten en zoekgedrag."),
-            ("Maak een simpele structuur", "Gebruik duidelijke titels, tussenkoppen en interne links naar relevante dienstenpagina's."),
+            ("Maak een simpele structuur", "Gebruik duidelijke titels, tussenkoppen en verwijzingen naar relevante dienstenpagina's."),
             ("Publiceer consistent", "Een blog hoeft niet elke dag nieuw te zijn. Belangrijker is dat elk artikel nuttig, actueel en goed vindbaar is."),
         ],
     },
@@ -1161,7 +1160,7 @@ def recovery_faqs(page: dict[str, Any], city: dict[str, Any], profile: dict[str,
             ),
         },
         {
-            "question": f"Wordt de pagina afgestemd op lokale zoekintentie in {city_name}?",
+            "question": f"Sluit de aanpak aan op lokale zoekvragen in {city_name}?",
             "answer": (
                 f"Ja. We verwerken lokale context rond {areas} en schrijven de pagina voor bezoekers die gericht zoeken naar "
                 f"{keyword} in {city_name}."
@@ -1170,7 +1169,7 @@ def recovery_faqs(page: dict[str, Any], city: dict[str, Any], profile: dict[str,
         {
             "question": "Past deze aanpak bij een bestaande BDMNL website?",
             "answer": (
-                "Ja. De pagina gebruikt dezelfde BDMNL 2.0 basis met gedeelde header, footer, typografie, CTA's en SEO-structuur."
+                "Ja. BDMNL werkt vanuit één herkenbare basis met dezelfde uitstraling, duidelijke navigatie en een sterke SEO-opbouw."
             ),
         },
         {
@@ -1185,8 +1184,8 @@ def recovery_faqs(page: dict[str, Any], city: dict[str, Any], profile: dict[str,
 def recovery_service_cards(page: dict[str, Any], city: dict[str, Any], profile: dict[str, str]) -> str:
     cards = [
         ("01", "Strategie", f"We bepalen wat bezoekers in {city['name']} nodig hebben en welke informatie hen helpt kiezen."),
-        ("02", "Webflow & techniek", "We bouwen een snelle, rustige pagina met goede headings, nette code en duidelijke CTA's."),
-        ("03", "SEO & interne links", "De pagina krijgt lokale content, FAQ's, schema markup en links naar relevante BDMNL pagina's."),
+        ("02", "Webflow & gebruiksgemak", "We bouwen een snelle, rustige ervaring met duidelijke content en een logische route naar contact."),
+        ("03", "SEO & vindbaarheid", "Je online basis krijgt lokale content, veelgestelde vragen en verwijzingen naar relevante BDMNL pagina's."),
     ]
     return "\n".join(
         "\n".join(
@@ -1281,7 +1280,7 @@ def content_sections_html(page: dict[str, Any]) -> str:
 def content_related_cards(pages: list[dict[str, Any]]) -> str:
     candidates = [
         ("Webdesign Brielle", "/webdesign/webdesign-brielle/", "Bekijk hoe BDMNL webdesign lokaal neerzet."),
-        ("SEO Rotterdam", "/seo/seo-rotterdam/", "Bekijk de SEO recovery pagina voor Rotterdam."),
+        ("SEO Rotterdam", "/seo/seo-rotterdam/", "Bekijk hoe BDMNL lokale vindbaarheid in Rotterdam aanpakt."),
         ("Gratis SEO scan", "/gratis-seo-scan/", "Laat je website controleren op snelheid, structuur en vindbaarheid."),
     ]
     return "\n".join(
@@ -1307,7 +1306,7 @@ def content_faqs(page: dict[str, Any]) -> list[dict[str, str]]:
             },
             {
                 "question": "Is dit onderwerp belangrijk voor SEO?",
-                "answer": "Ja. Duidelijke content, snelheid, structuur en interne links helpen bezoekers én zoekmachines beter begrijpen waar je website over gaat.",
+                "answer": "Ja. Duidelijke content, snelheid, structuur en logische verwijzingen helpen bezoekers én zoekmachines beter begrijpen waar je website over gaat.",
             },
         ]
     return [
@@ -1316,8 +1315,8 @@ def content_faqs(page: dict[str, Any]) -> list[dict[str, str]]:
             "answer": "Ja. Je kunt BDMNL bereiken via info@bdmnl.nl of telefonisch via 085 060 56 27.",
         },
         {
-            "question": "Gebruikt deze pagina dezelfde BDMNL structuur?",
-            "answer": "Ja. Deze herstelpagina gebruikt dezelfde header, footer, typografie, CTA's en technische SEO basis als de andere recovery pagina's.",
+            "question": "Sluit dit aan op de BDMNL aanpak?",
+            "answer": "Ja. BDMNL werkt met een herkenbare basis: duidelijke structuur, snelle techniek, sterke content en heldere contactmomenten.",
         },
     ]
 
@@ -1368,7 +1367,7 @@ def render_content_page(
     <div class="section-heading centered reveal">
       <p class="eyebrow"><span></span>Verder binnen BDMNL</p>
       <h2>Gerelateerde pagina's.</h2>
-      <p>Gebruik deze links om door te gaan naar diensten, herstelpagina's of contact.</p>
+      <p>Gebruik deze links om door te gaan naar relevante diensten, inzichten of contact.</p>
     </div>
     <div class="card-grid service-grid">
 {content_related_cards(pages)}
@@ -1527,15 +1526,15 @@ def recovery_context(site: dict[str, Any], page: dict[str, Any], pages: list[dic
         "marquee_items": "\n".join(f"<span>{html(item)}</span>" for item in [profile["label"], city["name"], *city["areas"], "Webflow", "SEO", "Online groei"]),
         "intro_heading": f"{page['keyword']} {city['name']} met een sterke BDMNL basis.",
         "intro_copy_one": (
-            f"Deze pagina herstelt een belangrijke historische BDMNL URL voor {page['keyword'].lower()} in {city['name']}. "
-            "De inhoud is opnieuw opgebouwd met de BDMNL 2.0 structuur, zodat bezoekers direct begrijpen wat we doen."
+            f"Voor {page['keyword'].lower()} in {city['name']} draait het om een heldere combinatie van uitstraling, snelheid en vindbaarheid. "
+            "BDMNL vertaalt die basis naar content en design die bezoekers snel verder helpt."
         ),
         "intro_copy_two": (
-            f"We houden rekening met lokale zoekintentie rond {areas}. Daardoor voelt de pagina relevant voor bedrijven in de regio, "
-            "zonder generieke template-teksten."
+            f"We houden rekening met lokale vragen rond {areas}. Daardoor voelt de pagina relevant voor bedrijven in de regio, "
+            "met voorbeelden en voordelen die aansluiten op de lokale markt."
         ),
         "intro_copy_three": (
-            "De pagina gebruikt dezelfde header, footer, CTA's, FAQ-structuur en SEO-opbouw als de rest van het recovery systeem."
+            "Zo ontstaat een online basis waarin Webflow, SEO, content en conversie elkaar versterken."
         ),
         "services_heading": f"Hoe BDMNL helpt met {page['keyword'].lower()} in {city['name']}.",
         "services_intro": "We combineren strategie, Webflow, SEO en duidelijke content tot een pagina die snel laadt en logisch leest.",
@@ -1635,7 +1634,7 @@ def build_recovery_homepage(
                     '<article class="service-card reveal">',
                     f'<span class="card-number">{html(profile["label"])}</span>',
                     f"<h2>{html(page['keyword'])} {html(city['name'])}</h2>",
-                    f"<p>Historische BDMNL URL hersteld met nieuwe BDMNL 2.0 structuur, lokale content en technische SEO.</p>",
+                    f"<p>Een gerichte BDMNL pagina voor {html(city['name'])}, met lokale context, duidelijke voordelen en een logische route naar contact.</p>",
                     f'<div class="mini-link-row"><a href="{recovery_href(page)}">Bekijk pagina</a></div>',
                     "</article>",
                 ]
@@ -1645,11 +1644,11 @@ def build_recovery_homepage(
     page_content = f"""
 <section class="hero section-pad">
   <div class="container">
-    <p class="eyebrow"><span></span>BDMNL SEO recovery</p>
-    <h1>Historische BDMNL URL's hersteld met een sterke premium basis.</h1>
-    <p class="hero-lead">Deze omgeving herstelt belangrijke bestaande SEO pagina's voor webdesign, SEO, social media, online marketing en reclamebureau zoekopdrachten. Iedere pagina gebruikt dezelfde BDMNL header, footer, typografie, CTA's en schema-structuur.</p>
+    <p class="eyebrow"><span></span>BDMNL digital agency</p>
+    <h1>Webflow, SEO en online marketing voor bedrijven die sterker willen groeien.</h1>
+    <p class="hero-lead">BDMNL bouwt snelle websites, sterke lokale vindbaarheid en herkenbare online communicatie. Eén duidelijke uitstraling, korte lijnen en pagina's die bezoekers helpen de juiste stap te zetten.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="{recovery_href(pages[0])}" data-magnetic>Bekijk recovery pagina</a>
+      <a class="btn btn-primary" href="{recovery_href(pages[0])}" data-magnetic>Bekijk webdesign</a>
       <a class="btn btn-secondary" href="/contact/" data-magnetic>Neem contact op</a>
     </div>
   </div>
@@ -1657,9 +1656,9 @@ def build_recovery_homepage(
 <section class="section related-pages" id="diensten">
   <div class="container">
     <div class="section-heading centered reveal">
-      <p class="eyebrow"><span></span>Herstelde pagina's</p>
-      <h2>Belangrijke SEO URL's terug in één BDMNL systeem.</h2>
-      <p>De sitemap bevat alle herstelde historische URLs. Hieronder staan enkele belangrijke ingangen.</p>
+      <p class="eyebrow"><span></span>Diensten & steden</p>
+      <h2>Lokale pagina's met een herkenbaar BDMNL verhaal.</h2>
+      <p>Bekijk hoe BDMNL diensten als webdesign, SEO, social media en online marketing lokaal positioneert.</p>
     </div>
     <div class="card-grid service-grid">
       {"".join(cards)}
@@ -1679,8 +1678,8 @@ def build_recovery_homepage(
   <div class="container">
     <div class="section-heading centered reveal">
       <p class="eyebrow"><span></span>Werkwijze</p>
-      <h2>Eerst SEO stabiliteit, daarna verder uitbouwen.</h2>
-      <p>De prioriteit ligt nu op historische URL waarde herstellen met nette content, schema, interne links en gedeelde BDMNL componenten.</p>
+      <h2>Eerst helder krijgen wat nodig is, daarna slim bouwen.</h2>
+      <p>BDMNL begint met doelen, doelgroep en lokale kansen. Daarna vertalen we dat naar design, content, techniek en conversie.</p>
     </div>
   </div>
 </section>
@@ -1689,7 +1688,7 @@ def build_recovery_homepage(
     <div class="section-heading centered reveal">
       <p class="eyebrow"><span></span>Kennisbank</p>
       <h2>Webflow, snelheid, SEO en conversie als vaste basis.</h2>
-      <p>Nieuwe kennisbank- en AutoSEO-workflows kunnen later bovenop deze stabiele recovery-structuur worden gebouwd.</p>
+      <p>In de kennisbank delen we praktische inzichten over Webflow, snelheid, SEO, hosting, content en conversie.</p>
     </div>
   </div>
 </section>
@@ -1698,8 +1697,8 @@ def build_recovery_homepage(
     <div class="cta-panel reveal" id="contact">
       <div>
         <p class="eyebrow light"><span></span>Contact</p>
-        <h2>Wil je weten welke SEO pagina's eerst hersteld moeten worden?</h2>
-        <p>BDMNL helpt met prioriteit, structuur, content en technische SEO voor bestaande en nieuwe pagina's.</p>
+        <h2>Klaar om je website, SEO of online marketing sterker neer te zetten?</h2>
+        <p>BDMNL denkt mee over de juiste aanpak en vertaalt die naar een professionele online basis.</p>
       </div>
       <form class="cta-form" action="/contact/" method="get">
         <label for="email">Zakelijk e-mailadres</label>
@@ -1716,13 +1715,13 @@ def build_recovery_homepage(
     context = {
         "asset_prefix": "./",
         "canonical_url": f"{site['base_url']}/",
-        "og_title": "BDMNL SEO recovery systeem",
-        "og_description": "Historische BDMNL SEO URL's hersteld met gedeelde BDMNL 2.0 componenten.",
-        "twitter_title": "BDMNL SEO recovery systeem",
-        "twitter_description": "Historische BDMNL SEO URL's hersteld met gedeelde BDMNL 2.0 componenten.",
+        "og_title": "BDMNL | Webdesign, SEO en online marketing",
+        "og_description": "BDMNL helpt bedrijven groeien met snelle Webflow websites, SEO, branding, social media en online marketing.",
+        "twitter_title": "BDMNL | Webdesign, SEO en online marketing",
+        "twitter_description": "BDMNL helpt bedrijven groeien met snelle Webflow websites, SEO, branding, social media en online marketing.",
         "og_image": site["og_image"],
-        "meta_title": "BDMNL SEO recovery systeem | Historische URL's herstellen",
-        "meta_description": "BDMNL herstelt historische SEO pagina's met een premium BDMNL 2.0 structuur, gedeelde componenten, schema en interne links.",
+        "meta_title": "BDMNL | Webdesign, SEO & online marketing bureau",
+        "meta_description": "BDMNL helpt bedrijven groeien met Webflow websites, SEO, branding, social media en online marketing die professioneel en duidelijk aanvoelen.",
         "professional_service_schema": schema,
         "faq_schema": json_script({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": []}),
         "breadcrumb_schema": json_script(
