@@ -1,0 +1,312 @@
+<section class="hero section-pad seo-hero">
+  <div class="hero-orb hero-orb-one"></div>
+  <div class="hero-orb hero-orb-two"></div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <p class="eyebrow"><span></span>{{eyebrow}}</p>
+      <h1>{{h1}}</h1>
+      <p class="hero-lead">{{hero_lead}}</p>
+
+      <div class="hero-actions" aria-label="Belangrijkste acties">
+        <a class="btn btn-primary" href="/contact/" data-magnetic>{{primary_cta}}</a>
+        <a class="btn btn-secondary" href="#diensten" data-magnetic>Bekijk aanpak</a>
+      </div>
+
+      <div class="hero-proof" aria-label="BDMNL vertrouwen">
+        <div class="avatar-stack" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p><strong>BDMNL Brielle</strong> voor Webflow, SEO en online groei</p>
+      </div>
+
+      <dl class="hero-metrics" aria-label="BDMNL ervaring">
+        <div>
+          <dt>150+</dt>
+          <dd>websites & webshops gerealiseerd</dd>
+        </div>
+        <div>
+          <dt>15+</dt>
+          <dd>jaar ervaring in online groei</dd>
+        </div>
+        <div>
+          <dt>24/7</dt>
+          <dd>hosting, support & onderhoud</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="hero-visual reveal" aria-label="BDMNL pagina-preview voor {{service_label}} in {{city}}">
+      <div class="mockup-halo" aria-hidden="true"></div>
+      <div class="browser-card tilt-card" data-tilt-card>
+        <div class="browser-bar">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="browser-url">bdmnl.nl/{{path}}</div>
+        </div>
+        <div class="browser-content">
+          <div class="visual-topline">
+            <div class="visual-pill">{{city}}</div>
+            <div class="visual-score">{{service_label}}</div>
+          </div>
+          <div class="visual-layout">
+            <div>
+              <div class="visual-heading"></div>
+              <div class="visual-heading short"></div>
+              <div class="visual-body"></div>
+              <div class="visual-body narrow"></div>
+            </div>
+            <div class="visual-radar" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <strong>SEO</strong>
+            </div>
+          </div>
+          <div class="visual-card-row">
+            <div><span>01</span><strong>Strategie</strong></div>
+            <div><span>02</span><strong>Webflow</strong></div>
+            <div><span>03</span><strong>Groei</strong></div>
+          </div>
+          <div class="visual-chart" aria-hidden="true">
+            <span style="--height: 42%"></span>
+            <span style="--height: 62%"></span>
+            <span style="--height: 52%"></span>
+            <span style="--height: 78%"></span>
+            <span style="--height: 92%"></span>
+          </div>
+        </div>
+      </div>
+      <div class="floating-card floating-card-top glass-card" data-float>
+        <span>Focus</span>
+        <strong>{{service_short}}</strong>
+      </div>
+      <div class="floating-card floating-card-bottom glass-card" data-float>
+        <span>Locatie</span>
+        <strong>{{city}}</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust-strip" aria-label="Waarom bedrijven voor BDMNL kiezen">
+  <div class="container trust-grid reveal">
+    <div>
+      <strong>Webflow</strong>
+      <span>Snelle websites met een strakke basis</span>
+    </div>
+    <div>
+      <strong>SEO</strong>
+      <span>{{local_focus}}</span>
+    </div>
+    <div>
+      <strong>Conversie</strong>
+      <span>Duidelijke routes naar contact of aanvraag</span>
+    </div>
+    <div>
+      <strong>Support</strong>
+      <span>Korte lijnen vanuit Brielle</span>
+    </div>
+  </div>
+</section>
+
+<section class="logo-section" aria-label="BDMNL diensten">
+  <div class="container logo-panel reveal">
+    <p>BDMNL combineert strategie, design, techniek en online marketing.</p>
+    <div class="logo-marquee" aria-hidden="true">
+      <div class="logo-track">{{marquee_items}}</div>
+      <div class="logo-track" aria-hidden="true">{{marquee_items}}</div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-transition" id="diensten">
+  <div class="container split-section">
+    <div class="section-intro reveal">
+      <p class="eyebrow"><span></span>Lokale aanpak</p>
+      <h2>{{intro_heading}}</h2>
+    </div>
+    <div class="rich-copy reveal">
+      <p>{{intro_copy_one}}</p>
+      <p>{{intro_copy_two}}</p>
+      <p>{{intro_copy_three}}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section services">
+  <div class="section-divider" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <p class="eyebrow"><span></span>Wat BDMNL doet</p>
+      <h2>{{services_heading}}</h2>
+      <p>{{services_intro}}</p>
+    </div>
+    <div class="card-grid service-grid">
+      {{service_cards}}
+    </div>
+  </div>
+</section>
+
+<section class="section portfolio" id="portfolio">
+  <div class="section-divider section-divider-offset" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow"><span></span>Cases</p>
+      <h2>Digitale projecten met impact.</h2>
+      <p>BDMNL werkt aan websites, webshops, branding, SEO en online marketing voor ondernemers die online sterker willen staan.</p>
+    </div>
+    <div class="portfolio-grid">
+      <article class="portfolio-card portfolio-large reveal">
+        <div class="portfolio-preview premium-preview">
+          <div class="preview-nav"></div>
+          <div class="preview-hero"></div>
+          <div class="preview-grid"><i></i><i></i><i></i></div>
+          <span></span><span></span><span></span>
+        </div>
+        <div class="portfolio-content">
+          <p>Website & SEO</p>
+          <h3>Een snelle structuur die bezoekers helpt kiezen.</h3>
+          <span>Webflow, content en conversie in één lijn</span>
+        </div>
+      </article>
+      <article class="portfolio-card reveal">
+        <div class="portfolio-preview orange-preview"><div class="preview-phone"></div></div>
+        <div class="portfolio-content">
+          <p>Lokale groei</p>
+          <h3>Pagina's die aansluiten op lokale zoekintentie.</h3>
+          <span>{{city}} en omliggende gebieden</span>
+        </div>
+      </article>
+      <article class="portfolio-card reveal">
+        <div class="portfolio-preview clean-preview"><div class="preview-proof"><span></span><span></span><span></span></div></div>
+        <div class="portfolio-content">
+          <p>Vertrouwen</p>
+          <h3>Heldere bewijsvoering zonder overbodige ruis.</h3>
+          <span>Reviews, diensten en contactmomenten</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section proof">
+  <div class="container proof-panel reveal">
+    <div class="proof-copy">
+      <p class="eyebrow"><span></span>BDMNL basis</p>
+      <h2>Een praktische aanpak voor snelheid, SEO en conversie.</h2>
+    </div>
+    <div class="proof-stats">
+      <div>
+        <strong>150+</strong>
+        <span>Websites & webshops gerealiseerd</span>
+      </div>
+      <div>
+        <strong>15+</strong>
+        <span>Jaar ervaring in online groei</span>
+      </div>
+      <div>
+        <strong>24/7</strong>
+        <span>Hosting, support & onderhoud</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section process" id="proces">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <p class="eyebrow"><span></span>Werkwijze</p>
+      <h2>Van vraag naar een sterke online basis.</h2>
+      <p>BDMNL houdt het proces helder: eerst begrijpen wat nodig is, daarna ontwerpen, bouwen en verbeteren.</p>
+    </div>
+    <div class="process-steps">
+      <article class="process-step reveal">
+        <span>01</span>
+        <h3>Strategie</h3>
+        <p>We bepalen doel, doelgroep, lokale zoekintentie en de belangrijkste conversiemomenten.</p>
+      </article>
+      <article class="process-step reveal">
+        <span>02</span>
+        <h3>Structuur</h3>
+        <p>De pagina krijgt duidelijke headings, lokale content, FAQ's en interne links.</p>
+      </article>
+      <article class="process-step reveal">
+        <span>03</span>
+        <h3>Design & Webflow</h3>
+        <p>We bouwen een snelle, rustige en professionele ervaring die aansluit op BDMNL 2.0.</p>
+      </article>
+      <article class="process-step reveal">
+        <span>04</span>
+        <h3>Optimalisatie</h3>
+        <p>Na livegang blijft er ruimte om content, SEO en conversie gericht te verbeteren.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section related-pages" id="kennisbank">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <p class="eyebrow"><span></span>Interne links</p>
+      <h2>Verder kijken binnen BDMNL.</h2>
+      <p>Deze pagina is onderdeel van het SEO recovery systeem en linkt naar relevante diensten en steden.</p>
+    </div>
+    <div class="card-grid service-grid">
+      {{related_cards}}
+    </div>
+  </div>
+</section>
+
+<section class="section testimonials" aria-label="Klantreacties over BDMNL">
+  <div class="section-divider" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <p class="eyebrow"><span></span>Klanten over BDMNL</p>
+      <h2>Waar ondernemers ons om waarderen.</h2>
+      <p>Ondernemers kiezen BDMNL voor duidelijke communicatie, korte lijnen en oplossingen die passen bij hun bedrijf.</p>
+    </div>
+    <div class="testimonial-grid">
+      {{testimonial_cards}}
+    </div>
+  </div>
+</section>
+
+<section class="section cta-band">
+  <div class="container">
+    <div class="cta-panel reveal" id="contact">
+      <div>
+        <p class="eyebrow light"><span></span>Contact</p>
+        <h2>{{cta_heading}}</h2>
+        <p>{{cta_copy}}</p>
+      </div>
+      <div class="cta-visual" aria-hidden="true">
+        <span></span>
+        <strong>BDMNL</strong>
+        <em>Webflow, SEO & online groei</em>
+      </div>
+      <form class="cta-form" action="/contact/" method="get">
+        <label for="email">Zakelijk e-mailadres</label>
+        <div>
+          <input id="email" name="email" type="email" required />
+          <button class="btn btn-dark" type="submit">Plan gesprek</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="container faq-grid">
+    <div class="section-heading reveal">
+      <p class="eyebrow"><span></span>FAQ</p>
+      <h2>{{faq_heading}}</h2>
+      <p>Praktische antwoorden over samenwerking met BDMNL, lokale vindbaarheid en online groei.</p>
+    </div>
+    <div class="faq-list reveal">
+      {{faq_items}}
+    </div>
+  </div>
+</section>

@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "seo-system.json"
 LAYOUT_PATH = ROOT / "templates" / "layout.html"
 PAGE_TEMPLATE_PATH = ROOT / "templates" / "pages" / "seo-cluster-page.html"
+RECOVERY_TEMPLATE_PATH = ROOT / "templates" / "pages" / "recovery-page.html"
 HEADER_PATH = ROOT / "templates" / "components" / "header.html"
 FOOTER_PATH = ROOT / "templates" / "components" / "footer.html"
 GENERATED_MARKER = "<!-- generated-by: bdmnl-seo-system -->"
@@ -747,6 +748,620 @@ def build_support_page(
     )
 
 
+RECOVERY_CITIES = {
+    "brielle": {
+        "name": "Brielle",
+        "region": "Zuid-Holland",
+        "areas": ["Brielle Centrum", "Vierpolders", "Zwartewaal"],
+        "intent": "lokale ondernemers op Voorne-Putten die online professioneler zichtbaar willen zijn",
+    },
+    "rotterdam": {
+        "name": "Rotterdam",
+        "region": "Zuid-Holland",
+        "areas": ["Centrum", "Kop van Zuid", "Kralingen"],
+        "intent": "bedrijven die in een concurrerende markt sneller vertrouwen en aanvragen willen opbouwen",
+    },
+    "goes": {
+        "name": "Goes",
+        "region": "Zeeland",
+        "areas": ["Goes Centrum", "De Poel", "Kloetinge"],
+        "intent": "Zeeuwse ondernemers die lokaal beter gevonden willen worden en professioneel willen overkomen",
+    },
+    "dordrecht": {
+        "name": "Dordrecht",
+        "region": "Zuid-Holland",
+        "areas": ["Binnenstad", "Sterrenburg", "Dubbeldam"],
+        "intent": "dienstverleners en MKB-bedrijven die hun online basis willen versterken",
+    },
+    "vlaardingen": {
+        "name": "Vlaardingen",
+        "region": "Zuid-Holland",
+        "areas": ["Centrum", "Holy", "Westwijk"],
+        "intent": "lokale bedrijven die online vindbaarheid willen combineren met een moderne uitstraling",
+    },
+    "breda": {
+        "name": "Breda",
+        "region": "Noord-Brabant",
+        "areas": ["Centrum", "Belcrum", "Princenhage"],
+        "intent": "bedrijven die hun merk, website en lokale vindbaarheid sterker willen positioneren",
+    },
+    "amsterdam": {
+        "name": "Amsterdam",
+        "region": "Noord-Holland",
+        "areas": ["Centrum", "De Pijp", "Noord"],
+        "intent": "ambitieuze teams die snelheid, SEO en uitstraling op niveau willen brengen",
+    },
+    "den-haag": {
+        "name": "Den Haag",
+        "region": "Zuid-Holland",
+        "areas": ["Centrum", "Bezuidenhout", "Scheveningen"],
+        "intent": "professionele organisaties die online duidelijker en betrouwbaarder willen overkomen",
+    },
+    "middelburg": {
+        "name": "Middelburg",
+        "region": "Zeeland",
+        "areas": ["Binnenstad", "Dauwendaele", "Mortiere"],
+        "intent": "Zeeuwse bedrijven die hun website, SEO en online marketing praktisch willen verbeteren",
+    },
+}
+
+
+RECOVERY_SERVICE_PROFILES = {
+    "webdesign": {
+        "label": "Webdesign",
+        "short": "Webflow",
+        "service_type": "Webdesign en website development",
+        "title": "Webdesign {city} | Webflow websites door BDMNL",
+        "description": "Webdesign in {city}? BDMNL bouwt snelle Webflow websites met sterke structuur, SEO-basis en duidelijke conversiepaden voor lokale bedrijven.",
+        "h1": "Webdesign {city} met Webflow, snelheid en een duidelijke online basis.",
+        "hero": "BDMNL ontwerpt en bouwt websites voor bedrijven in {city} die professioneel willen overkomen en beter vindbaar willen zijn. We combineren Webflow, heldere content, snelheid en praktische conversiepunten.",
+        "cta": "Plan een websitegesprek",
+        "faq_focus": "website",
+    },
+    "seo": {
+        "label": "SEO",
+        "short": "SEO",
+        "service_type": "SEO en zoekmachine optimalisatie",
+        "title": "{keyword} {city} | SEO en vindbaarheid door BDMNL",
+        "description": "{keyword} in {city}? BDMNL helpt met technische SEO, snelle pagina's, lokale content en een duidelijke structuur voor betere vindbaarheid.",
+        "h1": "{keyword} {city} voor betere lokale vindbaarheid.",
+        "hero": "BDMNL helpt bedrijven in {city} beter gevonden worden met een praktische SEO-aanpak: techniek op orde, sterke pagina's, lokale content en interne links die logisch aanvoelen.",
+        "cta": "Plan een SEO-gesprek",
+        "faq_focus": "seo",
+    },
+    "social-media": {
+        "label": "Social media",
+        "short": "Social",
+        "service_type": "Social media beheer",
+        "title": "{keyword} {city} | Content en planning door BDMNL",
+        "description": "{keyword} in {city}? BDMNL helpt lokale bedrijven met content, planning en campagnes die passen bij hun website, SEO en merkverhaal.",
+        "h1": "{keyword} {city} met content die past bij je merk.",
+        "hero": "BDMNL helpt bedrijven in {city} zichtbaar blijven met social content die aansluit op hun website, doelgroep en lokale markt. Praktisch, herkenbaar en zonder losse flodders.",
+        "cta": "Plan een contentgesprek",
+        "faq_focus": "social",
+    },
+    "online-marketing": {
+        "label": "Online marketing",
+        "short": "Marketing",
+        "service_type": "Online marketing",
+        "title": "Online marketing {city} | Websites, SEO en campagnes door BDMNL",
+        "description": "Online marketing in {city}? BDMNL helpt lokale bedrijven met websites, SEO, content en campagnes die samen zorgen voor online groei.",
+        "h1": "Online marketing {city} met een praktische BDMNL aanpak.",
+        "hero": "BDMNL helpt bedrijven in {city} groeien met een combinatie van website, SEO, content en online marketing. Geen losse acties, maar een duidelijke basis die past bij je bedrijf.",
+        "cta": "Plan een groeigesprek",
+        "faq_focus": "marketing",
+    },
+    "reclamebureau": {
+        "label": "Reclamebureau",
+        "short": "BDMNL",
+        "service_type": "Webdesign, branding en online marketing",
+        "title": "Reclamebureau {city} | Webdesign, SEO en online marketing door BDMNL",
+        "description": "Reclamebureau in {city}? BDMNL helpt met Webflow websites, branding, SEO, social media en online marketing voor lokale bedrijven.",
+        "h1": "Reclamebureau {city} voor webdesign, SEO en online groei.",
+        "hero": "BDMNL is geen traditioneel reclamebureau. We helpen bedrijven in {city} met websites, branding, SEO, social media en online marketing die praktisch resultaat moeten opleveren.",
+        "cta": "Plan een kennismaking",
+        "faq_focus": "agency",
+    },
+}
+
+
+RECOVERY_URLS = [
+    ("webdesign", "webdesign", "webdesign-brielle", "brielle", "Webdesign"),
+    ("webdesign", "webdesign", "webdesign-rotterdam", "rotterdam", "Webdesign"),
+    ("webdesign", "webdesign", "webdesign-goes", "goes", "Webdesign"),
+    ("webdesign", "webdesign", "webdesign-dordrecht", "dordrecht", "Webdesign"),
+    ("webdesign", "webdesign", "webdesign-vlaardingen", "vlaardingen", "Webdesign"),
+    ("webdesign", "webdesign", "webdesign-breda", "breda", "Webdesign"),
+    ("webdesign", "webdesign", "webdesign-amsterdam", "amsterdam", "Webdesign"),
+    ("webdesign", "webdesign", "webdesign-den-haag", "den-haag", "Webdesign"),
+    ("webdesign", "webdesign", "webdesign-middelburg", "middelburg", "Webdesign"),
+    ("seo", "seo", "seo-rotterdam", "rotterdam", "SEO"),
+    ("seo", "seo", "seo-bureau-rotterdam", "rotterdam", "SEO bureau"),
+    ("seo", "seo", "zoekmachine-optimalisatie-rotterdam", "rotterdam", "Zoekmachine optimalisatie"),
+    ("seo", "seo", "seo-goes", "goes", "SEO"),
+    ("seo", "seo", "seo-dordrecht", "dordrecht", "SEO"),
+    ("seo", "seo", "seo-amsterdam", "amsterdam", "SEO"),
+    ("seo", "seo", "seo-den-haag", "den-haag", "SEO"),
+    ("seo", "seo", "seo-breda", "breda", "SEO"),
+    ("social-media", "social-media", "social-media-brielle", "brielle", "Social media"),
+    ("social-media", "social-media", "social-media-beheer-brielle", "brielle", "Social media beheer"),
+    ("social-media", "social-media", "social-media-goes", "goes", "Social media"),
+    ("social-media", "social-media", "social-media-rotterdam", "rotterdam", "Social media"),
+    ("social-media", "social-media", "social-media-dordrecht", "dordrecht", "Social media"),
+    ("social-media", "social-media", "social-media-vlaardingen", "vlaardingen", "Social media"),
+    ("online-marketing", "online-marketing", "online-marketing-goes", "goes", "Online marketing"),
+    ("online-marketing", "online-marketing", "online-marketing-brielle", "brielle", "Online marketing"),
+    ("online-marketing", "online-marketing", "online-marketing-dordrecht", "dordrecht", "Online marketing"),
+    ("online-marketing", "online-marketing", "online-marketing-vlaardingen", "vlaardingen", "Online marketing"),
+    ("reclamebureau", "reclamebureau", "reclamebureau-brielle", "brielle", "Reclamebureau"),
+    ("reclamebureau", "reclamebureau", "reclamebureau-rotterdam", "rotterdam", "Reclamebureau"),
+    ("reclamebureau", "reclamebureau", "reclamebureau-goes", "goes", "Reclamebureau"),
+    ("reclamebureau", "reclamebureau", "reclamebureau-dordrecht", "dordrecht", "Reclamebureau"),
+    ("reclamebureau", "reclamebureau", "reclamebureau-vlaardingen", "vlaardingen", "Reclamebureau"),
+]
+
+
+def recovery_pages() -> list[dict[str, Any]]:
+    pages = []
+    for category, service_key, slug, city_key, keyword in RECOVERY_URLS:
+        pages.append(
+            {
+                "category": category,
+                "service_key": service_key,
+                "slug": slug,
+                "path": f"{category}/{slug}",
+                "city_key": city_key,
+                "keyword": keyword,
+            }
+        )
+    return pages
+
+
+def recovery_url(site: dict[str, Any], page: dict[str, Any]) -> str:
+    return f"{site['base_url']}/{page['path']}/"
+
+
+def recovery_href(page: dict[str, Any]) -> str:
+    return f"/{page['path']}/"
+
+
+def recovery_footer_context(site: dict[str, Any], pages: list[dict[str, Any]]) -> dict[str, str]:
+    def first_page(service_key: str) -> dict[str, Any]:
+        return next(page for page in pages if page["service_key"] == service_key)
+
+    footer_service_links = "\n".join(
+        [
+            f'<a href="{recovery_href(first_page("webdesign"))}">Webdesign</a>',
+            f'<a href="{recovery_href(first_page("seo"))}">SEO</a>',
+            f'<a href="{recovery_href(first_page("social-media"))}">Social media</a>',
+            f'<a href="{recovery_href(first_page("online-marketing"))}">Online marketing</a>',
+            f'<a href="{recovery_href(first_page("reclamebureau"))}">Reclamebureau</a>',
+        ]
+    )
+    seen_cities: set[str] = set()
+    city_links = []
+    for page in pages:
+        if page["city_key"] in seen_cities:
+            continue
+        seen_cities.add(page["city_key"])
+        city = RECOVERY_CITIES[page["city_key"]]
+        city_links.append(f'<a href="{recovery_href(page)}">{html(city["name"])}</a>')
+
+    return {
+        "footer_city_links": "\n".join(city_links),
+        "footer_service_links": footer_service_links,
+        "footer_internal_links": "\n".join(
+            [
+                '<a href="/contact/">Contact</a>',
+                '<a href="/privacyverklaring/">Privacyverklaring</a>',
+                '<a href="/cookiebeleid/">Cookiebeleid</a>',
+                '<a href="/algemene-voorwaarden/">Algemene voorwaarden</a>',
+            ]
+        ),
+        "current_year": str(date.today().year),
+    }
+
+
+def recovery_faqs(page: dict[str, Any], city: dict[str, Any], profile: dict[str, str]) -> list[dict[str, str]]:
+    city_name = city["name"]
+    areas = ", ".join(city["areas"])
+    keyword = page["keyword"].lower()
+    return [
+        {
+            "question": f"Helpt BDMNL met {keyword} in {city_name}?",
+            "answer": (
+                f"Ja. BDMNL helpt bedrijven in {city_name} met {keyword}, waarbij we kijken naar uitstraling, snelheid, "
+                "vindbaarheid en de route naar contact of aanvraag."
+            ),
+        },
+        {
+            "question": f"Wordt de pagina afgestemd op lokale zoekintentie in {city_name}?",
+            "answer": (
+                f"Ja. We verwerken lokale context rond {areas} en schrijven de pagina voor bezoekers die gericht zoeken naar "
+                f"{keyword} in {city_name}."
+            ),
+        },
+        {
+            "question": "Past deze aanpak bij een bestaande BDMNL website?",
+            "answer": (
+                "Ja. De pagina gebruikt dezelfde BDMNL 2.0 basis met gedeelde header, footer, typografie, CTA's en SEO-structuur."
+            ),
+        },
+        {
+            "question": "Kan BDMNL ook helpen met verdere optimalisatie na livegang?",
+            "answer": (
+                "Ja. Na livegang kunnen we content, techniek, snelheid, SEO en conversiepunten gericht blijven verbeteren."
+            ),
+        },
+    ]
+
+
+def recovery_service_cards(page: dict[str, Any], city: dict[str, Any], profile: dict[str, str]) -> str:
+    cards = [
+        ("01", "Strategie", f"We bepalen wat bezoekers in {city['name']} nodig hebben en welke informatie hen helpt kiezen."),
+        ("02", "Webflow & techniek", "We bouwen een snelle, rustige pagina met goede headings, nette code en duidelijke CTA's."),
+        ("03", "SEO & interne links", "De pagina krijgt lokale content, FAQ's, schema markup en links naar relevante BDMNL pagina's."),
+    ]
+    return "\n".join(
+        "\n".join(
+            [
+                '      <article class="service-card reveal">',
+                f'        <span class="card-number">{number}</span>',
+                '        <div class="service-icon" aria-hidden="true"></div>',
+                f"        <h3>{html(title)}</h3>",
+                f"        <p>{html(copy)}</p>",
+                '        <a href="/contact/">Bespreek dit met BDMNL</a>',
+                "      </article>",
+            ]
+        )
+        for number, title, copy in cards
+    )
+
+
+def recovery_related_cards(page: dict[str, Any], pages: list[dict[str, Any]]) -> str:
+    related = [
+        candidate
+        for candidate in pages
+        if candidate["path"] != page["path"]
+        and (candidate["city_key"] == page["city_key"] or candidate["service_key"] == page["service_key"])
+    ][:6]
+    if len(related) < 3:
+        related.extend([candidate for candidate in pages if candidate not in related and candidate["path"] != page["path"]][: 3 - len(related)])
+
+    return "\n".join(
+        "\n".join(
+            [
+                f'      <a class="service-card related-card reveal" href="{recovery_href(candidate)}">',
+                f'        <span class="card-number">{html(RECOVERY_SERVICE_PROFILES[candidate["service_key"]]["label"])}</span>',
+                '        <div class="service-icon" aria-hidden="true"></div>',
+                f"        <h3>{html(candidate['keyword'])} {html(RECOVERY_CITIES[candidate['city_key']]['name'])}</h3>",
+                f"        <p>Bekijk hoe BDMNL deze dienst lokaal positioneert voor {html(RECOVERY_CITIES[candidate['city_key']]['name'])}.</p>",
+                "      </a>",
+            ]
+        )
+        for candidate in related
+    )
+
+
+def recovery_testimonial_cards() -> str:
+    testimonials = [
+        (
+            "BDMNL heeft onze website vernieuwd naar een moderne en gebruiksvriendelijke uitstraling. De communicatie verliep prettig en er werd snel geschakeld bij feedback of aanpassingen.",
+            "HV Helius",
+            "Lokale sportorganisatie",
+        ),
+        (
+            "Onze oude website was verouderd en niet goed vindbaar in Google. BDMNL heeft dit volledig vernieuwd met een frisse uitstraling en duidelijke structuur voor onze klanten.",
+            "Brielle Automotive",
+            "Autobedrijf",
+        ),
+        (
+            "Dankzij BDMNL hebben wij nu een professionele website die niet alleen mooi oogt, maar ook beter gevonden wordt in Google. Fijn contact en snelle communicatie tijdens het hele traject.",
+            "Studio Brielle",
+            "Creatieve onderneming",
+        ),
+    ]
+    return "\n".join(
+        "\n".join(
+            [
+                f'      <article class="testimonial-card{" featured" if index == 1 else ""} reveal">',
+                '        <div class="quote-mark">"</div>',
+                f"        <p>{html(copy)}</p>",
+                "        <div>",
+                f"          <strong>{html(name)}</strong>",
+                f"          <span>{html(role)}</span>",
+                "        </div>",
+                "      </article>",
+            ]
+        )
+        for index, (copy, name, role) in enumerate(testimonials)
+    )
+
+
+def recovery_schema(site: dict[str, Any], page: dict[str, Any], city: dict[str, Any], profile: dict[str, str]) -> str:
+    return json_script(
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": f"BDMNL - {page['keyword']} {city['name']}",
+            "url": recovery_url(site, page),
+            "image": site["og_image"],
+            "email": site["email"],
+            "telephone": site["phone"],
+            "areaServed": {"@type": "City", "name": city["name"]},
+            "address": {"@type": "PostalAddress", "streetAddress": "Krammer 8", "postalCode": "3232 HE", "addressLocality": "Brielle", "addressCountry": "NL"},
+            "description": profile["description"].format(city=city["name"], keyword=page["keyword"]),
+            "serviceType": profile["service_type"],
+            "sameAs": [social["url"] for social in site["socials"]],
+        }
+    )
+
+
+def recovery_breadcrumb(site: dict[str, Any], page: dict[str, Any], city: dict[str, Any]) -> str:
+    return json_script(
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site['base_url']}/"},
+                {"@type": "ListItem", "position": 2, "name": page["category"].replace("-", " ").title(), "item": f"{site['base_url']}/{page['category']}/"},
+                {"@type": "ListItem", "position": 3, "name": f"{page['keyword']} {city['name']}", "item": recovery_url(site, page)},
+            ],
+        }
+    )
+
+
+def recovery_context(site: dict[str, Any], page: dict[str, Any], pages: list[dict[str, Any]]) -> dict[str, str]:
+    city = RECOVERY_CITIES[page["city_key"]]
+    profile = RECOVERY_SERVICE_PROFILES[page["service_key"]]
+    title = profile["title"].format(city=city["name"], keyword=page["keyword"])
+    description = profile["description"].format(city=city["name"], keyword=page["keyword"])
+    faqs = recovery_faqs(page, city, profile)
+    areas = ", ".join(city["areas"])
+    return {
+        "asset_prefix": "../" * len(page["path"].split("/")),
+        "canonical_url": recovery_url(site, page),
+        "og_title": title,
+        "og_description": description,
+        "twitter_title": title,
+        "twitter_description": description,
+        "og_image": site["og_image"],
+        "meta_title": title,
+        "meta_description": description,
+        "professional_service_schema": recovery_schema(site, page, city, profile),
+        "faq_schema": faq_schema(faqs),
+        "breadcrumb_schema": recovery_breadcrumb(site, page, city),
+        "eyebrow": f"{page['keyword']} in {city['name']}",
+        "h1": profile["h1"].format(city=city["name"], keyword=page["keyword"]),
+        "hero_lead": profile["hero"].format(city=city["name"], keyword=page["keyword"]),
+        "primary_cta": profile["cta"],
+        "city": city["name"],
+        "service_label": profile["label"],
+        "service_short": profile["short"],
+        "path": page["path"],
+        "local_focus": f"Lokale content voor {areas}",
+        "marquee_items": "\n".join(f"<span>{html(item)}</span>" for item in [profile["label"], city["name"], *city["areas"], "Webflow", "SEO", "Online groei"]),
+        "intro_heading": f"{page['keyword']} {city['name']} met een sterke BDMNL basis.",
+        "intro_copy_one": (
+            f"Deze pagina herstelt een belangrijke historische BDMNL URL voor {page['keyword'].lower()} in {city['name']}. "
+            "De inhoud is opnieuw opgebouwd met de BDMNL 2.0 structuur, zodat bezoekers direct begrijpen wat we doen."
+        ),
+        "intro_copy_two": (
+            f"We houden rekening met lokale zoekintentie rond {areas}. Daardoor voelt de pagina relevant voor bedrijven in de regio, "
+            "zonder generieke template-teksten."
+        ),
+        "intro_copy_three": (
+            "De pagina gebruikt dezelfde header, footer, CTA's, FAQ-structuur en SEO-opbouw als de rest van het recovery systeem."
+        ),
+        "services_heading": f"Hoe BDMNL helpt met {page['keyword'].lower()} in {city['name']}.",
+        "services_intro": "We combineren strategie, Webflow, SEO en duidelijke content tot een pagina die snel laadt en logisch leest.",
+        "service_cards": recovery_service_cards(page, city, profile),
+        "related_cards": recovery_related_cards(page, pages),
+        "testimonial_cards": recovery_testimonial_cards(),
+        "cta_heading": f"Klaar om {page['keyword'].lower()} in {city['name']} goed neer te zetten?",
+        "cta_copy": "Neem contact op met BDMNL voor een praktische aanpak rond website, SEO, content en online groei.",
+        "faq_heading": f"Veelgestelde vragen over {page['keyword'].lower()} in {city['name']}.",
+        "faq_items": build_faq_items(faqs),
+    }
+
+
+def render_recovery_page(
+    layout: str,
+    page_template: str,
+    header: str,
+    footer: str,
+    footer_ctx: dict[str, str],
+    context: dict[str, str],
+) -> str:
+    page_content = render(
+        page_template,
+        context,
+        raw_keys={"service_cards", "related_cards", "testimonial_cards", "faq_items", "marquee_items"},
+    )
+    header_html = render(header, {"asset_prefix": context["asset_prefix"]})
+    footer_html = render(
+        footer,
+        {**footer_ctx, "asset_prefix": context["asset_prefix"]},
+        raw_keys={"footer_city_links", "footer_service_links", "footer_internal_links"},
+    )
+    return GENERATED_MARKER + "\n" + render(
+        layout,
+        {**context, "global_header": header_html, "global_footer": footer_html, "page_content": page_content.strip()},
+        raw_keys={"global_header", "global_footer", "page_content", "professional_service_schema", "faq_schema", "breadcrumb_schema"},
+    )
+
+
+def cleanup_generated_recovery(pages: list[dict[str, Any]]) -> None:
+    expected = {page["path"] for page in pages}
+    top_dirs = {"webdesign", "seo", "social-media", "online-marketing", "reclamebureau"}
+    for top in top_dirs:
+        directory = ROOT / top
+        if not directory.exists():
+            continue
+        for child in directory.iterdir():
+            if child.is_dir() and f"{top}/{child.name}" not in expected:
+                shutil.rmtree(child)
+
+
+def write_sitemap_for_paths(site: dict[str, Any], paths: list[str], support_slugs: list[str]) -> None:
+    today = date.today().isoformat()
+    urls = [f"{site['base_url']}/"]
+    urls.extend(f"{site['base_url']}/{path}/" for path in paths)
+    urls.extend(f"{site['base_url']}/{slug}/" for slug in support_slugs)
+    entries = "\n".join(
+        "\n".join(
+            [
+                "  <url>",
+                f"    <loc>{html(url)}</loc>",
+                f"    <lastmod>{today}</lastmod>",
+                "    <changefreq>monthly</changefreq>",
+                "    <priority>0.8</priority>",
+                "  </url>",
+            ]
+        )
+        for url in urls
+    )
+    (ROOT / "sitemap.xml").write_text(
+        f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{entries}
+</urlset>
+""",
+        encoding="utf-8",
+    )
+
+
+def build_recovery_homepage(
+    layout: str,
+    header: str,
+    footer: str,
+    footer_ctx: dict[str, str],
+    site: dict[str, Any],
+    pages: list[dict[str, Any]],
+) -> str:
+    cards = []
+    featured = pages[:12]
+    for page in featured:
+        city = RECOVERY_CITIES[page["city_key"]]
+        profile = RECOVERY_SERVICE_PROFILES[page["service_key"]]
+        cards.append(
+            "\n".join(
+                [
+                    '<article class="service-card reveal">',
+                    f'<span class="card-number">{html(profile["label"])}</span>',
+                    f"<h2>{html(page['keyword'])} {html(city['name'])}</h2>",
+                    f"<p>Historische BDMNL URL hersteld met nieuwe BDMNL 2.0 structuur, lokale content en technische SEO.</p>",
+                    f'<div class="mini-link-row"><a href="{recovery_href(page)}">Bekijk pagina</a></div>',
+                    "</article>",
+                ]
+            )
+        )
+
+    page_content = f"""
+<section class="hero section-pad">
+  <div class="container">
+    <p class="eyebrow"><span></span>BDMNL SEO recovery</p>
+    <h1>Historische BDMNL URL's hersteld met een sterke premium basis.</h1>
+    <p class="hero-lead">Deze omgeving herstelt belangrijke bestaande SEO pagina's voor webdesign, SEO, social media, online marketing en reclamebureau zoekopdrachten. Iedere pagina gebruikt dezelfde BDMNL header, footer, typografie, CTA's en schema-structuur.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{recovery_href(pages[0])}" data-magnetic>Bekijk recovery pagina</a>
+      <a class="btn btn-secondary" href="/contact/" data-magnetic>Neem contact op</a>
+    </div>
+  </div>
+</section>
+<section class="section related-pages" id="diensten">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <p class="eyebrow"><span></span>Herstelde pagina's</p>
+      <h2>Belangrijke SEO URL's terug in één BDMNL systeem.</h2>
+      <p>De sitemap bevat alle herstelde historische URLs. Hieronder staan enkele belangrijke ingangen.</p>
+    </div>
+    <div class="card-grid service-grid">
+      {"".join(cards)}
+    </div>
+  </div>
+</section>
+<section class="section portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow"><span></span>Cases</p>
+      <h2>Digitale projecten met impact.</h2>
+      <p>BDMNL werkt aan websites, webshops, branding, SEO en online marketing voor ondernemers die online sterker willen staan.</p>
+    </div>
+  </div>
+</section>
+<section class="section process" id="proces">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <p class="eyebrow"><span></span>Werkwijze</p>
+      <h2>Eerst SEO stabiliteit, daarna verder uitbouwen.</h2>
+      <p>De prioriteit ligt nu op historische URL waarde herstellen met nette content, schema, interne links en gedeelde BDMNL componenten.</p>
+    </div>
+  </div>
+</section>
+<section class="section knowledge-section" id="kennisbank">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <p class="eyebrow"><span></span>Kennisbank</p>
+      <h2>Webflow, snelheid, SEO en conversie als vaste basis.</h2>
+      <p>Nieuwe kennisbank- en AutoSEO-workflows kunnen later bovenop deze stabiele recovery-structuur worden gebouwd.</p>
+    </div>
+  </div>
+</section>
+<section class="section cta-band">
+  <div class="container">
+    <div class="cta-panel reveal" id="contact">
+      <div>
+        <p class="eyebrow light"><span></span>Contact</p>
+        <h2>Wil je weten welke SEO pagina's eerst hersteld moeten worden?</h2>
+        <p>BDMNL helpt met prioriteit, structuur, content en technische SEO voor bestaande en nieuwe pagina's.</p>
+      </div>
+      <form class="cta-form" action="/contact/" method="get">
+        <label for="email">Zakelijk e-mailadres</label>
+        <div>
+          <input id="email" name="email" type="email" required />
+          <button class="btn btn-dark" type="submit">Plan gesprek</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+"""
+    schema = json_script({"@context": "https://schema.org", "@type": "WebSite", "name": site["name"], "url": site["base_url"]})
+    context = {
+        "asset_prefix": "./",
+        "canonical_url": f"{site['base_url']}/",
+        "og_title": "BDMNL SEO recovery systeem",
+        "og_description": "Historische BDMNL SEO URL's hersteld met gedeelde BDMNL 2.0 componenten.",
+        "twitter_title": "BDMNL SEO recovery systeem",
+        "twitter_description": "Historische BDMNL SEO URL's hersteld met gedeelde BDMNL 2.0 componenten.",
+        "og_image": site["og_image"],
+        "meta_title": "BDMNL SEO recovery systeem | Historische URL's herstellen",
+        "meta_description": "BDMNL herstelt historische SEO pagina's met een premium BDMNL 2.0 structuur, gedeelde componenten, schema en interne links.",
+        "professional_service_schema": schema,
+        "faq_schema": json_script({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": []}),
+        "breadcrumb_schema": json_script(
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site['base_url']}/"}],
+            }
+        ),
+        "global_header": render(header, {"asset_prefix": "./"}),
+        "global_footer": render(
+            footer,
+            {**footer_ctx, "asset_prefix": "./"},
+            raw_keys={"footer_city_links", "footer_service_links", "footer_internal_links"},
+        ),
+        "page_content": page_content.strip(),
+    }
+    return GENERATED_MARKER + "\n" + render(
+        layout,
+        context,
+        raw_keys={"global_header", "global_footer", "page_content", "professional_service_schema", "faq_schema", "breadcrumb_schema"},
+    )
+
+
 def remove_legacy_generated_pages(site: dict[str, Any], services: list[dict[str, Any]], cities: list[dict[str, Any]]) -> None:
     keep = {page_slug(service, city) for service in services for city in cities}
     legacy_prefixes = ("webdesign-",)
@@ -806,31 +1421,26 @@ Sitemap: {site['base_url']}/sitemap.xml
 def main() -> None:
     data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     site = data["site"]
-    cities = data["cities"]
-    services = data["services"]
     layout = LAYOUT_PATH.read_text(encoding="utf-8")
-    page_template = PAGE_TEMPLATE_PATH.read_text(encoding="utf-8")
+    page_template = RECOVERY_TEMPLATE_PATH.read_text(encoding="utf-8")
     header = HEADER_PATH.read_text(encoding="utf-8")
     footer = FOOTER_PATH.read_text(encoding="utf-8")
-    footer_ctx = footer_context(site, cities, services)
-    slugs: list[str] = []
+    pages = recovery_pages()
+    footer_ctx = recovery_footer_context(site, pages)
 
-    remove_legacy_generated_pages(site, services, cities)
+    cleanup_generated_recovery(pages)
 
-    for city in cities:
-        for service in services:
-            slug = page_slug(service, city)
-            slugs.append(slug)
-            context = build_page_context(site, city, service, services, cities)
-            output_dir = ROOT / page_path(site, slug)
-            output_dir.mkdir(parents=True, exist_ok=True)
-            (output_dir / "index.html").write_text(
-                render_full_page(layout, page_template, header, footer, footer_ctx, context),
-                encoding="utf-8",
-            )
+    for page in pages:
+        context = recovery_context(site, page, pages)
+        output_dir = ROOT / page["path"]
+        output_dir.mkdir(parents=True, exist_ok=True)
+        (output_dir / "index.html").write_text(
+            render_recovery_page(layout, page_template, header, footer, footer_ctx, context),
+            encoding="utf-8",
+        )
 
     (ROOT / "index.html").write_text(
-        build_homepage(layout, header, footer, footer_ctx, site, cities, services),
+        build_recovery_homepage(layout, header, footer, footer_ctx, site, pages),
         encoding="utf-8",
     )
 
@@ -842,9 +1452,9 @@ def main() -> None:
             encoding="utf-8",
         )
 
-    write_sitemap(site, slugs, [page["slug"] for page in SUPPORT_PAGES])
+    write_sitemap_for_paths(site, [page["path"] for page in pages], [page["slug"] for page in SUPPORT_PAGES])
     write_robots(site)
-    print(f"Generated {len(slugs)} SEO cluster pages, sitemap.xml and robots.txt.")
+    print(f"Generated {len(pages)} SEO recovery pages, sitemap.xml and robots.txt.")
 
 
 if __name__ == "__main__":
