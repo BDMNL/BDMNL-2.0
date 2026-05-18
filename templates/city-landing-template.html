@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="keywords" content="{{meta_keywords}}" />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#F05A1A" />
+    <link rel="canonical" href="{{canonical_url}}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{asset_prefix}}assets/css/landing.css" />
+    <script type="application/ld+json">
+      {{service_schema}}
+    </script>
+    <script type="application/ld+json">
+      {{faq_schema}}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Direct naar inhoud</a>
+
+    <header class="site-header" data-header>
+      <nav class="nav container" aria-label="Hoofdnavigatie">
+        <a class="brand" href="{{asset_prefix}}" aria-label="BDMNL home">
+          <span class="brand-mark">BD</span>
+          <span class="brand-text">BDMNL</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          data-nav-toggle
+        >
+          <span class="sr-only">Menu openen</span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="primary-navigation" data-nav-menu>
+          <a href="#diensten">Diensten</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#proces">Proces</a>
+          <a href="#faq">FAQ</a>
+          <a class="nav-cta" href="#contact">Plan strategiegesprek</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-pad">
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">
+              <span></span>
+              Premium city landing page voor {{city}}
+            </p>
+            <h1>{{h1}}</h1>
+            <p class="hero-lead">{{hero_lead}}</p>
+
+            <div class="hero-actions" aria-label="Belangrijkste acties">
+              <a class="btn btn-primary" href="#contact">Start met {{city}}</a>
+              <a class="btn btn-secondary" href="#portfolio">Bekijk aanpak</a>
+            </div>
+
+            <dl class="hero-metrics" aria-label="BDMNL resultaten voor {{city}}">
+              <div>
+                <dt>{{metric_one_value}}</dt>
+                <dd>{{metric_one_label}}</dd>
+              </div>
+              <div>
+                <dt>{{metric_two_value}}</dt>
+                <dd>{{metric_two_label}}</dd>
+              </div>
+              <div>
+                <dt>SEO</dt>
+                <dd>lokale intentie eerst</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="Preview van BDMNL landingspagina voor {{city}}">
+            <div class="browser-card tilt-card">
+              <div class="browser-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="browser-content">
+                <div class="visual-pill">{{city}}</div>
+                <div class="visual-heading"></div>
+                <div class="visual-heading short"></div>
+                <div class="visual-body"></div>
+                <div class="visual-body narrow"></div>
+                <div class="visual-card-row">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="floating-card floating-card-top">
+              <span>SEO score</span>
+              <strong>97/100</strong>
+            </div>
+            <div class="floating-card floating-card-bottom">
+              <span>{{city}} leads</span>
+              <strong>{{lead_growth}}</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Waarom bedrijven in {{city}} voor BDMNL kiezen">
+        <div class="container trust-grid reveal">
+          <div>
+            <strong>Strategie</strong>
+            <span>{{strategy_point}}</span>
+          </div>
+          <div>
+            <strong>Design</strong>
+            <span>Premium Webflow-look</span>
+          </div>
+          <div>
+            <strong>SEO</strong>
+            <span>{{seo_point}}</span>
+          </div>
+          <div>
+            <strong>Conversie</strong>
+            <span>CTA's met duidelijke flow</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-transition">
+        <div class="container split-section">
+          <div class="section-intro reveal">
+            <p class="eyebrow"><span></span>Lokale groei in {{city}}</p>
+            <h2>{{intro_heading}}</h2>
+          </div>
+          <div class="rich-copy reveal">
+            <p>{{intro_copy_one}}</p>
+            <p>{{intro_copy_two}}</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="diensten">
+        <div class="container">
+          <div class="section-heading centered reveal">
+            <p class="eyebrow"><span></span>Diensten</p>
+            <h2>Alles wat een premium city landing page voor {{city}} nodig heeft.</h2>
+            <p>
+              Van strategie tot publicatie: elk onderdeel is ontworpen om lokale vindbaarheid,
+              merkperceptie en conversie tegelijk te versterken.
+            </p>
+          </div>
+
+          <div class="card-grid service-grid">
+            <article class="service-card reveal">
+              <span class="card-number">01</span>
+              <h3>Lokale SEO strategie</h3>
+              <p>{{service_one_copy}}</p>
+              <a href="#contact" aria-label="Bespreek lokale SEO strategie voor {{city}}">Bespreek strategie</a>
+            </article>
+            <article class="service-card reveal">
+              <span class="card-number">02</span>
+              <h3>High-end UX design</h3>
+              <p>{{service_two_copy}}</p>
+              <a href="#portfolio" aria-label="Bekijk UX voorbeelden voor {{city}}">Bekijk voorbeelden</a>
+            </article>
+            <article class="service-card reveal">
+              <span class="card-number">03</span>
+              <h3>Conversiegerichte CTA's</h3>
+              <p>{{service_three_copy}}</p>
+              <a href="#contact" aria-label="Optimaliseer CTA's voor {{city}}">Optimaliseer CTA's</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section portfolio" id="portfolio">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow"><span></span>Portfolio</p>
+            <h2>{{portfolio_heading}}</h2>
+          </div>
+
+          <div class="portfolio-grid">
+            <article class="portfolio-card portfolio-large reveal">
+              <div class="portfolio-preview premium-preview">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="portfolio-content">
+                <p>Case richting</p>
+                <h3>{{portfolio_case_one}}</h3>
+                <span>SEO structuur + conversie design</span>
+              </div>
+            </article>
+            <article class="portfolio-card reveal">
+              <div class="portfolio-preview orange-preview"></div>
+              <div class="portfolio-content">
+                <p>CTA concept</p>
+                <h3>{{portfolio_case_two}}</h3>
+                <span>Sticky CTA + korte proof points</span>
+              </div>
+            </article>
+            <article class="portfolio-card reveal">
+              <div class="portfolio-preview clean-preview"></div>
+              <div class="portfolio-content">
+                <p>Trust section</p>
+                <h3>{{portfolio_case_three}}</h3>
+                <span>Metrics, reviews en positionering</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section proof">
+        <div class="container proof-panel reveal">
+          <div class="proof-copy">
+            <p class="eyebrow"><span></span>Vertrouwen opbouwen</p>
+            <h2>{{proof_heading}}</h2>
+          </div>
+          <div class="proof-stats">
+            <div>
+              <strong>4.9/5</strong>
+              <span>Gemiddelde klantwaardering</span>
+            </div>
+            <div>
+              <strong>{{visibility_growth}}</strong>
+              <span>{{visibility_label}}</span>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <span>Pagina's gebouwd voor snelheid</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process" id="proces">
+        <div class="container">
+          <div class="section-heading centered reveal">
+            <p class="eyebrow"><span></span>Proces</p>
+            <h2>Van zoekintentie in {{city}} naar een premium pagina die klaar is om te schalen.</h2>
+          </div>
+
+          <div class="process-steps">
+            <article class="process-step reveal">
+              <span>01</span>
+              <h3>Positionering</h3>
+              <p>{{process_one}}</p>
+            </article>
+            <article class="process-step reveal">
+              <span>02</span>
+              <h3>Wireframe & copy</h3>
+              <p>{{process_two}}</p>
+            </article>
+            <article class="process-step reveal">
+              <span>03</span>
+              <h3>Design polish</h3>
+              <p>We voegen premium spacing, gradients, motion en moderne componenten toe.</p>
+            </article>
+            <article class="process-step reveal">
+              <span>04</span>
+              <h3>Launch & optimalisatie</h3>
+              <p>Na publicatie meten we engagement, snelheid en conversiepunten voor verdere groei.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-band">
+        <div class="container">
+          <div class="cta-panel reveal" id="contact">
+            <div>
+              <p class="eyebrow light"><span></span>Start jouw premium city page</p>
+              <h2>{{cta_heading}}</h2>
+              <p>{{cta_copy}}</p>
+            </div>
+            <form class="cta-form" action="#" method="post">
+              <label for="email">Zakelijk e-mailadres</label>
+              <div>
+                <input id="email" name="email" type="email" placeholder="jij@bedrijf.nl" required />
+                <button class="btn btn-dark" type="submit">Plan gesprek</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <div class="container faq-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow"><span></span>FAQ</p>
+            <h2>Veelgestelde vragen over webdesign en SEO in {{city}}.</h2>
+            <p>
+              Korte antwoorden op vragen die vaak ontstaan voordat bedrijven investeren in
+              lokale SEO pagina's en premium webdesign.
+            </p>
+          </div>
+
+          <div class="faq-list reveal">
+            {{faq_items}}
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="{{asset_prefix}}" aria-label="BDMNL home">
+            <span class="brand-mark">BD</span>
+            <span class="brand-text">BDMNL</span>
+          </a>
+          <p>Premium webdesign, SEO en city landing pages voor ambitieuze bedrijven.</p>
+        </div>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="#diensten">Diensten</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{asset_prefix}}assets/js/landing.js" defer></script>
+  </body>
+</html>
