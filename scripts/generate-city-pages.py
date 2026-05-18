@@ -102,7 +102,7 @@ def build_faqs(service: dict[str, Any], city: dict[str, Any]) -> list[dict[str, 
             ),
             (
                 "Combineert BDMNL SEO met webdesign?",
-                "Ja. SEO werkt sterker wanneer de pagina snel laadt, premium aanvoelt en bezoekers logisch naar contact of offerte leidt.",
+                "Ja. SEO werkt sterker wanneer de pagina snel laadt, duidelijk leest en bezoekers logisch naar contact of offerte leidt.",
             ),
         ],
         "social": [
@@ -137,8 +137,8 @@ def build_service_cards(service: dict[str, Any], city: dict[str, Any]) -> str:
         ),
         (
             "02",
-            "Premium uitvoering",
-            f"{service['label']} krijgt een high-end visuele laag met snelle performance, rustige typografie en sterke hiërarchie.",
+            "Strakke uitvoering",
+            f"{service['label']} krijgt een snelle Webflow-basis, rustige typografie en een duidelijke opbouw voor bezoekers.",
         ),
         (
             "03",
@@ -215,19 +215,19 @@ def build_faq_items(faqs: list[dict[str, str]]) -> str:
 def build_testimonial_cards(city: dict[str, Any], service: dict[str, Any]) -> str:
     testimonials = [
         (
-            f"De {service['label'].lower()} aanpak voelt premium en lokaal tegelijk. De pagina maakt direct duidelijk waarom klanten in {city['name']} contact opnemen.",
-            "Sanne de Vries",
-            f"Marketing lead, {city['name']}",
+            "BDMNL heeft onze website vernieuwd naar een moderne en gebruiksvriendelijke uitstraling. De communicatie verliep prettig en er werd snel geschakeld bij feedback of aanpassingen.",
+            "HV Helius",
+            "Lokale sportorganisatie",
         ),
         (
-            "BDMNL combineerde strategie, design en lokale SEO tot een systeem dat veel schaalbaarder is dan losse landingspagina's.",
-            "Milan Vermeer",
-            "Founder, groeibedrijf",
+            "Onze oude website was verouderd en niet goed vindbaar in Google. BDMNL heeft dit volledig vernieuwd met een frisse uitstraling en duidelijke structuur voor onze klanten.",
+            "Brielle Automotive",
+            "Autobedrijf",
         ),
         (
-            f"De interne links tussen website, SEO en social geven onze online aanwezigheid in {city['name']} veel meer structuur.",
-            "Nora Jansen",
-            "Commercial director",
+            "Dankzij BDMNL hebben wij nu een professionele website die niet alleen mooi oogt, maar ook beter gevonden wordt in Google. Fijn contact en snelle communicatie tijdens het hele traject.",
+            "Studio Brielle",
+            "Creatieve onderneming",
         ),
     ]
     return "\n".join(
@@ -248,7 +248,7 @@ def build_testimonial_cards(city: dict[str, Any], service: dict[str, Any]) -> st
 
 
 def build_marquee_items(city: dict[str, Any], service: dict[str, Any]) -> str:
-    items = [service["label"], city["name"], *city["areas"][:4], "Lokale SEO", "Premium UX", "Lead flow"]
+    items = [service["label"], city["name"], *city["areas"][:4], "Lokale SEO", "Snelle UX", "Lead flow"]
     return "\n".join(f"<span>{html(item)}</span>" for item in items)
 
 
@@ -272,11 +272,7 @@ def professional_service_schema(
             },
             "description": service["description_pattern"].format(city=city["name"]),
             "serviceType": service["service_type"],
-            "sameAs": [
-                "https://www.linkedin.com",
-                "https://www.instagram.com",
-                "https://www.facebook.com",
-            ],
+            "sameAs": [social["url"] for social in site["socials"]],
         }
     )
 
@@ -321,7 +317,12 @@ def footer_context(site: dict[str, Any], cities: list[dict[str, Any]], services:
         f'<a href="{page_href(site, page_slug(service, cities[0]))}">{html(service["label"])}</a>' for service in services
     )
     footer_internal_links = "\n".join(
-        f'<a href="{page_href(site, page_slug(service, cities[0]))}">{html(service["label"])}</a>' for service in services
+        [
+            '<a href="/contact/">Contact</a>',
+            '<a href="/privacyverklaring/">Privacyverklaring</a>',
+            '<a href="/cookiebeleid/">Cookiebeleid</a>',
+            '<a href="/algemene-voorwaarden/">Algemene voorwaarden</a>',
+        ]
     )
     return {
         "footer_city_links": footer_city_links,
@@ -371,7 +372,7 @@ def build_page_context(
         "stat_one_value": service["stat_one_value"],
         "stat_one_number": parse_percent(service["stat_one_value"]),
         "stat_one_prefix": "+" if service["stat_one_value"].startswith("+") else "",
-        "stat_one_suffix": "%" if service["stat_one_value"].endswith("%") else "",
+        "stat_one_suffix": "+" if service["stat_one_value"].endswith("+") else ("%" if service["stat_one_value"].endswith("%") else ""),
         "stat_one_label": service["stat_one_label"],
         "stat_two_value": service["stat_two_value"],
         "stat_two_label": service["stat_two_label"],
@@ -385,7 +386,7 @@ def build_page_context(
         "trust_strategy": f"Positionering voor {city['name']}",
         "trust_seo": f"Content voor {areas}",
         "marquee_items": build_marquee_items(city, service),
-        "intro_heading": f"{service['label']} {city['name']} met lokale relevantie en premium uitstraling.",
+        "intro_heading": f"{service['label']} {city['name']} met lokale relevantie en een professionele uitstraling.",
         "intro_copy_one": (
             f"In {city['name']} zoeken klanten anders dan in een landelijke markt. Daarom combineert BDMNL "
             f"{service['label'].lower()} met lokale content, technische SEO en een conversiegerichte flow."
@@ -400,27 +401,27 @@ def build_page_context(
         ),
         "services_heading": f"Wat BDMNL doet voor {service['label'].lower()} in {city['name']}.",
         "services_intro": (
-            f"Een schaalbare SEO pagina voor {city['name']} krijgt strategie, premium design, technische basis en "
+            f"Een schaalbare SEO pagina voor {city['name']} krijgt strategie, Webflow design, technische basis en "
             "interne links naar relevante diensten."
         ),
         "service_cards": build_service_cards(service, city),
-        "portfolio_heading": f"Premium preview richting voor {service['label'].lower()} in {city['name']}.",
+        "portfolio_heading": f"Voorbeeldrichting voor {service['label'].lower()} in {city['name']}.",
         "portfolio_intro": (
-            "Een lokale SEO pagina hoeft niet generiek te voelen. BDMNL combineert rustige visuele details, sterke CTA's "
-            "en bewijsvoering met een high-end agency uitstraling."
+            "Een lokale SEO pagina hoeft niet generiek te voelen. BDMNL combineert rustige visuele details, duidelijke CTA's "
+            "en bewijsvoering met de herkenbare uitstraling van de huidige BDMNL 2.0 website."
         ),
         "portfolio_case_one": f"{service['label']} {city['name']} met lokale hero en trust flow",
         "portfolio_case_one_label": f"SEO structuur + {keywords}",
         "portfolio_case_two": f"Mobiele lead flow voor bezoekers uit {city['name']}",
         "portfolio_case_three": f"Credibility systeem voor {city['market']}",
-        "proof_heading": f"Meer autoriteit in {city['name']} met lokale content, premium design en duidelijke CTA's.",
+        "proof_heading": f"Sterker online in {city['name']} met lokale content, Webflow, SEO en duidelijke CTA's.",
         "cluster_links": build_cluster_links(site, slug, city, services),
         "testimonial_heading": f"Waarom bedrijven kiezen voor BDMNL in {city['name']}.",
         "testimonial_cards": build_testimonial_cards(city, service),
-        "cta_heading": f"Klaar om {service['label'].lower()} in {city['name']} premium neer te zetten?",
+        "cta_heading": f"Klaar om {service['label'].lower()} in {city['name']} goed neer te zetten?",
         "cta_copy": (
-            f"Laat BDMNL een schaalbare lokale SEO pagina bouwen voor {city['name']} die past binnen een groter "
-            "website systeem met sterke interne links, schema data en conversiegerichte CTA's."
+            f"Laat BDMNL een lokale SEO pagina bouwen voor {city['name']} die past binnen je website, "
+            "met sterke interne links, schema data en duidelijke CTA's."
         ),
         "faq_heading": f"Veelgestelde vragen over {service['label'].lower()} in {city['name']}.",
         "faq_intro": "Antwoorden op lokale SEO vragen voordat je investeert in een schaalbare landingspagina.",
@@ -449,14 +450,15 @@ def render_full_page(
             "related_city_links",
         },
     )
+    header_html = render(header, {"asset_prefix": context["asset_prefix"]})
     footer_html = render(
         footer,
-        footer_ctx,
+        {**footer_ctx, "asset_prefix": context["asset_prefix"]},
         raw_keys={"footer_city_links", "footer_service_links", "footer_internal_links"},
     )
     full_context = {
         **context,
-        "global_header": header,
+        "global_header": header_html,
         "global_footer": footer_html,
         "page_content": page_content.strip(),
     }
@@ -509,11 +511,11 @@ def build_homepage(
 <section class="hero section-pad">
   <div class="container">
     <p class="eyebrow"><span></span>BDMNL SEO systeem</p>
-    <h1>Premium lokale SEO landingspagina's die schaalbaar blijven.</h1>
-    <p class="hero-lead">Een productieklare structuur voor website, SEO en social media clusters per stad, inclusief schema data, interne links, sitemap en gedeelde componenten.</p>
+    <h1>Lokale SEO pagina's in één helder BDMNL systeem.</h1>
+    <p class="hero-lead">Een vaste structuur voor Webflow, SEO en social media pagina's per stad, met gedeelde componenten, interne links en nette technische SEO.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="{page_href(site, page_slug(services[0], cities[0]))}" data-magnetic>Bekijk cluster</a>
-      <a class="btn btn-secondary" href="/sitemap.xml" data-magnetic>Open sitemap</a>
+      <a class="btn btn-secondary" href="/contact/" data-magnetic>Neem contact op</a>
     </div>
   </div>
 </section>
@@ -533,8 +535,8 @@ def build_homepage(
   <div class="container">
     <div class="section-heading reveal">
       <p class="eyebrow"><span></span>Cases</p>
-      <h2>Een schaalbaar systeem voor lokale zichtbaarheid.</h2>
-      <p>Dezelfde premium BDMNL header, footer, interacties en SEO basis worden automatisch toegepast op elke gegenereerde landingspagina.</p>
+      <h2>Een vaste basis voor lokale zichtbaarheid.</h2>
+      <p>Dezelfde BDMNL header, footer, interacties en SEO basis worden automatisch toegepast op elke gegenereerde pagina.</p>
     </div>
   </div>
 </section>
@@ -567,7 +569,7 @@ def build_homepage(
       <form class="cta-form" action="#" method="post">
         <label for="email">Zakelijk e-mailadres</label>
         <div>
-          <input id="email" name="email" type="email" placeholder="jij@bedrijf.nl" required />
+          <input id="email" name="email" type="email" required />
           <button class="btn btn-dark" type="submit">Plan gesprek</button>
         </div>
       </form>
@@ -580,11 +582,11 @@ def build_homepage(
         "asset_prefix": "./",
         "canonical_url": f"{site['base_url']}/",
         "og_title": "BDMNL lokaal SEO systeem",
-        "og_description": "Premium lokale SEO landingspagina's per stad en dienst.",
+        "og_description": "Lokale SEO pagina's per stad en dienst binnen één gedeelde BDMNL structuur.",
         "twitter_title": "BDMNL lokaal SEO systeem",
-        "twitter_description": "Premium lokale SEO landingspagina's per stad en dienst.",
+        "twitter_description": "Lokale SEO pagina's per stad en dienst binnen één gedeelde BDMNL structuur.",
         "og_image": site["og_image"],
-        "meta_title": "BDMNL lokaal SEO systeem | Premium landingspagina clusters",
+        "meta_title": "BDMNL lokaal SEO systeem | Webflow, SEO en online groei",
         "meta_description": "BDMNL bouwt schaalbare lokale SEO clusters voor websites, SEO en social media beheer in Brielle, Hellevoetsluis, Rockanje, Spijkenisse en Rotterdam.",
         "professional_service_schema": empty_schema,
         "faq_schema": json_script({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": []}),
@@ -595,10 +597,145 @@ def build_homepage(
                 "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site['base_url']}/"}],
             }
         ),
-        "global_header": header,
+        "global_header": render(header, {"asset_prefix": "./"}),
         "global_footer": render(
             footer,
-            footer_ctx,
+            {**footer_ctx, "asset_prefix": "./"},
+            raw_keys={"footer_city_links", "footer_service_links", "footer_internal_links"},
+        ),
+        "page_content": page_content.strip(),
+    }
+    return GENERATED_MARKER + "\n" + render(
+        layout,
+        full_context,
+        raw_keys={"global_header", "global_footer", "page_content", "professional_service_schema", "faq_schema", "breadcrumb_schema"},
+    )
+
+
+SUPPORT_PAGES = [
+    {
+        "slug": "contact",
+        "title": "Contact opnemen met BDMNL | Webdesign, SEO & online marketing",
+        "description": "Neem contact op met BDMNL in Brielle voor Webflow websites, SEO, branding, social media en online marketing.",
+        "h1": "Neem contact op met BDMNL.",
+        "body": (
+            "Heb je een vraag over een website, webshop, branding, SEO of online marketing? "
+            "Stuur BDMNL een bericht of plan een vrijblijvend gesprek. We denken praktisch met je mee over de volgende stap."
+        ),
+    },
+    {
+        "slug": "privacyverklaring",
+        "title": "Privacyverklaring | BDMNL",
+        "description": "Lees hoe BDMNL omgaat met persoonsgegevens, contactaanvragen en gegevens die nodig zijn voor onze dienstverlening.",
+        "h1": "Privacyverklaring.",
+        "body": (
+            "BDMNL gaat zorgvuldig om met persoonsgegevens die je actief met ons deelt, bijvoorbeeld via contactformulieren, "
+            "offerteaanvragen of e-mail. Gegevens worden gebruikt om vragen te beantwoorden, afspraken te maken en diensten uit te voeren."
+        ),
+    },
+    {
+        "slug": "cookiebeleid",
+        "title": "Cookiebeleid | BDMNL",
+        "description": "Lees hoe BDMNL cookies gebruikt voor een goed werkende website, analyse en verbetering van online ervaring.",
+        "h1": "Cookiebeleid.",
+        "body": (
+            "BDMNL gebruikt cookies en vergelijkbare technieken om de website goed te laten werken en waar nodig prestaties te meten. "
+            "Je kunt cookies beheren via je browserinstellingen."
+        ),
+    },
+    {
+        "slug": "algemene-voorwaarden",
+        "title": "Algemene voorwaarden | BDMNL",
+        "description": "Bekijk de algemene uitgangspunten voor samenwerking met BDMNL rond webdesign, SEO en online marketing.",
+        "h1": "Algemene voorwaarden.",
+        "body": (
+            "Voor projecten met BDMNL maken we duidelijke afspraken over scope, planning, oplevering, betaling en verantwoordelijkheden. "
+            "Bij een offerte of opdrachtbevestiging ontvang je de voorwaarden die op jouw project van toepassing zijn."
+        ),
+    },
+]
+
+
+def build_support_page(
+    layout: str,
+    header: str,
+    footer: str,
+    footer_ctx: dict[str, str],
+    site: dict[str, Any],
+    page: dict[str, str],
+) -> str:
+    asset_prefix = "../"
+    contact_cards = ""
+    if page["slug"] == "contact":
+        contact_cards = f"""
+    <div class="card-grid service-grid">
+      <article class="service-card reveal">
+        <span class="card-number">Mail</span>
+        <h2>E-mail</h2>
+        <p><a href="mailto:{html(site['email'])}">{html(site['email'])}</a></p>
+      </article>
+      <article class="service-card reveal">
+        <span class="card-number">Bel</span>
+        <h2>Telefoon</h2>
+        <p><a href="tel:{html(site['phone_href'])}">{html(site['phone'])}</a></p>
+      </article>
+      <article class="service-card reveal">
+        <span class="card-number">Adres</span>
+        <h2>Brielle</h2>
+        <p>{html(site['address'])}</p>
+      </article>
+    </div>
+"""
+    page_content = f"""
+<section class="hero section-pad">
+  <div class="container">
+    <p class="eyebrow"><span></span>BDMNL</p>
+    <h1>{html(page['h1'])}</h1>
+    <p class="hero-lead">{html(page['body'])}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mailto:{html(site['email'])}" data-magnetic>Stuur een e-mail</a>
+      <a class="btn btn-secondary" href="/sitemap.xml" data-magnetic>Bekijk sitemap</a>
+    </div>
+{contact_cards}
+  </div>
+</section>
+"""
+    web_page_schema = json_script(
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": page["title"],
+            "url": f"{site['base_url']}/{page['slug']}/",
+            "description": page["description"],
+        }
+    )
+    breadcrumb = json_script(
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site['base_url']}/"},
+                {"@type": "ListItem", "position": 2, "name": page["h1"].rstrip("."), "item": f"{site['base_url']}/{page['slug']}/"},
+            ],
+        }
+    )
+    full_context = {
+        "asset_prefix": asset_prefix,
+        "canonical_url": f"{site['base_url']}/{page['slug']}/",
+        "og_title": page["title"],
+        "og_description": page["description"],
+        "twitter_title": page["title"],
+        "twitter_description": page["description"],
+        "og_image": site["og_image"],
+        "meta_title": page["title"],
+        "meta_description": page["description"],
+        "professional_service_schema": web_page_schema,
+        "faq_schema": json_script({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": []}),
+        "breadcrumb_schema": breadcrumb,
+        "global_header": render(header, {"asset_prefix": asset_prefix}),
+        "global_footer": render(
+            footer,
+            {**footer_ctx, "asset_prefix": asset_prefix},
             raw_keys={"footer_city_links", "footer_service_links", "footer_internal_links"},
         ),
         "page_content": page_content.strip(),
@@ -632,9 +769,10 @@ def remove_legacy_generated_pages(site: dict[str, Any], services: list[dict[str,
             shutil.rmtree(child)
 
 
-def write_sitemap(site: dict[str, Any], slugs: list[str]) -> None:
+def write_sitemap(site: dict[str, Any], slugs: list[str], support_slugs: list[str]) -> None:
     today = date.today().isoformat()
     urls = [f"{site['base_url']}/"] + [page_url(site, slug) for slug in slugs]
+    urls.extend(f"{site['base_url']}/{slug}/" for slug in support_slugs)
     entries = "\n".join(
         "\n".join(
             [
@@ -695,7 +833,16 @@ def main() -> None:
         build_homepage(layout, header, footer, footer_ctx, site, cities, services),
         encoding="utf-8",
     )
-    write_sitemap(site, slugs)
+
+    for page in SUPPORT_PAGES:
+        output_dir = ROOT / page["slug"]
+        output_dir.mkdir(parents=True, exist_ok=True)
+        (output_dir / "index.html").write_text(
+            build_support_page(layout, header, footer, footer_ctx, site, page),
+            encoding="utf-8",
+        )
+
+    write_sitemap(site, slugs, [page["slug"] for page in SUPPORT_PAGES])
     write_robots(site)
     print(f"Generated {len(slugs)} SEO cluster pages, sitemap.xml and robots.txt.")
 
