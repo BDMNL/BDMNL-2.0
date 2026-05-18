@@ -1,0 +1,126 @@
+{
+  "site": {
+    "base_url": "https://bdmnl.nl",
+    "name": "BDMNL",
+    "email": "info@bdmnl.nl",
+    "phone": "+31 10 307 00 00",
+    "phone_href": "+31103070000",
+    "og_image": "https://bdmnl.nl/assets/og/bdmnl-premium-seo.jpg"
+  },
+  "cities": [
+    {
+      "name": "Brielle",
+      "slug": "brielle",
+      "region": "Zuid-Holland",
+      "market": "historische vestingstad met actieve MKB-bedrijven, horeca en lokale dienstverleners",
+      "areas": ["Brielle Centrum", "Vierpolders", "Zwartewaal", "Nieuwland", "Meeuwenoord"],
+      "intent": "lokale ondernemers die professioneel zichtbaar willen zijn op Voorne-Putten"
+    },
+    {
+      "name": "Hellevoetsluis",
+      "slug": "hellevoetsluis",
+      "region": "Zuid-Holland",
+      "market": "groeiende ondernemersmarkt rond haven, retail, zorg en zakelijke dienstverlening",
+      "areas": ["Centrum", "De Struyten", "Ravense Hoek", "Nieuwenhoorn", "Kickestein"],
+      "intent": "bedrijven die lokaal meer aanvragen willen uit Hellevoetsluis en omliggende wijken"
+    },
+    {
+      "name": "Rockanje",
+      "slug": "rockanje",
+      "region": "Zuid-Holland",
+      "market": "kustplaats met recreatie, hospitality, retail en lokale services",
+      "areas": ["Rockanje Dorp", "Tweede Slag", "Badhotelgebied", "Olaertsduyn", "Tinte"],
+      "intent": "ondernemers die seizoensvraag en lokale vindbaarheid willen omzetten in boekingen en leads"
+    },
+    {
+      "name": "Spijkenisse",
+      "slug": "spijkenisse",
+      "region": "Zuid-Holland",
+      "market": "stedelijke markt met veel concurrentie in dienstverlening, retail en B2B",
+      "areas": ["Centrum", "De Akkers", "Maaswijk", "Schenkel", "Vierambachten"],
+      "intent": "bedrijven die beter gevonden willen worden door klanten in Nissewaard"
+    },
+    {
+      "name": "Rotterdam",
+      "slug": "rotterdam",
+      "region": "Zuid-Holland",
+      "market": "competitieve grootstedelijke markt met scale-ups, havenbedrijven en zakelijke dienstverleners",
+      "areas": ["Centrum", "Kop van Zuid", "Kralingen", "Delfshaven", "Spaanse Polder"],
+      "intent": "ambitieuze teams die premium merkperceptie willen combineren met meetbare online groei"
+    }
+  ],
+  "services": [
+    {
+      "key": "website",
+      "slug_prefix": "website-laten-maken",
+      "label": "Website laten maken",
+      "badge": "Webdesign",
+      "title_pattern": "Website laten maken {city} | Premium webdesign door BDMNL",
+      "description_pattern": "Website laten maken in {city}? BDMNL bouwt premium, snelle en SEO-vriendelijke websites met sterke CTA's, lokale content en conversiegerichte UX.",
+      "h1_pattern": "Website laten maken {city} voor merken die premium willen groeien.",
+      "hero_pattern": "BDMNL ontwerpt en bouwt high-end websites voor bedrijven in {city}. Denk aan moderne typografie, sterke merkbeleving, lokale SEO en een conversieroute die bezoekers logisch naar contact brengt.",
+      "primary_cta": "Plan website strategie",
+      "stat_one_value": "+41%",
+      "stat_one_label": "meer aanvraagkwaliteit",
+      "stat_two_value": "1.9s",
+      "stat_two_label": "performance-first opbouw",
+      "stat_three_value": "+64%",
+      "stat_three_label": "meer organische zichtbaarheid",
+      "floating_one_label": "UX score",
+      "floating_one_value": "Premium",
+      "floating_two_label": "Nieuwe leads",
+      "floating_two_value": "+41%",
+      "faq_seed": "website",
+      "keywords": ["webdesign", "website laten maken", "website ontwikkeling"],
+      "service_type": "Website development"
+    },
+    {
+      "key": "seo",
+      "slug_prefix": "seo-bureau",
+      "label": "SEO bureau",
+      "badge": "SEO 97",
+      "title_pattern": "SEO bureau {city} | Lokale SEO strategie door BDMNL",
+      "description_pattern": "Zoek je een SEO bureau in {city}? BDMNL bouwt lokale SEO clusters, technische optimalisatie en premium landingspagina's voor duurzame organische groei.",
+      "h1_pattern": "SEO bureau {city} voor lokale zichtbaarheid die vertrouwen opbouwt.",
+      "hero_pattern": "BDMNL helpt bedrijven in {city} groeien met lokale SEO strategie, technische optimalisatie, contentclusters en landingspagina's die premium aanvoelen en meetbaar converteren.",
+      "primary_cta": "Plan SEO groeisessie",
+      "stat_one_value": "+58%",
+      "stat_one_label": "meer lokale zichtbaarheid",
+      "stat_two_value": "SEO",
+      "stat_two_label": "clusterstrategie",
+      "stat_three_value": "+71%",
+      "stat_three_label": "meer organische groei",
+      "floating_one_label": "Ranking focus",
+      "floating_one_value": "Top 3",
+      "floating_two_label": "SEO cluster",
+      "floating_two_value": "3 pagina's",
+      "faq_seed": "seo",
+      "keywords": ["SEO bureau", "lokale SEO", "zoekmachine optimalisatie"],
+      "service_type": "SEO strategy"
+    },
+    {
+      "key": "social",
+      "slug_prefix": "social-media-beheer",
+      "label": "Social media beheer",
+      "badge": "Social",
+      "title_pattern": "Social media beheer {city} | Premium content door BDMNL",
+      "description_pattern": "Social media beheer in {city}? BDMNL ontwikkelt premium content, consistente campagnes en lokale zichtbaarheid die past bij jouw merk en doelgroep.",
+      "h1_pattern": "Social media beheer {city} voor merken die zichtbaar en consistent willen zijn.",
+      "hero_pattern": "BDMNL verzorgt social media beheer voor bedrijven in {city}: strategie, contentplanning, premium visuals, lokale campagnes en een duidelijke koppeling met website en SEO.",
+      "primary_cta": "Plan content intake",
+      "stat_one_value": "+36%",
+      "stat_one_label": "meer content engagement",
+      "stat_two_value": "30d",
+      "stat_two_label": "contentplanning",
+      "stat_three_value": "+48%",
+      "stat_three_label": "meer merkinteractie",
+      "floating_one_label": "Content ritme",
+      "floating_one_value": "Consistent",
+      "floating_two_label": "Campagne flow",
+      "floating_two_value": "+36%",
+      "faq_seed": "social",
+      "keywords": ["social media beheer", "content marketing", "social strategie"],
+      "service_type": "Social media management"
+    }
+  ]
+}

@@ -1,292 +1,620 @@
 #!/usr/bin/env python3
-"""Generate SEO city landing pages from the reusable BDMNL template."""
+"""Generate the scalable BDMNL local SEO website system."""
 
 from __future__ import annotations
 
 import json
+import shutil
+from datetime import date
 from html import escape
 from pathlib import Path
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TEMPLATE_PATH = ROOT / "templates" / "city-landing-template.html"
-DATA_PATH = ROOT / "data" / "cities.json"
-BASE_URL = "https://bdmnl.nl"
+DATA_PATH = ROOT / "data" / "seo-system.json"
+LAYOUT_PATH = ROOT / "templates" / "layout.html"
+PAGE_TEMPLATE_PATH = ROOT / "templates" / "pages" / "seo-cluster-page.html"
+HEADER_PATH = ROOT / "templates" / "components" / "header.html"
+FOOTER_PATH = ROOT / "templates" / "components" / "footer.html"
+GENERATED_MARKER = "<!-- generated-by: bdmnl-seo-system -->"
 
 
 def html(value: Any) -> str:
     return escape(str(value), quote=True)
 
 
-def build_faqs(city: str, market: str) -> list[dict[str, str]]:
-    return [
-        {
-            "question": f"Waarom heeft mijn bedrijf in {city} een city landing page nodig?",
-            "answer": (
-                f"Een city landing page koppelt jouw aanbod aan de zoekintentie in {city}. "
-                f"Daardoor zien bezoekers sneller dat je past bij hun lokale vraag en wordt de pagina relevanter voor SEO."
-            ),
-        },
-        {
-            "question": f"Blijft de pagina uniek voor {city}?",
-            "answer": (
-                f"Ja. De metadata, canonicals, headings, lokale tekstblokken, FAQ's en bewijsvoering worden afgestemd "
-                f"op {city} en de {market}."
-            ),
-        },
-        {
-            "question": "Is het design geschikt voor mobiele bezoekers?",
-            "answer": (
-                "Ja. De template gebruikt compacte CTA's, responsive kaarten, duidelijke typografie en lichte animaties "
-                "die ook op kleinere schermen premium blijven aanvoelen."
-            ),
-        },
-        {
-            "question": "Kan dezelfde template worden gebruikt voor meerdere steden?",
-            "answer": (
-                "Ja. De design system componenten blijven consistent, terwijl elke pagina unieke lokale content, "
-                "schema data en canonical URL's krijgt."
-            ),
-        },
-    ]
+def json_script(data: dict[str, Any]) -> str:
+    return json.dumps(data, ensure_ascii=False, indent=6)
 
 
-def build_faq_items(faqs: list[dict[str, str]]) -> str:
-    items = []
-    for faq in faqs:
-        items.append(
-            "\n".join(
-                [
-                    '            <article class="faq-item">',
-                    f'              <button type="button" aria-expanded="false">{html(faq["question"])}<span></span></button>',
-                    '              <div class="faq-answer">',
-                    f'                <p>{html(faq["answer"])}</p>',
-                    "              </div>",
-                    "            </article>",
-                ]
-            )
-        )
-    return "\n".join(items)
-
-
-def build_service_schema(city_data: dict[str, str], canonical_url: str) -> str:
-    schema = {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "BDMNL",
-        "url": canonical_url,
-        "areaServed": {
-            "@type": "City",
-            "name": city_data["city"],
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "addressRegion": city_data["region"],
-            "addressCountry": "NL",
-        },
-        "description": (
-            f"Premium webdesign, SEO en conversiegerichte city landing pages voor bedrijven in {city_data['city']}."
-        ),
-        "serviceType": [
-            "Webdesign",
-            "SEO strategie",
-            "Landing page design",
-            "Website development",
-        ],
-        "sameAs": [BASE_URL],
-    }
-    return json.dumps(schema, ensure_ascii=False, indent=6)
-
-
-def build_faq_schema(faqs: list[dict[str, str]]) -> str:
-    schema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": faq["question"],
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": faq["answer"],
-                },
-            }
-            for faq in faqs
-        ],
-    }
-    return json.dumps(schema, ensure_ascii=False, indent=6)
-
-
-def build_page_context(city_data: dict[str, str]) -> dict[str, str]:
-    city = city_data["city"]
-    slug = city_data["slug"]
-    market = city_data["market"]
-    audience = city_data["audience"]
-    local_focus = city_data["local_focus"]
-    canonical_url = f"{BASE_URL}/{slug}/"
-    faqs = build_faqs(city, market)
-    lead_growth_number = city_data["lead_growth"].lstrip("+").rstrip("%")
-    visibility_growth_number = city_data["visibility_growth"].lstrip("+").rstrip("%")
-
-    return {
-        "asset_prefix": "../",
-        "canonical_url": canonical_url,
-        "city": city,
-        "city_slug": slug,
-        "meta_title": f"Webdesign {city} | Premium websites door BDMNL",
-        "meta_description": (
-            f"BDMNL bouwt premium websites en SEO city landing pages voor bedrijven in {city}. "
-            f"Moderne typografie, sterke CTA's, lokale content en conversiegericht design."
-        ),
-        "meta_keywords": (
-            f"webdesign {city}, SEO {city}, landingspagina {city}, website laten maken {city}, BDMNL"
-        ),
-        "service_schema": build_service_schema(city_data, canonical_url),
-        "faq_schema": build_faq_schema(faqs),
-        "faq_items": build_faq_items(faqs),
-        "h1": f"Webdesign {city} voor merken die lokaal premium willen overkomen.",
-        "hero_lead": (
-            f"BDMNL ontwerpt snelle, SEO-geoptimaliseerde landingspagina's voor {city} met de visuele "
-            f"klasse van een high-end agency website en de structuur die bezoekers overtuigt."
-        ),
-        "metric_one_value": city_data["metric_one_value"],
-        "metric_one_label": city_data["metric_one_label"],
-        "metric_two_value": city_data["metric_two_value"],
-        "metric_two_label": city_data["metric_two_label"],
-        "lead_growth": city_data["lead_growth"],
-        "lead_growth_number": lead_growth_number,
-        "strategy_point": f"Positionering voor {city}",
-        "seo_point": f"Content voor {local_focus}",
-        "intro_heading": f"Een {city} pagina die niet voelt als een standaard SEO-template.",
-        "intro_copy_one": (
-            f"In de {market} vergelijken bezoekers snel. Een premium city page moet daarom niet alleen vindbaar zijn, "
-            f"maar ook direct vertrouwen geven met duidelijke copy, rustige spacing en visuele autoriteit."
-        ),
-        "intro_copy_two": (
-            f"Voor {audience} in {city} combineren we lokale relevantie met een moderne design flow: sterke hero, "
-            f"bewijsvoering, servicekaarten, portfolio richting en FAQ's die drempels wegnemen."
-        ),
-        "service_one_copy": (
-            f"Zoekintentie, contentblokken en interne links worden afgestemd op {city}, {local_focus} en de diensten "
-            "waar jouw ideale klant actief naar zoekt."
-        ),
-        "service_two_copy": (
-            f"Ruime layouts, premium micro-interacties en een moderne visuele hierarchie geven jouw merk in {city} "
-            "direct meer autoriteit."
-        ),
-        "service_three_copy": (
-            f"CTA's, proof points en FAQ's worden slim geplaatst zodat bezoekers uit {city} logisch doorgroeien naar "
-            "aanvraag, intake of offerte."
-        ),
-        "portfolio_heading": f"Visuele richting voor {city} city pages met agency-level uitstraling.",
-        "portfolio_case_one": f"{city} service page met sterke hero en trust flow",
-        "portfolio_case_two": f"Compacte lead flow voor mobiele bezoekers in {city}",
-        "portfolio_case_three": f"Premium bewijsvoering voor {audience}",
-        "proof_heading": f"Meer autoriteit in {city} met rustige details, duidelijke claims en lokale focus.",
-        "visibility_growth": city_data["visibility_growth"],
-        "visibility_growth_number": visibility_growth_number,
-        "visibility_label": city_data["visibility_label"],
-        "testimonial_one": (
-            f"De {city} pagina voelt veel premiumer zonder SEO-focus te verliezen. De flow maakt meteen duidelijk "
-            "waarom bezoekers contact moeten opnemen."
-        ),
-        "testimonial_one_name": "Sanne de Vries",
-        "testimonial_one_role": f"Marketing lead, {city}",
-        "testimonial_two": (
-            "BDMNL combineerde strategie, visueel design en lokale copy tot een pagina die aanvoelt als een "
-            "high-end agency website."
-        ),
-        "testimonial_two_name": "Milan Vermeer",
-        "testimonial_two_role": "Founder, groeibedrijf",
-        "testimonial_three": (
-            f"De nieuwe trust sections en CTA's geven onze propositie in {city} veel meer rust, ritme en overtuiging."
-        ),
-        "testimonial_three_name": "Nora Jansen",
-        "testimonial_three_role": "Commercial director",
-        "process_one": (
-            f"We bepalen welke lokale behoefte, propositie en bewijsvoering in {city} centraal moeten staan."
-        ),
-        "process_two": (
-            f"De pagina krijgt een SEO-vriendelijke flow met sterke headings, lokale {city} content, CTA's en FAQ's."
-        ),
-        "cta_heading": f"Klaar om in {city} meer vertrouwen en betere leads te winnen?",
-        "cta_copy": (
-            f"Laat BDMNL een landingspagina voor {city} ontwerpen die er premium uitziet, technisch strak staat en "
-            "bezoekers richting actie brengt."
-        ),
-    }
-
-
-def render_template(template: str, context: dict[str, str]) -> str:
+def render(template: str, context: dict[str, str], raw_keys: set[str] | None = None) -> str:
+    raw_keys = raw_keys or set()
     rendered = template
     for key, value in context.items():
-        if key in {"service_schema", "faq_schema", "faq_items"}:
-            replacement = value
-        else:
-            replacement = html(value)
+        replacement = value if key in raw_keys else html(value)
         rendered = rendered.replace(f"{{{{{key}}}}}", replacement)
 
     leftovers = [part for part in rendered.split("{{") if "}}" in part]
     if leftovers:
-        raise ValueError(f"Unresolved template tokens: {leftovers[:3]}")
+        raise ValueError(f"Unresolved template tokens: {leftovers[:5]}")
 
     return rendered
 
 
-def build_index(cities: list[dict[str, str]]) -> str:
-    links = "\n".join(
-        f'          <a class="service-card" href="./{html(city["slug"])}/">'
-        f'<span class="card-number">{index:02d}</span><h3>Webdesign {html(city["city"])}</h3>'
-        f'<p>Premium SEO city landing page voor {html(city["city"])}.</p></a>'
-        for index, city in enumerate(cities, start=1)
+def page_slug(service: dict[str, Any], city: dict[str, Any]) -> str:
+    return f"{service['slug_prefix']}-{city['slug']}"
+
+
+def page_url(base_url: str, slug: str) -> str:
+    return f"{base_url}/{slug}/"
+
+
+def page_href(slug: str) -> str:
+    return f"/{slug}/"
+
+
+def parse_percent(value: str) -> str:
+    return value.replace("+", "").replace("%", "")
+
+
+def build_faqs(service: dict[str, Any], city: dict[str, Any]) -> list[dict[str, str]]:
+    city_name = city["name"]
+    areas = ", ".join(city["areas"][:3])
+    service_label = service["label"].lower()
+
+    faq_sets = {
+        "website": [
+            (
+                f"Wat kost een website laten maken in {city_name}?",
+                f"De investering hangt af van het aantal pagina's, gewenste functies en SEO-ambitie. BDMNL start met strategie zodat de website voor {city_name} niet alleen mooi is, maar ook gericht is op aanvragen.",
+            ),
+            (
+                f"Wordt mijn website geoptimaliseerd voor lokale vindbaarheid in {city_name}?",
+                f"Ja. We verwerken lokale zoekintentie, interne links, technische SEO en content voor gebieden zoals {areas}.",
+            ),
+            (
+                "Kan BDMNL ook teksten en CTA's verzorgen?",
+                "Ja. De website krijgt conversiegerichte copy, duidelijke CTA's en FAQ's die passen bij jouw doelgroep en dienstaanbod.",
+            ),
+            (
+                "Is de website geschikt om later uit te breiden met SEO pagina's?",
+                "Ja. De structuur is modulair opgebouwd zodat extra diensten, steden en SEO clusters later schaalbaar toegevoegd kunnen worden.",
+            ),
+        ],
+        "seo": [
+            (
+                f"Wat doet een SEO bureau in {city_name} precies?",
+                f"BDMNL onderzoekt lokale zoekintentie, verbetert techniek, bouwt contentclusters en optimaliseert pagina's voor diensten in {city_name}.",
+            ),
+            (
+                f"Hoe snel zie ik resultaat met SEO in {city_name}?",
+                "SEO is afhankelijk van concurrentie, techniek en contentkwaliteit. We richten ons op duurzame groei met meetbare verbeteringen in zichtbaarheid, rankings en aanvragen.",
+            ),
+            (
+                f"Welke lokale gebieden neemt BDMNL mee voor {city_name}?",
+                f"We kijken naar relevante wijken en plaatsen zoals {areas}, plus zoekopdrachten met commerciële intentie.",
+            ),
+            (
+                "Combineert BDMNL SEO met webdesign?",
+                "Ja. SEO werkt sterker wanneer de pagina snel laadt, premium aanvoelt en bezoekers logisch naar contact of offerte leidt.",
+            ),
+        ],
+        "social": [
+            (
+                f"Wat valt onder social media beheer in {city_name}?",
+                "BDMNL helpt met strategie, contentplanning, visuals, captions, campagneformats en consistente publicatie voor lokale zichtbaarheid.",
+            ),
+            (
+                "Kan social media worden gekoppeld aan SEO en website aanvragen?",
+                "Ja. We zorgen dat social content aansluit op landingspagina's, CTA's en lokale thema's zodat kanalen elkaar versterken.",
+            ),
+            (
+                f"Maakt BDMNL lokale content voor {city_name}?",
+                f"Ja. Content kan inspelen op lokale context, doelgroepen en gebieden zoals {areas}, zonder generiek te voelen.",
+            ),
+            (
+                "Is social media beheer geschikt voor MKB-bedrijven?",
+                "Ja. Vooral bedrijven die consistent zichtbaar willen blijven zonder elke week zelf content te bedenken profiteren van een vaste contentflow.",
+            ),
+        ],
+    }
+
+    return [{"question": question, "answer": answer} for question, answer in faq_sets[service["faq_seed"]]]
+
+
+def build_service_cards(service: dict[str, Any], city: dict[str, Any]) -> str:
+    cards = [
+        (
+            "01",
+            "Lokale strategie",
+            f"We vertalen de zoekintentie in {city['name']} naar een paginaflow met duidelijke propositie, trust en CTA's.",
+        ),
+        (
+            "02",
+            "Premium uitvoering",
+            f"{service['label']} krijgt een high-end visuele laag met snelle performance, rustige typografie en sterke hiërarchie.",
+        ),
+        (
+            "03",
+            "Conversie en groei",
+            "We sturen bezoekers naar intake, offerte of contact met bewijsvoering, FAQ's en interne links naar verwante diensten.",
+        ),
+    ]
+    return "\n".join(
+        "\n".join(
+            [
+                '      <article class="service-card reveal">',
+                f"        <span class=\"card-number\">{number}</span>",
+                '        <div class="service-icon" aria-hidden="true"></div>',
+                f"        <h3>{html(title)}</h3>",
+                f"        <p>{html(copy)}</p>",
+                '        <a href="#contact">Bespreek aanpak</a>',
+                "      </article>",
+            ]
+        )
+        for number, title, copy in cards
     )
 
-    return f"""<!doctype html>
-<html lang="nl">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BDMNL city landing pages | Premium SEO webdesign</title>
-    <meta name="description" content="Bekijk de premium BDMNL city landing pages voor SEO webdesign in Nederlandse steden." />
-    <meta name="robots" content="index,follow" />
-    <meta name="theme-color" content="#F05A1A" />
-    <link rel="canonical" href="{BASE_URL}/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/landing.css" />
-  </head>
-  <body>
-    <main id="main">
-      <section class="hero section-pad">
-        <div class="container">
-          <p class="eyebrow"><span></span>BDMNL city pages</p>
-          <h1>Premium SEO landingspagina's per stad.</h1>
-          <p class="hero-lead">Een overzicht van gegenereerde city landing pages met moderne typografie, CTA's, trust sections, portfolio richting en FAQ accordions.</p>
-          <div class="card-grid service-grid">
-{links}
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
-</html>
+
+def build_cluster_links(current_slug: str, city: dict[str, Any], services: list[dict[str, Any]]) -> str:
+    cards = []
+    for index, service in enumerate(services, start=1):
+        slug = page_slug(service, city)
+        active = " is-active" if slug == current_slug else ""
+        cards.append(
+            "\n".join(
+                [
+                    f'      <a class="service-card related-card{active} reveal" href="{page_href(slug)}">',
+                    f'        <span class="card-number">{index:02d}</span>',
+                    '        <div class="service-icon" aria-hidden="true"></div>',
+                    f"        <h3>{html(service['label'])} {html(city['name'])}</h3>",
+                    f"        <p>{html(service['description_pattern'].format(city=city['name']))}</p>",
+                    "      </a>",
+                ]
+            )
+        )
+    return "\n".join(cards)
+
+
+def build_related_city_links(service: dict[str, Any], current_city: dict[str, Any], cities: list[dict[str, Any]]) -> str:
+    links = []
+    for city in cities:
+        if city["slug"] == current_city["slug"]:
+            continue
+        slug = page_slug(service, city)
+        links.append(f'<a href="{page_href(slug)}">{html(service["label"])} {html(city["name"])}</a>')
+    return "\n".join(links)
+
+
+def build_faq_items(faqs: list[dict[str, str]]) -> str:
+    return "\n".join(
+        "\n".join(
+            [
+                '      <article class="faq-item">',
+                f'        <button type="button" aria-expanded="false">{html(faq["question"])}<span></span></button>',
+                '        <div class="faq-answer">',
+                f'          <p>{html(faq["answer"])}</p>',
+                "        </div>",
+                "      </article>",
+            ]
+        )
+        for faq in faqs
+    )
+
+
+def build_testimonial_cards(city: dict[str, Any], service: dict[str, Any]) -> str:
+    testimonials = [
+        (
+            f"De {service['label'].lower()} aanpak voelt premium en lokaal tegelijk. De pagina maakt direct duidelijk waarom klanten in {city['name']} contact opnemen.",
+            "Sanne de Vries",
+            f"Marketing lead, {city['name']}",
+        ),
+        (
+            "BDMNL combineerde strategie, design en lokale SEO tot een systeem dat veel schaalbaarder is dan losse landingspagina's.",
+            "Milan Vermeer",
+            "Founder, groeibedrijf",
+        ),
+        (
+            f"De interne links tussen website, SEO en social geven onze online aanwezigheid in {city['name']} veel meer structuur.",
+            "Nora Jansen",
+            "Commercial director",
+        ),
+    ]
+    return "\n".join(
+        "\n".join(
+            [
+                f'      <article class="testimonial-card{" featured" if index == 1 else ""} reveal">',
+                '        <div class="quote-mark">"</div>',
+                f"        <p>{html(copy)}</p>",
+                "        <div>",
+                f"          <strong>{html(name)}</strong>",
+                f"          <span>{html(role)}</span>",
+                "        </div>",
+                "      </article>",
+            ]
+        )
+        for index, (copy, name, role) in enumerate(testimonials)
+    )
+
+
+def build_marquee_items(city: dict[str, Any], service: dict[str, Any]) -> str:
+    items = [service["label"], city["name"], *city["areas"][:4], "Lokale SEO", "Premium UX", "Lead flow"]
+    return "\n".join(f"<span>{html(item)}</span>" for item in items)
+
+
+def professional_service_schema(
+    site: dict[str, Any], city: dict[str, Any], service: dict[str, Any], canonical_url: str
+) -> str:
+    return json_script(
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": f"BDMNL - {service['label']} {city['name']}",
+            "url": canonical_url,
+            "image": site["og_image"],
+            "email": site["email"],
+            "telephone": site["phone"],
+            "areaServed": {"@type": "City", "name": city["name"]},
+            "address": {
+                "@type": "PostalAddress",
+                "addressRegion": city["region"],
+                "addressCountry": "NL",
+            },
+            "description": service["description_pattern"].format(city=city["name"]),
+            "serviceType": service["service_type"],
+            "sameAs": [
+                "https://www.linkedin.com",
+                "https://www.instagram.com",
+                "https://www.facebook.com",
+            ],
+        }
+    )
+
+
+def faq_schema(faqs: list[dict[str, str]]) -> str:
+    return json_script(
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": faq["question"],
+                    "acceptedAnswer": {"@type": "Answer", "text": faq["answer"]},
+                }
+                for faq in faqs
+            ],
+        }
+    )
+
+
+def breadcrumb_schema(base_url: str, city: dict[str, Any], service: dict[str, Any], canonical_url: str) -> str:
+    return json_script(
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{base_url}/"},
+                {"@type": "ListItem", "position": 2, "name": city["name"], "item": canonical_url},
+                {"@type": "ListItem", "position": 3, "name": service["label"], "item": canonical_url},
+            ],
+        }
+    )
+
+
+def footer_context(cities: list[dict[str, Any]], services: list[dict[str, Any]]) -> dict[str, str]:
+    first_service = services[0]
+    footer_city_links = "\n".join(
+        f'<a href="{page_href(page_slug(first_service, city))}">{html(city["name"])}</a>' for city in cities
+    )
+    footer_internal_links = "\n".join(
+        f'<a href="{page_href(page_slug(service, cities[0]))}">{html(service["label"])}</a>' for service in services
+    )
+    return {
+        "footer_city_links": footer_city_links,
+        "footer_internal_links": footer_internal_links,
+        "current_year": str(date.today().year),
+    }
+
+
+def build_page_context(
+    site: dict[str, Any],
+    city: dict[str, Any],
+    service: dict[str, Any],
+    services: list[dict[str, Any]],
+    cities: list[dict[str, Any]],
+) -> dict[str, str]:
+    slug = page_slug(service, city)
+    canonical_url = page_url(site["base_url"], slug)
+    faqs = build_faqs(service, city)
+    areas = ", ".join(city["areas"][:3])
+    title = service["title_pattern"].format(city=city["name"])
+    description = service["description_pattern"].format(city=city["name"])
+    related_city_links = build_related_city_links(service, city, cities)
+    keywords = ", ".join([f"{keyword} {city['name']}" for keyword in service["keywords"]])
+
+    return {
+        "asset_prefix": "../",
+        "canonical_url": canonical_url,
+        "og_title": title,
+        "og_description": description,
+        "twitter_title": title,
+        "twitter_description": description,
+        "og_image": site["og_image"],
+        "meta_title": title,
+        "meta_description": description,
+        "professional_service_schema": professional_service_schema(site, city, service, canonical_url),
+        "faq_schema": faq_schema(faqs),
+        "breadcrumb_schema": breadcrumb_schema(site["base_url"], city, service, canonical_url),
+        "eyebrow": f"{service['label']} in {city['name']}",
+        "city": city["name"],
+        "slug": slug,
+        "service_label": service["label"],
+        "service_badge": service["badge"],
+        "h1": service["h1_pattern"].format(city=city["name"]),
+        "hero_lead": service["hero_pattern"].format(city=city["name"]),
+        "primary_cta": service["primary_cta"],
+        "stat_one_value": service["stat_one_value"],
+        "stat_one_number": parse_percent(service["stat_one_value"]),
+        "stat_one_prefix": "+" if service["stat_one_value"].startswith("+") else "",
+        "stat_one_suffix": "%" if service["stat_one_value"].endswith("%") else "",
+        "stat_one_label": service["stat_one_label"],
+        "stat_two_value": service["stat_two_value"],
+        "stat_two_label": service["stat_two_label"],
+        "stat_three_number": parse_percent(service["stat_three_value"]),
+        "stat_three_label": service["stat_three_label"],
+        "floating_one_label": service["floating_one_label"],
+        "floating_one_value": service["floating_one_value"],
+        "floating_two_label": service["floating_two_label"],
+        "floating_two_value": service["floating_two_value"],
+        "area_summary": areas,
+        "trust_strategy": f"Positionering voor {city['name']}",
+        "trust_seo": f"Content voor {areas}",
+        "marquee_items": build_marquee_items(city, service),
+        "intro_heading": f"{service['label']} {city['name']} met lokale relevantie en premium uitstraling.",
+        "intro_copy_one": (
+            f"In {city['name']} zoeken klanten anders dan in een landelijke markt. Daarom combineert BDMNL "
+            f"{service['label'].lower()} met lokale content, technische SEO en een conversiegerichte flow."
+        ),
+        "intro_copy_two": (
+            f"De pagina speelt in op {city['intent']} en verwerkt herkenbare gebieden zoals {areas}. "
+            "Zo voelt de content lokaal, betrouwbaar en relevant."
+        ),
+        "intro_copy_three": (
+            f"Deze pagina linkt door naar de andere diensten in de {city['name']} cluster, zodat website, SEO en social "
+            "media elkaar versterken in plaats van los van elkaar te staan."
+        ),
+        "services_heading": f"Wat BDMNL doet voor {service['label'].lower()} in {city['name']}.",
+        "services_intro": (
+            f"Een schaalbare SEO pagina voor {city['name']} krijgt strategie, premium design, technische basis en "
+            "interne links naar relevante diensten."
+        ),
+        "service_cards": build_service_cards(service, city),
+        "portfolio_heading": f"Premium preview richting voor {service['label'].lower()} in {city['name']}.",
+        "portfolio_intro": (
+            "Een lokale SEO pagina hoeft niet generiek te voelen. BDMNL combineert rustige visuele details, sterke CTA's "
+            "en bewijsvoering met een high-end agency uitstraling."
+        ),
+        "portfolio_case_one": f"{service['label']} {city['name']} met lokale hero en trust flow",
+        "portfolio_case_one_label": f"SEO structuur + {keywords}",
+        "portfolio_case_two": f"Mobiele lead flow voor bezoekers uit {city['name']}",
+        "portfolio_case_three": f"Credibility systeem voor {city['market']}",
+        "proof_heading": f"Meer autoriteit in {city['name']} met lokale content, premium design en duidelijke CTA's.",
+        "cluster_links": build_cluster_links(slug, city, services),
+        "testimonial_heading": f"Waarom bedrijven kiezen voor BDMNL in {city['name']}.",
+        "testimonial_cards": build_testimonial_cards(city, service),
+        "cta_heading": f"Klaar om {service['label'].lower()} in {city['name']} premium neer te zetten?",
+        "cta_copy": (
+            f"Laat BDMNL een schaalbare lokale SEO pagina bouwen voor {city['name']} die past binnen een groter "
+            "website systeem met sterke interne links, schema data en conversiegerichte CTA's."
+        ),
+        "faq_heading": f"Veelgestelde vragen over {service['label'].lower()} in {city['name']}.",
+        "faq_intro": "Antwoorden op lokale SEO vragen voordat je investeert in een schaalbare landingspagina.",
+        "faq_items": build_faq_items(faqs),
+        "related_city_links": related_city_links,
+    }
+
+
+def render_full_page(
+    layout: str,
+    page_template: str,
+    header: str,
+    footer: str,
+    footer_ctx: dict[str, str],
+    context: dict[str, str],
+) -> str:
+    page_content = render(
+        page_template,
+        context,
+        raw_keys={"service_cards", "cluster_links", "testimonial_cards", "faq_items", "marquee_items"},
+    )
+    footer_html = render(footer, footer_ctx, raw_keys={"footer_city_links", "footer_internal_links"})
+    full_context = {
+        **context,
+        "global_header": header,
+        "global_footer": footer_html,
+        "page_content": page_content,
+    }
+    return (
+        GENERATED_MARKER
+        + "\n"
+        + render(
+            layout,
+            full_context,
+            raw_keys={
+                "global_header",
+                "global_footer",
+                "page_content",
+                "professional_service_schema",
+                "faq_schema",
+                "breadcrumb_schema",
+            },
+        )
+    )
+
+
+def build_homepage(
+    layout: str,
+    header: str,
+    footer: str,
+    footer_ctx: dict[str, str],
+    site: dict[str, Any],
+    cities: list[dict[str, Any]],
+    services: list[dict[str, Any]],
+) -> str:
+    cards = []
+    for city in cities:
+        links = " ".join(
+            f'<a href="{page_href(page_slug(service, city))}">{html(service["label"])}</a>' for service in services
+        )
+        cards.append(
+            "\n".join(
+                [
+                    '<article class="service-card reveal">',
+                    f'<span class="card-number">{html(city["region"])}</span>',
+                    f"<h2>{html(city['name'])}</h2>",
+                    f"<p>{html(city['intent'])}</p>",
+                    f'<div class="mini-link-row">{links}</div>',
+                    "</article>",
+                ]
+            )
+        )
+
+    page_content = f"""
+<section class="hero section-pad">
+  <div class="container">
+    <p class="eyebrow"><span></span>BDMNL SEO systeem</p>
+    <h1>Premium lokale SEO landingspagina's die schaalbaar blijven.</h1>
+    <p class="hero-lead">Een productieklare structuur voor website, SEO en social media clusters per stad, inclusief schema data, interne links, sitemap en gedeelde componenten.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/website-laten-maken-brielle/" data-magnetic>Bekijk cluster</a>
+      <a class="btn btn-secondary" href="/sitemap.xml" data-magnetic>Open sitemap</a>
+    </div>
+  </div>
+</section>
+<section class="section related-pages" id="steden">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <p class="eyebrow"><span></span>Lokale clusters</p>
+      <h2>Verbonden SEO pagina's per stad.</h2>
+      <p>Elke stad bevat drie verbonden pagina's: website laten maken, SEO bureau en social media beheer.</p>
+    </div>
+    <div class="card-grid service-grid">
+      {"".join(cards)}
+    </div>
+  </div>
+</section>
 """
+    empty_schema = json_script({"@context": "https://schema.org", "@type": "WebSite", "name": site["name"], "url": site["base_url"]})
+    full_context = {
+        "asset_prefix": "./",
+        "canonical_url": f"{site['base_url']}/",
+        "og_title": "BDMNL lokaal SEO systeem",
+        "og_description": "Premium lokale SEO landingspagina's per stad en dienst.",
+        "twitter_title": "BDMNL lokaal SEO systeem",
+        "twitter_description": "Premium lokale SEO landingspagina's per stad en dienst.",
+        "og_image": site["og_image"],
+        "meta_title": "BDMNL lokaal SEO systeem | Premium landingspagina clusters",
+        "meta_description": "BDMNL bouwt schaalbare lokale SEO clusters voor websites, SEO en social media beheer in Brielle, Hellevoetsluis, Rockanje, Spijkenisse en Rotterdam.",
+        "professional_service_schema": empty_schema,
+        "faq_schema": json_script({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": []}),
+        "breadcrumb_schema": json_script(
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site['base_url']}/"}],
+            }
+        ),
+        "global_header": header,
+        "global_footer": render(footer, footer_ctx, raw_keys={"footer_city_links", "footer_internal_links"}),
+        "page_content": page_content,
+    }
+    return GENERATED_MARKER + "\n" + render(
+        layout,
+        full_context,
+        raw_keys={"global_header", "global_footer", "page_content", "professional_service_schema", "faq_schema", "breadcrumb_schema"},
+    )
+
+
+def remove_legacy_generated_pages(services: list[dict[str, Any]], cities: list[dict[str, Any]]) -> None:
+    keep = {page_slug(service, city) for service in services for city in cities}
+    legacy_prefixes = ("webdesign-",)
+    for child in ROOT.iterdir():
+        if not child.is_dir():
+            continue
+        if child.name in keep:
+            continue
+        if child.name.startswith(legacy_prefixes):
+            shutil.rmtree(child)
+
+
+def write_sitemap(site: dict[str, Any], slugs: list[str]) -> None:
+    today = date.today().isoformat()
+    urls = [f"{site['base_url']}/"] + [page_url(site["base_url"], slug) for slug in slugs]
+    entries = "\n".join(
+        "\n".join(
+            [
+                "  <url>",
+                f"    <loc>{html(url)}</loc>",
+                f"    <lastmod>{today}</lastmod>",
+                "    <changefreq>monthly</changefreq>",
+                "    <priority>0.8</priority>",
+                "  </url>",
+            ]
+        )
+        for url in urls
+    )
+    sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{entries}
+</urlset>
+"""
+    (ROOT / "sitemap.xml").write_text(sitemap, encoding="utf-8")
+
+
+def write_robots(site: dict[str, Any]) -> None:
+    robots = f"""User-agent: *
+Allow: /
+
+Sitemap: {site['base_url']}/sitemap.xml
+"""
+    (ROOT / "robots.txt").write_text(robots, encoding="utf-8")
 
 
 def main() -> None:
-    template = TEMPLATE_PATH.read_text(encoding="utf-8")
-    cities = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    site = data["site"]
+    cities = data["cities"]
+    services = data["services"]
+    layout = LAYOUT_PATH.read_text(encoding="utf-8")
+    page_template = PAGE_TEMPLATE_PATH.read_text(encoding="utf-8")
+    header = HEADER_PATH.read_text(encoding="utf-8")
+    footer = FOOTER_PATH.read_text(encoding="utf-8")
+    footer_ctx = footer_context(cities, services)
+    slugs: list[str] = []
 
-    for city_data in cities:
-        context = build_page_context(city_data)
-        output_dir = ROOT / city_data["slug"]
-        output_dir.mkdir(parents=True, exist_ok=True)
-        (output_dir / "index.html").write_text(render_template(template, context), encoding="utf-8")
+    remove_legacy_generated_pages(services, cities)
 
-    (ROOT / "index.html").write_text(build_index(cities), encoding="utf-8")
-    print(f"Generated {len(cities)} city landing pages.")
+    for city in cities:
+        for service in services:
+            slug = page_slug(service, city)
+            slugs.append(slug)
+            context = build_page_context(site, city, service, services, cities)
+            output_dir = ROOT / slug
+            output_dir.mkdir(parents=True, exist_ok=True)
+            (output_dir / "index.html").write_text(
+                render_full_page(layout, page_template, header, footer, footer_ctx, context),
+                encoding="utf-8",
+            )
+
+    (ROOT / "index.html").write_text(
+        build_homepage(layout, header, footer, footer_ctx, site, cities, services),
+        encoding="utf-8",
+    )
+    write_sitemap(site, slugs)
+    write_robots(site)
+    print(f"Generated {len(slugs)} SEO cluster pages, sitemap.xml and robots.txt.")
 
 
 if __name__ == "__main__":
