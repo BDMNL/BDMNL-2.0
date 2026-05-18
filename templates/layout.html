@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#F05A1A" />
+    <link rel="canonical" href="{{canonical_url}}" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:site_name" content="BDMNL" />
+    <meta property="og:title" content="{{og_title}}" />
+    <meta property="og:description" content="{{og_description}}" />
+    <meta property="og:url" content="{{canonical_url}}" />
+    <meta property="og:image" content="{{og_image}}" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{twitter_title}}" />
+    <meta name="twitter:description" content="{{twitter_description}}" />
+    <meta name="twitter:image" content="{{og_image}}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{asset_prefix}}assets/css/landing.css" />
+    <script type="application/ld+json">
+      {{professional_service_schema}}
+    </script>
+    <script type="application/ld+json">
+      {{faq_schema}}
+    </script>
+    <script type="application/ld+json">
+      {{breadcrumb_schema}}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Direct naar inhoud</a>
+    <div class="page-grain" aria-hidden="true"></div>
+    <div class="cursor-glow" data-cursor-glow aria-hidden="true"></div>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    {{global_header}}
+
+    <main id="main">
+      {{page_content}}
+    </main>
+
+    {{global_footer}}
+
+    <script src="{{asset_prefix}}assets/js/landing.js" defer></script>
+  </body>
+</html>

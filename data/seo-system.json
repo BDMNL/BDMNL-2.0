@@ -1,0 +1,142 @@
+{
+  "site": {
+    "base_url": "https://bdmnl.nl",
+    "name": "BDMNL",
+    "email": "info@bdmnl.nl",
+    "phone": "085 060 56 27",
+    "phone_href": "+31850605627",
+    "address": "Krammer 8, 3232 HE Brielle",
+    "og_image": "https://cdn.prod.website-files.com/69fda057dc1e72c50e433fc4/69fdba0bc340810734f7fb0c_banner%20bdmnl.png",
+    "url_prefix": "reclamebureau",
+    "socials": [
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/bdmnl.nl/"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/company/bdmnlnl"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/BDMNL.nl/"
+      }
+    ]
+  },
+  "cities": [
+    {
+      "name": "Brielle",
+      "slug": "brielle",
+      "region": "Zuid-Holland",
+      "market": "historische vestingstad met actieve MKB-bedrijven, horeca en lokale dienstverleners",
+      "areas": ["Brielle Centrum", "Vierpolders", "Zwartewaal", "Nieuwland", "Meeuwenoord"],
+      "intent": "lokale ondernemers die professioneel zichtbaar willen zijn op Voorne-Putten"
+    },
+    {
+      "name": "Hellevoetsluis",
+      "slug": "hellevoetsluis",
+      "region": "Zuid-Holland",
+      "market": "groeiende ondernemersmarkt rond haven, retail, zorg en zakelijke dienstverlening",
+      "areas": ["Centrum", "De Struyten", "Ravense Hoek", "Nieuwenhoorn", "Kickestein"],
+      "intent": "bedrijven die lokaal meer aanvragen willen uit Hellevoetsluis en omliggende wijken"
+    },
+    {
+      "name": "Rockanje",
+      "slug": "rockanje",
+      "region": "Zuid-Holland",
+      "market": "kustplaats met recreatie, hospitality, retail en lokale services",
+      "areas": ["Rockanje Dorp", "Tweede Slag", "Badhotelgebied", "Olaertsduyn", "Tinte"],
+      "intent": "ondernemers die seizoensvraag en lokale vindbaarheid willen omzetten in boekingen en leads"
+    },
+    {
+      "name": "Spijkenisse",
+      "slug": "spijkenisse",
+      "region": "Zuid-Holland",
+      "market": "stedelijke markt met veel concurrentie in dienstverlening, retail en B2B",
+      "areas": ["Centrum", "De Akkers", "Maaswijk", "Schenkel", "Vierambachten"],
+      "intent": "bedrijven die beter gevonden willen worden door klanten in Nissewaard"
+    },
+    {
+      "name": "Rotterdam",
+      "slug": "rotterdam",
+      "region": "Zuid-Holland",
+      "market": "competitieve grootstedelijke markt met scale-ups, havenbedrijven en zakelijke dienstverleners",
+      "areas": ["Centrum", "Kop van Zuid", "Kralingen", "Delfshaven", "Spaanse Polder"],
+      "intent": "ambitieuze teams die een professionele uitstraling willen combineren met meetbare online groei"
+    }
+  ],
+  "services": [
+    {
+      "key": "website",
+      "slug_prefix": "website-laten-maken",
+      "label": "Website laten maken",
+      "badge": "Webdesign",
+      "title_pattern": "Website laten maken {city} | Webflow webdesign door BDMNL",
+      "description_pattern": "Website laten maken in {city}? BDMNL bouwt snelle Webflow websites met sterke structuur, SEO-basis en duidelijke conversiepaden voor lokale bedrijven.",
+      "h1_pattern": "Website laten maken {city} met Webflow, snelheid en een duidelijke SEO-basis.",
+      "hero_pattern": "BDMNL bouwt websites voor bedrijven in {city} die professioneel willen overkomen en beter vindbaar willen zijn. We combineren Webflow, heldere content, snelle techniek en praktische conversiepunten.",
+      "primary_cta": "Plan een websitegesprek",
+      "stat_one_value": "150+",
+      "stat_one_label": "websites & webshops gerealiseerd",
+      "stat_two_value": "15+",
+      "stat_two_label": "jaar ervaring in online groei",
+      "stat_three_value": "24/7",
+      "stat_three_label": "hosting, support & onderhoud",
+      "floating_one_label": "UX score",
+      "floating_one_value": "Helder",
+      "floating_two_label": "Focus",
+      "floating_two_value": "Snel online",
+      "faq_seed": "website",
+      "keywords": ["webdesign", "website laten maken", "website ontwikkeling"],
+      "service_type": "Website development"
+    },
+    {
+      "key": "seo",
+      "slug_prefix": "seo-bureau",
+      "label": "SEO bureau",
+      "badge": "SEO 97",
+      "title_pattern": "SEO bureau {city} | Lokale SEO strategie door BDMNL",
+      "description_pattern": "Zoek je een SEO bureau in {city}? BDMNL helpt lokale bedrijven met technische SEO, snelle pagina's, duidelijke content en een schaalbare lokale structuur.",
+      "h1_pattern": "SEO bureau {city} voor lokale vindbaarheid zonder onnodige complexiteit.",
+      "hero_pattern": "BDMNL helpt bedrijven in {city} beter gevonden worden met een praktische SEO-aanpak: techniek op orde, sterke pagina's, lokale content en interne links die logisch aanvoelen.",
+      "primary_cta": "Plan een SEO-gesprek",
+      "stat_one_value": "150+",
+      "stat_one_label": "websites & webshops gerealiseerd",
+      "stat_two_value": "15+",
+      "stat_two_label": "jaar ervaring in online groei",
+      "stat_three_value": "24/7",
+      "stat_three_label": "hosting, support & onderhoud",
+      "floating_one_label": "Ranking focus",
+      "floating_one_value": "Lokaal",
+      "floating_two_label": "Structuur",
+      "floating_two_value": "SEO basis",
+      "faq_seed": "seo",
+      "keywords": ["SEO bureau", "lokale SEO", "zoekmachine optimalisatie"],
+      "service_type": "SEO strategy"
+    },
+    {
+      "key": "social",
+      "slug_prefix": "social-media-beheer",
+      "label": "Social media beheer",
+      "badge": "Social",
+      "title_pattern": "Social media beheer {city} | Content & planning door BDMNL",
+      "description_pattern": "Social media beheer in {city}? BDMNL helpt lokale bedrijven met content, planning en campagnes die passen bij hun website, SEO en merkverhaal.",
+      "h1_pattern": "Social media beheer {city} met content die past bij je merk en website.",
+      "hero_pattern": "BDMNL helpt bedrijven in {city} zichtbaar blijven met social content die aansluit op hun website, doelgroep en lokale markt. Praktisch, herkenbaar en zonder losse flodders.",
+      "primary_cta": "Plan een contentgesprek",
+      "stat_one_value": "150+",
+      "stat_one_label": "websites & webshops gerealiseerd",
+      "stat_two_value": "15+",
+      "stat_two_label": "jaar ervaring in online groei",
+      "stat_three_value": "24/7",
+      "stat_three_label": "hosting, support & onderhoud",
+      "floating_one_label": "Content ritme",
+      "floating_one_value": "Herkenbaar",
+      "floating_two_label": "Aanpak",
+      "floating_two_value": "Praktisch",
+      "faq_seed": "social",
+      "keywords": ["social media beheer", "content marketing", "social strategie"],
+      "service_type": "Social media management"
+    }
+  ]
+}
