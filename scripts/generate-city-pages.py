@@ -434,7 +434,7 @@ def render_full_page(
         **context,
         "global_header": header,
         "global_footer": footer_html,
-        "page_content": page_content,
+        "page_content": page_content.strip(),
     }
     return (
         GENERATED_MARKER
@@ -528,7 +528,7 @@ def build_homepage(
         ),
         "global_header": header,
         "global_footer": render(footer, footer_ctx, raw_keys={"footer_city_links", "footer_internal_links"}),
-        "page_content": page_content,
+        "page_content": page_content.strip(),
     }
     return GENERATED_MARKER + "\n" + render(
         layout,
