@@ -46,12 +46,17 @@ def page_slug(service: dict[str, Any], city: dict[str, Any]) -> str:
     return f"{service['slug_prefix']}-{city['slug']}"
 
 
-def page_url(base_url: str, slug: str) -> str:
-    return f"{base_url}/{slug}/"
+def page_path(site: dict[str, Any], slug: str) -> str:
+    prefix = site.get("url_prefix", "").strip("/")
+    return f"{prefix}/{slug}" if prefix else slug
 
 
-def page_href(slug: str) -> str:
-    return f"/{slug}/"
+def page_url(site: dict[str, Any], slug: str) -> str:
+    return f"{site['base_url']}/{page_path(site, slug)}/"
+
+
+def page_href(site: dict[str, Any], slug: str) -> str:
+    return f"/{page_path(site, slug)}/"
 
 
 def parse_percent(value: str) -> str:
@@ -157,7 +162,9 @@ def build_service_cards(service: dict[str, Any], city: dict[str, Any]) -> str:
     )
 
 
-def build_cluster_links(current_slug: str, city: dict[str, Any], services: list[dict[str, Any]]) -> str:
+def build_cluster_links(
+    site: dict[str, Any], current_slug: str, city: dict[str, Any], services: list[dict[str, Any]]
+) -> str:
     cards = []
     for index, service in enumerate(services, start=1):
         slug = page_slug(service, city)
@@ -165,7 +172,7 @@ def build_cluster_links(current_slug: str, city: dict[str, Any], services: list[
         cards.append(
             "\n".join(
                 [
-                    f'      <a class="service-card related-card{active} reveal" href="{page_href(slug)}">',
+                    f'      <a class="service-card related-card{active} reveal" href="{page_href(site, slug)}">',
                     f'        <span class="card-number">{index:02d}</span>',
                     '        <div class="service-icon" aria-hidden="true"></div>',
                     f"        <h3>{html(service['label'])} {html(city['name'])}</h3>",
@@ -177,13 +184,15 @@ def build_cluster_links(current_slug: str, city: dict[str, Any], services: list[
     return "\n".join(cards)
 
 
-def build_related_city_links(service: dict[str, Any], current_city: dict[str, Any], cities: list[dict[str, Any]]) -> str:
+def build_related_city_links(
+    site: dict[str, Any], service: dict[str, Any], current_city: dict[str, Any], cities: list[dict[str, Any]]
+) -> str:
     links = []
     for city in cities:
         if city["slug"] == current_city["slug"]:
             continue
         slug = page_slug(service, city)
-        links.append(f'<a href="{page_href(slug)}">{html(service["label"])} {html(city["name"])}</a>')
+        links.append(f'<a href="{page_href(site, slug)}">{html(service["label"])} {html(city["name"])}</a>')
     return "\n".join(links)
 
 
@@ -303,16 +312,20 @@ def breadcrumb_schema(base_url: str, city: dict[str, Any], service: dict[str, An
     )
 
 
-def footer_context(cities: list[dict[str, Any]], services: list[dict[str, Any]]) -> dict[str, str]:
+def footer_context(site: dict[str, Any], cities: list[dict[str, Any]], services: list[dict[str, Any]]) -> dict[str, str]:
     first_service = services[0]
     footer_city_links = "\n".join(
-        f'<a href="{page_href(page_slug(first_service, city))}">{html(city["name"])}</a>' for city in cities
+        f'<a href="{page_href(site, page_slug(first_service, city))}">{html(city["name"])}</a>' for city in cities
+    )
+    footer_service_links = "\n".join(
+        f'<a href="{page_href(site, page_slug(service, cities[0]))}">{html(service["label"])}</a>' for service in services
     )
     footer_internal_links = "\n".join(
-        f'<a href="{page_href(page_slug(service, cities[0]))}">{html(service["label"])}</a>' for service in services
+        f'<a href="{page_href(site, page_slug(service, cities[0]))}">{html(service["label"])}</a>' for service in services
     )
     return {
         "footer_city_links": footer_city_links,
+        "footer_service_links": footer_service_links,
         "footer_internal_links": footer_internal_links,
         "current_year": str(date.today().year),
     }
@@ -326,16 +339,16 @@ def build_page_context(
     cities: list[dict[str, Any]],
 ) -> dict[str, str]:
     slug = page_slug(service, city)
-    canonical_url = page_url(site["base_url"], slug)
+    canonical_url = page_url(site, slug)
     faqs = build_faqs(service, city)
     areas = ", ".join(city["areas"][:3])
     title = service["title_pattern"].format(city=city["name"])
     description = service["description_pattern"].format(city=city["name"])
-    related_city_links = build_related_city_links(service, city, cities)
+    related_city_links = build_related_city_links(site, service, city, cities)
     keywords = ", ".join([f"{keyword} {city['name']}" for keyword in service["keywords"]])
 
     return {
-        "asset_prefix": "../",
+        "asset_prefix": "../" * len(page_path(site, slug).split("/")),
         "canonical_url": canonical_url,
         "og_title": title,
         "og_description": description,
@@ -349,7 +362,7 @@ def build_page_context(
         "breadcrumb_schema": breadcrumb_schema(site["base_url"], city, service, canonical_url),
         "eyebrow": f"{service['label']} in {city['name']}",
         "city": city["name"],
-        "slug": slug,
+        "slug": page_path(site, slug),
         "service_label": service["label"],
         "service_badge": service["badge"],
         "h1": service["h1_pattern"].format(city=city["name"]),
@@ -401,7 +414,7 @@ def build_page_context(
         "portfolio_case_two": f"Mobiele lead flow voor bezoekers uit {city['name']}",
         "portfolio_case_three": f"Credibility systeem voor {city['market']}",
         "proof_heading": f"Meer autoriteit in {city['name']} met lokale content, premium design en duidelijke CTA's.",
-        "cluster_links": build_cluster_links(slug, city, services),
+        "cluster_links": build_cluster_links(site, slug, city, services),
         "testimonial_heading": f"Waarom bedrijven kiezen voor BDMNL in {city['name']}.",
         "testimonial_cards": build_testimonial_cards(city, service),
         "cta_heading": f"Klaar om {service['label'].lower()} in {city['name']} premium neer te zetten?",
@@ -436,7 +449,11 @@ def render_full_page(
             "related_city_links",
         },
     )
-    footer_html = render(footer, footer_ctx, raw_keys={"footer_city_links", "footer_internal_links"})
+    footer_html = render(
+        footer,
+        footer_ctx,
+        raw_keys={"footer_city_links", "footer_service_links", "footer_internal_links"},
+    )
     full_context = {
         **context,
         "global_header": header,
@@ -473,7 +490,7 @@ def build_homepage(
     cards = []
     for city in cities:
         links = " ".join(
-            f'<a href="{page_href(page_slug(service, city))}">{html(service["label"])}</a>' for service in services
+            f'<a href="{page_href(site, page_slug(service, city))}">{html(service["label"])}</a>' for service in services
         )
         cards.append(
             "\n".join(
@@ -495,7 +512,7 @@ def build_homepage(
     <h1>Premium lokale SEO landingspagina's die schaalbaar blijven.</h1>
     <p class="hero-lead">Een productieklare structuur voor website, SEO en social media clusters per stad, inclusief schema data, interne links, sitemap en gedeelde componenten.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="/website-laten-maken-brielle/" data-magnetic>Bekijk cluster</a>
+      <a class="btn btn-primary" href="{page_href(site, page_slug(services[0], cities[0]))}" data-magnetic>Bekijk cluster</a>
       <a class="btn btn-secondary" href="/sitemap.xml" data-magnetic>Open sitemap</a>
     </div>
   </div>
@@ -579,7 +596,11 @@ def build_homepage(
             }
         ),
         "global_header": header,
-        "global_footer": render(footer, footer_ctx, raw_keys={"footer_city_links", "footer_internal_links"}),
+        "global_footer": render(
+            footer,
+            footer_ctx,
+            raw_keys={"footer_city_links", "footer_service_links", "footer_internal_links"},
+        ),
         "page_content": page_content.strip(),
     }
     return GENERATED_MARKER + "\n" + render(
@@ -589,21 +610,31 @@ def build_homepage(
     )
 
 
-def remove_legacy_generated_pages(services: list[dict[str, Any]], cities: list[dict[str, Any]]) -> None:
+def remove_legacy_generated_pages(site: dict[str, Any], services: list[dict[str, Any]], cities: list[dict[str, Any]]) -> None:
     keep = {page_slug(service, city) for service in services for city in cities}
     legacy_prefixes = ("webdesign-",)
     for child in ROOT.iterdir():
         if not child.is_dir():
             continue
-        if child.name in keep:
-            continue
-        if child.name.startswith(legacy_prefixes):
+        if child.name in keep or child.name.startswith(legacy_prefixes):
+            shutil.rmtree(child)
+
+    prefix = site.get("url_prefix", "").strip("/")
+    if not prefix:
+        return
+
+    prefix_dir = ROOT / prefix
+    if not prefix_dir.exists():
+        return
+
+    for child in prefix_dir.iterdir():
+        if child.is_dir() and child.name not in keep:
             shutil.rmtree(child)
 
 
 def write_sitemap(site: dict[str, Any], slugs: list[str]) -> None:
     today = date.today().isoformat()
-    urls = [f"{site['base_url']}/"] + [page_url(site["base_url"], slug) for slug in slugs]
+    urls = [f"{site['base_url']}/"] + [page_url(site, slug) for slug in slugs]
     entries = "\n".join(
         "\n".join(
             [
@@ -643,17 +674,17 @@ def main() -> None:
     page_template = PAGE_TEMPLATE_PATH.read_text(encoding="utf-8")
     header = HEADER_PATH.read_text(encoding="utf-8")
     footer = FOOTER_PATH.read_text(encoding="utf-8")
-    footer_ctx = footer_context(cities, services)
+    footer_ctx = footer_context(site, cities, services)
     slugs: list[str] = []
 
-    remove_legacy_generated_pages(services, cities)
+    remove_legacy_generated_pages(site, services, cities)
 
     for city in cities:
         for service in services:
             slug = page_slug(service, city)
             slugs.append(slug)
             context = build_page_context(site, city, service, services, cities)
-            output_dir = ROOT / slug
+            output_dir = ROOT / page_path(site, slug)
             output_dir.mkdir(parents=True, exist_ok=True)
             (output_dir / "index.html").write_text(
                 render_full_page(layout, page_template, header, footer, footer_ctx, context),

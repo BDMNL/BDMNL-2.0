@@ -5,7 +5,8 @@
     "email": "info@bdmnl.nl",
     "phone": "+31 10 307 00 00",
     "phone_href": "+31103070000",
-    "og_image": "https://bdmnl.nl/assets/og/bdmnl-premium-seo.jpg"
+    "og_image": "https://bdmnl.nl/assets/og/bdmnl-premium-seo.jpg",
+    "url_prefix": "reclamebureau"
   },
   "cities": [
     {
