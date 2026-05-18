@@ -427,7 +427,14 @@ def render_full_page(
     page_content = render(
         page_template,
         context,
-        raw_keys={"service_cards", "cluster_links", "testimonial_cards", "faq_items", "marquee_items"},
+        raw_keys={
+            "service_cards",
+            "cluster_links",
+            "testimonial_cards",
+            "faq_items",
+            "marquee_items",
+            "related_city_links",
+        },
     )
     footer_html = render(footer, footer_ctx, raw_keys={"footer_city_links", "footer_internal_links"})
     full_context = {
@@ -493,7 +500,7 @@ def build_homepage(
     </div>
   </div>
 </section>
-<section class="section related-pages" id="steden">
+<section class="section related-pages" id="diensten">
   <div class="container">
     <div class="section-heading centered reveal">
       <p class="eyebrow"><span></span>Lokale clusters</p>
@@ -502,6 +509,51 @@ def build_homepage(
     </div>
     <div class="card-grid service-grid">
       {"".join(cards)}
+    </div>
+  </div>
+</section>
+<section class="section portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow"><span></span>Cases</p>
+      <h2>Een schaalbaar systeem voor lokale zichtbaarheid.</h2>
+      <p>Dezelfde premium BDMNL header, footer, interacties en SEO basis worden automatisch toegepast op elke gegenereerde landingspagina.</p>
+    </div>
+  </div>
+</section>
+<section class="section process" id="proces">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <p class="eyebrow"><span></span>Werkwijze</p>
+      <h2>Data, componenten en generator vormen samen een herhaalbaar SEO systeem.</h2>
+      <p>Nieuwe steden en diensten kunnen worden toegevoegd via de centrale data, waarna de generator metadata, schema, sitemap en interne links opnieuw opbouwt.</p>
+    </div>
+  </div>
+</section>
+<section class="section knowledge-section" id="kennisbank">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <p class="eyebrow"><span></span>Kennisbank</p>
+      <h2>Interne links, lokale clusters en technische SEO in één structuur.</h2>
+      <p>Gebruik de sitemap en de lokale clusters om snel te controleren welke pagina's live staan en hoe ze aan elkaar gekoppeld zijn.</p>
+    </div>
+  </div>
+</section>
+<section class="section cta-band">
+  <div class="container">
+    <div class="cta-panel reveal" id="contact">
+      <div>
+        <p class="eyebrow light"><span></span>Contact</p>
+        <h2>Plan een strategiegesprek over jouw lokale SEO systeem.</h2>
+        <p>BDMNL helpt je de structuur, content en schaalbaarheid van lokale landingspagina's professioneel neer te zetten.</p>
+      </div>
+      <form class="cta-form" action="#" method="post">
+        <label for="email">Zakelijk e-mailadres</label>
+        <div>
+          <input id="email" name="email" type="email" placeholder="jij@bedrijf.nl" required />
+          <button class="btn btn-dark" type="submit">Plan gesprek</button>
+        </div>
+      </form>
     </div>
   </div>
 </section>
