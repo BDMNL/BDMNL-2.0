@@ -1505,6 +1505,14 @@ ZUID_HOLLAND_COMPLETION_ROUTES = [
     },
 ]
 
+ZEELAND_COMPLETION_CITY_KEYS = [
+    "vlissingen",
+    "terneuzen",
+    "zierikzee",
+]
+
+ZEELAND_COMPLETION_ROUTES = ZUID_HOLLAND_COMPLETION_ROUTES
+
 
 CONTENT_RECOVERY_PAGES = [
     {
@@ -1799,6 +1807,26 @@ def recovery_pages() -> list[dict[str, Any]]:
                     "keyword": route["keyword"],
                     "cluster": route["cluster"],
                     "source": "zuid-holland-completion-batch",
+                }
+            )
+
+    for city_key in ZEELAND_COMPLETION_CITY_KEYS:
+        city_slug = RECOVERY_CITIES[city_key].get("slug", city_key)
+        for route in ZEELAND_COMPLETION_ROUTES:
+            path = route["path_pattern"].format(city_slug=city_slug)
+            if path in existing_paths:
+                continue
+            existing_paths.add(path)
+            pages.append(
+                {
+                    "category": route["category"],
+                    "service_key": route["service_key"],
+                    "slug": path.split("/")[-1],
+                    "path": path,
+                    "city_key": city_key,
+                    "keyword": route["keyword"],
+                    "cluster": route["cluster"],
+                    "source": "zeeland-completion-batch",
                 }
             )
 
@@ -3084,6 +3112,11 @@ def write_recovery_reports(site: dict[str, Any], pages: list[dict[str, Any]], su
         for city_key in ZUID_HOLLAND_COMPLETION_CITY_KEYS
         for route in ZUID_HOLLAND_COMPLETION_ROUTES
     }
+    zeeland_completion_paths = {
+        route["path_pattern"].format(city_slug=RECOVERY_CITIES[city_key].get("slug", city_key))
+        for city_key in ZEELAND_COMPLETION_CITY_KEYS
+        for route in ZEELAND_COMPLETION_ROUTES
+    }
     for region, city_keys in REGIONAL_CLUSTER_PLAN.items():
         for city_key in city_keys:
             city_name = city_display_name(city_key)
@@ -3092,6 +3125,8 @@ def write_recovery_reports(site: dict[str, Any], pages: list[dict[str, Any]], su
                 path = path_patterns[cluster].format(city_slug=city_slug)
                 if path in zh_completion_paths and path in all_paths:
                     status = "generated-zuid-holland-completion"
+                elif path in zeeland_completion_paths and path in all_paths:
+                    status = "generated-zeeland-completion"
                 elif path in all_paths:
                     status = "generated-first-batch" if city_key in FIRST_BATCH_CITY_KEYS and cluster in first_batch_clusters else "existing-recovery"
                 elif city_key in FIRST_BATCH_CITY_KEYS and cluster in first_batch_clusters:

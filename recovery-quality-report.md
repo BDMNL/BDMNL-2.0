@@ -4,7 +4,7 @@ Generated: 2026-05-19
 
 ## What changed in this pass
 
-- Controlled first-batch expansion is active; the sitemap now contains 231 URLs.
+- Controlled first-batch expansion is active; the sitemap now contains 237 URLs.
 - Canonicals were audited against the live `seo.bdmnl.nl` path for every generated page.
 - Index/noindex strategy was reviewed and documented; no aggressive noindex changes were applied.
 - Internal crawl paths were strengthened through same-city and content-support linking in the generator.
@@ -13,9 +13,9 @@ Generated: 2026-05-19
 
 ## Validation result
 
-- HTML pages: 231
-- Sitemap URLs: 231
-- Index recommendations: {'index': 231}
+- HTML pages: 237
+- Sitemap URLs: 237
+- Index recommendations: {'index': 237}
 - Priority authority pages below score threshold: 0
 
 ## Topical cluster structure
@@ -26,11 +26,11 @@ Generated: 2026-05-19
 - online-marketing: 30 pages
 - reclamebureau: 15 pages
 - seo: 6 pages
-- seo-bureau: 23 pages
+- seo-bureau: 26 pages
 - social-media: 5 pages
 - social-media-beheer: 27 pages
 - support: 11 pages
-- webdesign: 19 pages
+- webdesign: 22 pages
 - webshop-laten-maken: 20 pages
 - website-laten-maken: 26 pages
 

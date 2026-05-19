@@ -56,23 +56,37 @@ Generated 4 additional pages to complete the first-batch Zuid-Holland cities wit
 - `/webdesign/webdesign-delft/`
 - `/seo-bureau-delft/`
 
+## Zeeland completion batch
+
+The next controlled batch followed the requested regional order and stayed within Zeeland only.
+
+Generated 6 additional pages to complete the first-batch Zeeland cities with webdesign and SEO bureau coverage:
+
+- `/webdesign/webdesign-vlissingen/`
+- `/seo-bureau-vlissingen/`
+- `/webdesign/webdesign-terneuzen/`
+- `/seo-bureau-terneuzen/`
+- `/webdesign/webdesign-zierikzee/`
+- `/seo-bureau-zierikzee/`
+
 ## Cluster plan output
 
 `cluster-plan.csv` contains 344 planned rows:
 
 - 120 generated-first-batch rows
 - 4 generated-zuid-holland-completion rows
+- 6 generated-zeeland-completion rows
 - 46 existing-recovery rows
-- 174 planned-controlled rows
+- 168 planned-controlled rows
 
 ## Validation snapshot
 
-- HTML pages: 231
-- Sitemap URLs: 231
+- HTML pages: 237
+- Sitemap URLs: 237
 - Forms: 0
 - Recovery validator: errors=0, warnings=0
-- Quality audit rows: 231
-- Index recommendations: 225 index, 6 index-monitor
+- Quality audit rows: 237
+- Index recommendations: 231 index, 6 index-monitor
 
 ## Screenshot examples
 
@@ -81,6 +95,8 @@ Generated 4 additional pages to complete the first-batch Zuid-Holland cities wit
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/cluster-branding-haarlem-mobile.png`
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/cluster-webdesign-leiden-desktop.png`
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/cluster-seo-delft-mobile.png`
+- `/opt/cursor/artifacts/bdmnl-recovery-ui/cluster-webdesign-vlissingen-desktop.png`
+- `/opt/cursor/artifacts/bdmnl-recovery-ui/cluster-seo-zierikzee-mobile.png`
 
 ## Remaining control rules
 
