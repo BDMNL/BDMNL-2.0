@@ -20,6 +20,13 @@ Generated: 2026-05-19
 - Footer now has a stronger recovery-platform brand treatment, clearer contact details and quick CTAs.
 - Mobile CSS now improves button sizing, hero flow, grid stacking, section spacing and readability.
 
+## Single-page premium prototype
+
+- Example URL: `/website-laten-maken-brielle/`
+- The example uses a page-specific editorial CSS layer instead of changing the shared 128-page template.
+- Hero scale was reduced, fake dashboard visuals were removed, and the content flow now reads more like a serious agency service page.
+- The prototype keeps canonical, schema, FAQ, internal links and sitemap inclusion intact.
+
 ## Screenshot examples
 
 Screenshots were captured locally from the generated static recovery pages:
@@ -27,6 +34,11 @@ Screenshots were captured locally from the generated static recovery pages:
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/website-laten-maken-brielle-desktop.png`
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/seo-bureau-rotterdam-mobile.png`
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/webdesign-breda-desktop.png`
+
+Single-page premium agency prototype:
+
+- `/opt/cursor/artifacts/bdmnl-recovery-ui/website-laten-maken-brielle-premium-example-desktop.png`
+- `/opt/cursor/artifacts/bdmnl-recovery-ui/website-laten-maken-brielle-premium-example-mobile.png`
 
 ## Validation
 
