@@ -1501,9 +1501,11 @@ def build_cta_actions(site: dict[str, Any], page: dict[str, Any], city: dict[str
     return "\n".join(
         [
             '<div class="cta-actions" aria-label="Contactopties">',
+            '  <span class="cta-actions-label">Kies je volgende stap</span>',
             f'  <a class="btn btn-dark" href="/contact/" data-magnetic>{html(profile["cta"])}</a>',
-            f'  <a class="btn btn-light" href="mailto:{html(site["email"])}?subject={html(subject_href)}">Mail BDMNL direct</a>',
-            '  <p class="cta-note">Directe route naar contact: kies een gesprek of stuur meteen je vraag per mail.</p>',
+            '  <a class="btn btn-light" href="/gratis-seo-scan/">Gratis website check</a>',
+            f'  <a class="btn btn-ghost-light" href="mailto:{html(site["email"])}?subject={html(subject_href)}">Vraag voorstel aan</a>',
+            '  <p class="cta-note">Directe route naar contact, scan of voorstel zonder schijnformulier.</p>',
             "</div>",
         ]
     )
@@ -1514,8 +1516,10 @@ def build_direct_cta_actions(site: dict[str, Any], primary_label: str, subject: 
     return "\n".join(
         [
             '<div class="cta-actions" aria-label="Contactopties">',
+            '  <span class="cta-actions-label">Direct contact</span>',
             f'  <a class="btn btn-dark" href="/contact/" data-magnetic>{html(primary_label)}</a>',
-            f'  <a class="btn btn-light" href="mailto:{html(site["email"])}?subject={html(subject_href)}">Mail BDMNL direct</a>',
+            '  <a class="btn btn-light" href="/gratis-seo-scan/">Gratis website check</a>',
+            f'  <a class="btn btn-ghost-light" href="mailto:{html(site["email"])}?subject={html(subject_href)}">Mail BDMNL direct</a>',
             '  <p class="cta-note">Directe route naar contact, zonder schijnformulier of onduidelijke vervolgstap.</p>',
             "</div>",
         ]
