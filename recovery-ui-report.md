@@ -40,6 +40,11 @@ Single-page premium agency prototype:
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/website-laten-maken-brielle-premium-example-desktop.png`
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/website-laten-maken-brielle-premium-example-mobile.png`
 
+Single-page authority prototype with real project strip:
+
+- `/opt/cursor/artifacts/bdmnl-recovery-ui/website-laten-maken-brielle-authority-example-desktop.png`
+- `/opt/cursor/artifacts/bdmnl-recovery-ui/website-laten-maken-brielle-authority-example-mobile.png`
+
 ## Validation
 
 - `python3 scripts/generate-city-pages.py`
