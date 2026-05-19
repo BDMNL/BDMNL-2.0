@@ -45,28 +45,42 @@ Generated first-batch service clusters:
 - Hosting
 - Branding en design
 
+## Zuid-Holland completion batch
+
+The next controlled batch followed the requested regional order and stayed within Zuid-Holland only.
+
+Generated 4 additional pages to complete the first-batch Zuid-Holland cities with all 8 service clusters:
+
+- `/webdesign/webdesign-leiden/`
+- `/seo-bureau-leiden/`
+- `/webdesign/webdesign-delft/`
+- `/seo-bureau-delft/`
+
 ## Cluster plan output
 
 `cluster-plan.csv` contains 344 planned rows:
 
 - 120 generated-first-batch rows
+- 4 generated-zuid-holland-completion rows
 - 46 existing-recovery rows
-- 178 planned-controlled rows
+- 174 planned-controlled rows
 
 ## Validation snapshot
 
-- HTML pages: 221
-- Sitemap URLs: 221
+- HTML pages: 231
+- Sitemap URLs: 231
 - Forms: 0
 - Recovery validator: errors=0, warnings=0
-- Quality audit rows: 221
-- Index recommendations: 215 index, 6 index-monitor
+- Quality audit rows: 231
+- Index recommendations: 225 index, 6 index-monitor
 
 ## Screenshot examples
 
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/cluster-website-brielle-desktop.png`
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/cluster-webshop-leiden-desktop.png`
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/cluster-branding-haarlem-mobile.png`
+- `/opt/cursor/artifacts/bdmnl-recovery-ui/cluster-webdesign-leiden-desktop.png`
+- `/opt/cursor/artifacts/bdmnl-recovery-ui/cluster-seo-delft-mobile.png`
 
 ## Remaining control rules
 
