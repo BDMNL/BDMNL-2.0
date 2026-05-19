@@ -31,6 +31,21 @@ def json_script(data: dict[str, Any]) -> str:
     return json.dumps(data, ensure_ascii=False, indent=6)
 
 
+def organization_identity(site: dict[str, Any]) -> dict[str, Any]:
+    same_as = [social["url"] for social in site["socials"]]
+    if site.get("legacy_domain"):
+        same_as.append(site["legacy_domain"])
+    if site.get("primary_domain"):
+        same_as.append(site["primary_domain"])
+    return {
+        "@type": "Organization",
+        "name": site["name"],
+        "alternateName": [site.get("alternate_name", "Bulldog Media")],
+        "url": site.get("primary_domain", site["base_url"]),
+        "sameAs": same_as,
+    }
+
+
 def render(template: str, context: dict[str, str], raw_keys: set[str] | None = None) -> str:
     raw_keys = raw_keys or set()
     rendered = template
@@ -263,6 +278,7 @@ def professional_service_schema(
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": f"BDMNL - {service['label']} {city['name']}",
+            "alternateName": "Bulldog Media",
             "url": canonical_url,
             "image": site["og_image"],
             "email": site["email"],
@@ -275,7 +291,7 @@ def professional_service_schema(
             },
             "description": service["description_pattern"].format(city=city["name"]),
             "serviceType": service["service_type"],
-            "sameAs": [social["url"] for social in site["socials"]],
+            "sameAs": organization_identity(site)["sameAs"],
         }
     )
 
@@ -580,7 +596,16 @@ def build_homepage(
   </div>
 </section>
 """
-    empty_schema = json_script({"@context": "https://schema.org", "@type": "WebSite", "name": site["name"], "url": site["base_url"]})
+    empty_schema = json_script(
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": site["name"],
+            "alternateName": site.get("alternate_name", "Bulldog Media"),
+            "url": site["base_url"],
+            "publisher": organization_identity(site),
+        }
+    )
     full_context = {
         "asset_prefix": "./",
         "canonical_url": f"{site['base_url']}/",
@@ -1463,15 +1488,49 @@ CONTENT_RECOVERY_PAGES = [
     {
         "path": "over-bdmnl",
         "kind": "core",
-        "title": "Over BDMNL | Webdesign, SEO en online marketing uit Brielle",
-        "description": "Leer BDMNL kennen: een digital agency uit Brielle voor Webflow websites, SEO, branding, social media en online marketing.",
+        "schema_type": "AboutPage",
+        "title": "Over BDMNL | Van Bulldog Media naar digital agency",
+        "description": "Leer BDMNL kennen: de doorontwikkeling van Bulldog Media naar een digital agency voor websites, SEO, branding, hosting en online groei.",
         "eyebrow": "Over BDMNL",
-        "h1": "BDMNL helpt bedrijven groeien met sterke digitale oplossingen.",
-        "intro": "BDMNL werkt vanuit Brielle aan websites, webshops, branding, SEO, social media en online marketing. De aanpak is persoonlijk, duidelijk en gericht op online groei die past bij het bedrijf achter de website.",
+        "h1": "BDMNL bouwt voort op de ervaring van Bulldog Media.",
+        "intro": "BDMNL is de doorontwikkeling van Bulldog Media: dezelfde digitale basis, dezelfde focus op websites, SEO en online groei, maar met een volwassenere identiteit en een scherper systeem voor moderne bedrijven.",
         "sections": [
-            ("Webflow, SEO en online marketing", "We combineren techniek, uitstraling en vindbaarheid. Zo ontstaat een website die niet alleen professioneel oogt, maar ook logisch werkt voor bezoekers en zoekmachines."),
-            ("Korte lijnen en praktische keuzes", "Een goed project begint met heldere keuzes. BDMNL denkt mee over structuur, content, snelheid en conversie zonder het onnodig ingewikkeld te maken."),
-            ("Voor lokale en landelijke bedrijven", "Van Brielle en Voorne-Putten tot Rotterdam, Zeeland en daarbuiten: BDMNL helpt ondernemers die online professioneler en beter vindbaar willen zijn."),
+            ("Van Bulldog Media naar BDMNL", "Bulldog Media groeide uit tot een bredere digitale partner. De naam BDMNL maakt die ontwikkeling duidelijker: minder losse marketing, meer samenhang tussen strategie, website, techniek, content en vindbaarheid."),
+            ("Expertise die is meegegroeid", "De kern bleef hetzelfde: websites, webshops, hosting, branding, SEO, online marketing en social media beheer voor bedrijven die online professioneler willen overkomen."),
+            ("Regionale basis, bredere blik", "BDMNL werkt vanuit Brielle voor ondernemers op Voorne-Putten, in Rotterdam, Zeeland, Noord-Brabant, Noord-Holland en daarbuiten. De lokale mentaliteit blijft: korte lijnen, duidelijke keuzes en werk dat praktisch resultaat moet opleveren."),
+            ("Huidige positionering", "BDMNL staat voor een premium maar nuchtere digital agency aanpak. Geen tijdelijke trucjes, maar een online basis die vertrouwen opbouwt, technisch klopt en kan doorgroeien."),
+        ],
+    },
+    {
+        "path": "bulldog-media",
+        "kind": "core",
+        "schema_type": "AboutPage",
+        "title": "Bulldog Media is nu BDMNL | Rebrand en digitale continuiteit",
+        "description": "Bulldog Media is doorontwikkeld naar BDMNL. Lees hoe dezelfde expertise in webdesign, SEO, hosting, branding en online marketing verdergaat.",
+        "eyebrow": "Bulldog Media",
+        "h1": "Bulldog Media is doorontwikkeld naar BDMNL.",
+        "intro": "BDMNL is geen losstaande nieuwe partij, maar de voortzetting en rebrand van Bulldog Media. De ervaring, dienstverlening en digitale expertise zijn doorontwikkeld naar een modernere identiteit.",
+        "sections": [
+            ("Dezelfde basis, scherper verhaal", "Bulldog Media stond voor websites, online marketing en digitale zichtbaarheid. BDMNL bouwt daarop voort met een helderder merk, een premium uitstraling en een sterker systeem voor groei."),
+            ("Services blijven herkenbaar", "Webdesign, websites, webshops, hosting, SEO, branding, online marketing en social media beheer blijven onderdeel van de aanpak. De naam is veranderd, de expertise is meegenomen."),
+            ("Waarom dit belangrijk is", "Voor klanten en zoekmachines moet duidelijk zijn dat Bulldog Media en BDMNL bij dezelfde ontwikkeling horen. Daarom benoemen we de overgang transparant en professioneel."),
+            ("Voor bestaande relaties", "Wie Bulldog Media kende, vindt dezelfde praktische mentaliteit terug bij BDMNL: korte lijnen, duidelijke keuzes en digitale oplossingen die betrouwbaar moeten werken."),
+        ],
+    },
+    {
+        "path": "van-bulldog-media-naar-bdmnl",
+        "kind": "core",
+        "schema_type": "AboutPage",
+        "title": "Van Bulldog Media naar BDMNL | Het verhaal achter de rebrand",
+        "description": "Waarom Bulldog Media verderging als BDMNL: de groei van het bureau, de nieuwe identiteit en de visie achter de doorontwikkeling.",
+        "eyebrow": "Rebrand",
+        "h1": "Van Bulldog Media naar BDMNL.",
+        "intro": "De overgang van Bulldog Media naar BDMNL markeert een volwassenere fase: meer focus, meer samenhang en een identiteit die beter past bij de digitale diensten van nu.",
+        "sections": [
+            ("Waarom de naam veranderde", "De werkzaamheden groeiden verder dan een klassieke mediapartner. BDMNL past beter bij een agency dat strategie, websites, branding, hosting, SEO en online marketing als een geheel ziet."),
+            ("Wat hetzelfde bleef", "De praktische manier van werken, de regionale betrokkenheid en de focus op duidelijke digitale oplossingen zijn gebleven. De rebrand maakt die basis juist sterker herkenbaar."),
+            ("Wat veranderde", "BDMNL legt meer nadruk op premium webdesign, technische kwaliteit, lokale SEO, schaalbare contentstructuren en een consistente merkervaring."),
+            ("Toekomstvisie", "BDMNL groeit door als digital agency voor bedrijven die online betrouwbaarder, scherper en beter vindbaar willen worden."),
         ],
     },
     {
@@ -1586,6 +1645,62 @@ CONTENT_RECOVERY_PAGES = [
             ("Publiceer consistent", "Een blog hoeft niet elke dag nieuw te zijn. Belangrijker is dat elk artikel nuttig, actueel en goed vindbaar is."),
         ],
     },
+    {
+        "path": "blog/waarom-bulldog-media-bdmnl-werd",
+        "kind": "article",
+        "title": "Waarom Bulldog Media BDMNL werd | Brand authority",
+        "description": "Lees waarom Bulldog Media verderging als BDMNL en hoe de rebrand de digitale expertise, diensten en positionering versterkt.",
+        "eyebrow": "Brand story",
+        "h1": "Waarom Bulldog Media BDMNL werd.",
+        "intro": "De rebrand van Bulldog Media naar BDMNL is geen breuk met het verleden. Het is een duidelijke stap naar een volwassener agencyverhaal, met dezelfde basis en een scherper toekomstbeeld.",
+        "sections": [
+            ("Een naam die beter past bij de huidige praktijk", "De werkzaamheden groeiden van losse media- en websitediensten naar een samenhangend geheel van webdesign, hosting, SEO, branding en online marketing."),
+            ("Meer focus op digitale groei", "BDMNL legt de nadruk op websites die vertrouwen opbouwen, content die vindbaar is en systemen die praktisch beheerd kunnen worden."),
+            ("Continuiteit voor klanten", "Bestaande kennis, ervaring en werkwijze blijven aanwezig. De rebrand maakt vooral duidelijker waar het bureau nu voor staat."),
+        ],
+    },
+    {
+        "path": "blog/evolutie-bulldog-media-naar-bdmnl",
+        "kind": "article",
+        "title": "De evolutie van Bulldog Media naar BDMNL | BDMNL",
+        "description": "Van Bulldog Media naar BDMNL: hoe de dienstverlening doorgroeide naar webdesign, SEO, hosting, branding en digitale strategie.",
+        "eyebrow": "Evolutie",
+        "h1": "De evolutie van Bulldog Media naar BDMNL.",
+        "intro": "Een merk groeit mee met de diensten, klanten en markt. Bulldog Media ontwikkelde zich door naar BDMNL om beter aan te sluiten op moderne digitale vraagstukken.",
+        "sections": [
+            ("Van uitvoering naar samenhang", "Waar een website vroeger vaak een los project was, vraagt online groei nu om samenhang tussen merk, content, techniek en vindbaarheid."),
+            ("Van lokaal zichtbaar naar professioneel gekozen", "BDMNL helpt bedrijven niet alleen zichtbaar worden, maar ook betrouwbaarder overkomen op het moment dat klanten vergelijken."),
+            ("Een sterker digitaal fundament", "De doorontwikkeling maakt ruimte voor betere processen, premium ontwerp, technische kwaliteit en schaalbare SEO-structuren."),
+        ],
+    },
+    {
+        "path": "blog/hoe-bdmnl-is-gebouwd",
+        "kind": "article",
+        "title": "Hoe BDMNL is gebouwd op Bulldog Media ervaring",
+        "description": "BDMNL is gebouwd op de ervaring van Bulldog Media, met een aangescherpte focus op websites, hosting, SEO, branding en online groei.",
+        "eyebrow": "BDMNL",
+        "h1": "Hoe BDMNL is gebouwd.",
+        "intro": "BDMNL is ontstaan vanuit bestaande ervaring met websites, online marketing en digitale zichtbaarheid. De nieuwe identiteit brengt die ervaring onder in een duidelijker agency-systeem.",
+        "sections": [
+            ("Praktische ervaring als basis", "De kracht van BDMNL zit in het combineren van strategie en uitvoering: niet alleen bedenken wat nodig is, maar het ook technisch en inhoudelijk goed neerzetten."),
+            ("Een premium maar nuchtere aanpak", "BDMNL kiest voor rustige vormgeving, duidelijke taal, snelle techniek en SEO die natuurlijk verwerkt is in de structuur."),
+            ("Klaar voor verdere groei", "De rebrand maakt het makkelijker om diensten als webdesign, hosting, branding, SEO en online marketing als een herkenbaar geheel te presenteren."),
+        ],
+    },
+    {
+        "path": "blog/toekomstvisie-bdmnl",
+        "kind": "article",
+        "title": "De toekomstvisie van BDMNL | Premium digital agency",
+        "description": "De toekomstvisie van BDMNL: premium websites, sterke lokale SEO, betrouwbare hosting, branding en online marketing vanuit een heldere basis.",
+        "eyebrow": "Visie",
+        "h1": "De toekomstvisie van BDMNL.",
+        "intro": "BDMNL bouwt verder aan een digitale basis waarin uitstraling, snelheid, vindbaarheid en vertrouwen samenkomen. De rebrand vanuit Bulldog Media maakt die richting duidelijker.",
+        "sections": [
+            ("Premium hoeft niet ingewikkeld te zijn", "Een sterke website is rustig, snel en overtuigend. BDMNL wil bedrijven helpen met digitale middelen die professioneel voelen en praktisch blijven."),
+            ("Lokale SEO met echte relevantie", "De komende fase draait om lokale autoriteit: pagina's die niet alleen gevonden worden, maar ook inhoudelijk kloppen voor de stad, regio en dienst."),
+            ("Een herkenbaar agency-systeem", "BDMNL blijft bouwen aan een systeem waarin branding, hosting, webdesign, SEO en online marketing elkaar versterken."),
+        ],
+    },
 ]
 
 
@@ -1688,6 +1803,8 @@ def recovery_footer_context(site: dict[str, Any], pages: list[dict[str, Any]]) -
         "footer_internal_links": "\n".join(
             [
                 '<a href="/over-bdmnl/">Over BDMNL</a>',
+                '<a href="/bulldog-media/">Bulldog Media</a>',
+                '<a href="/van-bulldog-media-naar-bdmnl/">Van Bulldog Media naar BDMNL</a>',
                 '<a href="/homepage/">BDMNL homepage</a>',
                 '<a href="/gratis-seo-scan/">Gratis SEO scan</a>',
                 '<a href="/kennisbank/webdesign/">Kennisbank</a>',
@@ -2088,10 +2205,17 @@ def content_sections_html(page: dict[str, Any]) -> str:
 
 def content_related_cards(pages: list[dict[str, Any]]) -> str:
     candidates = [
+        ("Bulldog Media is nu BDMNL", "/bulldog-media/", "Lees hoe Bulldog Media is doorontwikkeld naar BDMNL."),
+        ("Van Bulldog Media naar BDMNL", "/van-bulldog-media-naar-bdmnl/", "Bekijk het verhaal achter de rebrand en continuiteit."),
+        ("Over BDMNL", "/over-bdmnl/", "Leer de huidige positionering en historie van BDMNL kennen."),
         ("Webdesign Brielle", "/webdesign/webdesign-brielle/", "Bekijk hoe BDMNL webdesign lokaal neerzet."),
         ("SEO Rotterdam", "/seo/seo-rotterdam/", "Bekijk hoe BDMNL lokale vindbaarheid in Rotterdam aanpakt."),
         ("Gratis SEO scan", "/gratis-seo-scan/", "Laat je website controleren op snelheid, structuur en vindbaarheid."),
         ("Content marketing", "/blog/content-marketing/", "Lees hoe inhoud helpt om vertrouwen en vindbaarheid op te bouwen."),
+        ("Waarom Bulldog Media BDMNL werd", "/blog/waarom-bulldog-media-bdmnl-werd/", "Lees waarom de rebrand past bij de doorontwikkeling van het bureau."),
+        ("De evolutie naar BDMNL", "/blog/evolutie-bulldog-media-naar-bdmnl/", "Ontdek hoe Bulldog Media doorgroeide naar het huidige BDMNL."),
+        ("Hoe BDMNL is gebouwd", "/blog/hoe-bdmnl-is-gebouwd/", "Bekijk hoe bestaande ervaring is vertaald naar de huidige agency-aanpak."),
+        ("Toekomstvisie BDMNL", "/blog/toekomstvisie-bdmnl/", "Lees hoe BDMNL verder bouwt aan digitale autoriteit."),
         ("Website updaten", "/blog/hoe-vaak-moet-je-je-website-updaten/", "Bekijk wanneer content, techniek en SEO opnieuw aandacht nodig hebben."),
         ("Blog beginnen", "/blog/hoe-kun-je-een-eigen-blog-beginnen/", "Gebruik blogs als ondersteunende content binnen je SEO structuur."),
         ("Professionele hosting", "/blog/professionele-website-hosting-betrouwbaar-en-snel/", "Lees waarom snelheid en betrouwbaarheid belangrijk zijn voor SEO."),
@@ -2148,15 +2272,24 @@ def render_content_page(
     page_url = f"{site['base_url']}/{page['path']}/"
     faqs = content_faqs(page)
     article_class = " article-page" if page["kind"] == "article" else ""
-    schema_type = "Article" if page["kind"] == "article" else "WebPage"
+    schema_type = page.get("schema_type") or ("Article" if page["kind"] == "article" else "WebPage")
     main_schema = {
         "@context": "https://schema.org",
         "@type": schema_type,
         "headline" if schema_type == "Article" else "name": page["title"],
         "url": page_url,
         "description": page["description"],
-        "publisher": {"@type": "Organization", "name": site["name"], "url": site["base_url"]},
+        "publisher": organization_identity(site),
     }
+    if "bulldog" in page["path"] or "bdmnl" in page["path"]:
+        main_schema["about"] = [
+            {"@type": "Organization", "name": "BDMNL", "alternateName": "Bulldog Media"},
+            {"@type": "Brand", "name": "Bulldog Media"},
+        ]
+        main_schema["mentions"] = [
+            {"@type": "Organization", "name": "Bulldog Media", "url": site.get("legacy_domain", "https://www.bulldogmedia.nl")},
+            {"@type": "Organization", "name": "BDMNL", "url": site.get("primary_domain", "https://www.bdmnl.nl")},
+        ]
     page_content = f"""
 <section class="hero section-pad{article_class}">
   <div class="container">
@@ -2280,6 +2413,7 @@ def recovery_schema(site: dict[str, Any], page: dict[str, Any], city: dict[str, 
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": f"BDMNL - {page['keyword']} {city['name']}",
+            "alternateName": "Bulldog Media",
             "url": recovery_url(site, page),
             "image": site["og_image"],
             "email": site["email"],
@@ -2288,7 +2422,7 @@ def recovery_schema(site: dict[str, Any], page: dict[str, Any], city: dict[str, 
             "address": {"@type": "PostalAddress", "streetAddress": "Krammer 8", "postalCode": "3232 HE", "addressLocality": "Brielle", "addressCountry": "NL"},
             "description": profile["description"].format(city=city["name"], keyword=page["keyword"]),
             "serviceType": profile["service_type"],
-            "sameAs": [social["url"] for social in site["socials"]],
+            "sameAs": organization_identity(site)["sameAs"],
         }
     )
 
@@ -2658,7 +2792,16 @@ def build_recovery_homepage(
   </div>
 </section>
 """
-    schema = json_script({"@context": "https://schema.org", "@type": "WebSite", "name": site["name"], "url": site["base_url"]})
+    schema = json_script(
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": site["name"],
+            "alternateName": site.get("alternate_name", "Bulldog Media"),
+            "url": site["base_url"],
+            "publisher": organization_identity(site),
+        }
+    )
     context = {
         "asset_prefix": "./",
         "canonical_url": f"{site['base_url']}/",

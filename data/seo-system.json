@@ -2,6 +2,9 @@
   "site": {
     "base_url": "https://seo.bdmnl.nl",
     "name": "BDMNL",
+    "alternate_name": "Bulldog Media",
+    "legacy_domain": "https://www.bulldogmedia.nl",
+    "primary_domain": "https://www.bdmnl.nl",
     "email": "info@bdmnl.nl",
     "phone": "085 060 56 27",
     "phone_href": "+31850605627",

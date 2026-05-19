@@ -4,8 +4,8 @@ Generated: 2026-05-19
 
 ## Summary
 
-- HTML pages checked: 221
-- Sitemap URLs checked: 221
+- HTML pages checked: 227
+- Sitemap URLs checked: 227
 - Priority authority pages checked: 24
 - Errors: 0
 - Warnings: 0

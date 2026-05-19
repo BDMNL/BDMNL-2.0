@@ -4,7 +4,7 @@ Generated: 2026-05-19
 
 ## What changed in this pass
 
-- Controlled first-batch expansion is active; the sitemap now contains 221 URLs.
+- Controlled first-batch expansion is active; the sitemap now contains 227 URLs.
 - Canonicals were audited against the live `seo.bdmnl.nl` path for every generated page.
 - Index/noindex strategy was reviewed and documented; no aggressive noindex changes were applied.
 - Internal crawl paths were strengthened through same-city and content-support linking in the generator.
@@ -13,14 +13,14 @@ Generated: 2026-05-19
 
 ## Validation result
 
-- HTML pages: 221
-- Sitemap URLs: 221
-- Index recommendations: {'index': 215, 'index-monitor': 6}
+- HTML pages: 227
+- Sitemap URLs: 227
+- Index recommendations: {'index': 227}
 - Priority authority pages below score threshold: 0
 
 ## Topical cluster structure
 
-- blog: 4 pages
+- blog: 8 pages
 - branding-design: 20 pages
 - hosting: 21 pages
 - online-marketing: 30 pages
@@ -29,7 +29,7 @@ Generated: 2026-05-19
 - seo-bureau: 21 pages
 - social-media: 5 pages
 - social-media-beheer: 27 pages
-- support: 9 pages
+- support: 11 pages
 - webdesign: 17 pages
 - webshop-laten-maken: 20 pages
 - website-laten-maken: 26 pages
@@ -48,12 +48,6 @@ Generated: 2026-05-19
 
 ## Lowest quality scores to improve next
 
-- /blog/content-marketing/ — score 82 — thin_content
-- /blog/hoe-kun-je-een-eigen-blog-beginnen/ — score 82 — thin_content
-- /blog/hoe-vaak-moet-je-je-website-updaten/ — score 82 — thin_content
-- /blog/professionele-website-hosting-betrouwbaar-en-snel/ — score 82 — thin_content
-- /blog/wordpress-waarom-is-dat-zo-populair/ — score 82 — thin_content
-- /kennisbank/webdesign/ — score 82 — thin_content
 - /online-marketing-middelburg/ — score 100 — monitor_overlap_with:/online-marketing/online-marketing-middelburg/
 - /seo/seo-bureau-rotterdam/ — score 100 — monitor_overlap_with:/seo-bureau-rotterdam/
 - /social-media/social-media-beheer-brielle/ — score 100 — monitor_overlap_with:/social-media-beheer-brielle/
