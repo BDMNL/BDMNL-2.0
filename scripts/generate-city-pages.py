@@ -890,15 +890,109 @@ RECOVERY_CITIES = {
 }
 
 
+AUTHORITY_CITY_KEYS = {
+    "brielle",
+    "rotterdam",
+    "spijkenisse",
+    "hellevoetsluis",
+    "dordrecht",
+    "goes",
+    "middelburg",
+    "breda",
+}
+
+
+LOCAL_AUTHORITY = {
+    "brielle": {
+        "nearby": ["Vierpolders", "Zwartewaal", "Hellevoetsluis", "Rockanje"],
+        "market": "Brielle is compact, lokaal en persoonlijk: ondernemers worden vaak gekozen op vertrouwen, herkenbaarheid en snelle bereikbaarheid.",
+        "scenario": "Denk aan een lokale dienstverlener, praktijk, horecaondernemer of specialist op Voorne-Putten die professioneel wil overkomen bij klanten die eerst online vergelijken.",
+        "positioning": "BDMNL zet Brielse bedrijven neer met een rustige premium uitstraling, duidelijke bewijsvoering en content die aansluit op zoekvragen uit Brielle en omliggende plaatsen.",
+        "proof": "Lokale nabijheid vanuit Brielle, korte lijnen en ervaring met websites die vertrouwen moeten opbouwen voordat iemand belt of een offerte aanvraagt.",
+    },
+    "rotterdam": {
+        "nearby": ["Schiedam", "Vlaardingen", "Barendrecht", "Capelle aan den IJssel"],
+        "market": "Rotterdam is competitief en snel: bezoekers vergelijken aanbieders in enkele seconden en verwachten direct scherpte, bewijs en een professionele uitstraling.",
+        "scenario": "Voor zakelijke dienstverleners, agencies, technische bedrijven en groeiende teams is een website vaak het eerste moment waarop merk, expertise en schaalbaarheid samenkomen.",
+        "positioning": "BDMNL vertaalt Rotterdamse ambitie naar heldere positionering, snelle Webflow techniek en SEO-content die niet voelt als losse zoekwoorden.",
+        "proof": "Een pagina moet in Rotterdam harder werken: boven de vouw overtuigen, daarna verdiepen met cases, trust, lokale relevantie en een logische route naar contact.",
+    },
+    "spijkenisse": {
+        "nearby": ["Hekelingen", "Hoogvliet", "Brielle", "Rotterdam"],
+        "market": "Spijkenisse heeft een brede MKB-markt waar lokale vindbaarheid, bereikbaarheid en vertrouwen zwaar meewegen in de keuze voor een aanbieder.",
+        "scenario": "Een aannemer, zorgpraktijk, automotive bedrijf of zakelijke dienstverlener wil niet alleen gevonden worden, maar ook direct professioneel en betrouwbaar ogen.",
+        "positioning": "BDMNL helpt bedrijven in Nissewaard hun aanbod simpeler uitleggen, sterker vormgeven en beter verbinden met lokale zoekintentie.",
+        "proof": "De combinatie van lokale termen, duidelijke CTA's en moderne UX maakt het makkelijker voor bezoekers uit Spijkenisse om de stap naar contact te zetten.",
+    },
+    "hellevoetsluis": {
+        "nearby": ["Brielle", "Rockanje", "Ouddorp", "Spijkenisse"],
+        "market": "Hellevoetsluis combineert lokale dienstverlening, havenhistorie, retail en recreatie; online vertrouwen is belangrijk voor zowel inwoners als regionale bezoekers.",
+        "scenario": "Bedrijven die afhankelijk zijn van aanvragen, reserveringen of adviesgesprekken hebben een site nodig die snel uitlegt wat ze doen en waarom ze dichtbij relevant zijn.",
+        "positioning": "BDMNL maakt de lokale context voelbaar zonder de pagina vol te stoppen met plaatsnamen: duidelijk, premium en gericht op conversie.",
+        "proof": "Een sterke pagina verbindt Hellevoetsluis, Voorne aan Zee en omliggende plaatsen met concrete diensten en herkenbare klantvragen.",
+    },
+    "dordrecht": {
+        "nearby": ["Zwijndrecht", "Papendrecht", "Sliedrecht", "Rotterdam"],
+        "market": "Dordrecht heeft een volwassen lokale markt met veel dienstverleners, maakbedrijven en regionale spelers die online serieus vergeleken worden.",
+        "scenario": "Een bedrijf in de Drechtsteden heeft baat bij een website die vakmanschap, betrouwbaarheid en regionale bereikbaarheid direct zichtbaar maakt.",
+        "positioning": "BDMNL bouwt Dordtse pagina's met heldere hiërarchie, sterke headings en lokale content die aansluit op commerciële zoekopdrachten.",
+        "proof": "De pagina laat niet alleen zien dat je actief bent in Dordrecht, maar waarom jouw aanbod relevant is voor klanten in de hele regio.",
+    },
+    "goes": {
+        "nearby": ["Kapelle", "Kloetinge", "Middelburg", "Zierikzee"],
+        "market": "Goes is een belangrijk zakelijk centrum in Zeeland waar lokale zichtbaarheid en regionale uitstraling elkaar versterken.",
+        "scenario": "Voor Zeeuwse bedrijven is het belangrijk dat een website professioneel voelt voor lokale klanten én sterk genoeg is voor aanvragen uit de bredere provincie.",
+        "positioning": "BDMNL combineert Zeeuwse nuchterheid met premium digital agency UX: helder, snel, betrouwbaar en gericht op nieuwe aanvragen.",
+        "proof": "Door Goes te koppelen aan omliggende plaatsen en concrete klantvragen ontstaat lokale content die natuurlijk leest en SEO ondersteunt.",
+    },
+    "middelburg": {
+        "nearby": ["Vlissingen", "Goes", "Veere", "Domburg"],
+        "market": "Middelburg vraagt om een professionele balans tussen lokale historie, toerisme, zakelijke dienstverlening en regionale concurrentie.",
+        "scenario": "Een specialist, praktijk, winkel of hospitality-bedrijf wil zichtbaar zijn voor mensen die lokaal zoeken en daarna snel willen beoordelen of het aanbod past.",
+        "positioning": "BDMNL geeft Middelburgse pagina's een rustige, hoogwaardige structuur met content die inspeelt op vertrouwen, ligging en duidelijke vervolgstappen.",
+        "proof": "Lokale relevantie werkt hier vooral wanneer de pagina concreet blijft: wat doe je, voor wie, waar ben je actief en waarom moeten bezoekers nu contact opnemen?",
+    },
+    "breda": {
+        "nearby": ["Oosterhout", "Etten-Leur", "Tilburg", "Roosendaal"],
+        "market": "Breda is sterk in creativiteit, zakelijke dienstverlening, hospitality en groeiende MKB-bedrijven; uitstraling en positionering zijn doorslaggevend.",
+        "scenario": "Een bedrijf dat in Breda wil opvallen heeft een website nodig die niet standaard voelt en tegelijk snel uitlegt wat de waarde is.",
+        "positioning": "BDMNL bouwt Bredase autoriteitspagina's met scherpe copy, premium visuals en lokale SEO die past bij een competitieve Brabantse markt.",
+        "proof": "Met duidelijke merkpresentatie, lokale context en conversiegerichte CTA's wordt de pagina meer dan een vindbaarheidspagina: het wordt een sales asset.",
+    },
+}
+
+
+SERVICE_AUTHORITY = {
+    "website-laten-maken": {
+        "benefit": "een website die direct vertrouwen geeft en klaar is voor lokale SEO",
+        "outcome": "meer kwalitatieve aanvragen uit de regio",
+        "decision": "Bezoekers moeten snel snappen wat je doet, waarom je betrouwbaar bent en welke stap logisch is.",
+        "visual_label": "Website concept",
+    },
+    "webdesign": {
+        "benefit": "een premium ontwerp met scherpe structuur, sterke UX en Webflow snelheid",
+        "outcome": "een professionelere eerste indruk en betere lead flow",
+        "decision": "Goed webdesign haalt ruis weg: heldere hiërarchie, sterke typografie en een route die bezoekers vanzelf volgen.",
+        "visual_label": "UX preview",
+    },
+    "seo": {
+        "benefit": "lokale vindbaarheid met content die menselijk leest en technisch klopt",
+        "outcome": "duurzame zichtbaarheid op zoekopdrachten met commerciële intentie",
+        "decision": "SEO werkt pas echt wanneer techniek, lokale relevantie en conversie samen op één pagina landen.",
+        "visual_label": "SEO map",
+    },
+}
+
+
 RECOVERY_SERVICE_PROFILES = {
     "website-laten-maken": {
         "label": "Website laten maken",
         "short": "Website",
         "service_type": "Website development en Webflow webdesign",
-        "title": "Website laten maken {city} | Webflow websites door BDMNL",
-        "description": "Website laten maken in {city}? BDMNL bouwt snelle Webflow websites met lokale SEO, duidelijke content en conversiepaden voor meer aanvragen.",
-        "h1": "Website laten maken {city} met Webflow, lokale SEO en duidelijke conversie.",
-        "hero": "BDMNL bouwt websites voor bedrijven in {city} die professioneel willen overkomen, sneller duidelijk willen zijn en lokaal beter gevonden willen worden.",
+        "title": "Website laten maken {city} | Premium Webflow website door BDMNL",
+        "description": "Website laten maken in {city}? BDMNL ontwikkelt premium Webflow websites met lokale SEO, sterke UX en een duidelijke route naar contact.",
+        "h1": "Website laten maken in {city} voor bedrijven die premium willen overkomen.",
+        "hero": "BDMNL ontwikkelt websites voor bedrijven in {city} die niet alleen online willen staan, maar professioneel gekozen willen worden. Denk aan scherpe positionering, snelle Webflow techniek, lokale SEO en CTA's die logisch voelen.",
         "cta": "Plan een websitegesprek",
         "faq_focus": "website",
     },
@@ -906,10 +1000,10 @@ RECOVERY_SERVICE_PROFILES = {
         "label": "Webdesign",
         "short": "Webflow",
         "service_type": "Webdesign en website development",
-        "title": "Webdesign {city} | Webflow websites door BDMNL",
-        "description": "Webdesign in {city}? BDMNL bouwt snelle Webflow websites met sterke structuur, SEO-basis en duidelijke conversiepaden voor lokale bedrijven.",
-        "h1": "Webdesign {city} met Webflow, snelheid en een duidelijke online basis.",
-        "hero": "BDMNL ontwerpt en bouwt websites voor bedrijven in {city} die professioneel willen overkomen en beter vindbaar willen zijn. We combineren Webflow, heldere content, snelheid en praktische conversiepunten.",
+        "title": "Webdesign {city} | Premium UX en Webflow door BDMNL",
+        "description": "Webdesign in {city}? BDMNL ontwerpt premium websites met scherpe typografie, Webflow snelheid, lokale SEO en conversiegericht UX-design.",
+        "h1": "Webdesign {city} met de uitstraling van een premium digital agency.",
+        "hero": "BDMNL ontwerpt websites voor bedrijven in {city} die serieuzer, scherper en betrouwbaarder willen overkomen. We combineren rust in design met duidelijke content, snelle techniek en lokale context.",
         "cta": "Plan een websitegesprek",
         "faq_focus": "website",
     },
@@ -917,10 +1011,10 @@ RECOVERY_SERVICE_PROFILES = {
         "label": "SEO",
         "short": "SEO",
         "service_type": "SEO en zoekmachine optimalisatie",
-        "title": "{keyword} {city} | SEO en vindbaarheid door BDMNL",
-        "description": "{keyword} in {city}? BDMNL helpt met snelle websites, sterke lokale content en een duidelijke structuur voor betere vindbaarheid.",
-        "h1": "{keyword} {city} voor betere lokale vindbaarheid.",
-        "hero": "BDMNL helpt bedrijven in {city} beter gevonden worden met een praktische SEO-aanpak: een snelle website, sterke lokale content en duidelijke routes naar contact.",
+        "title": "{keyword} {city} | Lokale SEO strategie door BDMNL",
+        "description": "{keyword} in {city}? BDMNL verbetert lokale vindbaarheid met technische SEO, sterke content, interne links en pagina's die aanvragen opleveren.",
+        "h1": "{keyword} {city} voor vindbaarheid die ook vertrouwen opbouwt.",
+        "hero": "BDMNL helpt bedrijven in {city} groeien met SEO die verder gaat dan zoekwoorden. De basis: snelle techniek, lokale content, sterke interne links en pagina's die bezoekers overtuigen om contact op te nemen.",
         "cta": "Plan een SEO-gesprek",
         "faq_focus": "seo",
     },
@@ -1287,45 +1381,178 @@ def recovery_footer_context(site: dict[str, Any], pages: list[dict[str, Any]]) -
     }
 
 
+def local_authority(city_key: str) -> dict[str, Any]:
+    city = RECOVERY_CITIES[city_key]
+    return LOCAL_AUTHORITY.get(
+        city_key,
+        {
+            "nearby": city["areas"],
+            "market": f"{city['name']} heeft een lokale markt waarin vertrouwen, duidelijke communicatie en online vindbaarheid belangrijk zijn.",
+            "scenario": f"Voor bedrijven in {city['name']} moet een pagina snel laten zien wat je doet, waar je actief bent en waarom klanten contact opnemen.",
+            "positioning": f"BDMNL vertaalt {city['name']} naar een professionele pagina met lokale context, premium vormgeving en een logische route naar aanvraag.",
+            "proof": "De combinatie van rustige UX, lokale content en duidelijke CTA's maakt de pagina sterker dan een standaard SEO-landingspagina.",
+        },
+    )
+
+
+def service_authority(page: dict[str, Any], profile: dict[str, str]) -> dict[str, str]:
+    return SERVICE_AUTHORITY.get(
+        page["service_key"],
+        {
+            "benefit": f"een duidelijke aanpak voor {profile['label'].lower()}",
+            "outcome": "meer vertrouwen, betere herkenning en een duidelijkere route naar contact",
+            "decision": "De pagina moet bezoekers helpen begrijpen waarom BDMNL relevant is en welke stap ze kunnen zetten.",
+            "visual_label": profile["label"],
+        },
+    )
+
+
+def build_authority_facts(city_key: str, city: dict[str, Any], page: dict[str, Any], profile: dict[str, str]) -> str:
+    local = local_authority(city_key)
+    service = service_authority(page, profile)
+    facts = [
+        ("Lokale context", local["market"]),
+        ("Regionale vraag", f"Relevant voor {', '.join(local['nearby'][:4])} en de bredere regio {city['region']}."),
+        ("Commerciële intentie", f"Gebouwd voor bezoekers die zoeken naar {page['keyword'].lower()} in {city['name']} en snel willen beoordelen of BDMNL past."),
+        ("Gewenste uitkomst", service["outcome"]),
+    ]
+    return "\n".join(
+        "\n".join(
+            [
+                '      <article class="authority-fact">',
+                f"        <span>{html(label)}</span>",
+                f"        <p>{html(copy)}</p>",
+                "      </article>",
+            ]
+        )
+        for label, copy in facts
+    )
+
+
+def build_local_scenario_cards(city_key: str, city: dict[str, Any], page: dict[str, Any], profile: dict[str, str]) -> str:
+    local = local_authority(city_key)
+    service = service_authority(page, profile)
+    cards = [
+        ("Markt", local["market"]),
+        ("Scenario", local["scenario"]),
+        ("Positionering", local["positioning"]),
+        ("Resultaat", f"De pagina stuurt op {service['outcome']} zonder dat de content als SEO-filler voelt."),
+    ]
+    return "\n".join(
+        "\n".join(
+            [
+                '      <article class="local-card reveal">',
+                f"        <span>{html(label)}</span>",
+                f"        <p>{html(copy)}</p>",
+                "      </article>",
+            ]
+        )
+        for label, copy in cards
+    )
+
+
+def build_authority_visual(city_key: str, city: dict[str, Any], page: dict[str, Any], profile: dict[str, str]) -> str:
+    local = local_authority(city_key)
+    service = service_authority(page, profile)
+    nearby = local["nearby"][:3]
+    return "\n".join(
+        [
+            '<div class="authority-visual-card reveal">',
+            '  <div class="authority-visual-top">',
+            f"    <span>{html(service['visual_label'])}</span>",
+            f"    <strong>{html(city['name'])}</strong>",
+            "  </div>",
+            '  <div class="authority-device" aria-hidden="true">',
+            "    <div></div><div></div><div></div>",
+            "  </div>",
+            '  <div class="authority-map">',
+            f"    <span>{html(city['name'])}</span>",
+            *(f"    <i>{html(place)}</i>" for place in nearby),
+            "  </div>",
+            f"  <p>{html(local['proof'])}</p>",
+            "</div>",
+        ]
+    )
+
+
+def build_cta_actions(site: dict[str, Any], page: dict[str, Any], city: dict[str, Any], profile: dict[str, str]) -> str:
+    subject = f"{page['keyword']} {city['name']}"
+    subject_href = subject.replace(" ", "%20")
+    return "\n".join(
+        [
+            '<div class="cta-actions" aria-label="Contactopties">',
+            f'  <a class="btn btn-dark" href="/contact/" data-magnetic>{html(profile["cta"])}</a>',
+            f'  <a class="btn btn-light" href="mailto:{html(site["email"])}?subject={html(subject_href)}">Mail BDMNL direct</a>',
+            '  <p class="cta-note">Directe route naar contact: kies een gesprek of stuur meteen je vraag per mail.</p>',
+            "</div>",
+        ]
+    )
+
+
+def authority_page(page: dict[str, Any]) -> bool:
+    return page["service_key"] in {"website-laten-maken", "webdesign", "seo"} and page["city_key"] in AUTHORITY_CITY_KEYS
+
+
 def recovery_faqs(page: dict[str, Any], city: dict[str, Any], profile: dict[str, str]) -> list[dict[str, str]]:
     city_name = city["name"]
     areas = ", ".join(city["areas"])
     keyword = page["keyword"].lower()
+    local = local_authority(page["city_key"])
+    service = service_authority(page, profile)
     return [
         {
-            "question": f"Helpt BDMNL met {keyword} in {city_name}?",
+            "question": f"Wanneer is {keyword} in {city_name} een slimme investering?",
             "answer": (
-                f"Ja. BDMNL helpt bedrijven in {city_name} met {keyword}, waarbij we kijken naar uitstraling, snelheid, "
-                "vindbaarheid en de route naar contact of aanvraag."
+                f"Dat is vooral waardevol wanneer klanten je online vergelijken voordat ze contact opnemen. BDMNL zorgt dan voor {service['benefit']} "
+                f"en een pagina die past bij de markt in {city_name}."
             ),
         },
         {
-            "question": f"Sluit de aanpak aan op lokale zoekvragen in {city_name}?",
+            "question": f"Hoe maakt BDMNL de pagina lokaal relevant voor {city_name}?",
             "answer": (
-                f"Ja. We verwerken lokale context rond {areas} en schrijven de pagina voor bezoekers die gericht zoeken naar "
-                f"{keyword} in {city_name}."
+                f"We verwerken lokale context rond {areas}, nabijgelegen plaatsen zoals {', '.join(local['nearby'][:3])} en realistische klantvragen. "
+                "Daardoor leest de pagina natuurlijker en wordt de lokale intentie sterker."
             ),
         },
         {
-            "question": "Past deze aanpak bij een bestaande BDMNL website?",
+            "question": "Blijft de pagina premium in plaats van generiek SEO-gericht?",
             "answer": (
-                "Ja. BDMNL werkt vanuit één herkenbare basis met dezelfde uitstraling, duidelijke navigatie en een sterke SEO-opbouw."
+                "Ja. We houden de opbouw rustig, schrijven menselijk en gebruiken SEO als structuur onder de pagina, niet als zichtbare vulling."
             ),
         },
         {
-            "question": "Kan BDMNL ook helpen met verdere optimalisatie na livegang?",
+            "question": "Welke vervolgstap past na het bekijken van deze pagina?",
             "answer": (
-                "Ja. Na livegang kunnen we content, techniek, snelheid, SEO en conversiepunten gericht blijven verbeteren."
+                "Plan een gesprek of stuur een korte mail. Dan kijkt BDMNL naar je huidige website, lokale markt en de pagina's die nodig zijn om sterker te groeien."
             ),
         },
     ]
 
 
 def recovery_service_cards(page: dict[str, Any], city: dict[str, Any], profile: dict[str, str]) -> str:
+    local = local_authority(page["city_key"])
+    service = service_authority(page, profile)
     cards = [
-        ("01", "Strategie", f"We bepalen wat bezoekers in {city['name']} nodig hebben en welke informatie hen helpt kiezen."),
-        ("02", "Webflow & gebruiksgemak", "We bouwen een snelle, rustige ervaring met duidelijke content en een logische route naar contact."),
-        ("03", "SEO & vindbaarheid", "Je online basis krijgt lokale content, veelgestelde vragen en verwijzingen naar relevante BDMNL pagina's."),
+        (
+            "01",
+            "Lokale positionering",
+            f"We bepalen hoe {page['keyword'].lower()} in {city['name']} moet voelen voor klanten uit {', '.join(local['nearby'][:2])} en de regio.",
+        ),
+        (
+            "02",
+            "Premium UX en content",
+            f"De pagina krijgt scherpe headings, rustige secties en copy die uitlegt waarom jouw bedrijf de juiste keuze is.",
+        ),
+        (
+            "03",
+            "SEO die natuurlijk leest",
+            f"Lokale zoekwoorden, FAQ's en interne links worden verwerkt zonder de leesbaarheid of premium uitstraling te verliezen.",
+        ),
+        (
+            "04",
+            "Conversie zonder frictie",
+            f"We sturen op {service['outcome']} met duidelijke CTA's, contactroutes en bewijsvoering op de juiste plekken.",
+        ),
     ]
     return "\n".join(
         "\n".join(
@@ -1641,6 +1868,17 @@ def recovery_context(site: dict[str, Any], page: dict[str, Any], pages: list[dic
     description = profile["description"].format(city=city["name"], keyword=page["keyword"])
     faqs = recovery_faqs(page, city, profile)
     areas = ", ".join(city["areas"])
+    local = local_authority(page["city_key"])
+    service = service_authority(page, profile)
+    nearby = ", ".join(local["nearby"][:4])
+    is_authority = authority_page(page)
+    h1 = profile["h1"].format(city=city["name"], keyword=page["keyword"])
+    hero_lead = profile["hero"].format(city=city["name"], keyword=page["keyword"])
+    if is_authority:
+        hero_lead = (
+            f"{hero_lead} Voor ondernemers in {city['name']} en plaatsen als {nearby} draait het om meer dan vindbaarheid: "
+            f"de pagina moet vertrouwen opbouwen, scherp positioneren en leiden naar {service['outcome']}."
+        )
     return {
         "asset_prefix": "../" * len(page["path"].split("/")),
         "canonical_url": recovery_url(site, page),
@@ -1655,34 +1893,50 @@ def recovery_context(site: dict[str, Any], page: dict[str, Any], pages: list[dic
         "faq_schema": faq_schema(faqs),
         "breadcrumb_schema": recovery_breadcrumb(site, page, city),
         "eyebrow": f"{page['keyword']} in {city['name']}",
-        "h1": profile["h1"].format(city=city["name"], keyword=page["keyword"]),
-        "hero_lead": profile["hero"].format(city=city["name"], keyword=page["keyword"]),
+        "h1": h1,
+        "hero_lead": hero_lead,
+        "hero_proof": f"BDMNL koppelt premium Webflow design aan lokale SEO voor {city['name']} en {city['region']}.",
         "primary_cta": profile["cta"],
         "city": city["name"],
         "service_label": profile["label"],
         "service_short": profile["short"],
         "path": page["path"],
-        "local_focus": f"Lokale content voor {areas}",
-        "marquee_items": "\n".join(f"<span>{html(item)}</span>" for item in [profile["label"], city["name"], *city["areas"], "Webflow", "SEO", "Online groei"]),
-        "intro_heading": f"{page['keyword']} {city['name']} met een sterke BDMNL basis.",
+        "local_focus": f"{city['name']}, {nearby}",
+        "marquee_items": "\n".join(f"<span>{html(item)}</span>" for item in [profile["label"], city["name"], *local["nearby"][:4], "Webflow", "SEO", "Conversie"]),
+        "logo_panel_copy": f"BDMNL combineert lokale marktkennis, premium UX, Webflow techniek en SEO voor bedrijven in {city['name']} en omgeving.",
+        "intro_heading": f"{page['keyword']} {city['name']} met lokale autoriteit en een premium eerste indruk.",
         "intro_copy_one": (
-            f"Voor {page['keyword'].lower()} in {city['name']} draait het om een heldere combinatie van uitstraling, snelheid en vindbaarheid. "
-            "BDMNL vertaalt die basis naar content en design die bezoekers snel verder helpt."
+            f"{local['market']} Daarom moet {page['keyword'].lower()} in {city['name']} direct duidelijk maken waar je voor staat, "
+            f"voor wie je werkt en waarom iemand de volgende stap zet."
         ),
         "intro_copy_two": (
-            f"We houden rekening met lokale vragen rond {areas}. Daardoor voelt de pagina relevant voor bedrijven in de regio, "
-            "met voorbeelden en voordelen die aansluiten op de lokale markt."
+            f"{local['scenario']} BDMNL vertaalt dat naar {service['benefit']}, zonder overbodige SEO-zinnen of generieke beloftes."
         ),
         "intro_copy_three": (
-            "Zo ontstaat een online basis waarin Webflow, SEO, content en conversie elkaar versterken."
+            f"{service['decision']} De pagina blijft leesbaar, snel en logisch opgebouwd voor bezoekers uit {areas}."
         ),
-        "services_heading": f"Hoe BDMNL helpt met {page['keyword'].lower()} in {city['name']}.",
-        "services_intro": "We combineren strategie, Webflow, SEO en duidelijke content tot een pagina die snel laadt en logisch leest.",
+        "authority_facts": build_authority_facts(page["city_key"], city, page, profile),
+        "local_authority_heading": f"Wat maakt {city['name']} anders als lokale markt?",
+        "local_authority_intro": local["positioning"],
+        "local_scenario_cards": build_local_scenario_cards(page["city_key"], city, page, profile),
+        "authority_visual": build_authority_visual(page["city_key"], city, page, profile),
+        "services_heading": f"Een scherpere aanpak voor {page['keyword'].lower()} in {city['name']}.",
+        "services_intro": f"Geen dunne SEO-pagina, maar een compacte autoriteitspagina met lokale context, premium design en conversie voor {city['region']}.",
         "service_cards": recovery_service_cards(page, city, profile),
+        "portfolio_heading": f"Premium pagina-opbouw voor {page['keyword'].lower()} in {city['name']}.",
+        "portfolio_intro": "De visuele opbouw ondersteunt vertrouwen: een rustige hero, duidelijke diensten, lokale bewijsvoering en CTA's die niet voelen als druk.",
+        "portfolio_label_one": page["keyword"],
+        "portfolio_title_one": f"Een bovenkant die meteen positioneert.",
+        "portfolio_note_one": f"{city['name']} + {profile['label']} + duidelijke waardepropositie",
+        "portfolio_title_two": f"Lokale signalen zonder keyword stuffing.",
+        "portfolio_note_two": f"{city['name']}, {nearby}",
+        "portfolio_title_three": "Vertrouwen voor de klik naar contact.",
+        "portfolio_note_three": "Bewijs, FAQ, interne links en duidelijke CTA's",
         "related_cards": recovery_related_cards(page, pages),
         "testimonial_cards": recovery_testimonial_cards(),
-        "cta_heading": f"Klaar om {page['keyword'].lower()} in {city['name']} goed neer te zetten?",
-        "cta_copy": "Neem contact op met BDMNL voor een praktische aanpak rond website, SEO, content en online groei.",
+        "cta_heading": f"Wil je dat {page['keyword'].lower()} in {city['name']} serieuzer voelt?",
+        "cta_copy": f"Laat BDMNL meekijken naar je huidige pagina, lokale kansen en de route naar {service['outcome']}. Je krijgt een concreet gesprek over structuur, content, SEO en conversie.",
+        "cta_actions": build_cta_actions(site, page, city, profile),
         "faq_heading": f"Veelgestelde vragen over {page['keyword'].lower()} in {city['name']}.",
         "faq_items": build_faq_items(faqs),
     }
@@ -1699,7 +1953,17 @@ def render_recovery_page(
     page_content = render(
         page_template,
         context,
-        raw_keys={"service_cards", "related_cards", "testimonial_cards", "faq_items", "marquee_items"},
+        raw_keys={
+            "service_cards",
+            "related_cards",
+            "testimonial_cards",
+            "faq_items",
+            "marquee_items",
+            "authority_facts",
+            "local_scenario_cards",
+            "authority_visual",
+            "cta_actions",
+        },
     )
     header_html = render(header, {"asset_prefix": context["asset_prefix"]})
     footer_html = render(
@@ -2165,6 +2429,7 @@ Generated: {date.today().isoformat()}
 - Existing recovery infrastructure preserved: templates, shared CSS/JS, generated recovery pages, sitemap and robots flow.
 - Search Console export files were not present in this workspace or tracked on `origin/main`; expansion therefore uses the existing recovery URL inventory plus the requested priority services, regions and cities.
 - Temporary, preview and non-commercial URLs were not generated.
+- Authority upgrade applied to website laten maken, SEO bureau and webdesign pages, with priority local content for Brielle, Rotterdam, Spijkenisse, Hellevoetsluis, Dordrecht, Goes, Middelburg and Breda.
 
 ## Output files
 
@@ -2188,6 +2453,7 @@ Generated: {date.today().isoformat()}
 - CTA blocks, FAQ sections and internal related links.
 - Shared BDMNL 2.0 styling and responsive layout.
 - Local city and region references in headings, body copy and FAQ answers.
+- Premium authority sections with local market context, regional scenarios, visual mockups and direct CTA buttons instead of fake inline forms.
 
 ## Validation performed
 

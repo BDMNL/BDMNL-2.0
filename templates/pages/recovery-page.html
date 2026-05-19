@@ -19,7 +19,7 @@
           <span></span>
           <span></span>
         </div>
-        <p><strong>BDMNL Brielle</strong> voor Webflow, SEO en online groei</p>
+        <p><strong>{{city}} en omgeving</strong> {{hero_proof}}</p>
       </div>
 
       <dl class="hero-metrics" aria-label="BDMNL ervaring">
@@ -51,6 +51,10 @@
           <div class="visual-topline">
             <div class="visual-pill">{{city}}</div>
             <div class="visual-score">{{service_label}}</div>
+          </div>
+          <div class="authority-mini-panel">
+            <span>Lokale markt</span>
+            <strong>{{local_focus}}</strong>
           </div>
           <div class="visual-layout">
             <div>
@@ -114,7 +118,7 @@
 
 <section class="logo-section" aria-label="BDMNL diensten">
   <div class="container logo-panel reveal">
-    <p>BDMNL combineert strategie, design, techniek en online marketing.</p>
+    <p>{{logo_panel_copy}}</p>
     <div class="logo-marquee" aria-hidden="true">
       <div class="logo-track">{{marquee_items}}</div>
       <div class="logo-track" aria-hidden="true">{{marquee_items}}</div>
@@ -132,7 +136,24 @@
       <p>{{intro_copy_one}}</p>
       <p>{{intro_copy_two}}</p>
       <p>{{intro_copy_three}}</p>
+      <div class="authority-facts">
+        {{authority_facts}}
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="section local-authority" id="lokale-context">
+  <div class="container local-authority-grid">
+    <div class="section-heading reveal">
+      <p class="eyebrow"><span></span>Lokale relevantie</p>
+      <h2>{{local_authority_heading}}</h2>
+      <p>{{local_authority_intro}}</p>
+    </div>
+    {{authority_visual}}
+  </div>
+  <div class="container local-card-grid">
+    {{local_scenario_cards}}
   </div>
 </section>
 
@@ -155,8 +176,8 @@
   <div class="container">
     <div class="section-heading reveal">
       <p class="eyebrow"><span></span>Cases</p>
-      <h2>Digitale projecten met impact.</h2>
-      <p>BDMNL werkt aan websites, webshops, branding, SEO en online marketing voor ondernemers die online sterker willen staan.</p>
+      <h2>{{portfolio_heading}}</h2>
+      <p>{{portfolio_intro}}</p>
     </div>
     <div class="portfolio-grid">
       <article class="portfolio-card portfolio-large reveal">
@@ -167,25 +188,25 @@
           <span></span><span></span><span></span>
         </div>
         <div class="portfolio-content">
-          <p>Website & SEO</p>
-          <h3>Een snelle structuur die bezoekers helpt kiezen.</h3>
-          <span>Webflow, content en conversie in één lijn</span>
+          <p>{{portfolio_label_one}}</p>
+          <h3>{{portfolio_title_one}}</h3>
+          <span>{{portfolio_note_one}}</span>
         </div>
       </article>
       <article class="portfolio-card reveal">
         <div class="portfolio-preview orange-preview"><div class="preview-phone"></div></div>
         <div class="portfolio-content">
           <p>Lokale groei</p>
-          <h3>Content die aansluit op lokale vragen.</h3>
-          <span>{{city}} en omliggende gebieden</span>
+          <h3>{{portfolio_title_two}}</h3>
+          <span>{{portfolio_note_two}}</span>
         </div>
       </article>
       <article class="portfolio-card reveal">
         <div class="portfolio-preview clean-preview"><div class="preview-proof"><span></span><span></span><span></span></div></div>
         <div class="portfolio-content">
           <p>Vertrouwen</p>
-          <h3>Heldere bewijsvoering zonder overbodige ruis.</h3>
-          <span>Reviews, diensten en contactmomenten</span>
+          <h3>{{portfolio_title_three}}</h3>
+          <span>{{portfolio_note_three}}</span>
         </div>
       </article>
     </div>
@@ -287,13 +308,7 @@
         <strong>BDMNL</strong>
         <em>Webflow, SEO & online groei</em>
       </div>
-      <form class="cta-form" action="/contact/" method="get">
-        <label for="email">Zakelijk e-mailadres</label>
-        <div>
-          <input id="email" name="email" type="email" required />
-          <button class="btn btn-dark" type="submit">Plan gesprek</button>
-        </div>
-      </form>
+      {{cta_actions}}
     </div>
   </div>
 </section>
