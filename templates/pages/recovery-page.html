@@ -38,32 +38,60 @@
       </dl>
     </div>
 
-    <aside class="agency-visual reveal" aria-label="BDMNL authority brief voor {{service_label}} in {{city}}">
-      <div class="agency-plate">
-        <p class="plate-kicker">{{service_label}}</p>
+    <div class="hero-visual reveal" aria-label="BDMNL pagina-preview voor {{service_label}} in {{city}}">
+      <div class="mockup-halo" aria-hidden="true"></div>
+      <div class="browser-card tilt-card" data-tilt-card>
+        <div class="browser-bar">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="browser-url">bdmnl.nl/{{path}}</div>
+        </div>
+        <div class="browser-content">
+          <div class="visual-topline">
+            <div class="visual-pill">{{city}}</div>
+            <div class="visual-score">{{service_label}}</div>
+          </div>
+          <div class="authority-mini-panel">
+            <span>Lokale markt</span>
+            <strong>{{local_focus}}</strong>
+          </div>
+          <div class="visual-layout">
+            <div>
+              <div class="visual-heading"></div>
+              <div class="visual-heading short"></div>
+              <div class="visual-body"></div>
+              <div class="visual-body narrow"></div>
+            </div>
+            <div class="visual-radar" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <strong>SEO</strong>
+            </div>
+          </div>
+          <div class="visual-card-row">
+            <div><span>01</span><strong>Strategie</strong></div>
+            <div><span>02</span><strong>Webflow</strong></div>
+            <div><span>03</span><strong>Groei</strong></div>
+          </div>
+          <div class="visual-chart" aria-hidden="true">
+            <span style="--height: 42%"></span>
+            <span style="--height: 62%"></span>
+            <span style="--height: 52%"></span>
+            <span style="--height: 78%"></span>
+            <span style="--height: 92%"></span>
+          </div>
+        </div>
+      </div>
+      <div class="floating-card floating-card-top glass-card" data-float>
+        <span>Focus</span>
+        <strong>{{service_short}}</strong>
+      </div>
+      <div class="floating-card floating-card-bottom glass-card" data-float>
+        <span>Locatie</span>
         <strong>{{city}}</strong>
-        <p>{{local_focus}}</p>
-        <div class="plate-rule" aria-hidden="true"></div>
-        <dl class="plate-details">
-          <div>
-            <dt>Focus</dt>
-            <dd>{{service_short}}</dd>
-          </div>
-          <div>
-            <dt>Aanpak</dt>
-            <dd>Strategie, content en techniek</dd>
-          </div>
-          <div>
-            <dt>Doel</dt>
-            <dd>Vertrouwen en aanvragen</dd>
-          </div>
-        </dl>
       </div>
-      <div class="agency-caption">
-        <span>BDMNL recovery platform</span>
-        <p>Een rustige autoriteitspagina met lokale context, inhoudelijke onderbouwing en een heldere route naar contact.</p>
-      </div>
-    </aside>
+    </div>
   </div>
 </section>
 
@@ -152,24 +180,29 @@
       <p>{{portfolio_intro}}</p>
     </div>
     <div class="portfolio-grid">
-      <article class="portfolio-card portfolio-large editorial-case reveal">
-        <div class="case-index">01</div>
+      <article class="portfolio-card portfolio-large reveal">
+        <div class="portfolio-preview premium-preview">
+          <div class="preview-nav"></div>
+          <div class="preview-hero"></div>
+          <div class="preview-grid"><i></i><i></i><i></i></div>
+          <span></span><span></span><span></span>
+        </div>
         <div class="portfolio-content">
           <p>{{portfolio_label_one}}</p>
           <h3>{{portfolio_title_one}}</h3>
           <span>{{portfolio_note_one}}</span>
         </div>
       </article>
-      <article class="portfolio-card editorial-case reveal">
-        <div class="case-index">02</div>
+      <article class="portfolio-card reveal">
+        <div class="portfolio-preview orange-preview"><div class="preview-phone"></div></div>
         <div class="portfolio-content">
           <p>Lokale groei</p>
           <h3>{{portfolio_title_two}}</h3>
           <span>{{portfolio_note_two}}</span>
         </div>
       </article>
-      <article class="portfolio-card editorial-case reveal">
-        <div class="case-index">03</div>
+      <article class="portfolio-card reveal">
+        <div class="portfolio-preview clean-preview"><div class="preview-proof"><span></span><span></span><span></span></div></div>
         <div class="portfolio-content">
           <p>Vertrouwen</p>
           <h3>{{portfolio_title_three}}</h3>
