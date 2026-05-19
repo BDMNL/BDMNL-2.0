@@ -197,8 +197,8 @@ def validate() -> tuple[list[str], list[str]]:
 
     locs = sitemap_urls()
     expected_locs = {f"{BASE_URL}{path}" for path in pages}
-    if len(locs) != 128:
-        errors.append(f"sitemap.xml: expected 128 URLs, found {len(locs)}")
+    if len(locs) != len(pages):
+        errors.append(f"sitemap.xml: expected {len(pages)} URLs, found {len(locs)}")
     if len(locs) != len(set(locs)):
         errors.append("sitemap.xml: duplicate URLs found")
     if set(locs) != expected_locs:
@@ -233,9 +233,11 @@ def validate() -> tuple[list[str], list[str]]:
                 errors.append(f"{path}: missing priority authority page")
                 continue
             html = pages[path][2]
-            for token in ["local-authority", "authority-facts", "authority-visual-card", "cta-actions"]:
+            for token in ["local-authority", "authority-facts", "authority-visual-card"]:
                 if token not in html:
                     errors.append(f"{path}: missing authority section {token}")
+            if "cta-actions" not in html and "premium-cta-actions" not in html:
+                errors.append(f"{path}: missing authority section cta-actions")
 
     return errors, warnings
 

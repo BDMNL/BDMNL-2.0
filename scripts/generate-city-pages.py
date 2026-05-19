@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "seo-system.json"
 LAYOUT_PATH = ROOT / "templates" / "layout.html"
 RECOVERY_TEMPLATE_PATH = ROOT / "templates" / "pages" / "recovery-page.html"
+PREMIUM_RECOVERY_TEMPLATE_PATH = ROOT / "templates" / "pages" / "premium-recovery-page.html"
 HEADER_PATH = ROOT / "templates" / "components" / "header.html"
 FOOTER_PATH = ROOT / "templates" / "components" / "footer.html"
 PREMIUM_BRIELLE_TEMPLATE_PATH = ROOT / "templates" / "pages" / "premium-brielle-example.html"
@@ -828,6 +829,66 @@ RECOVERY_CITIES = {
         "areas": ["Centrum", "Gageldonk", "Halsteren"],
         "intent": "bedrijven in West-Brabant die beter gevonden willen worden op lokale zoekvragen",
     },
+    "leiden": {
+        "name": "Leiden",
+        "region": "Zuid-Holland",
+        "areas": ["Binnenstad", "Bio Science Park", "Stevenshof"],
+        "intent": "kennisgedreven bedrijven en lokale dienstverleners die professioneel zichtbaar willen zijn",
+    },
+    "delft": {
+        "name": "Delft",
+        "region": "Zuid-Holland",
+        "areas": ["Binnenstad", "TU Delft", "Voorhof"],
+        "intent": "technische bedrijven, creatieve ondernemers en lokale dienstverleners die online scherper willen positioneren",
+    },
+    "vlissingen": {
+        "name": "Vlissingen",
+        "region": "Zeeland",
+        "areas": ["Binnenstad", "Boulevard", "Souburg"],
+        "intent": "Zeeuwse ondernemers in maritieme, toeristische en dienstverlenende markten die sterker online willen staan",
+    },
+    "terneuzen": {
+        "name": "Terneuzen",
+        "region": "Zeeland",
+        "areas": ["Centrum", "Axel", "Sluiskil"],
+        "intent": "bedrijven in Zeeuws-Vlaanderen die online betrouwbaarheid en regionale vindbaarheid willen versterken",
+    },
+    "zierikzee": {
+        "name": "Zierikzee",
+        "region": "Zeeland",
+        "areas": ["Binnenstad", "Schouwen-Duiveland", "Nieuwerkerk"],
+        "intent": "lokale en toeristische ondernemers die aanvragen uit Schouwen-Duiveland willen aantrekken",
+    },
+    "den-bosch": {
+        "name": "Den Bosch",
+        "region": "Noord-Brabant",
+        "areas": ["Binnenstad", "Paleiskwartier", "Rosmalen"],
+        "intent": "Brabantse bedrijven die hun merk, website en online vindbaarheid professioneler willen neerzetten",
+    },
+    "haarlem": {
+        "name": "Haarlem",
+        "region": "Noord-Holland",
+        "areas": ["Centrum", "Schalkwijk", "Waarderpolder"],
+        "intent": "creatieve ondernemers en lokale dienstverleners die in een concurrerende Randstadmarkt willen opvallen",
+    },
+    "alkmaar": {
+        "name": "Alkmaar",
+        "region": "Noord-Holland",
+        "areas": ["Binnenstad", "Overdie", "De Hoef"],
+        "intent": "Noord-Hollandse MKB-bedrijven die regionale zichtbaarheid willen koppelen aan professionele uitstraling",
+    },
+    "hilversum": {
+        "name": "Hilversum",
+        "region": "Noord-Holland",
+        "areas": ["Centrum", "Media Park", "Kerkelanden"],
+        "intent": "media, creatieve en zakelijke bedrijven die online betrouwbaarheid en herkenbaarheid willen versterken",
+    },
+    "hoofddorp": {
+        "name": "Hoofddorp",
+        "region": "Noord-Holland",
+        "areas": ["Centrum", "Beukenhorst", "Toolenburg"],
+        "intent": "bedrijven rond Haarlemmermeer en Schiphol die zakelijke zichtbaarheid en conversie willen verbeteren",
+    },
     "amsterdam": {
         "name": "Amsterdam",
         "region": "Noord-Holland",
@@ -982,6 +1043,36 @@ SERVICE_AUTHORITY = {
         "decision": "SEO werkt pas echt wanneer techniek, lokale relevantie en conversie samen op één pagina landen.",
         "visual_label": "SEO map",
     },
+    "webshop-laten-maken": {
+        "benefit": "een webshop die vertrouwen, productpresentatie en bestelgemak samenbrengt",
+        "outcome": "meer online bestellingen en betere productaanvragen",
+        "decision": "Een webshop moet niet alleen werken; bezoekers moeten snel begrijpen waarom ze juist hier kopen.",
+        "visual_label": "Webshop basis",
+    },
+    "online-marketing": {
+        "benefit": "een online marketingstructuur waarin website, SEO en content elkaar versterken",
+        "outcome": "meer consistente zichtbaarheid en betere opvolging",
+        "decision": "Online marketing werkt sterker wanneer campagnes terugvallen op een heldere website en lokale content.",
+        "visual_label": "Groei structuur",
+    },
+    "social-media": {
+        "benefit": "een herkenbaar contentritme dat aansluit op website, merk en lokale markt",
+        "outcome": "meer herkenning, vertrouwen en terugkerende contactmomenten",
+        "decision": "Social media moet voelen als onderdeel van je merk, niet als losse posts zonder richting.",
+        "visual_label": "Content ritme",
+    },
+    "hosting": {
+        "benefit": "hosting die snelheid, veiligheid en continuïteit ondersteunt",
+        "outcome": "minder technische ruis en een betrouwbaardere websitebasis",
+        "decision": "Goede hosting is onzichtbaar voor bezoekers, maar merkbaar in snelheid, vertrouwen en stabiliteit.",
+        "visual_label": "Hosting basis",
+    },
+    "branding-design": {
+        "benefit": "branding en design die je bedrijf herkenbaar en geloofwaardig neerzetten",
+        "outcome": "een sterker merkgevoel en meer vertrouwen bij eerste bezoekers",
+        "decision": "Een merk moet in beeld, tekst en website hetzelfde vertrouwen uitstralen.",
+        "visual_label": "Brand system",
+    },
 }
 
 
@@ -1056,6 +1147,39 @@ RECOVERY_SERVICE_PROFILES = {
         "hero": "BDMNL helpt bedrijven in {city} groeien met een combinatie van website, SEO, content en online marketing. Geen losse acties, maar een duidelijke basis die past bij je bedrijf.",
         "cta": "Plan een groeigesprek",
         "faq_focus": "marketing",
+    },
+    "webshop-laten-maken": {
+        "label": "Webshop laten maken",
+        "short": "Webshop",
+        "service_type": "Webshop development en conversie optimalisatie",
+        "title": "Webshop laten maken {city} | Premium webshop door BDMNL",
+        "description": "Webshop laten maken in {city}? BDMNL ontwikkelt snelle, betrouwbare webshops met sterke productpresentatie, SEO-basis en duidelijke conversie.",
+        "h1": "Webshop laten maken {city} voor bedrijven die professioneel online willen verkopen.",
+        "hero": "BDMNL helpt bedrijven in {city} met webshops die helder presenteren, snel laden en vertrouwen geven tijdens het aankoopproces.",
+        "cta": "Plan een webshopgesprek",
+        "faq_focus": "website",
+    },
+    "hosting": {
+        "label": "Hosting",
+        "short": "Hosting",
+        "service_type": "Website hosting en onderhoud",
+        "title": "Hosting {city} | Snelle en betrouwbare websitebasis door BDMNL",
+        "description": "Hosting in {city}? BDMNL helpt bedrijven met snelle hosting, onderhoud, veiligheid en een stabiele technische basis voor websites en webshops.",
+        "h1": "Hosting {city} voor een snelle, veilige en betrouwbare website.",
+        "hero": "BDMNL helpt bedrijven in {city} met hosting die snelheid, betrouwbaarheid en onderhoud ondersteunt zonder technische ruis.",
+        "cta": "Bespreek hosting",
+        "faq_focus": "website",
+    },
+    "branding-design": {
+        "label": "Branding en design",
+        "short": "Branding",
+        "service_type": "Branding, huisstijl en digitaal design",
+        "title": "Branding en design {city} | Merkidentiteit door BDMNL",
+        "description": "Branding en design in {city}? BDMNL helpt bedrijven met een herkenbare uitstraling, sterke huisstijl en digitaal design dat vertrouwen opbouwt.",
+        "h1": "Branding en design {city} voor een merk dat professioneler voelt.",
+        "hero": "BDMNL helpt bedrijven in {city} met branding en design die richting geven aan website, content en online marketing.",
+        "cta": "Plan een merkgesprek",
+        "faq_focus": "agency",
     },
     "reclamebureau": {
         "label": "Reclamebureau",
@@ -1179,6 +1303,158 @@ EXPANSION_SERVICE_ROUTES = [
         "path_pattern": "reclamebureau/reclamebureau-{city_slug}",
         "keyword": "Reclamebureau",
         "cluster": "recovery-reclamebureau",
+    },
+]
+
+REGIONAL_CLUSTER_PLAN = {
+    "Zuid-Holland": [
+        "rotterdam",
+        "den-haag",
+        "dordrecht",
+        "leiden",
+        "delft",
+        "gouda",
+        "schiedam",
+        "vlaardingen",
+        "zoetermeer",
+        "spijkenisse",
+        "brielle",
+        "hellevoetsluis",
+    ],
+    "Zeeland": [
+        "goes",
+        "middelburg",
+        "vlissingen",
+        "terneuzen",
+        "zierikzee",
+        "hulst",
+        "sluis",
+        "kapelle",
+        "tholen",
+        "domburg",
+        "zoutelande",
+    ],
+    "Noord-Brabant": [
+        "breda",
+        "eindhoven",
+        "tilburg",
+        "den-bosch",
+        "roosendaal",
+        "bergen-op-zoom",
+        "helmond",
+        "oosterhout",
+        "etten-leur",
+        "waalwijk",
+    ],
+    "Noord-Holland": [
+        "amsterdam",
+        "haarlem",
+        "alkmaar",
+        "hilversum",
+        "hoofddorp",
+        "zaandam",
+        "amstelveen",
+        "purmerend",
+        "hoorn",
+        "den-helder",
+    ],
+}
+
+REGIONAL_CLUSTER_CITY_NAMES = {
+    "gouda": "Gouda",
+    "schiedam": "Schiedam",
+    "zoetermeer": "Zoetermeer",
+    "hulst": "Hulst",
+    "sluis": "Sluis",
+    "kapelle": "Kapelle",
+    "tholen": "Tholen",
+    "helmond": "Helmond",
+    "oosterhout": "Oosterhout",
+    "etten-leur": "Etten-Leur",
+    "waalwijk": "Waalwijk",
+    "zaandam": "Zaandam",
+    "amstelveen": "Amstelveen",
+    "purmerend": "Purmerend",
+    "hoorn": "Hoorn",
+    "den-helder": "Den Helder",
+}
+
+REGIONAL_SERVICE_CLUSTERS = [
+    ("website-laten-maken", "Website laten maken"),
+    ("webshop-laten-maken", "Webshop laten maken"),
+    ("online-marketing", "Online marketing"),
+    ("social-media-beheer", "Social media beheer"),
+    ("hosting", "Hosting"),
+    ("branding-design", "Branding en design"),
+    ("webdesign", "Webdesign"),
+    ("seo-bureau", "SEO bureau"),
+]
+
+FIRST_BATCH_CITY_KEYS = [
+    "rotterdam",
+    "den-haag",
+    "dordrecht",
+    "leiden",
+    "delft",
+    "goes",
+    "middelburg",
+    "vlissingen",
+    "terneuzen",
+    "zierikzee",
+    "breda",
+    "eindhoven",
+    "tilburg",
+    "den-bosch",
+    "roosendaal",
+    "amsterdam",
+    "haarlem",
+    "alkmaar",
+    "hilversum",
+    "hoofddorp",
+]
+
+FIRST_BATCH_SERVICE_ROUTES = [
+    {
+        "category": "website-laten-maken",
+        "service_key": "website-laten-maken",
+        "path_pattern": "website-laten-maken-{city_slug}",
+        "keyword": "Website laten maken",
+        "cluster": "website-laten-maken",
+    },
+    {
+        "category": "webshop-laten-maken",
+        "service_key": "webshop-laten-maken",
+        "path_pattern": "webshop-laten-maken-{city_slug}",
+        "keyword": "Webshop laten maken",
+        "cluster": "webshop-laten-maken",
+    },
+    {
+        "category": "online-marketing",
+        "service_key": "online-marketing",
+        "path_pattern": "online-marketing/online-marketing-{city_slug}",
+        "keyword": "Online marketing",
+        "cluster": "online-marketing",
+    },
+    {
+        "category": "social-media-beheer",
+        "service_key": "social-media",
+        "path_pattern": "social-media-beheer-{city_slug}",
+        "keyword": "Social media beheer",
+        "cluster": "social-media-beheer",
+    },
+    {
+        "category": "hosting",
+        "service_key": "hosting",
+        "path_pattern": "hosting-{city_slug}",
+        "keyword": "Hosting",
+        "cluster": "hosting",
+    },
+    {
+        "category": "branding-design",
+        "service_key": "branding-design",
+        "path_pattern": "branding-design-{city_slug}",
+        "keyword": "Branding en design",
+        "cluster": "branding-design",
     },
 ]
 
@@ -1349,6 +1625,26 @@ def recovery_pages() -> list[dict[str, Any]]:
                 }
             )
 
+    for city_key in FIRST_BATCH_CITY_KEYS:
+        city_slug = RECOVERY_CITIES[city_key].get("slug", city_key)
+        for route in FIRST_BATCH_SERVICE_ROUTES:
+            path = route["path_pattern"].format(city_slug=city_slug)
+            if path in existing_paths:
+                continue
+            existing_paths.add(path)
+            pages.append(
+                {
+                    "category": route["category"],
+                    "service_key": route["service_key"],
+                    "slug": path.split("/")[-1],
+                    "path": path,
+                    "city_key": city_key,
+                    "keyword": route["keyword"],
+                    "cluster": route["cluster"],
+                    "source": "controlled-regional-batch",
+                }
+            )
+
     return pages
 
 
@@ -1367,10 +1663,13 @@ def recovery_footer_context(site: dict[str, Any], pages: list[dict[str, Any]]) -
     footer_service_links = "\n".join(
         [
             f'<a href="{recovery_href(first_page("website-laten-maken"))}">Website laten maken</a>',
+            f'<a href="{recovery_href(first_page("webshop-laten-maken"))}">Webshop laten maken</a>',
             f'<a href="{recovery_href(first_page("webdesign"))}">Webdesign</a>',
             f'<a href="{recovery_href(first_page("seo"))}">SEO</a>',
             f'<a href="{recovery_href(first_page("social-media"))}">Social media</a>',
             f'<a href="{recovery_href(first_page("online-marketing"))}">Online marketing</a>',
+            f'<a href="{recovery_href(first_page("hosting"))}">Hosting</a>',
+            f'<a href="{recovery_href(first_page("branding-design"))}">Branding en design</a>',
             f'<a href="{recovery_href(first_page("reclamebureau"))}">Reclamebureau</a>',
         ]
     )
@@ -1527,6 +1826,12 @@ def build_direct_cta_actions(site: dict[str, Any], primary_label: str, subject: 
     )
 
 
+def city_display_name(city_key: str) -> str:
+    if city_key in RECOVERY_CITIES:
+        return RECOVERY_CITIES[city_key]["name"]
+    return REGIONAL_CLUSTER_CITY_NAMES.get(city_key, city_key.replace("-", " ").title())
+
+
 def authority_page(page: dict[str, Any]) -> bool:
     return page["service_key"] in {"website-laten-maken", "webdesign", "seo"} and page["city_key"] in AUTHORITY_CITY_KEYS
 
@@ -1666,6 +1971,104 @@ def recovery_testimonial_cards() -> str:
             ]
         )
         for index, (copy, name, role) in enumerate(testimonials)
+    )
+
+
+def premium_case_notes(page: dict[str, Any], city: dict[str, Any], profile: dict[str, str]) -> str:
+    service = service_authority(page, profile)
+    notes = [
+        (
+            "01 Strategie",
+            "De eerste vijf seconden bepalen vertrouwen.",
+            f"We brengen propositie, doelgroep en lokale vraag in {city['name']} terug naar een duidelijke bovenkant: wie je helpt, waarom dat relevant is en welke stap iemand kan zetten.",
+        ),
+        (
+            "02 Uitvoering",
+            f"{profile['label']} als beheerbare basis.",
+            f"De pagina wordt licht, responsive en overzichtelijk opgebouwd, met ruimte voor bewijs, diensten, lokale content en latere uitbreiding.",
+        ),
+        (
+            "03 Vindbaarheid",
+            "Lokale SEO zonder keyword-gevoel.",
+            f"{city['name']}, {city['region']} en relevante omliggende plaatsen worden natuurlijk verwerkt in headings, tekst, schema en interne links.",
+        ),
+    ]
+    if page["service_key"] in {"hosting", "branding-design", "webshop-laten-maken"}:
+        notes[1] = (
+            "02 Uitvoering",
+            service["visual_label"],
+            f"BDMNL maakt de dienst concreet met duidelijke deliverables, realistische verwachtingen en een structuur die bezoekers helpt kiezen.",
+        )
+    return "\n".join(
+        "\n".join(
+            [
+                '      <article class="case-note">',
+                f"        <span>{html(label)}</span>",
+                f"        <h3>{html(title)}</h3>",
+                f"        <p>{html(copy)}</p>",
+                "      </article>",
+            ]
+        )
+        for label, title, copy in notes
+    )
+
+
+def premium_expertise_cards(page: dict[str, Any], city: dict[str, Any], profile: dict[str, str]) -> str:
+    service = service_authority(page, profile)
+    cards = [
+        ("01", "Positionering", "Heldere keuzes in doelgroep, belofte en bewijsvoering."),
+        ("02", "Ontwerp", "Editorial rust, sterke hiërarchie en premium uitstraling."),
+        ("03", "Techniek", "Snelle realisatie met nette SEO-basis en schaalbaarheid."),
+        ("04", "Conversie", f"Subtiele contactroutes gericht op {service['outcome']}."),
+    ]
+    return "\n".join(
+        "\n".join(
+            [
+                "      <article>",
+                f"        <span>{html(number)}</span>",
+                f"        <h3>{html(title)}</h3>",
+                f"        <p>{html(copy)}</p>",
+                "      </article>",
+            ]
+        )
+        for number, title, copy in cards
+    )
+
+
+def premium_deliverables(page: dict[str, Any]) -> str:
+    deliverables = {
+        "website-laten-maken": ["Strategie", "Webflow build", "SEO basis", "Copystructuur", "Meetbare contactflow"],
+        "webshop-laten-maken": ["Shopstructuur", "Productpresentatie", "Checkout flow", "SEO basis", "Conversiepunten"],
+        "online-marketing": ["Kanaalstrategie", "SEO content", "Campagnebasis", "Rapportage", "Lead flow"],
+        "social-media": ["Contentritme", "Formats", "Planning", "Campagnehaakjes", "Website koppeling"],
+        "hosting": ["Snelheid", "Veiligheid", "Onderhoud", "Backups", "Monitoring"],
+        "branding-design": ["Positionering", "Visuele richting", "Huisstijl", "Design system", "Website toepassing"],
+        "webdesign": ["UX structuur", "Webflow design", "Responsive layout", "SEO basis", "Conversie"],
+        "seo": ["Technische SEO", "Lokale content", "Interne links", "Schema", "Monitoring"],
+        "reclamebureau": ["Strategie", "Branding", "Website", "Content", "Online groei"],
+    }.get(page["service_key"], ["Strategie", "Content", "Techniek", "SEO", "Conversie"])
+    return "\n".join(f"<span>{html(item)}</span>" for item in deliverables)
+
+
+def premium_related_links(page: dict[str, Any], pages: list[dict[str, Any]]) -> str:
+    same_city = [candidate for candidate in pages if candidate["path"] != page["path"] and candidate["city_key"] == page["city_key"]]
+    same_service = [
+        candidate
+        for candidate in pages
+        if candidate["path"] != page["path"] and candidate["service_key"] == page["service_key"] and candidate not in same_city
+    ]
+    related = (same_city[:10] + same_service[:4])[:12]
+    return "\n".join(
+        "\n".join(
+            [
+                f'      <a href="{recovery_href(candidate)}">',
+                f"        <span>{html(RECOVERY_SERVICE_PROFILES[candidate['service_key']]['label'])}</span>",
+                f"        <strong>{html(candidate['keyword'])} {html(RECOVERY_CITIES[candidate['city_key']]['name'])}</strong>",
+                "        <i>Bekijk</i>",
+                "      </a>",
+            ]
+        )
+        for candidate in related
     )
 
 
@@ -1942,6 +2345,34 @@ def recovery_context(site: dict[str, Any], page: dict[str, Any], pages: list[dic
         "eyebrow": f"{page['keyword']} in {city['name']}",
         "h1": h1,
         "hero_lead": hero_lead,
+        "premium_h1": h1,
+        "premium_hero_lead": (
+            f"{profile['label']} in {city['name']} moet vertrouwen opbouwen voordat iemand contact opneemt. "
+            f"BDMNL combineert strategie, content en techniek tot een rustige pagina die past bij de lokale markt."
+        ),
+        "premium_brief_intro": (
+            f"Voor ondernemers in {city['name']} en omliggende plaatsen zoals {nearby}, die professioneel gevonden en gekozen willen worden."
+        ),
+        "premium_focus": f"{profile['label']} en lokale autoriteit",
+        "premium_market": f"{city['region']} / {city['name']}",
+        "premium_goal": service["outcome"],
+        "premium_local_heading": f"{profile['label']} moet in {city['name']} eerst betrouwbaar voelen.",
+        "premium_authority_copy": (
+            "De pagina wordt behandeld als een merk- en verkoopdocument: eerst positionering, daarna bewijs, daarna de technische SEO-laag die de juiste bezoekers aantrekt."
+        ),
+        "premium_case_label": "Authority standard",
+        "premium_case_heading": "Van lokaal zichtbaar naar professioneel gekozen.",
+        "premium_case_intro": f"Een BDMNL pagina voor {city['name']} moet aanvoelen als een volwassen merkpresentatie: rustig, overtuigend en klaar voor groei.",
+        "premium_case_notes": premium_case_notes(page, city, profile),
+        "premium_expertise_heading": "De pagina werkt als een digitaal verkoopgesprek.",
+        "premium_expertise_intro": (
+            f"Goede {profile['label'].lower()} hoeft niet druk te zijn. Het moet scherp zijn. "
+            "BDMNL combineert strategie, ontwerp, content en techniek zodat bezoekers zonder frictie begrijpen waarom jouw bedrijf de juiste keuze is."
+        ),
+        "premium_expertise_cards": premium_expertise_cards(page, city, profile),
+        "premium_deliverables": premium_deliverables(page),
+        "premium_related_links": premium_related_links(page, pages),
+        "premium_mail_subject": f"{page['keyword']} {city['name']}".replace(" ", "%20"),
         "hero_proof": f"BDMNL koppelt premium Webflow design aan lokale SEO voor {city['name']} en {city['region']}.",
         "primary_cta": profile["cta"],
         "city": city["name"],
@@ -1997,6 +2428,8 @@ def render_recovery_page(
     footer_ctx: dict[str, str],
     context: dict[str, str],
 ) -> str:
+    template_path = PREMIUM_RECOVERY_TEMPLATE_PATH if PREMIUM_RECOVERY_TEMPLATE_PATH.exists() else RECOVERY_TEMPLATE_PATH
+    page_template = template_path.read_text(encoding="utf-8")
     page_content = render(
         page_template,
         context,
@@ -2010,6 +2443,10 @@ def render_recovery_page(
             "local_scenario_cards",
             "authority_visual",
             "cta_actions",
+            "premium_case_notes",
+            "premium_expertise_cards",
+            "premium_deliverables",
+            "premium_related_links",
         },
     )
     header_html = render(header, {"asset_prefix": context["asset_prefix"]})
@@ -2018,11 +2455,17 @@ def render_recovery_page(
         {**footer_ctx, "asset_prefix": context["asset_prefix"]},
         raw_keys={"footer_city_links", "footer_service_links", "footer_internal_links"},
     )
-    return GENERATED_MARKER + "\n" + render(
+    html_output = GENERATED_MARKER + "\n" + render(
         layout,
         {**context, "global_header": header_html, "global_footer": footer_html, "page_content": page_content.strip()},
         raw_keys={"global_header", "global_footer", "page_content", "professional_service_schema", "faq_schema", "breadcrumb_schema"},
     )
+    html_output = html_output.replace(
+        '<link rel="stylesheet" href="../assets/css/landing.css" />',
+        '<link rel="stylesheet" href="../assets/css/landing.css" />\n    <link rel="stylesheet" href="../assets/css/premium-example.css" />',
+        1,
+    )
+    return html_output.replace("<body>", '<body class="premium-example-page">', 1)
 
 
 def render_premium_brielle_example(
@@ -2322,7 +2765,7 @@ def page_service_family(page: dict[str, Any]) -> str:
 
 def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> None:
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -2439,28 +2882,41 @@ def write_recovery_reports(site: dict[str, Any], pages: list[dict[str, Any]], su
         )
 
     cluster_rows = []
-    cluster_definitions = [
-        ("website-laten-maken", "Website laten maken", "website-laten-maken-{city_slug}"),
-        ("seo-bureau", "SEO bureau", "seo-bureau-{city_slug}"),
-        ("social-media-beheer", "Social media beheer", "social-media-beheer-{city_slug}"),
-    ]
     all_paths = {page["path"] for page in pages}
-    for city_key in PRIORITY_CITY_KEYS:
-        city = RECOVERY_CITIES[city_key]
-        city_slug = city.get("slug", city_key)
-        for cluster, service, pattern in cluster_definitions:
-            path = pattern.format(city_slug=city_slug)
-            cluster_rows.append(
-                {
-                    "cluster": cluster,
-                    "city": city["name"],
-                    "region": city["region"],
-                    "planned_path": f"/{path}/",
-                    "status": "generated" if path in all_paths else "planned",
-                    "overwrite_risk": "none",
-                    "note": "Next-generation cluster URL; recovery URLs remain intact.",
-                }
-            )
+    path_patterns = {
+        "website-laten-maken": "website-laten-maken-{city_slug}",
+        "webshop-laten-maken": "webshop-laten-maken-{city_slug}",
+        "online-marketing": "online-marketing/online-marketing-{city_slug}",
+        "social-media-beheer": "social-media-beheer-{city_slug}",
+        "hosting": "hosting-{city_slug}",
+        "branding-design": "branding-design-{city_slug}",
+        "webdesign": "webdesign/webdesign-{city_slug}",
+        "seo-bureau": "seo-bureau-{city_slug}",
+    }
+    first_batch_clusters = {route["cluster"] for route in FIRST_BATCH_SERVICE_ROUTES}
+    for region, city_keys in REGIONAL_CLUSTER_PLAN.items():
+        for city_key in city_keys:
+            city_name = city_display_name(city_key)
+            city_slug = RECOVERY_CITIES.get(city_key, {}).get("slug", city_key)
+            for cluster, service in REGIONAL_SERVICE_CLUSTERS:
+                path = path_patterns[cluster].format(city_slug=city_slug)
+                if path in all_paths:
+                    status = "generated-first-batch" if city_key in FIRST_BATCH_CITY_KEYS and cluster in first_batch_clusters else "existing-recovery"
+                elif city_key in FIRST_BATCH_CITY_KEYS and cluster in first_batch_clusters:
+                    status = "missing-batch-review"
+                else:
+                    status = "planned-controlled"
+                cluster_rows.append(
+                    {
+                        "cluster": cluster,
+                        "city": city_name,
+                        "region": region,
+                        "planned_path": f"/{path}/",
+                        "status": status,
+                        "overwrite_risk": "none",
+                        "note": "Regional cluster plan; only first-batch rows are generated in this phase.",
+                    }
+                )
 
     write_csv(
         ROOT / "recovery-audit.csv",
@@ -2561,10 +3017,7 @@ def main() -> None:
         context = recovery_context(site, page, pages)
         output_dir = ROOT / page["path"]
         output_dir.mkdir(parents=True, exist_ok=True)
-        if page["path"] == "website-laten-maken-brielle":
-            rendered_page = render_premium_brielle_example(layout, header, footer, footer_ctx, context)
-        else:
-            rendered_page = render_recovery_page(layout, page_template, header, footer, footer_ctx, context)
+        rendered_page = render_recovery_page(layout, page_template, header, footer, footer_ctx, context)
         (output_dir / "index.html").write_text(
             rendered_page,
             encoding="utf-8",

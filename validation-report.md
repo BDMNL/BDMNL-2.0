@@ -11,17 +11,17 @@ Generated: 2026-05-19
 
 ## Output files
 
-- `recovery-audit.csv`: 128 audited URLs and coverage rows.
-- `missing-pages.csv`: 73 missing-before-expansion URLs generated.
-- `cluster-plan.csv`: 45 next-generation cluster rows.
+- `recovery-audit.csv`: 221 audited URLs and coverage rows.
+- `missing-pages.csv`: 166 missing-before-expansion URLs generated.
+- `cluster-plan.csv`: 344 next-generation cluster rows.
 - `sitemap.xml`: updated with recovery URLs on `https://seo.bdmnl.nl`.
 
 ## Coverage
 
-- Recovery pages generated: 114
+- Recovery pages generated: 207
 - Supporting content pages: 9
 - Support pages: 4
-- Total HTML pages in sitemap scope: 128
+- Total HTML pages in sitemap scope: 221
 - Redirect candidates flagged: 14
 
 ## Quality checks built into generation
@@ -36,8 +36,8 @@ Generated: 2026-05-19
 ## Validation performed
 
 - Generator completed successfully.
-- HTML parser validation target: 128 generated `index.html` files.
-- Sitemap XML validation target: 128 URL entries.
+- HTML parser validation target: 221 generated `index.html` files.
+- Sitemap XML validation target: 221 URL entries.
 - Priority coverage target: 15 cities x 6 service routes.
 - CSV outputs generated with audit, missing-page and cluster-plan rows.
 

@@ -1,46 +1,345 @@
 cluster,city,region,planned_path,status,overwrite_risk,note
-website-laten-maken,Rotterdam,Zuid-Holland,/website-laten-maken-rotterdam/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Rotterdam,Zuid-Holland,/seo-bureau-rotterdam/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Rotterdam,Zuid-Holland,/social-media-beheer-rotterdam/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Brielle,Zuid-Holland,/website-laten-maken-brielle/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Brielle,Zuid-Holland,/seo-bureau-brielle/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Brielle,Zuid-Holland,/social-media-beheer-brielle/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Hellevoetsluis,Zuid-Holland,/website-laten-maken-hellevoetsluis/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Hellevoetsluis,Zuid-Holland,/seo-bureau-hellevoetsluis/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Hellevoetsluis,Zuid-Holland,/social-media-beheer-hellevoetsluis/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Rockanje,Zuid-Holland,/website-laten-maken-rockanje/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Rockanje,Zuid-Holland,/seo-bureau-rockanje/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Rockanje,Zuid-Holland,/social-media-beheer-rockanje/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Spijkenisse,Zuid-Holland,/website-laten-maken-spijkenisse/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Spijkenisse,Zuid-Holland,/seo-bureau-spijkenisse/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Spijkenisse,Zuid-Holland,/social-media-beheer-spijkenisse/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Dordrecht,Zuid-Holland,/website-laten-maken-dordrecht/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Dordrecht,Zuid-Holland,/seo-bureau-dordrecht/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Dordrecht,Zuid-Holland,/social-media-beheer-dordrecht/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Vlaardingen,Zuid-Holland,/website-laten-maken-vlaardingen/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Vlaardingen,Zuid-Holland,/seo-bureau-vlaardingen/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Vlaardingen,Zuid-Holland,/social-media-beheer-vlaardingen/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Den Haag,Zuid-Holland,/website-laten-maken-den-haag/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Den Haag,Zuid-Holland,/seo-bureau-den-haag/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Den Haag,Zuid-Holland,/social-media-beheer-den-haag/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Goes,Zeeland,/website-laten-maken-goes/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Goes,Zeeland,/seo-bureau-goes/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Goes,Zeeland,/social-media-beheer-goes/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Middelburg,Zeeland,/website-laten-maken-middelburg/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Middelburg,Zeeland,/seo-bureau-middelburg/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Middelburg,Zeeland,/social-media-beheer-middelburg/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Breda,Noord-Brabant,/website-laten-maken-breda/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Breda,Noord-Brabant,/seo-bureau-breda/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Breda,Noord-Brabant,/social-media-beheer-breda/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Tilburg,Noord-Brabant,/website-laten-maken-tilburg/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Tilburg,Noord-Brabant,/seo-bureau-tilburg/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Tilburg,Noord-Brabant,/social-media-beheer-tilburg/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Eindhoven,Noord-Brabant,/website-laten-maken-eindhoven/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Eindhoven,Noord-Brabant,/seo-bureau-eindhoven/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Eindhoven,Noord-Brabant,/social-media-beheer-eindhoven/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Roosendaal,Noord-Brabant,/website-laten-maken-roosendaal/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Roosendaal,Noord-Brabant,/seo-bureau-roosendaal/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Roosendaal,Noord-Brabant,/social-media-beheer-roosendaal/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-website-laten-maken,Bergen op Zoom,Noord-Brabant,/website-laten-maken-bergen-op-zoom/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-seo-bureau,Bergen op Zoom,Noord-Brabant,/seo-bureau-bergen-op-zoom/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
-social-media-beheer,Bergen op Zoom,Noord-Brabant,/social-media-beheer-bergen-op-zoom/,generated,none,Next-generation cluster URL; recovery URLs remain intact.
+website-laten-maken,Rotterdam,Zuid-Holland,/website-laten-maken-rotterdam/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Rotterdam,Zuid-Holland,/webshop-laten-maken-rotterdam/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Rotterdam,Zuid-Holland,/online-marketing/online-marketing-rotterdam/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Rotterdam,Zuid-Holland,/social-media-beheer-rotterdam/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Rotterdam,Zuid-Holland,/hosting-rotterdam/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Rotterdam,Zuid-Holland,/branding-design-rotterdam/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Rotterdam,Zuid-Holland,/webdesign/webdesign-rotterdam/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Rotterdam,Zuid-Holland,/seo-bureau-rotterdam/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Den Haag,Zuid-Holland,/website-laten-maken-den-haag/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Den Haag,Zuid-Holland,/webshop-laten-maken-den-haag/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Den Haag,Zuid-Holland,/online-marketing/online-marketing-den-haag/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Den Haag,Zuid-Holland,/social-media-beheer-den-haag/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Den Haag,Zuid-Holland,/hosting-den-haag/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Den Haag,Zuid-Holland,/branding-design-den-haag/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Den Haag,Zuid-Holland,/webdesign/webdesign-den-haag/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Den Haag,Zuid-Holland,/seo-bureau-den-haag/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Dordrecht,Zuid-Holland,/website-laten-maken-dordrecht/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Dordrecht,Zuid-Holland,/webshop-laten-maken-dordrecht/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Dordrecht,Zuid-Holland,/online-marketing/online-marketing-dordrecht/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Dordrecht,Zuid-Holland,/social-media-beheer-dordrecht/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Dordrecht,Zuid-Holland,/hosting-dordrecht/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Dordrecht,Zuid-Holland,/branding-design-dordrecht/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Dordrecht,Zuid-Holland,/webdesign/webdesign-dordrecht/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Dordrecht,Zuid-Holland,/seo-bureau-dordrecht/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Leiden,Zuid-Holland,/website-laten-maken-leiden/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Leiden,Zuid-Holland,/webshop-laten-maken-leiden/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Leiden,Zuid-Holland,/online-marketing/online-marketing-leiden/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Leiden,Zuid-Holland,/social-media-beheer-leiden/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Leiden,Zuid-Holland,/hosting-leiden/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Leiden,Zuid-Holland,/branding-design-leiden/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Leiden,Zuid-Holland,/webdesign/webdesign-leiden/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Leiden,Zuid-Holland,/seo-bureau-leiden/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Delft,Zuid-Holland,/website-laten-maken-delft/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Delft,Zuid-Holland,/webshop-laten-maken-delft/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Delft,Zuid-Holland,/online-marketing/online-marketing-delft/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Delft,Zuid-Holland,/social-media-beheer-delft/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Delft,Zuid-Holland,/hosting-delft/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Delft,Zuid-Holland,/branding-design-delft/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Delft,Zuid-Holland,/webdesign/webdesign-delft/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Delft,Zuid-Holland,/seo-bureau-delft/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Gouda,Zuid-Holland,/website-laten-maken-gouda/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Gouda,Zuid-Holland,/webshop-laten-maken-gouda/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Gouda,Zuid-Holland,/online-marketing/online-marketing-gouda/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Gouda,Zuid-Holland,/social-media-beheer-gouda/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Gouda,Zuid-Holland,/hosting-gouda/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Gouda,Zuid-Holland,/branding-design-gouda/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Gouda,Zuid-Holland,/webdesign/webdesign-gouda/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Gouda,Zuid-Holland,/seo-bureau-gouda/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Schiedam,Zuid-Holland,/website-laten-maken-schiedam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Schiedam,Zuid-Holland,/webshop-laten-maken-schiedam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Schiedam,Zuid-Holland,/online-marketing/online-marketing-schiedam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Schiedam,Zuid-Holland,/social-media-beheer-schiedam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Schiedam,Zuid-Holland,/hosting-schiedam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Schiedam,Zuid-Holland,/branding-design-schiedam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Schiedam,Zuid-Holland,/webdesign/webdesign-schiedam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Schiedam,Zuid-Holland,/seo-bureau-schiedam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Vlaardingen,Zuid-Holland,/website-laten-maken-vlaardingen/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Vlaardingen,Zuid-Holland,/webshop-laten-maken-vlaardingen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Vlaardingen,Zuid-Holland,/online-marketing/online-marketing-vlaardingen/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Vlaardingen,Zuid-Holland,/social-media-beheer-vlaardingen/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Vlaardingen,Zuid-Holland,/hosting-vlaardingen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Vlaardingen,Zuid-Holland,/branding-design-vlaardingen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Vlaardingen,Zuid-Holland,/webdesign/webdesign-vlaardingen/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Vlaardingen,Zuid-Holland,/seo-bureau-vlaardingen/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Zoetermeer,Zuid-Holland,/website-laten-maken-zoetermeer/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Zoetermeer,Zuid-Holland,/webshop-laten-maken-zoetermeer/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Zoetermeer,Zuid-Holland,/online-marketing/online-marketing-zoetermeer/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Zoetermeer,Zuid-Holland,/social-media-beheer-zoetermeer/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Zoetermeer,Zuid-Holland,/hosting-zoetermeer/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Zoetermeer,Zuid-Holland,/branding-design-zoetermeer/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Zoetermeer,Zuid-Holland,/webdesign/webdesign-zoetermeer/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Zoetermeer,Zuid-Holland,/seo-bureau-zoetermeer/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Spijkenisse,Zuid-Holland,/website-laten-maken-spijkenisse/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Spijkenisse,Zuid-Holland,/webshop-laten-maken-spijkenisse/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Spijkenisse,Zuid-Holland,/online-marketing/online-marketing-spijkenisse/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Spijkenisse,Zuid-Holland,/social-media-beheer-spijkenisse/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Spijkenisse,Zuid-Holland,/hosting-spijkenisse/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Spijkenisse,Zuid-Holland,/branding-design-spijkenisse/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Spijkenisse,Zuid-Holland,/webdesign/webdesign-spijkenisse/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Spijkenisse,Zuid-Holland,/seo-bureau-spijkenisse/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Brielle,Zuid-Holland,/website-laten-maken-brielle/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Brielle,Zuid-Holland,/webshop-laten-maken-brielle/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Brielle,Zuid-Holland,/online-marketing/online-marketing-brielle/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Brielle,Zuid-Holland,/social-media-beheer-brielle/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Brielle,Zuid-Holland,/hosting-brielle/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Brielle,Zuid-Holland,/branding-design-brielle/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Brielle,Zuid-Holland,/webdesign/webdesign-brielle/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Brielle,Zuid-Holland,/seo-bureau-brielle/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Hellevoetsluis,Zuid-Holland,/website-laten-maken-hellevoetsluis/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Hellevoetsluis,Zuid-Holland,/webshop-laten-maken-hellevoetsluis/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Hellevoetsluis,Zuid-Holland,/online-marketing/online-marketing-hellevoetsluis/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Hellevoetsluis,Zuid-Holland,/social-media-beheer-hellevoetsluis/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Hellevoetsluis,Zuid-Holland,/hosting-hellevoetsluis/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Hellevoetsluis,Zuid-Holland,/branding-design-hellevoetsluis/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Hellevoetsluis,Zuid-Holland,/webdesign/webdesign-hellevoetsluis/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Hellevoetsluis,Zuid-Holland,/seo-bureau-hellevoetsluis/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Goes,Zeeland,/website-laten-maken-goes/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Goes,Zeeland,/webshop-laten-maken-goes/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Goes,Zeeland,/online-marketing/online-marketing-goes/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Goes,Zeeland,/social-media-beheer-goes/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Goes,Zeeland,/hosting-goes/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Goes,Zeeland,/branding-design-goes/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Goes,Zeeland,/webdesign/webdesign-goes/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Goes,Zeeland,/seo-bureau-goes/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Middelburg,Zeeland,/website-laten-maken-middelburg/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Middelburg,Zeeland,/webshop-laten-maken-middelburg/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Middelburg,Zeeland,/online-marketing/online-marketing-middelburg/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Middelburg,Zeeland,/social-media-beheer-middelburg/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Middelburg,Zeeland,/hosting-middelburg/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Middelburg,Zeeland,/branding-design-middelburg/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Middelburg,Zeeland,/webdesign/webdesign-middelburg/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Middelburg,Zeeland,/seo-bureau-middelburg/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Vlissingen,Zeeland,/website-laten-maken-vlissingen/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Vlissingen,Zeeland,/webshop-laten-maken-vlissingen/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Vlissingen,Zeeland,/online-marketing/online-marketing-vlissingen/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Vlissingen,Zeeland,/social-media-beheer-vlissingen/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Vlissingen,Zeeland,/hosting-vlissingen/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Vlissingen,Zeeland,/branding-design-vlissingen/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Vlissingen,Zeeland,/webdesign/webdesign-vlissingen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Vlissingen,Zeeland,/seo-bureau-vlissingen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Terneuzen,Zeeland,/website-laten-maken-terneuzen/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Terneuzen,Zeeland,/webshop-laten-maken-terneuzen/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Terneuzen,Zeeland,/online-marketing/online-marketing-terneuzen/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Terneuzen,Zeeland,/social-media-beheer-terneuzen/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Terneuzen,Zeeland,/hosting-terneuzen/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Terneuzen,Zeeland,/branding-design-terneuzen/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Terneuzen,Zeeland,/webdesign/webdesign-terneuzen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Terneuzen,Zeeland,/seo-bureau-terneuzen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Zierikzee,Zeeland,/website-laten-maken-zierikzee/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Zierikzee,Zeeland,/webshop-laten-maken-zierikzee/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Zierikzee,Zeeland,/online-marketing/online-marketing-zierikzee/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Zierikzee,Zeeland,/social-media-beheer-zierikzee/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Zierikzee,Zeeland,/hosting-zierikzee/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Zierikzee,Zeeland,/branding-design-zierikzee/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Zierikzee,Zeeland,/webdesign/webdesign-zierikzee/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Zierikzee,Zeeland,/seo-bureau-zierikzee/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Hulst,Zeeland,/website-laten-maken-hulst/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Hulst,Zeeland,/webshop-laten-maken-hulst/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Hulst,Zeeland,/online-marketing/online-marketing-hulst/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Hulst,Zeeland,/social-media-beheer-hulst/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Hulst,Zeeland,/hosting-hulst/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Hulst,Zeeland,/branding-design-hulst/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Hulst,Zeeland,/webdesign/webdesign-hulst/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Hulst,Zeeland,/seo-bureau-hulst/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Sluis,Zeeland,/website-laten-maken-sluis/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Sluis,Zeeland,/webshop-laten-maken-sluis/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Sluis,Zeeland,/online-marketing/online-marketing-sluis/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Sluis,Zeeland,/social-media-beheer-sluis/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Sluis,Zeeland,/hosting-sluis/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Sluis,Zeeland,/branding-design-sluis/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Sluis,Zeeland,/webdesign/webdesign-sluis/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Sluis,Zeeland,/seo-bureau-sluis/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Kapelle,Zeeland,/website-laten-maken-kapelle/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Kapelle,Zeeland,/webshop-laten-maken-kapelle/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Kapelle,Zeeland,/online-marketing/online-marketing-kapelle/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Kapelle,Zeeland,/social-media-beheer-kapelle/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Kapelle,Zeeland,/hosting-kapelle/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Kapelle,Zeeland,/branding-design-kapelle/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Kapelle,Zeeland,/webdesign/webdesign-kapelle/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Kapelle,Zeeland,/seo-bureau-kapelle/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Tholen,Zeeland,/website-laten-maken-tholen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Tholen,Zeeland,/webshop-laten-maken-tholen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Tholen,Zeeland,/online-marketing/online-marketing-tholen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Tholen,Zeeland,/social-media-beheer-tholen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Tholen,Zeeland,/hosting-tholen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Tholen,Zeeland,/branding-design-tholen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Tholen,Zeeland,/webdesign/webdesign-tholen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Tholen,Zeeland,/seo-bureau-tholen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Domburg,Zeeland,/website-laten-maken-domburg/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Domburg,Zeeland,/webshop-laten-maken-domburg/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Domburg,Zeeland,/online-marketing/online-marketing-domburg/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Domburg,Zeeland,/social-media-beheer-domburg/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Domburg,Zeeland,/hosting-domburg/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Domburg,Zeeland,/branding-design-domburg/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Domburg,Zeeland,/webdesign/webdesign-domburg/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Domburg,Zeeland,/seo-bureau-domburg/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Zoutelande,Zeeland,/website-laten-maken-zoutelande/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Zoutelande,Zeeland,/webshop-laten-maken-zoutelande/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Zoutelande,Zeeland,/online-marketing/online-marketing-zoutelande/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Zoutelande,Zeeland,/social-media-beheer-zoutelande/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Zoutelande,Zeeland,/hosting-zoutelande/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Zoutelande,Zeeland,/branding-design-zoutelande/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Zoutelande,Zeeland,/webdesign/webdesign-zoutelande/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Zoutelande,Zeeland,/seo-bureau-zoutelande/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Breda,Noord-Brabant,/website-laten-maken-breda/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Breda,Noord-Brabant,/webshop-laten-maken-breda/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Breda,Noord-Brabant,/online-marketing/online-marketing-breda/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Breda,Noord-Brabant,/social-media-beheer-breda/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Breda,Noord-Brabant,/hosting-breda/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Breda,Noord-Brabant,/branding-design-breda/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Breda,Noord-Brabant,/webdesign/webdesign-breda/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Breda,Noord-Brabant,/seo-bureau-breda/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Eindhoven,Noord-Brabant,/website-laten-maken-eindhoven/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Eindhoven,Noord-Brabant,/webshop-laten-maken-eindhoven/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Eindhoven,Noord-Brabant,/online-marketing/online-marketing-eindhoven/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Eindhoven,Noord-Brabant,/social-media-beheer-eindhoven/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Eindhoven,Noord-Brabant,/hosting-eindhoven/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Eindhoven,Noord-Brabant,/branding-design-eindhoven/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Eindhoven,Noord-Brabant,/webdesign/webdesign-eindhoven/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Eindhoven,Noord-Brabant,/seo-bureau-eindhoven/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Tilburg,Noord-Brabant,/website-laten-maken-tilburg/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Tilburg,Noord-Brabant,/webshop-laten-maken-tilburg/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Tilburg,Noord-Brabant,/online-marketing/online-marketing-tilburg/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Tilburg,Noord-Brabant,/social-media-beheer-tilburg/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Tilburg,Noord-Brabant,/hosting-tilburg/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Tilburg,Noord-Brabant,/branding-design-tilburg/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Tilburg,Noord-Brabant,/webdesign/webdesign-tilburg/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Tilburg,Noord-Brabant,/seo-bureau-tilburg/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Den Bosch,Noord-Brabant,/website-laten-maken-den-bosch/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Den Bosch,Noord-Brabant,/webshop-laten-maken-den-bosch/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Den Bosch,Noord-Brabant,/online-marketing/online-marketing-den-bosch/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Den Bosch,Noord-Brabant,/social-media-beheer-den-bosch/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Den Bosch,Noord-Brabant,/hosting-den-bosch/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Den Bosch,Noord-Brabant,/branding-design-den-bosch/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Den Bosch,Noord-Brabant,/webdesign/webdesign-den-bosch/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Den Bosch,Noord-Brabant,/seo-bureau-den-bosch/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Roosendaal,Noord-Brabant,/website-laten-maken-roosendaal/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Roosendaal,Noord-Brabant,/webshop-laten-maken-roosendaal/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Roosendaal,Noord-Brabant,/online-marketing/online-marketing-roosendaal/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Roosendaal,Noord-Brabant,/social-media-beheer-roosendaal/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Roosendaal,Noord-Brabant,/hosting-roosendaal/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Roosendaal,Noord-Brabant,/branding-design-roosendaal/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Roosendaal,Noord-Brabant,/webdesign/webdesign-roosendaal/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Roosendaal,Noord-Brabant,/seo-bureau-roosendaal/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Bergen op Zoom,Noord-Brabant,/website-laten-maken-bergen-op-zoom/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Bergen op Zoom,Noord-Brabant,/webshop-laten-maken-bergen-op-zoom/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Bergen op Zoom,Noord-Brabant,/online-marketing/online-marketing-bergen-op-zoom/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Bergen op Zoom,Noord-Brabant,/social-media-beheer-bergen-op-zoom/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Bergen op Zoom,Noord-Brabant,/hosting-bergen-op-zoom/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Bergen op Zoom,Noord-Brabant,/branding-design-bergen-op-zoom/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Bergen op Zoom,Noord-Brabant,/webdesign/webdesign-bergen-op-zoom/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Bergen op Zoom,Noord-Brabant,/seo-bureau-bergen-op-zoom/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Helmond,Noord-Brabant,/website-laten-maken-helmond/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Helmond,Noord-Brabant,/webshop-laten-maken-helmond/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Helmond,Noord-Brabant,/online-marketing/online-marketing-helmond/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Helmond,Noord-Brabant,/social-media-beheer-helmond/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Helmond,Noord-Brabant,/hosting-helmond/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Helmond,Noord-Brabant,/branding-design-helmond/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Helmond,Noord-Brabant,/webdesign/webdesign-helmond/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Helmond,Noord-Brabant,/seo-bureau-helmond/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Oosterhout,Noord-Brabant,/website-laten-maken-oosterhout/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Oosterhout,Noord-Brabant,/webshop-laten-maken-oosterhout/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Oosterhout,Noord-Brabant,/online-marketing/online-marketing-oosterhout/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Oosterhout,Noord-Brabant,/social-media-beheer-oosterhout/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Oosterhout,Noord-Brabant,/hosting-oosterhout/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Oosterhout,Noord-Brabant,/branding-design-oosterhout/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Oosterhout,Noord-Brabant,/webdesign/webdesign-oosterhout/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Oosterhout,Noord-Brabant,/seo-bureau-oosterhout/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Etten-Leur,Noord-Brabant,/website-laten-maken-etten-leur/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Etten-Leur,Noord-Brabant,/webshop-laten-maken-etten-leur/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Etten-Leur,Noord-Brabant,/online-marketing/online-marketing-etten-leur/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Etten-Leur,Noord-Brabant,/social-media-beheer-etten-leur/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Etten-Leur,Noord-Brabant,/hosting-etten-leur/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Etten-Leur,Noord-Brabant,/branding-design-etten-leur/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Etten-Leur,Noord-Brabant,/webdesign/webdesign-etten-leur/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Etten-Leur,Noord-Brabant,/seo-bureau-etten-leur/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Waalwijk,Noord-Brabant,/website-laten-maken-waalwijk/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Waalwijk,Noord-Brabant,/webshop-laten-maken-waalwijk/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Waalwijk,Noord-Brabant,/online-marketing/online-marketing-waalwijk/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Waalwijk,Noord-Brabant,/social-media-beheer-waalwijk/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Waalwijk,Noord-Brabant,/hosting-waalwijk/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Waalwijk,Noord-Brabant,/branding-design-waalwijk/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Waalwijk,Noord-Brabant,/webdesign/webdesign-waalwijk/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Waalwijk,Noord-Brabant,/seo-bureau-waalwijk/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Amsterdam,Noord-Holland,/website-laten-maken-amsterdam/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Amsterdam,Noord-Holland,/webshop-laten-maken-amsterdam/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Amsterdam,Noord-Holland,/online-marketing/online-marketing-amsterdam/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Amsterdam,Noord-Holland,/social-media-beheer-amsterdam/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Amsterdam,Noord-Holland,/hosting-amsterdam/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Amsterdam,Noord-Holland,/branding-design-amsterdam/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Amsterdam,Noord-Holland,/webdesign/webdesign-amsterdam/,existing-recovery,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Amsterdam,Noord-Holland,/seo-bureau-amsterdam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Haarlem,Noord-Holland,/website-laten-maken-haarlem/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Haarlem,Noord-Holland,/webshop-laten-maken-haarlem/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Haarlem,Noord-Holland,/online-marketing/online-marketing-haarlem/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Haarlem,Noord-Holland,/social-media-beheer-haarlem/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Haarlem,Noord-Holland,/hosting-haarlem/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Haarlem,Noord-Holland,/branding-design-haarlem/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Haarlem,Noord-Holland,/webdesign/webdesign-haarlem/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Haarlem,Noord-Holland,/seo-bureau-haarlem/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Alkmaar,Noord-Holland,/website-laten-maken-alkmaar/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Alkmaar,Noord-Holland,/webshop-laten-maken-alkmaar/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Alkmaar,Noord-Holland,/online-marketing/online-marketing-alkmaar/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Alkmaar,Noord-Holland,/social-media-beheer-alkmaar/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Alkmaar,Noord-Holland,/hosting-alkmaar/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Alkmaar,Noord-Holland,/branding-design-alkmaar/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Alkmaar,Noord-Holland,/webdesign/webdesign-alkmaar/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Alkmaar,Noord-Holland,/seo-bureau-alkmaar/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Hilversum,Noord-Holland,/website-laten-maken-hilversum/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Hilversum,Noord-Holland,/webshop-laten-maken-hilversum/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Hilversum,Noord-Holland,/online-marketing/online-marketing-hilversum/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Hilversum,Noord-Holland,/social-media-beheer-hilversum/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Hilversum,Noord-Holland,/hosting-hilversum/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Hilversum,Noord-Holland,/branding-design-hilversum/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Hilversum,Noord-Holland,/webdesign/webdesign-hilversum/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Hilversum,Noord-Holland,/seo-bureau-hilversum/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Hoofddorp,Noord-Holland,/website-laten-maken-hoofddorp/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Hoofddorp,Noord-Holland,/webshop-laten-maken-hoofddorp/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Hoofddorp,Noord-Holland,/online-marketing/online-marketing-hoofddorp/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Hoofddorp,Noord-Holland,/social-media-beheer-hoofddorp/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Hoofddorp,Noord-Holland,/hosting-hoofddorp/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Hoofddorp,Noord-Holland,/branding-design-hoofddorp/,generated-first-batch,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Hoofddorp,Noord-Holland,/webdesign/webdesign-hoofddorp/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Hoofddorp,Noord-Holland,/seo-bureau-hoofddorp/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Zaandam,Noord-Holland,/website-laten-maken-zaandam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Zaandam,Noord-Holland,/webshop-laten-maken-zaandam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Zaandam,Noord-Holland,/online-marketing/online-marketing-zaandam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Zaandam,Noord-Holland,/social-media-beheer-zaandam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Zaandam,Noord-Holland,/hosting-zaandam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Zaandam,Noord-Holland,/branding-design-zaandam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Zaandam,Noord-Holland,/webdesign/webdesign-zaandam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Zaandam,Noord-Holland,/seo-bureau-zaandam/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Amstelveen,Noord-Holland,/website-laten-maken-amstelveen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Amstelveen,Noord-Holland,/webshop-laten-maken-amstelveen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Amstelveen,Noord-Holland,/online-marketing/online-marketing-amstelveen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Amstelveen,Noord-Holland,/social-media-beheer-amstelveen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Amstelveen,Noord-Holland,/hosting-amstelveen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Amstelveen,Noord-Holland,/branding-design-amstelveen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Amstelveen,Noord-Holland,/webdesign/webdesign-amstelveen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Amstelveen,Noord-Holland,/seo-bureau-amstelveen/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Purmerend,Noord-Holland,/website-laten-maken-purmerend/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Purmerend,Noord-Holland,/webshop-laten-maken-purmerend/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Purmerend,Noord-Holland,/online-marketing/online-marketing-purmerend/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Purmerend,Noord-Holland,/social-media-beheer-purmerend/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Purmerend,Noord-Holland,/hosting-purmerend/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Purmerend,Noord-Holland,/branding-design-purmerend/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Purmerend,Noord-Holland,/webdesign/webdesign-purmerend/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Purmerend,Noord-Holland,/seo-bureau-purmerend/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Hoorn,Noord-Holland,/website-laten-maken-hoorn/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Hoorn,Noord-Holland,/webshop-laten-maken-hoorn/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Hoorn,Noord-Holland,/online-marketing/online-marketing-hoorn/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Hoorn,Noord-Holland,/social-media-beheer-hoorn/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Hoorn,Noord-Holland,/hosting-hoorn/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Hoorn,Noord-Holland,/branding-design-hoorn/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Hoorn,Noord-Holland,/webdesign/webdesign-hoorn/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Hoorn,Noord-Holland,/seo-bureau-hoorn/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+website-laten-maken,Den Helder,Noord-Holland,/website-laten-maken-den-helder/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webshop-laten-maken,Den Helder,Noord-Holland,/webshop-laten-maken-den-helder/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+online-marketing,Den Helder,Noord-Holland,/online-marketing/online-marketing-den-helder/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+social-media-beheer,Den Helder,Noord-Holland,/social-media-beheer-den-helder/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+hosting,Den Helder,Noord-Holland,/hosting-den-helder/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+branding-design,Den Helder,Noord-Holland,/branding-design-den-helder/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+webdesign,Den Helder,Noord-Holland,/webdesign/webdesign-den-helder/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
+seo-bureau,Den Helder,Noord-Holland,/seo-bureau-den-helder/,planned-controlled,none,Regional cluster plan; only first-batch rows are generated in this phase.
