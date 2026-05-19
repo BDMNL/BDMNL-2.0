@@ -18,6 +18,7 @@ LAYOUT_PATH = ROOT / "templates" / "layout.html"
 RECOVERY_TEMPLATE_PATH = ROOT / "templates" / "pages" / "recovery-page.html"
 HEADER_PATH = ROOT / "templates" / "components" / "header.html"
 FOOTER_PATH = ROOT / "templates" / "components" / "footer.html"
+PREMIUM_BRIELLE_TEMPLATE_PATH = ROOT / "templates" / "pages" / "premium-brielle-example.html"
 GENERATED_MARKER = "<!-- generated-by: bdmnl-seo-system -->"
 
 
@@ -2024,6 +2025,33 @@ def render_recovery_page(
     )
 
 
+def render_premium_brielle_example(
+    layout: str,
+    header: str,
+    footer: str,
+    footer_ctx: dict[str, str],
+    context: dict[str, str],
+) -> str:
+    page_content = PREMIUM_BRIELLE_TEMPLATE_PATH.read_text(encoding="utf-8")
+    header_html = render(header, {"asset_prefix": context["asset_prefix"]})
+    footer_html = render(
+        footer,
+        {**footer_ctx, "asset_prefix": context["asset_prefix"]},
+        raw_keys={"footer_city_links", "footer_service_links", "footer_internal_links"},
+    )
+    html_output = GENERATED_MARKER + "\n" + render(
+        layout,
+        {**context, "global_header": header_html, "global_footer": footer_html, "page_content": page_content.strip()},
+        raw_keys={"global_header", "global_footer", "page_content", "professional_service_schema", "faq_schema", "breadcrumb_schema"},
+    )
+    html_output = html_output.replace(
+        '<link rel="stylesheet" href="../assets/css/landing.css" />',
+        '<link rel="stylesheet" href="../assets/css/landing.css" />\n    <link rel="stylesheet" href="../assets/css/premium-example.css" />',
+        1,
+    )
+    return html_output.replace("<body>", '<body class="premium-example-page">', 1)
+
+
 def cleanup_generated_recovery(pages: list[dict[str, Any]]) -> None:
     expected = {page["path"] for page in pages}
     top_dirs = {"webdesign", "seo", "social-media", "online-marketing", "reclamebureau"}
@@ -2533,8 +2561,12 @@ def main() -> None:
         context = recovery_context(site, page, pages)
         output_dir = ROOT / page["path"]
         output_dir.mkdir(parents=True, exist_ok=True)
+        if page["path"] == "website-laten-maken-brielle":
+            rendered_page = render_premium_brielle_example(layout, header, footer, footer_ctx, context)
+        else:
+            rendered_page = render_recovery_page(layout, page_template, header, footer, footer_ctx, context)
         (output_dir / "index.html").write_text(
-            render_recovery_page(layout, page_template, header, footer, footer_ctx, context),
+            rendered_page,
             encoding="utf-8",
         )
 
