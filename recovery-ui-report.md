@@ -20,6 +20,15 @@ Generated: 2026-05-19
 - Footer now has a stronger recovery-platform brand treatment, clearer contact details and quick CTAs.
 - Mobile CSS now improves button sizing, hero flow, grid stacking, section spacing and readability.
 
+## Design maturity refinements
+
+- Orange usage was reduced to a restrained accent instead of a dominant background/glow language.
+- Hero typography was calmed with a smaller scale, softer line-height and less aggressive weight.
+- Fake dashboard/browser mockups were removed from the recovery template and replaced with a restrained editorial agency brief panel.
+- Portfolio-style sections now use editorial case cards rather than artificial UI screenshots.
+- CTA blocks now feel more like a professional agency contact route than a sales funnel.
+- Footer and internal link cards were toned down with neutral surfaces, subtle borders and quieter hover treatments.
+
 ## Screenshot examples
 
 Screenshots were captured locally from the generated static recovery pages:
@@ -27,6 +36,12 @@ Screenshots were captured locally from the generated static recovery pages:
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/website-laten-maken-brielle-desktop.png`
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/seo-bureau-rotterdam-mobile.png`
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/webdesign-breda-desktop.png`
+
+After the design maturity pass:
+
+- `/opt/cursor/artifacts/bdmnl-recovery-ui/website-laten-maken-brielle-desktop-after.png`
+- `/opt/cursor/artifacts/bdmnl-recovery-ui/seo-bureau-rotterdam-mobile-after.png`
+- `/opt/cursor/artifacts/bdmnl-recovery-ui/webdesign-breda-desktop-after.png`
 
 ## Validation
 
