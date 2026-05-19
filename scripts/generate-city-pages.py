@@ -984,6 +984,22 @@ SERVICE_AUTHORITY = {
 }
 
 
+META_OVERRIDES = {
+    "online-marketing-middelburg": {
+        "title": "Online marketing Middelburg en Walcheren | BDMNL",
+        "description": "Online marketing in Middelburg en Walcheren? BDMNL verbindt websites, SEO en content tot een duidelijke groeistructuur voor Zeeuwse bedrijven.",
+    },
+    "seo/seo-bureau-rotterdam": {
+        "title": "SEO bureau Rotterdam | Technische SEO en content door BDMNL",
+        "description": "SEO bureau in Rotterdam nodig? BDMNL versterkt technische SEO, contentstructuur en lokale autoriteit voor bedrijven in een competitieve markt.",
+    },
+    "social-media/social-media-beheer-brielle": {
+        "title": "Social media beheer Brielle | Contentritme voor lokale bedrijven",
+        "description": "Social media beheer in Brielle? BDMNL helpt lokale bedrijven met herkenbare content, planning en koppeling met website en SEO.",
+    },
+}
+
+
 RECOVERY_SERVICE_PROFILES = {
     "website-laten-maken": {
         "label": "Website laten maken",
@@ -1371,6 +1387,10 @@ def recovery_footer_context(site: dict[str, Any], pages: list[dict[str, Any]]) -
         "footer_service_links": footer_service_links,
         "footer_internal_links": "\n".join(
             [
+                '<a href="/over-bdmnl/">Over BDMNL</a>',
+                '<a href="/homepage/">BDMNL homepage</a>',
+                '<a href="/gratis-seo-scan/">Gratis SEO scan</a>',
+                '<a href="/kennisbank/webdesign/">Kennisbank</a>',
                 '<a href="/contact/">Contact</a>',
                 '<a href="/privacyverklaring/">Privacyverklaring</a>',
                 '<a href="/cookiebeleid/">Cookiebeleid</a>',
@@ -1489,6 +1509,19 @@ def build_cta_actions(site: dict[str, Any], page: dict[str, Any], city: dict[str
     )
 
 
+def build_direct_cta_actions(site: dict[str, Any], primary_label: str, subject: str) -> str:
+    subject_href = subject.replace(" ", "%20")
+    return "\n".join(
+        [
+            '<div class="cta-actions" aria-label="Contactopties">',
+            f'  <a class="btn btn-dark" href="/contact/" data-magnetic>{html(primary_label)}</a>',
+            f'  <a class="btn btn-light" href="mailto:{html(site["email"])}?subject={html(subject_href)}">Mail BDMNL direct</a>',
+            '  <p class="cta-note">Directe route naar contact, zonder schijnformulier of onduidelijke vervolgstap.</p>',
+            "</div>",
+        ]
+    )
+
+
 def authority_page(page: dict[str, Any]) -> bool:
     return page["service_key"] in {"website-laten-maken", "webdesign", "seo"} and page["city_key"] in AUTHORITY_CITY_KEYS
 
@@ -1571,14 +1604,15 @@ def recovery_service_cards(page: dict[str, Any], city: dict[str, Any], profile: 
 
 
 def recovery_related_cards(page: dict[str, Any], pages: list[dict[str, Any]]) -> str:
-    related = [
+    same_city = [candidate for candidate in pages if candidate["path"] != page["path"] and candidate["city_key"] == page["city_key"]]
+    same_service = [
         candidate
         for candidate in pages
-        if candidate["path"] != page["path"]
-        and (candidate["city_key"] == page["city_key"] or candidate["service_key"] == page["service_key"])
-    ][:6]
-    if len(related) < 3:
-        related.extend([candidate for candidate in pages if candidate not in related and candidate["path"] != page["path"]][: 3 - len(related)])
+        if candidate["path"] != page["path"] and candidate["service_key"] == page["service_key"] and candidate not in same_city
+    ]
+    related = same_city + same_service[:4]
+    if len(related) < 4:
+        related.extend([candidate for candidate in pages if candidate not in related and candidate["path"] != page["path"]][: 4 - len(related)])
 
     return "\n".join(
         "\n".join(
@@ -1649,6 +1683,11 @@ def content_related_cards(pages: list[dict[str, Any]]) -> str:
         ("Webdesign Brielle", "/webdesign/webdesign-brielle/", "Bekijk hoe BDMNL webdesign lokaal neerzet."),
         ("SEO Rotterdam", "/seo/seo-rotterdam/", "Bekijk hoe BDMNL lokale vindbaarheid in Rotterdam aanpakt."),
         ("Gratis SEO scan", "/gratis-seo-scan/", "Laat je website controleren op snelheid, structuur en vindbaarheid."),
+        ("Content marketing", "/blog/content-marketing/", "Lees hoe inhoud helpt om vertrouwen en vindbaarheid op te bouwen."),
+        ("Website updaten", "/blog/hoe-vaak-moet-je-je-website-updaten/", "Bekijk wanneer content, techniek en SEO opnieuw aandacht nodig hebben."),
+        ("Blog beginnen", "/blog/hoe-kun-je-een-eigen-blog-beginnen/", "Gebruik blogs als ondersteunende content binnen je SEO structuur."),
+        ("Professionele hosting", "/blog/professionele-website-hosting-betrouwbaar-en-snel/", "Lees waarom snelheid en betrouwbaarheid belangrijk zijn voor SEO."),
+        ("WordPress populair", "/blog/wordpress-waarom-is-dat-zo-populair/", "Vergelijk bekende CMS-keuzes met snelheid, beheer en onderhoud."),
     ]
     return "\n".join(
         "\n".join(
@@ -1767,13 +1806,12 @@ def render_content_page(
         <h2>Wil je hiermee aan de slag?</h2>
         <p>Neem contact op met BDMNL voor een praktische aanpak rond website, SEO, content of online marketing.</p>
       </div>
-      <form class="cta-form" action="/contact/" method="get">
-        <label for="email">Zakelijk e-mailadres</label>
-        <div>
-          <input id="email" name="email" type="email" required />
-          <button class="btn btn-dark" type="submit">Plan gesprek</button>
-        </div>
-      </form>
+      <div class="cta-visual" aria-hidden="true">
+        <span></span>
+        <strong>BDMNL</strong>
+        <em>SEO recovery</em>
+      </div>
+      {build_direct_cta_actions(site, "Neem contact op", page["title"])}
     </div>
   </div>
 </section>
@@ -1848,13 +1886,14 @@ def recovery_schema(site: dict[str, Any], page: dict[str, Any], city: dict[str, 
 
 
 def recovery_breadcrumb(site: dict[str, Any], page: dict[str, Any], city: dict[str, Any]) -> str:
+    profile = RECOVERY_SERVICE_PROFILES[page["service_key"]]
     return json_script(
         {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site['base_url']}/"},
-                {"@type": "ListItem", "position": 2, "name": page["category"].replace("-", " ").title(), "item": f"{site['base_url']}/{page['category']}/"},
+                {"@type": "ListItem", "position": 2, "name": profile["label"], "item": f"{site['base_url']}/#diensten"},
                 {"@type": "ListItem", "position": 3, "name": f"{page['keyword']} {city['name']}", "item": recovery_url(site, page)},
             ],
         }
@@ -1866,6 +1905,9 @@ def recovery_context(site: dict[str, Any], page: dict[str, Any], pages: list[dic
     profile = RECOVERY_SERVICE_PROFILES[page["service_key"]]
     title = profile["title"].format(city=city["name"], keyword=page["keyword"])
     description = profile["description"].format(city=city["name"], keyword=page["keyword"])
+    if page["path"] in META_OVERRIDES:
+        title = META_OVERRIDES[page["path"]]["title"]
+        description = META_OVERRIDES[page["path"]]["description"]
     faqs = recovery_faqs(page, city, profile)
     areas = ", ".join(city["areas"])
     local = local_authority(page["city_key"])
@@ -2131,13 +2173,12 @@ def build_recovery_homepage(
         <h2>Klaar om je website, SEO of online marketing sterker neer te zetten?</h2>
         <p>BDMNL denkt mee over de juiste aanpak en vertaalt die naar een professionele online basis.</p>
       </div>
-      <form class="cta-form" action="/contact/" method="get">
-        <label for="email">Zakelijk e-mailadres</label>
-        <div>
-          <input id="email" name="email" type="email" required />
-          <button class="btn btn-dark" type="submit">Plan gesprek</button>
-        </div>
-      </form>
+      <div class="cta-visual" aria-hidden="true">
+        <span></span>
+        <strong>BDMNL</strong>
+        <em>Recovery structuur</em>
+      </div>
+      {build_direct_cta_actions(site, "Plan strategiegesprek", "BDMNL SEO recovery")}
     </div>
   </div>
 </section>
