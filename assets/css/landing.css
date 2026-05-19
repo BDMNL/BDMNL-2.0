@@ -2926,6 +2926,325 @@ body.has-pointer .cursor-glow {
   }
 }
 
+/* Final premium footer and contact refinement */
+.global-footer {
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+  background: #ffffff;
+}
+
+.footer-editorial {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.32fr);
+  gap: clamp(40px, 8vw, 120px);
+  align-items: end;
+  padding: clamp(70px, 9vw, 132px) 0 clamp(46px, 6vw, 76px);
+}
+
+.footer-statement span,
+.contact-premium-panel > span,
+.contact-premium-options span {
+  color: rgba(17, 17, 17, 0.48);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-statement h2 {
+  max-width: 980px;
+  margin: 18px 0 24px;
+  font-size: clamp(2.6rem, 6vw, 6.2rem);
+  font-weight: 760;
+  line-height: 1.02;
+  letter-spacing: -0.065em;
+}
+
+.footer-statement p {
+  max-width: 680px;
+  margin: 0;
+  color: rgba(17, 17, 17, 0.62);
+  font-size: clamp(1.02rem, 1.35vw, 1.22rem);
+  line-height: 1.7;
+}
+
+.footer-action-panel {
+  display: grid;
+  gap: 1px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  background: rgba(17, 17, 17, 0.08);
+}
+
+.footer-action-panel a {
+  background: #ffffff;
+  color: #111111;
+  padding: 18px 20px;
+  font-weight: 820;
+  letter-spacing: -0.02em;
+}
+
+.footer-action-panel .footer-primary-link {
+  background: #111111;
+  color: #ffffff;
+}
+
+.footer-directory {
+  display: grid;
+  gap: clamp(30px, 5vw, 62px);
+  padding: 0 0 34px;
+}
+
+.footer-primary-groups {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.9fr;
+  gap: clamp(28px, 5vw, 80px);
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+  padding-top: clamp(30px, 5vw, 54px);
+}
+
+.footer-primary-groups section {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.footer-primary-groups h2,
+.footer-secondary-groups summary {
+  margin: 0 0 12px;
+  color: rgba(17, 17, 17, 0.48);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-primary-groups a,
+.footer-primary-groups span,
+.footer-link-cloud a {
+  color: rgba(17, 17, 17, 0.68);
+  font-size: 0.96rem;
+  font-weight: 720;
+}
+
+.footer-primary-groups a:hover,
+.footer-link-cloud a:hover,
+.footer-bottom a:hover {
+  color: #111111;
+}
+
+.footer-secondary-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(17, 17, 17, 0.08);
+}
+
+.footer-secondary-groups details {
+  background: #ffffff;
+  padding: 22px 0;
+}
+
+.footer-secondary-groups summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.footer-secondary-groups summary::-webkit-details-marker {
+  display: none;
+}
+
+.footer-secondary-groups summary::after {
+  content: "+";
+  float: right;
+  color: rgba(17, 17, 17, 0.36);
+  font-size: 1rem;
+}
+
+.footer-secondary-groups details[open] summary::after {
+  content: "-";
+}
+
+.footer-link-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding-top: 10px;
+}
+
+.footer-link-cloud a {
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+  padding: 22px 0 34px;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+  color: rgba(17, 17, 17, 0.56);
+}
+
+.contact-premium-hero {
+  background: #ffffff;
+  padding: clamp(76px, 9vw, 136px) 0 clamp(70px, 8vw, 120px);
+}
+
+.contact-premium-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.48fr);
+  gap: clamp(42px, 8vw, 118px);
+  align-items: end;
+}
+
+.contact-premium-grid .premium-kicker {
+  display: block;
+  margin: 0 0 26px;
+  color: rgba(17, 17, 17, 0.48);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-premium-grid h1 {
+  max-width: 860px;
+  margin-bottom: 26px;
+  font-size: clamp(3rem, 6.2vw, 6.1rem);
+  font-weight: 760;
+  line-height: 1.02;
+  letter-spacing: -0.065em;
+}
+
+.contact-premium-lead {
+  max-width: 680px;
+  color: rgba(17, 17, 17, 0.64);
+  font-size: clamp(1.04rem, 1.35vw, 1.22rem);
+  line-height: 1.74;
+}
+
+.contact-premium-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.contact-premium-actions .btn-primary {
+  background: #111111;
+  box-shadow: 0 16px 42px rgba(17, 17, 17, 0.15);
+}
+
+.contact-premium-panel {
+  border-left: 1px solid rgba(17, 17, 17, 0.16);
+  padding-left: clamp(22px, 3vw, 38px);
+}
+
+.contact-premium-panel dl {
+  display: grid;
+  gap: 18px;
+  margin: 24px 0 0;
+}
+
+.contact-premium-panel div {
+  display: grid;
+  grid-template-columns: 0.42fr 1fr;
+  gap: 18px;
+}
+
+.contact-premium-panel dt {
+  color: rgba(17, 17, 17, 0.46);
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.contact-premium-panel dd {
+  margin: 0;
+  color: #111111;
+  font-weight: 780;
+  letter-spacing: -0.02em;
+}
+
+.contact-premium-section {
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+  padding: clamp(70px, 8vw, 120px) 0;
+}
+
+.contact-premium-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(17, 17, 17, 0.08);
+}
+
+.contact-premium-options article {
+  display: grid;
+  align-content: start;
+  min-height: 320px;
+  background: #ffffff;
+  padding: clamp(26px, 4vw, 44px);
+}
+
+.contact-premium-options h2 {
+  max-width: 12ch;
+  margin: 68px 0 16px;
+  font-size: clamp(1.55rem, 2.4vw, 2.3rem);
+  font-weight: 760;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.contact-premium-options p {
+  color: rgba(17, 17, 17, 0.62);
+}
+
+.contact-premium-options a {
+  align-self: end;
+  color: #111111;
+  font-weight: 820;
+}
+
+@media (max-width: 980px) {
+  .footer-editorial,
+  .footer-primary-groups,
+  .footer-secondary-groups,
+  .contact-premium-grid,
+  .contact-premium-options {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-statement h2,
+  .contact-premium-grid h1 {
+    font-size: clamp(2.6rem, 10vw, 4.4rem);
+  }
+
+  .contact-premium-panel {
+    border-top: 1px solid rgba(17, 17, 17, 0.14);
+    border-left: 0;
+    padding-top: 28px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-editorial {
+    padding-top: 58px;
+  }
+
+  .contact-premium-actions {
+    display: grid;
+  }
+
+  .contact-premium-actions .btn {
+    width: 100%;
+  }
+
+  .contact-premium-panel div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
 /* Authority page upgrade */
 .seo-hero {
   background:

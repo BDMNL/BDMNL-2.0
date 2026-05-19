@@ -695,26 +695,53 @@ def build_support_page(
     asset_prefix = "../"
     contact_cards = ""
     if page["slug"] == "contact":
-        contact_cards = f"""
-    <div class="card-grid service-grid">
-      <article class="service-card reveal">
-        <span class="card-number">Mail</span>
-        <h2>E-mail</h2>
-        <p><a href="mailto:{html(site['email'])}">{html(site['email'])}</a></p>
-      </article>
-      <article class="service-card reveal">
-        <span class="card-number">Bel</span>
-        <h2>Telefoon</h2>
-        <p><a href="tel:{html(site['phone_href'])}">{html(site['phone'])}</a></p>
-      </article>
-      <article class="service-card reveal">
-        <span class="card-number">Adres</span>
-        <h2>Brielle</h2>
-        <p>{html(site['address'])}</p>
-      </article>
+        page_content = f"""
+<section class="contact-premium-hero">
+  <div class="container contact-premium-grid">
+    <div>
+      <p class="premium-kicker">Contact</p>
+      <h1>{html(page['h1'])}</h1>
+      <p class="contact-premium-lead">{html(page['body'])}</p>
+      <div class="contact-premium-actions">
+        <a class="btn btn-primary" href="mailto:{html(site['email'])}">Mail BDMNL</a>
+        <a class="btn btn-secondary" href="tel:{html(site['phone_href'])}">Bel {html(site['phone'])}</a>
+      </div>
     </div>
+    <aside class="contact-premium-panel" aria-label="Contactgegevens BDMNL">
+      <span>BDMNL Brielle</span>
+      <dl>
+        <div><dt>E-mail</dt><dd><a href="mailto:{html(site['email'])}">{html(site['email'])}</a></dd></div>
+        <div><dt>Telefoon</dt><dd><a href="tel:{html(site['phone_href'])}">{html(site['phone'])}</a></dd></div>
+        <div><dt>Adres</dt><dd>{html(site['address'])}</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+<section class="contact-premium-section">
+  <div class="container contact-premium-options">
+    <article>
+      <span>01</span>
+      <h2>Website of webshop bespreken</h2>
+      <p>Voor bedrijven die hun online basis willen vernieuwen, verbeteren of professioneler willen presenteren.</p>
+      <a href="/website-laten-maken-brielle/">Bekijk website aanpak</a>
+    </article>
+    <article>
+      <span>02</span>
+      <h2>SEO en lokale vindbaarheid</h2>
+      <p>Voor ondernemers die beter gevonden willen worden zonder dat hun pagina's als SEO-filler aanvoelen.</p>
+      <a href="/seo-bureau-brielle/">Bekijk SEO aanpak</a>
+    </article>
+    <article>
+      <span>03</span>
+      <h2>Branding, hosting en groei</h2>
+      <p>Voor bedrijven die merk, techniek en online marketing als één professionele basis willen neerzetten.</p>
+      <a href="/branding-design-rotterdam/">Bekijk branding aanpak</a>
+    </article>
+  </div>
+</section>
 """
-    page_content = f"""
+    else:
+        page_content = f"""
 <section class="hero section-pad">
   <div class="container">
     <p class="eyebrow"><span></span>BDMNL</p>

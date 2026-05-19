@@ -45,6 +45,13 @@ Single-page authority prototype with real project strip:
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/website-laten-maken-brielle-authority-example-desktop.png`
 - `/opt/cursor/artifacts/bdmnl-recovery-ui/website-laten-maken-brielle-authority-example-mobile.png`
 
+Footer and contact final refinement:
+
+- Before desktop: `/opt/cursor/artifacts/bdmnl-recovery-ui/contact-footer-before-desktop.png`
+- Before mobile: `/opt/cursor/artifacts/bdmnl-recovery-ui/contact-footer-before-mobile.png`
+- After desktop: `/opt/cursor/artifacts/bdmnl-recovery-ui/contact-footer-after-desktop.png`
+- After mobile: `/opt/cursor/artifacts/bdmnl-recovery-ui/contact-footer-after-mobile.png`
+
 ## Validation
 
 - `python3 scripts/generate-city-pages.py`
