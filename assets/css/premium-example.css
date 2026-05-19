@@ -418,6 +418,387 @@
   box-shadow: none;
 }
 
+/* BDMNL final "wow" preview page */
+.bdmnl-wow-page {
+  background: #ffffff;
+  color: #0e0e0e;
+}
+
+.bdmnl-wow-page .site-header {
+  border-bottom: 1px solid rgba(14, 14, 14, 0.08);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.bdmnl-wow-page .global-footer {
+  display: none;
+}
+
+.bdmnl-wow-page .nav-status,
+.bdmnl-wow-page .page-grain,
+.bdmnl-wow-page .ambient,
+.bdmnl-wow-page .cursor-glow {
+  display: none;
+}
+
+.bdmnl-wow-page .nav-links {
+  border-color: rgba(14, 14, 14, 0.08);
+  box-shadow: none;
+}
+
+.wow-container {
+  width: min(100% - 56px, 1480px);
+  margin-inline: auto;
+}
+
+.wow-kicker {
+  margin: 0;
+  color: rgba(14, 14, 14, 0.46);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.wow-kicker.light {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.wow-hero {
+  padding: clamp(76px, 9vw, 128px) 0 clamp(72px, 8vw, 118px);
+}
+
+.wow-hero-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: clamp(42px, 7vw, 96px);
+  border-bottom: 1px solid rgba(14, 14, 14, 0.1);
+  padding-bottom: 18px;
+}
+
+.wow-meta {
+  margin: 0;
+  color: rgba(14, 14, 14, 0.44);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.wow-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.48fr);
+  gap: clamp(44px, 8vw, 120px);
+  align-items: end;
+}
+
+.wow-hero h1 {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 690;
+  line-height: 1.04;
+  letter-spacing: -0.07em;
+}
+
+.wow-hero-copy {
+  border-left: 1px solid rgba(14, 14, 14, 0.14);
+  padding-left: clamp(22px, 3vw, 38px);
+}
+
+.wow-hero-copy p {
+  max-width: 520px;
+  margin: 0;
+  color: rgba(14, 14, 14, 0.64);
+  font-size: clamp(1rem, 1.25vw, 1.14rem);
+  line-height: 1.8;
+}
+
+.wow-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.wow-button,
+.wow-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.wow-button {
+  background: #0e0e0e;
+  color: #ffffff;
+  padding: 0 22px;
+}
+
+.wow-button.inverted {
+  background: #ffffff;
+  color: #0e0e0e;
+}
+
+.wow-link {
+  color: rgba(14, 14, 14, 0.62);
+}
+
+.wow-work,
+.wow-editorial,
+.wow-related,
+.wow-faq {
+  border-top: 1px solid rgba(14, 14, 14, 0.08);
+  padding: clamp(78px, 9vw, 138px) 0;
+}
+
+.wow-section-heading,
+.wow-editorial-grid,
+.wow-black-grid,
+.wow-cta-grid,
+.wow-footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
+  gap: clamp(40px, 8vw, 118px);
+}
+
+.wow-section-heading h2,
+.wow-editorial h2,
+.wow-related h2,
+.wow-cta h2,
+.wow-footer h2,
+.wow-faq h2 {
+  max-width: 780px;
+  margin: 16px 0 0;
+  font-size: clamp(2.05rem, 4.1vw, 4.4rem);
+  font-weight: 690;
+  line-height: 1.08;
+  letter-spacing: -0.058em;
+}
+
+.wow-work-list {
+  display: grid;
+  gap: 1px;
+  background: rgba(14, 14, 14, 0.1);
+}
+
+.wow-work-list article {
+  display: grid;
+  grid-template-columns: 0.42fr 0.48fr 1fr;
+  gap: clamp(18px, 3vw, 42px);
+  align-items: baseline;
+  background: #ffffff;
+  padding: clamp(24px, 3.5vw, 42px) 0;
+}
+
+.wow-work-list span,
+.wow-method span,
+.wow-link-list span,
+.wow-proof-list span,
+.wow-footer span {
+  color: rgba(14, 14, 14, 0.42);
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.wow-work-list strong {
+  font-size: clamp(1.35rem, 2vw, 1.95rem);
+  font-weight: 690;
+  letter-spacing: -0.045em;
+}
+
+.wow-work-list p,
+.wow-copy p,
+.wow-method p,
+.wow-proof-list p,
+.wow-cta p {
+  margin: 0;
+  color: rgba(14, 14, 14, 0.64);
+  line-height: 1.76;
+}
+
+.wow-copy {
+  display: grid;
+  gap: 24px;
+  max-width: 760px;
+}
+
+.wow-black {
+  background: #0e0e0e;
+  color: #ffffff;
+  padding: clamp(86px, 10vw, 150px) 0;
+}
+
+.wow-black h2 {
+  color: #ffffff;
+}
+
+.wow-proof-list {
+  display: grid;
+  gap: 34px;
+}
+
+.wow-proof-list article {
+  display: grid;
+  grid-template-columns: 0.18fr 0.62fr 1fr;
+  gap: clamp(18px, 3vw, 42px);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  padding-top: 24px;
+}
+
+.wow-proof-list span {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.wow-proof-list h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-weight: 680;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+.wow-proof-list p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.wow-method {
+  display: grid;
+  gap: 1px;
+  background: rgba(14, 14, 14, 0.1);
+}
+
+.wow-method div {
+  display: grid;
+  grid-template-columns: 0.18fr 0.46fr 1fr;
+  gap: clamp(18px, 3vw, 42px);
+  align-items: baseline;
+  background: #ffffff;
+  padding: clamp(22px, 3vw, 34px) 0;
+}
+
+.wow-method strong {
+  font-size: clamp(1.18rem, 1.7vw, 1.65rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.wow-link-list {
+  display: grid;
+  gap: 1px;
+  background: rgba(14, 14, 14, 0.1);
+}
+
+.wow-link-list a {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  gap: 24px;
+  align-items: center;
+  background: #ffffff;
+  padding: 24px 0;
+}
+
+.wow-link-list strong {
+  font-size: clamp(1.2rem, 1.85vw, 1.75rem);
+  font-weight: 690;
+  letter-spacing: -0.045em;
+}
+
+.wow-cta {
+  background: #0e0e0e;
+  color: #ffffff;
+  padding: clamp(82px, 9vw, 142px) 0;
+}
+
+.wow-cta h2,
+.wow-cta p {
+  color: #ffffff;
+}
+
+.wow-cta p {
+  max-width: 600px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.wow-faq .faq-item {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.wow-footer {
+  border-top: 1px solid rgba(14, 14, 14, 0.1);
+  padding: clamp(72px, 9vw, 132px) 0 36px;
+}
+
+.wow-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  align-content: start;
+}
+
+.wow-footer nav a {
+  color: rgba(14, 14, 14, 0.64);
+  font-weight: 760;
+}
+
+@media (max-width: 980px) {
+  .wow-hero-grid,
+  .wow-section-heading,
+  .wow-editorial-grid,
+  .wow-black-grid,
+  .wow-cta-grid,
+  .wow-footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wow-hero-copy {
+    border-top: 1px solid rgba(14, 14, 14, 0.14);
+    border-left: 0;
+    padding-top: 28px;
+    padding-left: 0;
+  }
+
+  .wow-work-list article,
+  .wow-proof-list article,
+  .wow-method div,
+  .wow-link-list a {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wow-container {
+    width: min(100% - 28px, 1480px);
+  }
+
+  .wow-hero {
+    padding-top: 54px;
+  }
+
+  .wow-hero h1 {
+    font-size: clamp(2.45rem, 12vw, 3.65rem);
+  }
+
+  .wow-hero-top {
+    display: grid;
+    gap: 8px;
+  }
+
+  .wow-actions {
+    display: grid;
+  }
+
+  .wow-button {
+    width: 100%;
+  }
+}
+
 @media (max-width: 980px) {
   .premium-hero-grid,
   .premium-split,

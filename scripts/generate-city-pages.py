@@ -2723,7 +2723,7 @@ def render_premium_brielle_example(
         '<link rel="stylesheet" href="../assets/css/landing.css" />\n    <link rel="stylesheet" href="../assets/css/premium-example.css" />',
         1,
     )
-    return html_output.replace("<body>", '<body class="premium-example-page">', 1)
+    return html_output.replace("<body>", '<body class="premium-example-page bdmnl-wow-page">', 1)
 
 
 def cleanup_generated_recovery(pages: list[dict[str, Any]]) -> None:
@@ -3271,7 +3271,10 @@ def main() -> None:
         context = recovery_context(site, page, pages)
         output_dir = ROOT / page["path"]
         output_dir.mkdir(parents=True, exist_ok=True)
-        rendered_page = render_recovery_page(layout, page_template, header, footer, footer_ctx, context)
+        if page["path"] == "website-laten-maken-brielle":
+            rendered_page = render_premium_brielle_example(layout, header, footer, footer_ctx, context)
+        else:
+            rendered_page = render_recovery_page(layout, page_template, header, footer, footer_ctx, context)
         (output_dir / "index.html").write_text(
             rendered_page,
             encoding="utf-8",

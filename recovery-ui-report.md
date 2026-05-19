@@ -52,6 +52,14 @@ Footer and contact final refinement:
 - After desktop: `/opt/cursor/artifacts/bdmnl-recovery-ui/contact-footer-after-desktop.png`
 - After mobile: `/opt/cursor/artifacts/bdmnl-recovery-ui/contact-footer-after-mobile.png`
 
+Single-page final BDMNL direction preview:
+
+- Before desktop: `/opt/cursor/artifacts/bdmnl-recovery-ui/brielle-wow-before-desktop.png`
+- Before mobile: `/opt/cursor/artifacts/bdmnl-recovery-ui/brielle-wow-before-mobile.png`
+- After desktop: `/opt/cursor/artifacts/bdmnl-recovery-ui/brielle-wow-after-desktop.png`
+- After mobile: `/opt/cursor/artifacts/bdmnl-recovery-ui/brielle-wow-after-mobile.png`
+- Footer after: `/opt/cursor/artifacts/bdmnl-recovery-ui/brielle-wow-footer-after.png`
+
 ## Validation
 
 - `python3 scripts/generate-city-pages.py`
