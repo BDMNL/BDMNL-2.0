@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bdmnl.nl/sitemap.xml
+Sitemap: https://seo.bdmnl.nl/sitemap.xml

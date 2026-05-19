@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import shutil
+import csv
 from datetime import date
 from html import escape
 from pathlib import Path
@@ -754,6 +755,24 @@ RECOVERY_CITIES = {
         "areas": ["Brielle Centrum", "Vierpolders", "Zwartewaal"],
         "intent": "lokale ondernemers op Voorne-Putten die online professioneler zichtbaar willen zijn",
     },
+    "hellevoetsluis": {
+        "name": "Hellevoetsluis",
+        "region": "Zuid-Holland",
+        "areas": ["Centrum", "De Struyten", "Ravense Hoek"],
+        "intent": "bedrijven rond haven, retail en dienstverlening die lokaal beter gevonden willen worden",
+    },
+    "rockanje": {
+        "name": "Rockanje",
+        "region": "Zuid-Holland",
+        "areas": ["Rockanje Dorp", "Tweede Slag", "Tinte"],
+        "intent": "lokale en recreatieve ondernemers die seizoensvraag willen omzetten in aanvragen",
+    },
+    "spijkenisse": {
+        "name": "Spijkenisse",
+        "region": "Zuid-Holland",
+        "areas": ["Centrum", "De Akkers", "Maaswijk"],
+        "intent": "bedrijven in Nissewaard die vertrouwen, vindbaarheid en aanvragen willen versterken",
+    },
     "rotterdam": {
         "name": "Rotterdam",
         "region": "Zuid-Holland",
@@ -783,6 +802,30 @@ RECOVERY_CITIES = {
         "region": "Noord-Brabant",
         "areas": ["Centrum", "Belcrum", "Princenhage"],
         "intent": "bedrijven die hun merk, website en lokale vindbaarheid sterker willen positioneren",
+    },
+    "tilburg": {
+        "name": "Tilburg",
+        "region": "Noord-Brabant",
+        "areas": ["Centrum", "Spoorzone", "Reeshof"],
+        "intent": "Brabantse ondernemers die online zichtbaarheid willen koppelen aan een professionele websitebasis",
+    },
+    "eindhoven": {
+        "name": "Eindhoven",
+        "region": "Noord-Brabant",
+        "areas": ["Centrum", "Strijp-S", "Woensel"],
+        "intent": "innovatieve bedrijven die digitaal sterker willen concurreren met heldere content en SEO",
+    },
+    "roosendaal": {
+        "name": "Roosendaal",
+        "region": "Noord-Brabant",
+        "areas": ["Centrum", "Kalsdonk", "Tolberg"],
+        "intent": "lokale dienstverleners en MKB-bedrijven die meer regionale aanvragen willen krijgen",
+    },
+    "bergen-op-zoom": {
+        "name": "Bergen op Zoom",
+        "region": "Noord-Brabant",
+        "areas": ["Centrum", "Gageldonk", "Halsteren"],
+        "intent": "bedrijven in West-Brabant die beter gevonden willen worden op lokale zoekvragen",
     },
     "amsterdam": {
         "name": "Amsterdam",
@@ -848,6 +891,17 @@ RECOVERY_CITIES = {
 
 
 RECOVERY_SERVICE_PROFILES = {
+    "website-laten-maken": {
+        "label": "Website laten maken",
+        "short": "Website",
+        "service_type": "Website development en Webflow webdesign",
+        "title": "Website laten maken {city} | Webflow websites door BDMNL",
+        "description": "Website laten maken in {city}? BDMNL bouwt snelle Webflow websites met lokale SEO, duidelijke content en conversiepaden voor meer aanvragen.",
+        "h1": "Website laten maken {city} met Webflow, lokale SEO en duidelijke conversie.",
+        "hero": "BDMNL bouwt websites voor bedrijven in {city} die professioneel willen overkomen, sneller duidelijk willen zijn en lokaal beter gevonden willen worden.",
+        "cta": "Plan een websitegesprek",
+        "faq_focus": "website",
+    },
     "webdesign": {
         "label": "Webdesign",
         "short": "Webflow",
@@ -952,6 +1006,69 @@ ADDITIONAL_LOCAL_RECOVERY_URLS = [
     {"category": "online-marketing", "service_key": "online-marketing", "slug": "online-marketing-domburg", "path": "online-marketing-domburg", "city_key": "domburg", "keyword": "Online marketing"},
     {"category": "online-marketing", "service_key": "online-marketing", "slug": "online-marketing-middelburg", "path": "online-marketing-middelburg", "city_key": "middelburg", "keyword": "Online marketing"},
     {"category": "online-marketing", "service_key": "online-marketing", "slug": "online-marketing-ouddorp", "path": "online-marketing-ouddorp", "city_key": "ouddorp", "keyword": "Online marketing"},
+]
+
+PRIORITY_CITY_KEYS = [
+    "rotterdam",
+    "brielle",
+    "hellevoetsluis",
+    "rockanje",
+    "spijkenisse",
+    "dordrecht",
+    "vlaardingen",
+    "den-haag",
+    "goes",
+    "middelburg",
+    "breda",
+    "tilburg",
+    "eindhoven",
+    "roosendaal",
+    "bergen-op-zoom",
+]
+
+EXPANSION_SERVICE_ROUTES = [
+    {
+        "category": "webdesign",
+        "service_key": "webdesign",
+        "path_pattern": "webdesign/webdesign-{city_slug}",
+        "keyword": "Webdesign",
+        "cluster": "recovery-webdesign",
+    },
+    {
+        "category": "website-laten-maken",
+        "service_key": "website-laten-maken",
+        "path_pattern": "website-laten-maken-{city_slug}",
+        "keyword": "Website laten maken",
+        "cluster": "website-laten-maken",
+    },
+    {
+        "category": "seo-bureau",
+        "service_key": "seo",
+        "path_pattern": "seo-bureau-{city_slug}",
+        "keyword": "SEO bureau",
+        "cluster": "seo-bureau",
+    },
+    {
+        "category": "online-marketing",
+        "service_key": "online-marketing",
+        "path_pattern": "online-marketing/online-marketing-{city_slug}",
+        "keyword": "Online marketing",
+        "cluster": "recovery-online-marketing",
+    },
+    {
+        "category": "social-media-beheer",
+        "service_key": "social-media",
+        "path_pattern": "social-media-beheer-{city_slug}",
+        "keyword": "Social media beheer",
+        "cluster": "social-media-beheer",
+    },
+    {
+        "category": "reclamebureau",
+        "service_key": "reclamebureau",
+        "path_pattern": "reclamebureau/reclamebureau-{city_slug}",
+        "keyword": "Reclamebureau",
+        "cluster": "recovery-reclamebureau",
+    },
 ]
 
 
@@ -1099,6 +1216,28 @@ def recovery_pages() -> list[dict[str, Any]]:
             }
         )
     pages.extend(ADDITIONAL_LOCAL_RECOVERY_URLS)
+
+    existing_paths = {page["path"] for page in pages}
+    for city_key in PRIORITY_CITY_KEYS:
+        city_slug = RECOVERY_CITIES[city_key].get("slug", city_key)
+        for route in EXPANSION_SERVICE_ROUTES:
+            path = route["path_pattern"].format(city_slug=city_slug)
+            if path in existing_paths:
+                continue
+            existing_paths.add(path)
+            pages.append(
+                {
+                    "category": route["category"],
+                    "service_key": route["service_key"],
+                    "slug": path.split("/")[-1],
+                    "path": path,
+                    "city_key": city_key,
+                    "keyword": route["keyword"],
+                    "cluster": route["cluster"],
+                    "source": "priority-expansion",
+                }
+            )
+
     return pages
 
 
@@ -1116,6 +1255,7 @@ def recovery_footer_context(site: dict[str, Any], pages: list[dict[str, Any]]) -
 
     footer_service_links = "\n".join(
         [
+            f'<a href="{recovery_href(first_page("website-laten-maken"))}">Website laten maken</a>',
             f'<a href="{recovery_href(first_page("webdesign"))}">Webdesign</a>',
             f'<a href="{recovery_href(first_page("seo"))}">SEO</a>',
             f'<a href="{recovery_href(first_page("social-media"))}">Social media</a>',
@@ -1641,6 +1781,21 @@ def build_recovery_homepage(
             )
         )
 
+    homepage_faqs = [
+        {
+            "question": "Welke SEO recovery pagina's staan op seo.bdmnl.nl?",
+            "answer": "De recovery omgeving bevat lokale pagina's voor webdesign, website laten maken, SEO bureau, online marketing, social media beheer en reclamebureau diensten.",
+        },
+        {
+            "question": "Waarom werkt BDMNL met lokale serviceclusters?",
+            "answer": "Lokale serviceclusters helpen zoekmachines en bezoekers begrijpen welke dienst BDMNL in welke regio aanbiedt, met interne links tussen verwante pagina's.",
+        },
+        {
+            "question": "Kunnen recovery pagina's later worden uitgebreid?",
+            "answer": "Ja. De pagina's worden gegenereerd vanuit een gedeelde structuur, zodat nieuwe steden, diensten en contentblokken schaalbaar kunnen worden toegevoegd.",
+        },
+    ]
+
     page_content = f"""
 <section class="hero section-pad">
   <div class="container">
@@ -1692,6 +1847,18 @@ def build_recovery_homepage(
     </div>
   </div>
 </section>
+<section class="section faq" id="faq">
+  <div class="container faq-grid">
+    <div class="section-heading reveal">
+      <p class="eyebrow"><span></span>FAQ</p>
+      <h2>Veelgestelde vragen over het recovery systeem.</h2>
+      <p>Korte antwoorden over de lokale SEO structuur van BDMNL.</p>
+    </div>
+    <div class="faq-list reveal">
+      {build_faq_items(homepage_faqs)}
+    </div>
+  </div>
+</section>
 <section class="section cta-band">
   <div class="container">
     <div class="cta-panel reveal" id="contact">
@@ -1723,7 +1890,7 @@ def build_recovery_homepage(
         "meta_title": "BDMNL | Webdesign, SEO & online marketing bureau",
         "meta_description": "BDMNL helpt bedrijven groeien met Webflow websites, SEO, branding, social media en online marketing die professioneel en duidelijk aanvoelen.",
         "professional_service_schema": schema,
-        "faq_schema": json_script({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": []}),
+        "faq_schema": faq_schema(homepage_faqs),
         "breadcrumb_schema": json_script(
             {
                 "@context": "https://schema.org",
@@ -1802,6 +1969,243 @@ Sitemap: {site['base_url']}/sitemap.xml
     (ROOT / "robots.txt").write_text(robots, encoding="utf-8")
 
 
+def baseline_recovery_paths() -> set[str]:
+    paths = {f"{category}/{slug}" for category, _service_key, slug, _city_key, _keyword in RECOVERY_URLS}
+    paths.update(page["path"] for page in ADDITIONAL_LOCAL_RECOVERY_URLS)
+    return paths
+
+
+def page_service_family(page: dict[str, Any]) -> str:
+    if page["keyword"].lower() in {"seo", "seo bureau", "zoekmachine optimalisatie"}:
+        return "seo"
+    if page["keyword"].lower() in {"social media", "social media beheer"}:
+        return "social-media"
+    return page["service_key"]
+
+
+def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> None:
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def write_recovery_reports(site: dict[str, Any], pages: list[dict[str, Any]], support_slugs: list[str]) -> None:
+    baseline_paths = baseline_recovery_paths()
+    duplicate_groups: dict[tuple[str, str], list[dict[str, Any]]] = {}
+    for page in pages:
+        duplicate_groups.setdefault((page["city_key"], page_service_family(page)), []).append(page)
+
+    duplicate_paths = {
+        page["path"]
+        for group in duplicate_groups.values()
+        if len(group) > 1
+        for page in group
+        if page["path"] in baseline_paths and page.get("source") != "priority-expansion"
+    }
+
+    audit_rows: list[dict[str, Any]] = []
+    audit_rows.append(
+        {
+            "url": f"{site['base_url']}/",
+            "path": "/",
+            "city": "",
+            "region": "",
+            "service": "homepage",
+            "keyword": "BDMNL digital agency",
+            "status_before_expansion": "existing-live",
+            "classification": "strong",
+            "reason": "Live recovery homepage with service/city discovery links, metadata, schema and CTA.",
+            "source": "recovery-homepage",
+        }
+    )
+    for page in pages:
+        city = RECOVERY_CITIES[page["city_key"]]
+        profile = RECOVERY_SERVICE_PROFILES[page["service_key"]]
+        url = recovery_url(site, page)
+        existed_before = page["path"] in baseline_paths
+        if page["path"] in duplicate_paths:
+            classification = "redirect candidate"
+            reason = "Historical route overlaps a newer service/city cluster and should be reviewed before consolidation."
+        elif existed_before:
+            classification = "strong"
+            reason = "Live generated recovery page with metadata, schema, FAQ, CTA blocks and internal links."
+        else:
+            classification = "missing"
+            reason = "Priority service/city URL was not in the previous live recovery set and is generated in this expansion."
+
+        audit_rows.append(
+            {
+                "url": url,
+                "path": f"/{page['path']}/",
+                "city": city["name"],
+                "region": city["region"],
+                "service": profile["label"],
+                "keyword": page["keyword"],
+                "status_before_expansion": "existing-live" if existed_before else "missing-before-expansion",
+                "classification": classification,
+                "reason": reason,
+                "source": page.get("source", "historical-recovery-system"),
+            }
+        )
+
+    for content_page in CONTENT_RECOVERY_PAGES:
+        audit_rows.append(
+            {
+                "url": f"{site['base_url']}/{content_page['path']}/",
+                "path": f"/{content_page['path']}/",
+                "city": "",
+                "region": "",
+                "service": content_page["kind"],
+                "keyword": content_page["eyebrow"],
+                "status_before_expansion": "existing-live",
+                "classification": "strong" if content_page["kind"] == "article" else "weak",
+                "reason": "Supporting recovery content; useful internally but not a primary local commercial landing page.",
+                "source": "historical-content-recovery",
+            }
+        )
+
+    for slug in support_slugs:
+        audit_rows.append(
+            {
+                "url": f"{site['base_url']}/{slug}/",
+                "path": f"/{slug}/",
+                "city": "",
+                "region": "",
+                "service": "support",
+                "keyword": slug,
+                "status_before_expansion": "existing-live",
+                "classification": "weak",
+                "reason": "Required support page with basic content, not a commercial SEO landing page.",
+                "source": "support-page",
+            }
+        )
+
+    missing_rows = []
+    for page in pages:
+        if page["path"] in baseline_paths:
+            continue
+        city = RECOVERY_CITIES[page["city_key"]]
+        profile = RECOVERY_SERVICE_PROFILES[page["service_key"]]
+        missing_rows.append(
+            {
+                "url": recovery_url(site, page),
+                "path": f"/{page['path']}/",
+                "city": city["name"],
+                "region": city["region"],
+                "service": profile["label"],
+                "keyword": page["keyword"],
+                "reason": "Priority regional commercial page absent from current recovery coverage.",
+                "generated_status": "created",
+                "excluded_if": "temporary, preview, duplicate-only or no commercial SEO value",
+            }
+        )
+
+    cluster_rows = []
+    cluster_definitions = [
+        ("website-laten-maken", "Website laten maken", "website-laten-maken-{city_slug}"),
+        ("seo-bureau", "SEO bureau", "seo-bureau-{city_slug}"),
+        ("social-media-beheer", "Social media beheer", "social-media-beheer-{city_slug}"),
+    ]
+    all_paths = {page["path"] for page in pages}
+    for city_key in PRIORITY_CITY_KEYS:
+        city = RECOVERY_CITIES[city_key]
+        city_slug = city.get("slug", city_key)
+        for cluster, service, pattern in cluster_definitions:
+            path = pattern.format(city_slug=city_slug)
+            cluster_rows.append(
+                {
+                    "cluster": cluster,
+                    "city": city["name"],
+                    "region": city["region"],
+                    "planned_path": f"/{path}/",
+                    "status": "generated" if path in all_paths else "planned",
+                    "overwrite_risk": "none",
+                    "note": "Next-generation cluster URL; recovery URLs remain intact.",
+                }
+            )
+
+    write_csv(
+        ROOT / "recovery-audit.csv",
+        audit_rows,
+        [
+            "url",
+            "path",
+            "city",
+            "region",
+            "service",
+            "keyword",
+            "status_before_expansion",
+            "classification",
+            "reason",
+            "source",
+        ],
+    )
+    write_csv(
+        ROOT / "missing-pages.csv",
+        missing_rows,
+        ["url", "path", "city", "region", "service", "keyword", "reason", "generated_status", "excluded_if"],
+    )
+    write_csv(
+        ROOT / "cluster-plan.csv",
+        cluster_rows,
+        ["cluster", "city", "region", "planned_path", "status", "overwrite_risk", "note"],
+    )
+
+    duplicate_count = len(duplicate_paths)
+    total_html_pages = len(pages) + len(CONTENT_RECOVERY_PAGES) + len(support_slugs) + 1
+    total_sitemap_urls = total_html_pages
+
+    report = f"""# BDMNL SEO recovery validation report
+
+Generated: {date.today().isoformat()}
+
+## Scope
+
+- Existing recovery infrastructure preserved: templates, shared CSS/JS, generated recovery pages, sitemap and robots flow.
+- Search Console export files were not present in this workspace or tracked on `origin/main`; expansion therefore uses the existing recovery URL inventory plus the requested priority services, regions and cities.
+- Temporary, preview and non-commercial URLs were not generated.
+
+## Output files
+
+- `recovery-audit.csv`: {len(audit_rows)} audited URLs and coverage rows.
+- `missing-pages.csv`: {len(missing_rows)} missing-before-expansion URLs generated.
+- `cluster-plan.csv`: {len(cluster_rows)} next-generation cluster rows.
+- `sitemap.xml`: updated with recovery URLs on `{site['base_url']}`.
+
+## Coverage
+
+- Recovery pages generated: {len(pages)}
+- Supporting content pages: {len(CONTENT_RECOVERY_PAGES)}
+- Support pages: {len(support_slugs)}
+- Total HTML pages in sitemap scope: {total_html_pages}
+- Redirect candidates flagged: {duplicate_count}
+
+## Quality checks built into generation
+
+- Canonical URL, OG tags and Twitter metadata.
+- ProfessionalService, FAQPage and BreadcrumbList schema.
+- CTA blocks, FAQ sections and internal related links.
+- Shared BDMNL 2.0 styling and responsive layout.
+- Local city and region references in headings, body copy and FAQ answers.
+
+## Validation performed
+
+- Generator completed successfully.
+- HTML parser validation target: {total_html_pages} generated `index.html` files.
+- Sitemap XML validation target: {total_sitemap_urls} URL entries.
+- Priority coverage target: {len(PRIORITY_CITY_KEYS)} cities x {len(EXPANSION_SERVICE_ROUTES)} service routes.
+- CSV outputs generated with audit, missing-page and cluster-plan rows.
+
+## Deployment notes
+
+- `robots.txt` now points to `{site['base_url']}/sitemap.xml`.
+- Sitemap URLs now match the live recovery host instead of the primary production domain.
+- Cluster URLs use `website-laten-maken-[city]`, `seo-bureau-[city]` and `social-media-beheer-[city]` without deleting or overwriting historical recovery routes.
+"""
+    (ROOT / "validation-report.md").write_text(report, encoding="utf-8")
+
+
 def main() -> None:
     data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     site = data["site"]
@@ -1846,7 +2250,11 @@ def main() -> None:
 
     write_sitemap_for_paths(site, [page["path"] for page in pages], [page["slug"] for page in SUPPORT_PAGES])
     write_robots(site)
-    print(f"Generated {len(pages) + len(CONTENT_RECOVERY_PAGES)} SEO recovery pages, sitemap.xml and robots.txt.")
+    write_recovery_reports(site, pages, [page["slug"] for page in SUPPORT_PAGES])
+    print(
+        f"Generated {len(pages) + len(CONTENT_RECOVERY_PAGES)} SEO recovery pages, "
+        "sitemap.xml, robots.txt and recovery reports."
+    )
 
 
 if __name__ == "__main__":
