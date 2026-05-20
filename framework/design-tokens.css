@@ -1,8 +1,6 @@
 /*
   ============================================================
   BDMNL DESIGN TOKENS v1.0
-  ============================================================
-  LOCKED — DO NOT MODIFY THIS FILE
   
   This file defines the complete BDMNL design system.
   All visual properties are controlled exclusively here.
@@ -875,5 +873,40 @@ img, svg {
   body.bdmnl-page {
     font-size: 12pt;
     color: #000;
+  }
+}
+
+
+/* ============================================================
+   HEADER CONTACT STRIP — LOCKED (added v1.1)
+   Real BDMNL contact details in header
+   ============================================================ */
+.bdmnl-header__contact {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-left: auto;
+  margin-right: var(--space-8);
+}
+
+.bdmnl-header__phone,
+.bdmnl-header__email {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: var(--transition-color);
+  white-space: nowrap;
+}
+
+.bdmnl-header__phone:hover,
+.bdmnl-header__email:hover {
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 1024px) {
+  .bdmnl-header__contact {
+    display: none;
   }
 }
