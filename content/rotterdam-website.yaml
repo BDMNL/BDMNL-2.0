@@ -88,6 +88,20 @@ sections:
       websites die bij die energie passen.
 
 # ------------------------------------------------------------
+# IMAGES — 3 section visuals (use /assets/images/seo/ for local or full URL)
+# ------------------------------------------------------------
+images:
+  image_1:
+    src: "/assets/images/seo/webdesign-rotterdam-conversie.webp"
+    alt: "Professioneel webdesign Rotterdam \u2014 website die converteert voor jouw bedrijf"
+  image_2:
+    src: "/assets/images/seo/webdesign-technisch-snelheid.webp"
+    alt: "Technisch perfecte website \u2014 snel, veilig en mobielvriendelijk gebouwd door BDMNL"
+  image_3:
+    src: "/assets/images/seo/rotterdam-skyline-digitaal.webp"
+    alt: "Rotterdam skyline \u2014 lokale expertise en digitale aanwezigheid voor Rotterdamse ondernemers"
+
+# ------------------------------------------------------------
 # CTA BLOCK
 # ------------------------------------------------------------
 cta:
