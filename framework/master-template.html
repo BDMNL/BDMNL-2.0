@@ -2,7 +2,7 @@
 <html lang="nl">
 <!--
   ============================================================
-  BDMNL MASTER TEMPLATE v1.0
+  BDMNL MASTER TEMPLATE v1.1
   ============================================================
   LOCKED DESIGN SYSTEM — DO NOT MODIFY STRUCTURE OR STYLES
 
@@ -31,15 +31,13 @@
   {{CTA_HEADLINE}}           CTA block headline
   {{CTA_SUBTEXT}}            CTA supporting text
   {{CTA_BUTTON}}             CTA button label
-  {{CTA_HREF}}               CTA button URL
+  {{CTA_HREF}}               CTA button URL (use https://www.bdmnl.nl/contact)
   {{FAQ_1_Q}} - {{FAQ_5_Q}}  FAQ questions 1-5
   {{FAQ_1_A}} - {{FAQ_5_A}}  FAQ answers 1-5
   {{BREADCRUMB_PARENT}}      Breadcrumb parent label
   {{BREADCRUMB_PARENT_HREF}} Breadcrumb parent URL
   {{SCHEMA_SERVICE_NAME}}    Schema.org service name
   {{SCHEMA_AREA_SERVED}}     Schema.org area served
-  {{SCHEMA_PHONE}}           Schema.org phone number
-  {{SCHEMA_EMAIL}}           Schema.org email address
   ============================================================
 -->
 <head>
@@ -58,7 +56,7 @@
   <meta property="og:site_name" content="BDMNL">
 
   <!-- BDMNL Design System — LOCKED — DO NOT OVERRIDE -->
-  <link rel="stylesheet" href="../framework/design-tokens.css">
+  <link rel="stylesheet" href="../../framework/design-tokens.css">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -67,16 +65,19 @@
     "@type": "LocalBusiness",
     "name": "BDMNL",
     "description": "{{SCHEMA_SERVICE_NAME}}",
-    "url": "https://bdmnl.nl",
-    "telephone": "{{SCHEMA_PHONE}}",
-    "email": "{{SCHEMA_EMAIL}}",
+    "url": "https://www.bdmnl.nl",
+    "telephone": "+31850605627",
+    "email": "info@bdmnl.nl",
     "areaServed": {
       "@type": "City",
       "name": "{{SCHEMA_AREA_SERVED}}"
     },
-    "priceRange": "eureuro",
+    "priceRange": "€€",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Krammer 8",
+      "postalCode": "3232 HE",
+      "addressLocality": "Brielle",
       "addressCountry": "NL"
     }
   }
@@ -104,15 +105,33 @@
        ============================================================ -->
   <header class="bdmnl-header" role="banner">
     <div class="bdmnl-container">
-      <a href="/" class="bdmnl-logo" aria-label="BDMNL homepage">
+
+      <!-- Logo -->
+      <a href="https://www.bdmnl.nl/" class="bdmnl-logo" aria-label="BDMNL — terug naar homepage">
         <span class="bdmnl-logo__text">BDMNL</span>
       </a>
+
+      <!-- Header contact strip — real BDMNL details -->
+      <div class="bdmnl-header__contact">
+        <a href="tel:+31850605627" class="bdmnl-header__phone" aria-label="Bel BDMNL">
+          085 - 060 56 27
+        </a>
+        <a href="mailto:info@bdmnl.nl" class="bdmnl-header__email" aria-label="Mail BDMNL">
+          info@bdmnl.nl
+        </a>
+      </div>
+
+      <!-- Nav -->
       <nav class="bdmnl-nav" role="navigation" aria-label="Hoofdnavigatie">
         <ul class="bdmnl-nav__list">
-          <li><a href="/webdesign/" class="bdmnl-nav__link">Webdesign</a></li>
-          <li><a href="/branding/" class="bdmnl-nav__link">Branding</a></li>
-          <li><a href="/seo/" class="bdmnl-nav__link">SEO</a></li>
-          <li><a href="/contact/" class="bdmnl-nav__link bdmnl-nav__link--cta">Contact</a></li>
+          <li><a href="https://www.bdmnl.nl/webdesign/" class="bdmnl-nav__link">Webdesign</a></li>
+          <li><a href="https://www.bdmnl.nl/branding/" class="bdmnl-nav__link">Branding</a></li>
+          <li><a href="https://www.bdmnl.nl/seo/" class="bdmnl-nav__link">SEO</a></li>
+          <li>
+            <a href="https://www.bdmnl.nl/contact/" class="bdmnl-nav__link bdmnl-nav__link--cta">
+              Contact
+            </a>
+          </li>
         </ul>
         <button class="bdmnl-nav__toggle" aria-label="Menu openen" aria-expanded="false">
           <span class="bdmnl-nav__toggle-bar"></span>
@@ -120,6 +139,7 @@
           <span class="bdmnl-nav__toggle-bar"></span>
         </button>
       </nav>
+
     </div>
   </header>
 
@@ -130,7 +150,7 @@
     <div class="bdmnl-container">
       <ol class="bdmnl-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <a href="https://www.bdmnl.nl/" itemprop="item"><span itemprop="name">Home</span></a>
           <meta itemprop="position" content="1">
         </li>
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -155,7 +175,7 @@
       <div class="bdmnl-hero__content">
         <h1 id="bdmnl-h1" class="bdmnl-hero__h1">{{H1}}</h1>
         <p class="bdmnl-hero__subline">{{INTRO_P1}}</p>
-        <a href="{{CTA_HREF}}" class="bdmnl-btn bdmnl-btn--primary">{{CTA_BUTTON}}</a>
+        <a href="https://www.bdmnl.nl/contact/" class="bdmnl-btn bdmnl-btn--primary">{{CTA_BUTTON}}</a>
       </div>
     </div>
   </section>
@@ -227,7 +247,9 @@
       <div class="bdmnl-container bdmnl-container--narrow">
         <h2 id="bdmnl-cta-h2" class="bdmnl-cta-block__headline">{{CTA_HEADLINE}}</h2>
         <p class="bdmnl-cta-block__subtext">{{CTA_SUBTEXT}}</p>
-        <a href="{{CTA_HREF}}" class="bdmnl-btn bdmnl-btn--primary bdmnl-btn--large">{{CTA_BUTTON}}</a>
+        <a href="https://www.bdmnl.nl/contact/" class="bdmnl-btn bdmnl-btn--primary bdmnl-btn--large">
+          {{CTA_BUTTON}}
+        </a>
       </div>
     </section>
 
@@ -267,59 +289,70 @@
   </main>
 
   <!-- ============================================================
-       FOOTER — LOCKED — DO NOT MODIFY
+       FOOTER — LOCKED — REAL BDMNL IDENTITY
        ============================================================ -->
   <footer class="bdmnl-footer" role="contentinfo">
     <div class="bdmnl-container">
       <div class="bdmnl-footer__grid">
 
+        <!-- Brand -->
         <div class="bdmnl-footer__brand">
-          <a href="/" class="bdmnl-logo" aria-label="BDMNL homepage">
+          <a href="https://www.bdmnl.nl/" class="bdmnl-logo" aria-label="BDMNL homepage">
             <span class="bdmnl-logo__text">BDMNL</span>
           </a>
-          <p class="bdmnl-footer__tagline">Premium webdesign &amp; branding voor Nederlandse bedrijven.</p>
+          <p class="bdmnl-footer__tagline">
+            Premium webdesign &amp; branding<br>voor Nederlandse bedrijven.
+          </p>
         </div>
 
+        <!-- Diensten -->
         <div class="bdmnl-footer__nav">
           <h3 class="bdmnl-footer__nav-title">Diensten</h3>
           <ul class="bdmnl-footer__nav-list">
-            <li><a href="/webdesign/">Webdesign</a></li>
-            <li><a href="/branding/">Branding &amp; huisstijl</a></li>
-            <li><a href="/seo/">SEO &amp; vindbaarheid</a></li>
-            <li><a href="/logo-design/">Logo design</a></li>
+            <li><a href="https://www.bdmnl.nl/webdesign/">Webdesign</a></li>
+            <li><a href="https://www.bdmnl.nl/branding/">Branding &amp; huisstijl</a></li>
+            <li><a href="https://www.bdmnl.nl/seo/">SEO &amp; vindbaarheid</a></li>
+            <li><a href="https://www.bdmnl.nl/webshop-laten-maken/">Webshop laten maken</a></li>
+            <li><a href="https://www.bdmnl.nl/online-marketing/">Online marketing</a></li>
           </ul>
         </div>
 
+        <!-- Bedrijf -->
         <div class="bdmnl-footer__nav">
-          <h3 class="bdmnl-footer__nav-title">Bedrijf</h3>
+          <h3 class="bdmnl-footer__nav-title">BDMNL</h3>
           <ul class="bdmnl-footer__nav-list">
-            <li><a href="/over-ons/">Over BDMNL</a></li>
-            <li><a href="/portfolio/">Portfolio</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/contact/">Contact</a></li>
+            <li><a href="https://www.bdmnl.nl/over-ons/">Over ons</a></li>
+            <li><a href="https://www.bdmnl.nl/portfolio/">Portfolio</a></li>
+            <li><a href="https://www.bdmnl.nl/blog/">Blog</a></li>
+            <li><a href="https://www.bdmnl.nl/gratis-seo-scan/">Gratis SEO-scan</a></li>
+            <li><a href="https://www.bdmnl.nl/contact/">Contact</a></li>
           </ul>
         </div>
 
+        <!-- Contact — real BDMNL details -->
         <div class="bdmnl-footer__contact">
           <h3 class="bdmnl-footer__nav-title">Contact</h3>
           <address class="bdmnl-footer__address">
-            <p>Nederland</p>
-            <a href="tel:+31000000000">+31 (0)00 000 0000</a>
+            <p>Krammer 8<br>3232 HE Brielle</p>
+            <a href="tel:+31850605627">085 - 060 56 27</a>
             <a href="mailto:info@bdmnl.nl">info@bdmnl.nl</a>
           </address>
         </div>
 
-      </div>
+      </div><!-- /bdmnl-footer__grid -->
 
       <div class="bdmnl-footer__bottom">
         <p class="bdmnl-footer__legal">
           &copy; <span id="bdmnl-year"></span> BDMNL. Alle rechten voorbehouden.
-          <a href="/algemene-voorwaarden/">Algemene voorwaarden</a> &middot;
-          <a href="/privacy/">Privacy</a>
+          <a href="https://www.bdmnl.nl/algemene-voorwaarden/">Algemene voorwaarden</a> &middot;
+          <a href="https://www.bdmnl.nl/privacy/">Privacy</a>
         </p>
-        <p class="bdmnl-footer__micro-accent"><span class="bdmnl-accent">Gebouwd in Nederland</span></p>
+        <p class="bdmnl-footer__micro-accent">
+          <span class="bdmnl-accent">Gebouwd in Nederland</span>
+        </p>
       </div>
-    </div>
+
+    </div><!-- /bdmnl-container -->
   </footer>
 
   <!-- ============================================================
