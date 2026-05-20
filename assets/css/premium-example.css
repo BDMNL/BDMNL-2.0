@@ -446,7 +446,7 @@
 }
 
 .wow-container {
-  width: min(100% - 56px, 1480px);
+  width: min(100% - calc(var(--bdmnl-container-padding) * 2), var(--bdmnl-container));
   margin-inline: auto;
 }
 
@@ -493,10 +493,10 @@
 .wow-hero h1 {
   max-width: 900px;
   margin: 0;
-  font-size: clamp(3rem, 6vw, 6rem);
-  font-weight: 690;
-  line-height: 1.04;
-  letter-spacing: -0.07em;
+  font-size: clamp(var(--bdmnl-title-h1), 6vw, var(--bdmnl-title-display));
+  font-weight: var(--bdmnl-weight-bold);
+  line-height: var(--bdmnl-line-100);
+  letter-spacing: -0.96px;
 }
 
 .wow-hero-copy {
@@ -531,7 +531,7 @@
 }
 
 .wow-button {
-  background: #0e0e0e;
+  background: var(--bdmnl-primary);
   color: #ffffff;
   padding: 0 22px;
 }
@@ -590,10 +590,10 @@
 .wow-faq h2 {
   max-width: 780px;
   margin: 16px 0 0;
-  font-size: clamp(2.05rem, 4.1vw, 4.4rem);
-  font-weight: 690;
-  line-height: 1.08;
-  letter-spacing: -0.058em;
+  font-size: clamp(var(--bdmnl-title-h2), 4.1vw, var(--bdmnl-title-xl));
+  font-weight: var(--bdmnl-weight-bold);
+  line-height: var(--bdmnl-line-120);
+  letter-spacing: -0.96px;
 }
 
 .wow-work-list {
@@ -646,7 +646,7 @@
 }
 
 .wow-black {
-  background: #0e0e0e;
+  background: var(--bdmnl-primary);
   color: #ffffff;
   padding: clamp(86px, 10vw, 150px) 0;
 }
@@ -761,7 +761,7 @@
 }
 
 .wow-cta {
-  background: #0e0e0e;
+  background: var(--bdmnl-primary);
   color: #ffffff;
   padding: clamp(82px, 9vw, 142px) 0;
 }
@@ -829,7 +829,7 @@
 
 @media (max-width: 640px) {
   .wow-container {
-    width: min(100% - 28px, 1480px);
+    width: min(100% - calc(var(--bdmnl-container-padding) * 2), var(--bdmnl-container));
   }
 
   .wow-hero {

@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://cdn.prod.website-files.com/69fda057dc1e72c50e433fc4/69fda059dc1e72c50e434065_Satoshi-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://cdn.prod.website-files.com/69fda057dc1e72c50e433fc4/69fda059dc1e72c50e434064_Satoshi-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://cdn.prod.website-files.com/69fda057dc1e72c50e433fc4/69fda059dc1e72c50e434063_Satoshi-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://cdn.prod.website-files.com/69fda057dc1e72c50e433fc4/69fda059dc1e72c50e434061_Satoshi-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://cdn.prod.website-files.com/69fda057dc1e72c50e433fc4/69fda059dc1e72c50e434062_Satoshi-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bdmnl-font-primary: "Satoshi", Arial, sans-serif;
+  --bdmnl-primary: #070a26;
+  --bdmnl-secondary: #f05a1a;
+  --bdmnl-gray: #6f7890;
+  --bdmnl-light-gray: #f5f5f7;
+  --bdmnl-white: #ffffff;
+  --bdmnl-transparent: transparent;
+  --bdmnl-body-lg: 18px;
+  --bdmnl-body-md: 16px;
+  --bdmnl-body-sm: 14px;
+  --bdmnl-button-size: 18px;
+  --bdmnl-title-display: 120px;
+  --bdmnl-title-xl: 60px;
+  --bdmnl-title-h1: 48px;
+  --bdmnl-title-h2: 40px;
+  --bdmnl-title-h3: 33px;
+  --bdmnl-title-h4: 28px;
+  --bdmnl-title-h5: 24px;
+  --bdmnl-title-h6: 20px;
+  --bdmnl-line-100: 100%;
+  --bdmnl-line-120: 120%;
+  --bdmnl-line-130: 130%;
+  --bdmnl-line-150: 150%;
+  --bdmnl-weight-light: 300;
+  --bdmnl-weight-regular: 400;
+  --bdmnl-weight-medium: 500;
+  --bdmnl-weight-bold: 700;
+  --bdmnl-weight-black: 900;
+  --bdmnl-section-gap: 110px;
+  --bdmnl-section-gap-medium: 80px;
+  --bdmnl-section-gap-small: 60px;
+  --bdmnl-container: 1320px;
+  --bdmnl-container-padding: 15px;
+  --accent: var(--bdmnl-secondary);
+  --accent-dark: #c9430d;
+  --accent-soft: #fff7f3;
+  --ink: var(--bdmnl-primary);
+  --ink-muted: var(--bdmnl-gray);
+  --ink-soft: #8c929d;
+  --line: rgba(7, 10, 38, 0.12);
+  --surface: var(--bdmnl-white);
+  --surface-warm: var(--bdmnl-light-gray);
+  --container: var(--bdmnl-container);
+  --shadow-soft: 0 24px 80px rgba(7, 10, 38, 0.08);
+  --shadow-card: 0 22px 60px rgba(7, 10, 38, 0.1);
+  --radius-lg: 20px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+}
