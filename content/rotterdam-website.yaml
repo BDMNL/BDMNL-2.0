@@ -92,14 +92,14 @@ sections:
 # ------------------------------------------------------------
 images:
   image_1:
-    src: "/assets/images/seo/webdesign-rotterdam-conversie.webp"
-    alt: "Professioneel webdesign Rotterdam \u2014 website die converteert voor jouw bedrijf"
+    src: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop&auto=format"
+    alt: "Professioneel webdesign Rotterdam — website die converteert voor jouw bedrijf"
   image_2:
-    src: "/assets/images/seo/webdesign-technisch-snelheid.webp"
-    alt: "Technisch perfecte website \u2014 snel, veilig en mobielvriendelijk gebouwd door BDMNL"
+    src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop&auto=format"
+    alt: "Technisch perfecte website — snel, veilig en mobielvriendelijk gebouwd door BDMNL"
   image_3:
-    src: "/assets/images/seo/rotterdam-skyline-digitaal.webp"
-    alt: "Rotterdam skyline \u2014 lokale expertise en digitale aanwezigheid voor Rotterdamse ondernemers"
+    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&auto=format"
+    alt: "Rotterdam skyline — lokale expertise en digitale aanwezigheid voor Rotterdamse ondernemers"
 
 # ------------------------------------------------------------
 # CTA BLOCK

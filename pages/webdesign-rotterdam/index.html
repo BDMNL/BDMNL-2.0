@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="nl">
 <!--
-  Generated from: framework/master-template.html v1.1
-  Content source: content/rotterdam-website.yaml
-  Page: Webdesign Rotterdam
-  DO NOT EDIT HTML STRUCTURE — edit YAML file instead
+  ============================================================
+  BDMNL MASTER TEMPLATE v1.1
+  ============================================================
+  LOCKED DESIGN SYSTEM — DO NOT MODIFY STRUCTURE OR STYLES
+
+  Cat Instructions:
+  - ONLY replace CONTENT tokens with real content
+  - NEVER change class names, IDs, or CSS variables
+  - NEVER add inline styles
+  - NEVER remove or reorder sections
+  - Add content ONLY inside designated token zones
+
+  Token Reference:
+  Rotterdam                   City name (e.g. Rotterdam, Brielle)
+  webdesign                Service name (e.g. webdesign, branding)
+  Professioneel Webdesign Rotterdam — BDMNL                     Main heading text
+  Webdesign Rotterdam | Premium websites | BDMNL             Page title tag content (max 60 chars)
+  Op zoek naar professioneel webdesign in Rotterdam? BDMNL bouwt snelle, conversiegerichte websites die jouw bedrijf laten groeien. Vraag een offerte aan.              Meta description (max 155 chars)
+  https://bdmnl.nl/webdesign-rotterdam/         Canonical URL
+  Jouw bedrijf in Rotterdam verdient een website die indruk maakt, snel laadt en bezoekers omzet in klanten. BDMNL ontwerpt en bouwt premium websites die werken — voor ondernemers die geen genoegen nemen met middelmatig.               First intro paragraph
+  We werken voor bedrijven in Rotterdam die begrijpen dat een website niet een kostenpost is, maar een investering. Van een strakke zakelijke site tot een volledig gepersonaliseerde webshop — wij leveren altijd scherp, doordacht en op tijd.               Second intro paragraph
+  Websites die verkopen voor jouw Rotterdamse bedrijf           Section 1 heading
+  Een mooie website is mooi. Een website die converteert is waardevol. Bij BDMNL combineren we beide. We ontwerpen elke pagina met één doel: de bezoeker laten doen wat jij wilt. Of dat nu een offerte aanvragen is, bellen, inschrijven of kopen — elk element is bewust geplaatst. Jouw website wordt een strategisch instrument, geen digitale brochure.            Section 1 paragraph
+  Technisch perfect — snel, veilig en mobielvriendelijk           Section 2 heading
+  Een trage website kost je klanten. Google straft hem af, bezoekers verlaten hem, en jij mist omzet. Elke website die BDMNL bouwt is geoptimaliseerd voor snelheid, veiligheid en mobile-first gebruik. We bouwen op bewezen technologie, met schone code, SSL-certificaten, correcte meta-structuur en technische SEO als standaard onderdeel — niet als betaalde optie.            Section 2 paragraph
+  Lokale expertise, Rotterdam begrijpen           Section 3 heading
+  Rotterdam is geen gewone stad. Het is de zakelijkste, meest vooruitstrevende stad van Nederland. Bedrijven hier willen iets zeggen — en ze willen dat hun digitale aanwezigheid dat weerspiegelt. BDMNL werkt met Rotterdamse ondernemers die klaar zijn om door te groeien. We kennen de markt, we begrijpen de ambitie en we bouwen websites die bij die energie passen.            Section 3 paragraph
+  Klaar voor een website die werkt?           CTA block headline
+  Plan een vrijblijvend gesprek. We kijken samen naar jouw bedrijf, jouw doelen en wat een nieuwe website voor jou kan doen in Rotterdam.            CTA supporting text
+  Vraag een offerte aan             CTA button label
+  /contact/               CTA button URL (use https://www.bdmnl.nl/contact)
+  Wat kost een professionele website in Rotterdam? - Kan ik mijn website zelf beheren na oplevering?  FAQ questions 1-5
+  De kosten voor een professionele website variëren sterk op basis van omvang, functionaliteiten en maatwerk. Een zakelijke website bij BDMNL start vanaf een vast bedrag dat op aanvraag beschikbaar is. We zijn transparant over prijzen en leveren altijd een gedetailleerde offerte voordat we starten. - Ja. We leveren elke website op met een gebruiksvriendelijk CMS waarmee jij zelfstandig teksten, afbeeldingen en pagina's kunt aanpassen. We geven een korte training bij oplevering en zijn bereikbaar voor vragen. Wil je dat wij het beheer overnemen? Dat is ook mogelijk.  FAQ answers 1-5
+  Webdesign      Breadcrumb parent label
+  /webdesign/ Breadcrumb parent URL
+  Premium webdesign en website ontwikkeling in Rotterdam    Schema.org service name
+  Rotterdam     Schema.org area served
+  ============================================================
 -->
 <head>
   <meta charset="UTF-8">
@@ -13,12 +47,18 @@
   <title>Webdesign Rotterdam | Premium websites | BDMNL</title>
   <meta name="description" content="Op zoek naar professioneel webdesign in Rotterdam? BDMNL bouwt snelle, conversiegerichte websites die jouw bedrijf laten groeien. Vraag een offerte aan.">
   <link rel="canonical" href="https://bdmnl.nl/webdesign-rotterdam/">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Webdesign Rotterdam | Premium websites | BDMNL">
   <meta property="og:description" content="Op zoek naar professioneel webdesign in Rotterdam? BDMNL bouwt snelle, conversiegerichte websites die jouw bedrijf laten groeien. Vraag een offerte aan.">
   <meta property="og:url" content="https://bdmnl.nl/webdesign-rotterdam/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BDMNL">
-  <link rel="stylesheet" href="../../framework/design-tokens.css">
+
+  <!-- BDMNL Design System — LOCKED — DO NOT OVERRIDE -->
+  <link rel="stylesheet" href="/framework/design-tokens.css">
+
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -28,11 +68,22 @@
     "url": "https://www.bdmnl.nl",
     "telephone": "+31850605627",
     "email": "info@bdmnl.nl",
-    "areaServed": { "@type": "City", "name": "Rotterdam" },
+    "areaServed": {
+      "@type": "City",
+      "name": "Rotterdam"
+    },
     "priceRange": "€€",
-    "address": { "@type": "PostalAddress", "streetAddress": "Krammer 8", "postalCode": "3232 HE", "addressLocality": "Brielle", "addressCountry": "NL" }
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Krammer 8",
+      "postalCode": "3232 HE",
+      "addressLocality": "Brielle",
+      "addressCountry": "NL"
+    }
   }
   </script>
+
+  <!-- FAQ Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -49,31 +100,41 @@
 </head>
 <body class="bdmnl-page">
 
+  <!-- ============================================================
+       HEADER — LOCKED — DO NOT MODIFY
+       ============================================================ -->
   <header class="bdmnl-header" role="banner">
     <div class="bdmnl-container">
-      <a href="https://www.bdmnl.nl/" class="bdmnl-logo" aria-label="BDMNL — terug naar homepage">
-        <span class="bdmnl-logo__text">BDMNL</span>
+
+      <!-- Logo -->
+      <a href="https://www.bdmnl.nl/" class="bdmnl-logo" aria-label="BDMNL &mdash; terug naar homepage">
+        <span class="bdmnl-logo__text">BDMNL<span class="bdmnl-logo__dot">.</span></span>
       </a>
-      <div class="bdmnl-header__contact">
-        <a href="tel:+31850605627" class="bdmnl-header__phone" aria-label="Bel BDMNL">085 - 060 56 27</a>
-        <a href="mailto:info@bdmnl.nl" class="bdmnl-header__email" aria-label="Mail BDMNL">info@bdmnl.nl</a>
-      </div>
+
+      <!-- Nav matching www.bdmnl.nl -->
       <nav class="bdmnl-nav" role="navigation" aria-label="Hoofdnavigatie">
         <ul class="bdmnl-nav__list">
-          <li><a href="https://www.bdmnl.nl/webdesign/" class="bdmnl-nav__link">Webdesign</a></li>
-          <li><a href="https://www.bdmnl.nl/branding/" class="bdmnl-nav__link">Branding</a></li>
-          <li><a href="https://www.bdmnl.nl/seo/" class="bdmnl-nav__link">SEO</a></li>
+          <li><a href="https://www.bdmnl.nl/" class="bdmnl-nav__link">Home</a></li>
+          <li><a href="https://www.bdmnl.nl/diensten/" class="bdmnl-nav__link">Diensten</a></li>
+          <li><a href="https://www.bdmnl.nl/cases/" class="bdmnl-nav__link">Cases</a></li>
+          <li><a href="https://www.bdmnl.nl/over-ons/" class="bdmnl-nav__link">Over ons</a></li>
+          <li><a href="https://www.bdmnl.nl/kennisbank/" class="bdmnl-nav__link">Kennisbank</a></li>
           <li><a href="https://www.bdmnl.nl/contact/" class="bdmnl-nav__link bdmnl-nav__link--cta">Contact</a></li>
         </ul>
-        <button class="bdmnl-nav__toggle" aria-label="Menu openen" aria-expanded="false">
-          <span class="bdmnl-nav__toggle-bar"></span>
-          <span class="bdmnl-nav__toggle-bar"></span>
-          <span class="bdmnl-nav__toggle-bar"></span>
-        </button>
       </nav>
+
+      <!-- Phone CTA -->
+      <div class="bdmnl-header__cta">
+        <span class="bdmnl-header__tagline">Samen groeien?</span>
+        <a href="tel:+31850605627" class="bdmnl-header__phone">085 060 56 27</a>
+      </div>
+
     </div>
   </header>
 
+  <!-- ============================================================
+       BREADCRUMB — LOCKED STRUCTURE / TOKENS REPLACEABLE
+       ============================================================ -->
   <nav class="bdmnl-breadcrumb" aria-label="Breadcrumb">
     <div class="bdmnl-container">
       <ol class="bdmnl-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -82,7 +143,9 @@
           <meta itemprop="position" content="1">
         </li>
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="https://www.bdmnl.nl/webdesign/" itemprop="item"><span itemprop="name">Webdesign</span></a>
+          <a href="/webdesign/" itemprop="item">
+            <span itemprop="name">Webdesign</span>
+          </a>
           <meta itemprop="position" content="2">
         </li>
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
@@ -93,6 +156,9 @@
     </div>
   </nav>
 
+  <!-- ============================================================
+       HERO — LOCKED STRUCTURE
+       ============================================================ -->
   <section class="bdmnl-hero" aria-labelledby="bdmnl-h1">
     <div class="bdmnl-container">
       <div class="bdmnl-hero__content">
@@ -103,6 +169,9 @@
     </div>
   </section>
 
+  <!-- ============================================================
+       INTRO — LOCKED STRUCTURE
+       ============================================================ -->
   <section class="bdmnl-section bdmnl-section--intro" aria-label="Introductie">
     <div class="bdmnl-container bdmnl-container--narrow">
       <p class="bdmnl-intro__p1">Jouw bedrijf in Rotterdam verdient een website die indruk maakt, snel laadt en bezoekers omzet in klanten. BDMNL ontwerpt en bouwt premium websites die werken — voor ondernemers die geen genoegen nemen met middelmatig.</p>
@@ -110,8 +179,12 @@
     </div>
   </section>
 
+  <!-- ============================================================
+       MAIN CONTENT — LOCKED STRUCTURE
+       ============================================================ -->
   <main class="bdmnl-main" id="main-content">
 
+    <!-- Section 1 -->
     <section class="bdmnl-section" aria-labelledby="bdmnl-s1-h2">
       <div class="bdmnl-container">
         <div class="bdmnl-section__grid">
@@ -119,11 +192,21 @@
             <h2 id="bdmnl-s1-h2" class="bdmnl-section__h2">Websites die verkopen voor jouw Rotterdamse bedrijf</h2>
             <p class="bdmnl-section__p">Een mooie website is mooi. Een website die converteert is waardevol. Bij BDMNL combineren we beide. We ontwerpen elke pagina met één doel: de bezoeker laten doen wat jij wilt. Of dat nu een offerte aanvragen is, bellen, inschrijven of kopen — elk element is bewust geplaatst. Jouw website wordt een strategisch instrument, geen digitale brochure.</p>
           </div>
-          <div class="bdmnl-section__visual" aria-hidden="true"><div class="bdmnl-placeholder-visual"></div></div>
+          <div class="bdmnl-section__visual">
+          <img
+            src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop&auto=format"
+            alt="Professioneel webdesign Rotterdam — website die converteert voor jouw bedrijf"
+            class="bdmnl-section__img"
+            loading="lazy"
+            width="600"
+            height="400"
+          >
+        </div>
         </div>
       </div>
     </section>
 
+    <!-- Section 2 -->
     <section class="bdmnl-section bdmnl-section--alt" aria-labelledby="bdmnl-s2-h2">
       <div class="bdmnl-container">
         <div class="bdmnl-section__grid bdmnl-section__grid--reverse">
@@ -131,11 +214,21 @@
             <h2 id="bdmnl-s2-h2" class="bdmnl-section__h2">Technisch perfect — snel, veilig en mobielvriendelijk</h2>
             <p class="bdmnl-section__p">Een trage website kost je klanten. Google straft hem af, bezoekers verlaten hem, en jij mist omzet. Elke website die BDMNL bouwt is geoptimaliseerd voor snelheid, veiligheid en mobile-first gebruik. We bouwen op bewezen technologie, met schone code, SSL-certificaten, correcte meta-structuur en technische SEO als standaard onderdeel — niet als betaalde optie.</p>
           </div>
-          <div class="bdmnl-section__visual" aria-hidden="true"><div class="bdmnl-placeholder-visual"></div></div>
+          <div class="bdmnl-section__visual">
+          <img
+            src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop&auto=format"
+            alt="Technisch perfecte website — snel, veilig en mobielvriendelijk gebouwd door BDMNL"
+            class="bdmnl-section__img"
+            loading="lazy"
+            width="600"
+            height="400"
+          >
+        </div>
         </div>
       </div>
     </section>
 
+    <!-- Section 3 -->
     <section class="bdmnl-section" aria-labelledby="bdmnl-s3-h2">
       <div class="bdmnl-container">
         <div class="bdmnl-section__grid">
@@ -143,85 +236,186 @@
             <h2 id="bdmnl-s3-h2" class="bdmnl-section__h2">Lokale expertise, Rotterdam begrijpen</h2>
             <p class="bdmnl-section__p">Rotterdam is geen gewone stad. Het is de zakelijkste, meest vooruitstrevende stad van Nederland. Bedrijven hier willen iets zeggen — en ze willen dat hun digitale aanwezigheid dat weerspiegelt. BDMNL werkt met Rotterdamse ondernemers die klaar zijn om door te groeien. We kennen de markt, we begrijpen de ambitie en we bouwen websites die bij die energie passen.</p>
           </div>
-          <div class="bdmnl-section__visual" aria-hidden="true"><div class="bdmnl-placeholder-visual"></div></div>
+          <div class="bdmnl-section__visual">
+          <img
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&auto=format"
+            alt="Rotterdam skyline — lokale expertise en digitale aanwezigheid voor Rotterdamse ondernemers"
+            class="bdmnl-section__img"
+            loading="lazy"
+            width="600"
+            height="400"
+          >
+        </div>
         </div>
       </div>
     </section>
 
+    <!-- ============================================================
+         CTA BLOCK — LOCKED / PREMIUM BLACK
+         ============================================================ -->
     <section class="bdmnl-cta-block" aria-labelledby="bdmnl-cta-h2">
       <div class="bdmnl-container bdmnl-container--narrow">
         <h2 id="bdmnl-cta-h2" class="bdmnl-cta-block__headline">Klaar voor een website die werkt?</h2>
         <p class="bdmnl-cta-block__subtext">Plan een vrijblijvend gesprek. We kijken samen naar jouw bedrijf, jouw doelen en wat een nieuwe website voor jou kan doen in Rotterdam.</p>
-        <a href="https://www.bdmnl.nl/contact/" class="bdmnl-btn bdmnl-btn--primary bdmnl-btn--large">Vraag een offerte aan</a>
+        <a href="https://www.bdmnl.nl/contact/" class="bdmnl-btn bdmnl-btn--primary bdmnl-btn--large">
+          Vraag een offerte aan
+        </a>
       </div>
     </section>
 
+    <!-- ============================================================
+         FAQ SECTION — LOCKED STRUCTURE
+         ============================================================ -->
     <section class="bdmnl-section bdmnl-section--faq" aria-labelledby="bdmnl-faq-h2">
       <div class="bdmnl-container bdmnl-container--narrow">
         <h2 id="bdmnl-faq-h2" class="bdmnl-section__h2 bdmnl-section__h2--centered">
           Veelgestelde vragen over webdesign in Rotterdam
         </h2>
         <dl class="bdmnl-faq">
-          <div class="bdmnl-faq__item"><dt class="bdmnl-faq__question">Wat kost een professionele website in Rotterdam?</dt><dd class="bdmnl-faq__answer">De kosten voor een professionele website variëren sterk op basis van omvang, functionaliteiten en maatwerk. Een zakelijke website bij BDMNL start vanaf een vast bedrag dat op aanvraag beschikbaar is. We zijn transparant over prijzen en leveren altijd een gedetailleerde offerte voordat we starten.</dd></div>
-          <div class="bdmnl-faq__item"><dt class="bdmnl-faq__question">Hoe lang duurt het bouwen van een website?</dt><dd class="bdmnl-faq__answer">Een standaard zakelijke website is gemiddeld binnen 3 tot 5 weken gereed. Voor complexere projecten zoals webshops of maatwerk platforms rekenen we 6 tot 10 weken. We stemmen de planning altijd af in de briefing en houden ons aan gemaakte afspraken.</dd></div>
-          <div class="bdmnl-faq__item"><dt class="bdmnl-faq__question">Bouwt BDMNL ook webshops in Rotterdam?</dt><dd class="bdmnl-faq__answer">Ja. BDMNL bouwt zowel zakelijke websites als volledig functionele webshops voor Rotterdamse ondernemers. We werken met bewezen e-commerce oplossingen die schaalbaar zijn en goed converteren. Vraag een gesprek aan om de mogelijkheden te bespreken.</dd></div>
-          <div class="bdmnl-faq__item"><dt class="bdmnl-faq__question">Is mijn website vindbaar in Google na oplevering?</dt><dd class="bdmnl-faq__answer">Elke website die BDMNL bouwt is technisch SEO-proof bij oplevering. Dat betekent: correcte meta-structuur, snelle laadtijden, mobiel-vriendelijk, schema-markup en schone URL-structuur. Voor verdere Google-vindbaarheid bieden we aanvullende SEO-diensten aan op basis van jouw doelstellingen.</dd></div>
-          <div class="bdmnl-faq__item"><dt class="bdmnl-faq__question">Kan ik mijn website zelf beheren na oplevering?</dt><dd class="bdmnl-faq__answer">Ja. We leveren elke website op met een gebruiksvriendelijk CMS waarmee jij zelfstandig teksten, afbeeldingen en pagina's kunt aanpassen. We geven een korte training bij oplevering en zijn bereikbaar voor vragen. Wil je dat wij het beheer overnemen? Dat is ook mogelijk.</dd></div>
+          <div class="bdmnl-faq__item">
+            <dt class="bdmnl-faq__question">Wat kost een professionele website in Rotterdam?</dt>
+            <dd class="bdmnl-faq__answer">De kosten voor een professionele website variëren sterk op basis van omvang, functionaliteiten en maatwerk. Een zakelijke website bij BDMNL start vanaf een vast bedrag dat op aanvraag beschikbaar is. We zijn transparant over prijzen en leveren altijd een gedetailleerde offerte voordat we starten.</dd>
+          </div>
+          <div class="bdmnl-faq__item">
+            <dt class="bdmnl-faq__question">Hoe lang duurt het bouwen van een website?</dt>
+            <dd class="bdmnl-faq__answer">Een standaard zakelijke website is gemiddeld binnen 3 tot 5 weken gereed. Voor complexere projecten zoals webshops of maatwerk platforms rekenen we 6 tot 10 weken. We stemmen de planning altijd af in de briefing en houden ons aan gemaakte afspraken.</dd>
+          </div>
+          <div class="bdmnl-faq__item">
+            <dt class="bdmnl-faq__question">Bouwt BDMNL ook webshops in Rotterdam?</dt>
+            <dd class="bdmnl-faq__answer">Ja. BDMNL bouwt zowel zakelijke websites als volledig functionele webshops voor Rotterdamse ondernemers. We werken met bewezen e-commerce oplossingen die schaalbaar zijn en goed converteren. Vraag een gesprek aan om de mogelijkheden te bespreken.</dd>
+          </div>
+          <div class="bdmnl-faq__item">
+            <dt class="bdmnl-faq__question">Is mijn website vindbaar in Google na oplevering?</dt>
+            <dd class="bdmnl-faq__answer">Elke website die BDMNL bouwt is technisch SEO-proof bij oplevering. Dat betekent: correcte meta-structuur, snelle laadtijden, mobiel-vriendelijk, schema-markup en schone URL-structuur. Voor verdere Google-vindbaarheid bieden we aanvullende SEO-diensten aan op basis van jouw doelstellingen.</dd>
+          </div>
+          <div class="bdmnl-faq__item">
+            <dt class="bdmnl-faq__question">Kan ik mijn website zelf beheren na oplevering?</dt>
+            <dd class="bdmnl-faq__answer">Ja. We leveren elke website op met een gebruiksvriendelijk CMS waarmee jij zelfstandig teksten, afbeeldingen en pagina's kunt aanpassen. We geven een korte training bij oplevering en zijn bereikbaar voor vragen. Wil je dat wij het beheer overnemen? Dat is ook mogelijk.</dd>
+          </div>
         </dl>
       </div>
     </section>
 
   </main>
 
+  <!-- ============================================================
+       FOOTER — LOCKED — REAL BDMNL IDENTITY
+       ============================================================ -->
   <footer class="bdmnl-footer" role="contentinfo">
-    <div class="bdmnl-container">
-      <div class="bdmnl-footer__grid">
-        <div class="bdmnl-footer__brand">
-          <a href="https://www.bdmnl.nl/" class="bdmnl-logo" aria-label="BDMNL homepage">
-            <span class="bdmnl-logo__text">BDMNL</span>
-          </a>
-          <p class="bdmnl-footer__tagline">Premium webdesign &amp; branding<br>voor Nederlandse bedrijven.</p>
+    <div class="bdmnl-footer__main">
+      <div class="bdmnl-container">
+        <div class="bdmnl-footer__grid">
+
+          <!-- Column 1: Navigatie -->
+          <div class="bdmnl-footer__col">
+            <h3 class="bdmnl-footer__col-title">Navigatie</h3>
+            <ul class="bdmnl-footer__col-list">
+              <li><a href="https://www.bdmnl.nl/">Home</a></li>
+              <li><a href="https://www.bdmnl.nl/diensten/">Diensten</a></li>
+              <li><a href="https://www.bdmnl.nl/cases/">Cases</a></li>
+              <li><a href="https://www.bdmnl.nl/kennisbank/">Kennisbank</a></li>
+              <li><a href="https://www.bdmnl.nl/contact/">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Diensten -->
+          <div class="bdmnl-footer__col">
+            <h3 class="bdmnl-footer__col-title">Diensten</h3>
+            <ul class="bdmnl-footer__col-list">
+              <li><a href="https://www.bdmnl.nl/diensten/websites-webshops/">Websites &amp; Webshops</a></li>
+              <li><a href="https://www.bdmnl.nl/diensten/branding-design/">Branding &amp; Design</a></li>
+              <li><a href="https://www.bdmnl.nl/diensten/social-media-beheer/">Social Media Beheer</a></li>
+              <li><a href="https://www.bdmnl.nl/diensten/online-marketing/">Online Marketing</a></li>
+              <li><a href="https://www.bdmnl.nl/diensten/seo-optimalisatie/">SEO Optimalisatie</a></li>
+              <li><a href="https://www.bdmnl.nl/diensten/hosting/">Hosting</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Kennisbank -->
+          <div class="bdmnl-footer__col">
+            <h3 class="bdmnl-footer__col-title">Kennisbank</h3>
+            <ul class="bdmnl-footer__col-list">
+              <li><a href="https://www.bdmnl.nl/kennisbank/">Webdesign</a></li>
+              <li><a href="https://www.bdmnl.nl/kennisbank/">SEO</a></li>
+              <li><a href="https://www.bdmnl.nl/kennisbank/">Webflow</a></li>
+              <li><a href="https://www.bdmnl.nl/kennisbank/">Google Ads</a></li>
+              <li><a href="https://www.bdmnl.nl/kennisbank/">Branding</a></li>
+              <li><a href="https://www.bdmnl.nl/kennisbank/">Lokale SEO</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact -->
+          <div class="bdmnl-footer__col">
+            <h3 class="bdmnl-footer__col-title">Contact</h3>
+            <ul class="bdmnl-footer__contact-list">
+              <li>
+                <span class="bdmnl-footer__contact-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.04 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.13 1 .36 1.98.68 2.92a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.16-1.16a2 2 0 012.11-.45c.94.32 1.92.55 2.92.68A2 2 0 0122 14.22v2.7z"/></svg>
+                </span>
+                <a href="tel:+31850605627" class="bdmnl-footer__contact-link">+31 085 060 56 27</a>
+              </li>
+              <li>
+                <span class="bdmnl-footer__contact-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                <a href="mailto:info@bdmnl.nl" class="bdmnl-footer__contact-link">info@bdmnl.nl</a>
+              </li>
+              <li>
+                <span class="bdmnl-footer__contact-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <span class="bdmnl-footer__contact-link">Krammer 8, 3232 HE Brielle</span>
+              </li>
+            </ul>
+          </div>
+
         </div>
-        <div class="bdmnl-footer__nav">
-          <h3 class="bdmnl-footer__nav-title">Diensten</h3>
-          <ul class="bdmnl-footer__nav-list">
-            <li><a href="https://www.bdmnl.nl/webdesign/">Webdesign</a></li>
-            <li><a href="https://www.bdmnl.nl/branding/">Branding &amp; huisstijl</a></li>
-            <li><a href="https://www.bdmnl.nl/seo/">SEO &amp; vindbaarheid</a></li>
-            <li><a href="https://www.bdmnl.nl/webshop-laten-maken/">Webshop laten maken</a></li>
-            <li><a href="https://www.bdmnl.nl/online-marketing/">Online marketing</a></li>
-          </ul>
-        </div>
-        <div class="bdmnl-footer__nav">
-          <h3 class="bdmnl-footer__nav-title">BDMNL</h3>
-          <ul class="bdmnl-footer__nav-list">
-            <li><a href="https://www.bdmnl.nl/over-ons/">Over ons</a></li>
-            <li><a href="https://www.bdmnl.nl/portfolio/">Portfolio</a></li>
-            <li><a href="https://www.bdmnl.nl/blog/">Blog</a></li>
-            <li><a href="https://www.bdmnl.nl/gratis-seo-scan/">Gratis SEO-scan</a></li>
-            <li><a href="https://www.bdmnl.nl/contact/">Contact</a></li>
-          </ul>
-        </div>
-        <div class="bdmnl-footer__contact">
-          <h3 class="bdmnl-footer__nav-title">Contact</h3>
-          <address class="bdmnl-footer__address">
-            <p>Krammer 8<br>3232 HE Brielle</p>
-            <a href="tel:+31850605627">085 - 060 56 27</a>
-            <a href="mailto:info@bdmnl.nl">info@bdmnl.nl</a>
-          </address>
-        </div>
-      </div>
-      <div class="bdmnl-footer__bottom">
-        <p class="bdmnl-footer__legal">
-          &copy; <span id="bdmnl-year"></span> BDMNL. Alle rechten voorbehouden.
-          <a href="https://www.bdmnl.nl/algemene-voorwaarden/">Algemene voorwaarden</a> &middot;
-          <a href="https://www.bdmnl.nl/privacy/">Privacy</a>
-        </p>
-        <p class="bdmnl-footer__micro-accent"><span class="bdmnl-accent">Gebouwd in Nederland</span></p>
       </div>
     </div>
+
+    <!-- Social + copyright bar -->
+    <div class="bdmnl-footer__bottom-bar">
+      <div class="bdmnl-container">
+        <div class="bdmnl-footer__bottom-inner">
+          <div class="bdmnl-footer__social">
+            <span class="bdmnl-footer__social-label">Volg BDMNL op social media</span>
+            <div class="bdmnl-footer__social-icons">
+              <a href="https://www.instagram.com/bdmnl.nl/" target="_blank" rel="noopener noreferrer" aria-label="BDMNL op Instagram" class="bdmnl-footer__social-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/company/bdmnlnl" target="_blank" rel="noopener noreferrer" aria-label="BDMNL op LinkedIn" class="bdmnl-footer__social-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="https://www.facebook.com/BDMNL.nl/" target="_blank" rel="noopener noreferrer" aria-label="BDMNL op Facebook" class="bdmnl-footer__social-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="BDMNL op X" class="bdmnl-footer__social-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.73-8.835L2.022 2.25h6.848l4.247 5.616 5.127-5.616zM17 20.25l-12-16H5l12 16h2z"/></svg>
+              </a>
+            </div>
+          </div>
+          <p class="bdmnl-footer__copy">&copy; 2026 BDMNL</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Legal links bar -->
+    <div class="bdmnl-footer__legal-bar">
+      <div class="bdmnl-container">
+        <nav class="bdmnl-footer__legal-nav" aria-label="Juridische links">
+          <a href="https://www.bdmnl.nl/privacyverklaring/">privacyverklaring</a>
+          <a href="https://www.bdmnl.nl/cookiebeleid/">Cookiebeleid</a>
+          <a href="https://www.bdmnl.nl/algemene-voorwaarden/">Algemene voorwaarden</a>
+          <a href="https://www.bdmnl.nl/sitemap.xml">Sitemap</a>
+        </nav>
+      </div>
+    </div>
+
   </footer>
 
+  <!-- ============================================================
+       SCRIPTS — LOCKED — DO NOT MODIFY
+       ============================================================ -->
   <script>
     document.getElementById('bdmnl-year').textContent = new Date().getFullYear();
     (function() {
@@ -240,16 +434,22 @@
         var q = item.querySelector('.bdmnl-faq__question');
         var a = item.querySelector('.bdmnl-faq__answer');
         if (!q || !a) return;
-        q.setAttribute('tabindex', '0'); q.setAttribute('role', 'button'); q.setAttribute('aria-expanded', 'false');
+        q.setAttribute('tabindex', '0');
+        q.setAttribute('role', 'button');
+        q.setAttribute('aria-expanded', 'false');
         a.hidden = true;
         q.addEventListener('click', function() {
           var open = q.getAttribute('aria-expanded') === 'true';
-          q.setAttribute('aria-expanded', String(!open)); a.hidden = open;
+          q.setAttribute('aria-expanded', String(!open));
+          a.hidden = open;
           item.classList.toggle('bdmnl-faq__item--open', !open);
         });
-        q.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); q.click(); } });
+        q.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); q.click(); }
+        });
       });
     })();
   </script>
+
 </body>
 </html>
