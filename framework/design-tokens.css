@@ -598,6 +598,16 @@ img, svg {
   border-radius: var(--radius-lg);
 }
 
+/* --- Section Image (replaces placeholder visual) --- */
+.bdmnl-section__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
 @media (max-width: 768px) {
   .bdmnl-section__grid {
     grid-template-columns: 1fr;
