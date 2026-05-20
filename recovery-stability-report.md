@@ -1,6 +1,6 @@
 # SEO recovery stability report
 
-Generated: 2026-05-19
+Generated: 2026-05-20
 
 ## Summary
 

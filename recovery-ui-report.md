@@ -60,6 +60,12 @@ Single-page final BDMNL direction preview:
 - After mobile: `/opt/cursor/artifacts/bdmnl-recovery-ui/brielle-wow-after-mobile.png`
 - Footer after: `/opt/cursor/artifacts/bdmnl-recovery-ui/brielle-wow-footer-after.png`
 
+Final one-page quality direction:
+
+- Desktop: `/opt/cursor/artifacts/bdmnl-recovery-ui/final-wow-brielle-desktop.png`
+- Mobile: `/opt/cursor/artifacts/bdmnl-recovery-ui/final-wow-brielle-mobile.png`
+- Footer: `/opt/cursor/artifacts/bdmnl-recovery-ui/final-wow-brielle-footer.png`
+
 ## Validation
 
 - `python3 scripts/generate-city-pages.py`
