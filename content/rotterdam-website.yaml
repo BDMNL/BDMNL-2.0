@@ -66,6 +66,9 @@ sections:
       de bezoeker laten doen wat jij wilt. Of dat nu een offerte aanvragen is,
       bellen, inschrijven of kopen — elk element is bewust geplaatst.
       Jouw website wordt een strategisch instrument, geen digitale brochure.
+    image:
+      src: "/assets/images/seo/rotterdam-erasmusbrug.jpg"
+      alt: "Rotterdamse skyline met Erasmusbrug als lokale context voor een website laten maken in Rotterdam"
 
   - id: 2
     h2: "Technisch perfect — snel, veilig en mobielvriendelijk"
@@ -76,6 +79,9 @@ sections:
       We bouwen op bewezen technologie, met schone code, SSL-certificaten,
       correcte meta-structuur en technische SEO als standaard onderdeel —
       niet als betaalde optie.
+    image:
+      src: "/assets/images/seo/premium-webdesign-studio.jpg"
+      alt: "Premium webdesign studio met rustige werkplek en moderne digitale uitstraling"
 
   - id: 3
     h2: "Lokale expertise, Rotterdam begrijpen"
@@ -86,6 +92,9 @@ sections:
       BDMNL werkt met Rotterdamse ondernemers die klaar zijn om door te
       groeien. We kennen de markt, we begrijpen de ambitie en we bouwen
       websites die bij die energie passen.
+    image:
+      src: "/assets/images/seo/rotterdam-business-strategy.jpg"
+      alt: "Zakelijke strategie en samenwerking voor Rotterdamse bedrijven die online willen groeien"
 
 # ------------------------------------------------------------
 # CTA BLOCK
