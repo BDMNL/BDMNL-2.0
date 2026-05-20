@@ -1,0 +1,127 @@
+# ============================================================
+# BDMNL CONTENT FILE
+# Page: SEO Bureau Rotterdam
+# Template: framework/master-template.html
+# Output: pages/seo-bureau-rotterdam/index.html
+# ============================================================
+
+page:
+  service: seo-bureau
+  city: Rotterdam
+  output_path: pages/seo-bureau-rotterdam/index.html
+
+seo:
+  meta_title: "SEO Bureau Rotterdam | Beter vindbaar | BDMNL"
+  meta_desc: "Op zoek naar een SEO bureau in Rotterdam? BDMNL zorgt voor hogere Google-posities, meer organisch verkeer en structurele groei voor jouw bedrijf."
+  meta_canonical: "https://bdmnl.nl/seo-bureau-rotterdam/"
+  schema_service_name: "SEO en zoekmachineoptimalisatie voor bedrijven in Rotterdam"
+  schema_area_served: "Rotterdam"
+  schema_phone: "+31000000000"
+  schema_email: "info@bdmnl.nl"
+
+breadcrumb:
+  parent_label: "SEO"
+  parent_href: "/seo/"
+
+hero:
+  h1: "SEO Bureau Rotterdam — Hoger in Google met BDMNL"
+  intro_p1: >
+    Jouw bedrijf in Rotterdam moet gevonden worden door mensen die actief zoeken
+    naar jouw dienst of product. BDMNL is het SEO bureau dat zorgt voor hogere
+    posities in Google, meer organisch verkeer en meetbare groei — zonder
+    zwarte trucs, zonder beloften die we niet kunnen nakomen.
+
+intro:
+  p1: >
+    Jouw bedrijf in Rotterdam moet gevonden worden door mensen die actief zoeken
+    naar jouw dienst of product. BDMNL is het SEO bureau dat zorgt voor hogere
+    posities in Google, meer organisch verkeer en meetbare groei — zonder
+    zwarte trucs, zonder beloften die we niet kunnen nakomen.
+  p2: >
+    We werken met Rotterdamse bedrijven die begrijpen dat SEO een investering
+    is, geen quick fix. Van technische optimalisatie tot contentstrategie en
+    linkbuilding — wij bouwen een duurzame SEO-fundering die maanden en jaren
+    blijft presteren.
+
+sections:
+  - id: 1
+    h2: "Technische SEO die Google begrijpt"
+    p: >
+      De basis van elke succesvolle SEO-strategie is technisch perfect. We
+      beginnen met een grondige audit van jouw website: laadsnelheid, Core
+      Web Vitals, crawlbaarheid, indexering, structuurdata en mobiele
+      optimalisatie. Zonder sterke technische basis heeft geen enkele
+      contentstrategie zin. BDMNL lost de techniek op voordat we verder gaan.
+
+  - id: 2
+    h2: "Lokale SEO voor Rotterdamse zoekopdrachten"
+    p: >
+      'SEO bureau Rotterdam', 'webdesign bedrijf Rotterdam', 'accountant
+      Rotterdam centrum' — dit zijn de zoekopdrachten die jouw klanten
+      gebruiken. We optimaliseren jouw Google Business Profile, bouwen
+      lokale landingspagina's en zorgen dat jij verschijnt waar jouw
+      klanten in Rotterdam zoeken. Lokale SEO is specialistenwerk en
+      BDMNL doet het structureel goed.
+
+  - id: 3
+    h2: "Contentstrategie die rankt en converteert"
+    p: >
+      Content is de brandstof van SEO. Maar niet élke content rankt.
+      BDMNL ontwikkelt een gerichte contentstrategie op basis van
+      zoekwoordenonderzoek, concurrentieanalyse en jouw bedrijfsdoelen.
+      We schrijven content die Google vertrouwt en bezoekers overtuigt —
+      voor jouw branche in Rotterdam en de regio.
+
+cta:
+  headline: "Klaar om hoger te scoren in Google?"
+  subtext: >
+    Plan een gratis SEO-analyse. We kijken naar jouw huidige positie,
+    de kansen in jouw markt en wat SEO voor jouw Rotterdamse bedrijf
+    kan opleveren.
+  button_label: "Vraag gratis SEO-analyse aan"
+  button_href: "/gratis-seo-scan/"
+
+faq:
+  - id: 1
+    question: "Wat kost SEO in Rotterdam?"
+    answer: >
+      SEO-kosten variëren sterk op basis van concurrentie, doelstellingen
+      en de huidige staat van jouw website. BDMNL werkt met transparante
+      maandelijkse pakketten en vaste projectprijzen. We leveren altijd
+      een gedetailleerde offerte op maat. Vraag een gratis analyse aan
+      voor een eerlijk beeld van wat nodig is.
+
+  - id: 2
+    question: "Hoe lang duurt het voordat SEO resultaat oplevert?"
+    answer: >
+      SEO is een langetermijninvestering. De eerste meetbare verbeteringen
+      zijn doorgaans zichtbaar na 3 tot 6 maanden. Structurele, stabiele
+      posities in Google bereiken we gemiddeld na 6 tot 12 maanden
+      consistente werkzaamheden. We zijn altijd eerlijk over verwachtingen
+      en rapporteren maandelijks over de voortgang.
+
+  - id: 3
+    question: "Werkt BDMNL ook voor lokale bedrijven in Rotterdam?"
+    answer: >
+      Zeker. Lokale SEO is een van onze specialisaties. We optimaliseren
+      Google Business Profiles, bouwen lokale landingspagina's en zorgen
+      dat jouw bedrijf verschijnt in de lokale zoekresultaten in Rotterdam
+      en omliggende gebieden zoals Schiedam, Capelle aan den IJssel
+      en Vlaardingen.
+
+  - id: 4
+    question: "Wat is het verschil tussen SEO en Google Ads?"
+    answer: >
+      Google Ads geeft direct resultaat maar stopt zodra je budget op is.
+      SEO bouwt organische zichtbaarheid op die blijvend is. De combinatie
+      van beide levert de sterkste resultaten. BDMNL adviseert welke
+      aanpak het beste past bij jouw doelstellingen en budget in Rotterdam.
+
+  - id: 5
+    question: "Rapporteert BDMNL over SEO-resultaten?"
+    answer: >
+      Ja. Elke maand ontvang je een helder rapport met de belangrijkste
+      KPI's: posities per zoekwoord, organisch verkeer, conversies en
+      technische voortgang. We bespreken de resultaten en de planning
+      voor de volgende maand. Transparantie is voor ons geen optie,
+      maar standaard.
