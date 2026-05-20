@@ -72,6 +72,20 @@ sections:
       leads en verkopen opleveren. Gerichte targeting op jouw doelgroep
       in Delft en de regio.
 
+# ------------------------------------------------------------
+# IMAGES — 3 section visuals
+# ------------------------------------------------------------
+images:
+  image_1:
+    src: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&h=400&fit=crop&auto=format"
+    alt: "Architectonisch detail als premium visuele sfeer voor online marketing in Delft"
+  image_2:
+    src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop&auto=format"
+    alt: "Online marketing strategie met teamoverleg en digitale planning"
+  image_3:
+    src: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&auto=format"
+    alt: "Digitaal teamoverleg voor meetbare online marketing in Delft"
+
 cta:
   headline: "Klaar om online te groeien in Delft?"
   subtext: >

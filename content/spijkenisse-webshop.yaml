@@ -71,6 +71,20 @@ sections:
       BDMNL het beheer en de doorontwikkeling overneemt? Dat is ook
       mogelijk — op basis van een helder maandbedrag.
 
+# ------------------------------------------------------------
+# IMAGES — 3 section visuals
+# ------------------------------------------------------------
+images:
+  image_1:
+    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&h=400&fit=crop&auto=format"
+    alt: "Premium lokale winkelomgeving als inspiratie voor een webshop in Spijkenisse"
+  image_2:
+    src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&h=400&fit=crop&auto=format"
+    alt: "Moderne digitale werkplek voor webshop ontwerp en ontwikkeling"
+  image_3:
+    src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop&auto=format"
+    alt: "Strategisch overleg voor e-commerce groei in Spijkenisse"
+
 cta:
   headline: "Klaar om online te verkopen vanuit Spijkenisse?"
   subtext: >

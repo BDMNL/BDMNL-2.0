@@ -85,6 +85,20 @@ sections:
       samen, van briefing tot oplevering en daarna.
 
 # ------------------------------------------------------------
+# IMAGES — 3 section visuals
+# ------------------------------------------------------------
+images:
+  image_1:
+    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&h=400&fit=crop&auto=format"
+    alt: "Premium lokale bedrijfsomgeving als sfeerbeeld voor webdesign in Brielle"
+  image_2:
+    src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&h=400&fit=crop&auto=format"
+    alt: "Rustige premium webdesign studio met moderne werkplek"
+  image_3:
+    src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop&auto=format"
+    alt: "Strategisch overleg voor lokale bedrijven in Brielle en Voorne-Putten"
+
+# ------------------------------------------------------------
 # CTA BLOCK
 # ------------------------------------------------------------
 cta:

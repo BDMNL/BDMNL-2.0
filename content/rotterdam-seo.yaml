@@ -72,6 +72,20 @@ sections:
       We schrijven content die Google vertrouwt en bezoekers overtuigt —
       voor jouw branche in Rotterdam en de regio.
 
+# ------------------------------------------------------------
+# IMAGES — 3 section visuals
+# ------------------------------------------------------------
+images:
+  image_1:
+    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&auto=format"
+    alt: "Rotterdam skyline als lokale context voor SEO bureau Rotterdam"
+  image_2:
+    src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop&auto=format"
+    alt: "Strategische SEO en online marketing analyse voor Rotterdamse bedrijven"
+  image_3:
+    src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop&auto=format"
+    alt: "Zakelijke strategie voor lokale SEO en online groei in Rotterdam"
+
 cta:
   headline: "Klaar om hoger te scoren in Google?"
   subtext: >
