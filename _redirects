@@ -23,3 +23,17 @@
 
 # webdesign-rotterdam framework rewrite (200! — serve pages/ version at flat URL)
 /webdesign-rotterdam/*                  /pages/webdesign-rotterdam/:splat        200!
+/website-laten-maken-brielle/*                              /pages/website-laten-maken-brielle/:splat                              200!
+/website-laten-maken-spijkenisse/*                              /pages/website-laten-maken-spijkenisse/:splat                              200!
+/website-laten-maken-hellevoetsluis/*                              /pages/website-laten-maken-hellevoetsluis/:splat                              200!
+/website-laten-maken-delft/*                              /pages/website-laten-maken-delft/:splat                              200!
+/seo-bureau-brielle/*                              /pages/seo-bureau-brielle/:splat                              200!
+/seo-bureau-spijkenisse/*                              /pages/seo-bureau-spijkenisse/:splat                              200!
+/seo-bureau-hellevoetsluis/*                              /pages/seo-bureau-hellevoetsluis/:splat                              200!
+/seo-bureau-delft/*                              /pages/seo-bureau-delft/:splat                              200!
+/website-laten-maken-leiden/*                              /pages/website-laten-maken-leiden/:splat                              200!
+/seo-bureau-leiden/*                              /pages/seo-bureau-leiden/:splat                              200!
+/website-laten-maken-dordrecht/*                              /pages/website-laten-maken-dordrecht/:splat                              200!
+/seo-bureau-dordrecht/*                              /pages/seo-bureau-dordrecht/:splat                              200!
+/webshop-laten-maken-rotterdam/*                              /pages/webshop-laten-maken-rotterdam/:splat                              200!
+/website-laten-maken-breda/*                              /pages/website-laten-maken-breda/:splat                              200!

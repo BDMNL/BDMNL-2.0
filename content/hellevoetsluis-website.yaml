@@ -1,0 +1,60 @@
+page:
+  service: website laten maken
+  city: Hellevoetsluis
+  output_path: pages/website-laten-maken-hellevoetsluis/index.html
+seo:
+  meta_title: Website laten maken Hellevoetsluis | BDMNL
+  meta_desc: Website laten maken in Hellevoetsluis? BDMNL bouwt premium websites met sterke structuur, snelheid en lokale vindbaarheid.
+  meta_canonical: https://bdmnl.nl/website-laten-maken-hellevoetsluis/
+  schema_service_name: Website laten maken en website ontwikkeling in Hellevoetsluis
+  schema_area_served: Hellevoetsluis
+breadcrumb:
+  parent_label: Website laten maken
+  parent_href: /website-laten-maken/
+hero:
+  h1: Website laten maken Hellevoetsluis — BDMNL
+  intro_p1: Jouw bedrijf in Hellevoetsluis verdient een website die professioneel voelt, snel werkt en vertrouwen opbouwt. BDMNL helpt ondernemers met een premium digitale basis die past bij hun markt en ambities.
+intro:
+  p1: Jouw bedrijf in Hellevoetsluis verdient een website die professioneel voelt, snel werkt en vertrouwen opbouwt. BDMNL helpt ondernemers met een premium digitale basis die past bij hun markt en ambities.
+  p2: 'We combineren strategie, ontwerp, techniek en lokale vindbaarheid. Voor bedrijven in Hellevoetsluis betekent dat: een duidelijke structuur, sterke content en een website die bezoekers helpt de volgende stap te zetten.'
+sections:
+- id: 1
+  h2: Een website die past bij jouw bedrijf in Hellevoetsluis
+  p: Hellevoetsluis heeft een eigen zakelijke dynamiek. Als ondernemer wil je een website die professioneel voelt, snel laadt en vertrouwen wekt bij klanten uit Centrum, De Struyten en Ravense Hoek. BDMNL bouwt websites die niet alleen goed ogen, maar ook logisch sturen op aanvragen en groei.
+- id: 2
+  h2: Technisch sterk, snel en mobielvriendelijk
+  p: Een moderne website moet technisch kloppen. We bouwen met aandacht voor snelheid, veiligheid, mobiel gebruik, duidelijke structuur en technische SEO. Zo krijgt jouw bedrijf in Hellevoetsluis een online basis die betrouwbaar voelt en goed kan doorgroeien.
+- id: 3
+  h2: Lokale zichtbaarheid in Hellevoetsluis en omgeving
+  p: Een website moet aansluiten op je markt. Daarom verwerken we lokale context rond Hellevoetsluis, Centrum, De Struyten en Ravense Hoek en de bredere regio Voorne aan Zee op een natuurlijke manier. Geen keyword stuffing, maar content die bezoekers en Google helpt begrijpen waar je relevant bent.
+images:
+  image_1:
+    src: https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=400&fit=crop&auto=format
+    alt: Premium werkplek voor website strategie en webdesign voor website laten maken in Hellevoetsluis
+  image_2:
+    src: https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&h=400&fit=crop&auto=format
+    alt: Rustige digitale studio voor professionele website ontwikkeling voor Hellevoetsluis
+  image_3:
+    src: https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop&auto=format
+    alt: Strategisch overleg voor website groei en online zichtbaarheid in Hellevoetsluis
+cta:
+  headline: Klaar voor een website die werkt?
+  subtext: Plan een vrijblijvend gesprek. We kijken naar jouw bedrijf, doelen en wat een nieuwe website in Hellevoetsluis kan opleveren.
+  button_label: Vraag een offerte aan
+  button_href: https://www.bdmnl.nl/contact/
+faq:
+- id: 1
+  question: Wat kost website laten maken in Hellevoetsluis?
+  answer: De kosten hangen af van omvang, doelen en gewenste functionaliteiten. BDMNL maakt vooraf een duidelijke offerte op maat, zodat je weet wat nodig is voor jouw bedrijf in Hellevoetsluis.
+- id: 2
+  question: Werkt BDMNL voor lokale bedrijven in Hellevoetsluis?
+  answer: Ja. We werken voor lokale ondernemers en MKB-bedrijven die online professioneler willen overkomen. Daarbij nemen we de markt in Hellevoetsluis en omgeving mee in structuur, tekst en vindbaarheid.
+- id: 3
+  question: Hoe snel kan een project starten?
+  answer: Dat hangt af van planning, content en scope. Na een eerste gesprek kunnen we snel aangeven welke stappen nodig zijn en wanneer ontwerp, bouw of optimalisatie kan starten.
+- id: 4
+  question: Is SEO onderdeel van de aanpak?
+  answer: Ja. Technische SEO, duidelijke headings, metadata en logische structuur zijn standaard onderdeel van de basis. Voor verdere groei kunnen we aanvullende SEO en content uitwerken.
+- id: 5
+  question: Kan ik later verder uitbreiden?
+  answer: Ja. We bouwen met groei in gedachten. Nieuwe pagina’s, diensten, content, campagnes of optimalisaties kunnen later worden toegevoegd zonder opnieuw te beginnen.
