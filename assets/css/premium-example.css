@@ -706,6 +706,39 @@
   letter-spacing: -0.035em;
 }
 
+.wow-marquee {
+  overflow: hidden;
+  border-top: 1px solid rgba(14, 14, 14, 0.08);
+  border-bottom: 1px solid rgba(14, 14, 14, 0.08);
+  background: #ffffff;
+  padding: 18px 0;
+}
+
+.wow-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: clamp(28px, 5vw, 72px);
+  animation: wowMarquee 34s linear infinite;
+}
+
+.wow-marquee span {
+  color: rgba(14, 14, 14, 0.78);
+  font-size: clamp(1rem, 1.8vw, 1.55rem);
+  font-weight: 780;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@keyframes wowMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .wow-link-list {
   display: grid;
   gap: 1px;

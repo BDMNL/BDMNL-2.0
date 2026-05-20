@@ -66,6 +66,12 @@ Final one-page quality direction:
 - Mobile: `/opt/cursor/artifacts/bdmnl-recovery-ui/final-wow-brielle-mobile.png`
 - Footer: `/opt/cursor/artifacts/bdmnl-recovery-ui/final-wow-brielle-footer.png`
 
+BDMNL-aligned one-page refinement:
+
+- Desktop: `/opt/cursor/artifacts/bdmnl-recovery-ui/brielle-bdmnl-aligned-desktop.png`
+- Mobile: `/opt/cursor/artifacts/bdmnl-recovery-ui/brielle-bdmnl-aligned-mobile.png`
+- Footer: `/opt/cursor/artifacts/bdmnl-recovery-ui/brielle-bdmnl-aligned-footer.png`
+
 ## Validation
 
 - `python3 scripts/generate-city-pages.py`
