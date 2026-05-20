@@ -1,0 +1,144 @@
+# ============================================================
+# BDMNL CONTENT FILE
+# Page: Webdesign Rotterdam
+# Template: framework/master-template.html
+# Output: pages/webdesign-rotterdam/index.html
+# Status: EXAMPLE — replace with final copy before publishing
+# ============================================================
+
+page:
+  service: webdesign
+  city: Rotterdam
+  output_path: pages/webdesign-rotterdam/index.html
+
+# ------------------------------------------------------------
+# SEO META — LOCKED LIMITS: title max 60 chars, desc max 155
+# ------------------------------------------------------------
+seo:
+  meta_title: "Webdesign Rotterdam | Premium websites | BDMNL"
+  meta_desc: "Op zoek naar professioneel webdesign in Rotterdam? BDMNL bouwt snelle, conversiegerichte websites die jouw bedrijf laten groeien. Vraag een offerte aan."
+  meta_canonical: "https://bdmnl.nl/webdesign-rotterdam/"
+  schema_service_name: "Premium webdesign en website ontwikkeling in Rotterdam"
+  schema_area_served: "Rotterdam"
+  schema_phone: "+31000000000"
+  schema_email: "info@bdmnl.nl"
+
+# ------------------------------------------------------------
+# BREADCRUMB
+# ------------------------------------------------------------
+breadcrumb:
+  parent_label: "Webdesign"
+  parent_href: "/webdesign/"
+
+# ------------------------------------------------------------
+# HERO
+# ------------------------------------------------------------
+hero:
+  h1: "Professioneel Webdesign Rotterdam — BDMNL"
+  intro_p1: >
+    Jouw bedrijf in Rotterdam verdient een website die indruk maakt, snel laadt
+    en bezoekers omzet in klanten. BDMNL ontwerpt en bouwt premium websites
+    die werken — voor ondernemers die geen genoegen nemen met middelmatig.
+
+# ------------------------------------------------------------
+# INTRO SECTION
+# ------------------------------------------------------------
+intro:
+  p1: >
+    Jouw bedrijf in Rotterdam verdient een website die indruk maakt, snel laadt
+    en bezoekers omzet in klanten. BDMNL ontwerpt en bouwt premium websites
+    die werken — voor ondernemers die geen genoegen nemen met middelmatig.
+  p2: >
+    We werken voor bedrijven in Rotterdam die begrijpen dat een website niet
+    een kostenpost is, maar een investering. Van een strakke zakelijke site tot
+    een volledig gepersonaliseerde webshop — wij leveren altijd scherp,
+    doordacht en op tijd.
+
+# ------------------------------------------------------------
+# CONTENT SECTIONS — 3 required
+# ------------------------------------------------------------
+sections:
+  - id: 1
+    h2: "Websites die verkopen voor jouw Rotterdamse bedrijf"
+    p: >
+      Een mooie website is mooi. Een website die converteert is waardevol.
+      Bij BDMNL combineren we beide. We ontwerpen elke pagina met één doel:
+      de bezoeker laten doen wat jij wilt. Of dat nu een offerte aanvragen is,
+      bellen, inschrijven of kopen — elk element is bewust geplaatst.
+      Jouw website wordt een strategisch instrument, geen digitale brochure.
+
+  - id: 2
+    h2: "Technisch perfect — snel, veilig en mobielvriendelijk"
+    p: >
+      Een trage website kost je klanten. Google straft hem af, bezoekers
+      verlaten hem, en jij mist omzet. Elke website die BDMNL bouwt is
+      geoptimaliseerd voor snelheid, veiligheid en mobile-first gebruik.
+      We bouwen op bewezen technologie, met schone code, SSL-certificaten,
+      correcte meta-structuur en technische SEO als standaard onderdeel —
+      niet als betaalde optie.
+
+  - id: 3
+    h2: "Lokale expertise, Rotterdam begrijpen"
+    p: >
+      Rotterdam is geen gewone stad. Het is de zakelijkste, meest
+      vooruitstrevende stad van Nederland. Bedrijven hier willen iets
+      zeggen — en ze willen dat hun digitale aanwezigheid dat weerspiegelt.
+      BDMNL werkt met Rotterdamse ondernemers die klaar zijn om door te
+      groeien. We kennen de markt, we begrijpen de ambitie en we bouwen
+      websites die bij die energie passen.
+
+# ------------------------------------------------------------
+# CTA BLOCK
+# ------------------------------------------------------------
+cta:
+  headline: "Klaar voor een website die werkt?"
+  subtext: >
+    Plan een vrijblijvend gesprek. We kijken samen naar jouw bedrijf,
+    jouw doelen en wat een nieuwe website voor jou kan doen in Rotterdam.
+  button_label: "Vraag een offerte aan"
+  button_href: "/contact/"
+
+# ------------------------------------------------------------
+# FAQ — 5 required
+# ------------------------------------------------------------
+faq:
+  - id: 1
+    question: "Wat kost een professionele website in Rotterdam?"
+    answer: >
+      De kosten voor een professionele website variëren sterk op basis van
+      omvang, functionaliteiten en maatwerk. Een zakelijke website bij BDMNL
+      start vanaf een vast bedrag dat op aanvraag beschikbaar is. We zijn
+      transparant over prijzen en leveren altijd een gedetailleerde offerte
+      voordat we starten.
+
+  - id: 2
+    question: "Hoe lang duurt het bouwen van een website?"
+    answer: >
+      Een standaard zakelijke website is gemiddeld binnen 3 tot 5 weken
+      gereed. Voor complexere projecten zoals webshops of maatwerk platforms
+      rekenen we 6 tot 10 weken. We stemmen de planning altijd af in de
+      briefing en houden ons aan gemaakte afspraken.
+
+  - id: 3
+    question: "Bouwt BDMNL ook webshops in Rotterdam?"
+    answer: >
+      Ja. BDMNL bouwt zowel zakelijke websites als volledig functionele
+      webshops voor Rotterdamse ondernemers. We werken met bewezen
+      e-commerce oplossingen die schaalbaar zijn en goed converteren.
+      Vraag een gesprek aan om de mogelijkheden te bespreken.
+
+  - id: 4
+    question: "Is mijn website vindbaar in Google na oplevering?"
+    answer: >
+      Elke website die BDMNL bouwt is technisch SEO-proof bij oplevering.
+      Dat betekent: correcte meta-structuur, snelle laadtijden, mobiel-vriendelijk,
+      schema-markup en schone URL-structuur. Voor verdere Google-vindbaarheid
+      bieden we aanvullende SEO-diensten aan op basis van jouw doelstellingen.
+
+  - id: 5
+    question: "Kan ik mijn website zelf beheren na oplevering?"
+    answer: >
+      Ja. We leveren elke website op met een gebruiksvriendelijk CMS waarmee
+      jij zelfstandig teksten, afbeeldingen en pagina's kunt aanpassen.
+      We geven een korte training bij oplevering en zijn bereikbaar voor
+      vragen. Wil je dat wij het beheer overnemen? Dat is ook mogelijk.
