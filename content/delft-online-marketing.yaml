@@ -1,0 +1,115 @@
+# ============================================================
+# BDMNL CONTENT FILE
+# Page: Online marketing Delft
+# Template: framework/master-template.html
+# Output: pages/online-marketing-delft/index.html
+# ============================================================
+
+page:
+  service: online marketing
+  city: Delft
+  output_path: pages/online-marketing-delft/index.html
+
+seo:
+  meta_title: "Online marketing Delft | Strategie & groei | BDMNL"
+  meta_desc: "Online marketing in Delft? BDMNL helpt bedrijven met websites, SEO, content en campagnes die samen zorgen voor groei."
+  meta_canonical: "https://bdmnl.nl/online-marketing-delft/"
+  schema_service_name: "Online marketing strategie en digitale groei in Delft"
+  schema_area_served: "Delft"
+  schema_phone: "+31000000000"
+  schema_email: "info@bdmnl.nl"
+
+breadcrumb:
+  parent_label: "Online marketing"
+  parent_href: "/online-marketing/"
+
+hero:
+  h1: "Online marketing Delft — BDMNL"
+  intro_p1: >
+    Delftse bedrijven hebben een online basis nodig die inhoud, vindbaarheid
+    en campagnes met elkaar verbindt. BDMNL helpt je groeien met een duidelijke
+    digitale strategie en meetbare vervolgstappen.
+
+intro:
+  p1: >
+    Delftse bedrijven hebben een online basis nodig die inhoud, vindbaarheid
+    en campagnes met elkaar verbindt. BDMNL helpt je groeien met een duidelijke
+    digitale strategie en meetbare vervolgstappen.
+  p2: >
+    We kijken naar je website, doelgroep, lokale markt en bestaande kanalen.
+    Daarna bouwen we een marketingstructuur waarin SEO, content en campagnes
+    elkaar versterken in plaats van los naast elkaar te staan.
+
+sections:
+  - id: 1
+    h2: "Digitale groei voor bedrijven in Delft"
+    p: >
+      Delft combineert technische kennis, creatieve ondernemers en lokale
+      dienstverlening. Online marketing moet daarom scherp, inhoudelijk en
+      betrouwbaar zijn. BDMNL helpt je aanbod helder positioneren en vindbaar
+      maken voor de juiste doelgroep.
+    image:
+      src: "/assets/images/seo/premium-architecture-detail.jpg"
+      alt: "Architectonisch detail als premium visuele sfeer voor online marketing in Delft"
+
+  - id: 2
+    h2: "Website, SEO en campagnes in één lijn"
+    p: >
+      Campagnes werken beter wanneer de website klopt. We zorgen dat bezoekers
+      landen op duidelijke pagina's, begrijpen wat je aanbiedt en eenvoudig de
+      volgende stap kunnen zetten. Zo wordt marketing een systeem in plaats van
+      losse acties.
+    image:
+      src: "/assets/images/seo/online-marketing-strategy.jpg"
+      alt: "Online marketing strategie met teamoverleg en digitale planning"
+
+  - id: 3
+    h2: "Meetbaar zonder ruis"
+    p: >
+      We sturen op zichtbaarheid, aanvragen en kwaliteit van verkeer. Geen
+      dashboards vol ruis, maar heldere inzichten waarmee je begrijpt welke
+      content, campagnes en pagina's bijdragen aan groei.
+    image:
+      src: "/assets/images/seo/digital-team-workshop.jpg"
+      alt: "Digitaal teamoverleg voor meetbare online marketing in Delft"
+
+cta:
+  headline: "Klaar voor meer samenhang in je marketing?"
+  subtext: >
+    Plan een gesprek met BDMNL. We bekijken je website, doelgroep en kansen
+    voor online groei in Delft.
+  button_label: "Plan een groeigesprek"
+  button_href: "/contact/"
+
+faq:
+  - id: 1
+    question: "Wat valt onder online marketing in Delft?"
+    answer: >
+      Online marketing kan bestaan uit SEO, content, campagnes, social media
+      en conversieverbetering. BDMNL kijkt vooral naar de samenhang tussen die
+      kanalen en je website.
+
+  - id: 2
+    question: "Kan BDMNL helpen met lokale zichtbaarheid?"
+    answer: >
+      Ja. We kijken naar zoekgedrag in Delft, relevante diensten en lokale
+      context. Daarna versterken we pagina's en content die passen bij je
+      doelgroep.
+
+  - id: 3
+    question: "Werken campagnes beter met een goede website?"
+    answer: >
+      Ja. Campagnes sturen bezoekers naar je website. Als die pagina niet
+      duidelijk, snel of overtuigend is, gaat veel waarde verloren.
+
+  - id: 4
+    question: "Is online marketing geschikt voor kleinere bedrijven?"
+    answer: >
+      Zeker. Juist kleinere bedrijven hebben baat bij focus. We kiezen de
+      kanalen en acties die passen bij je markt, budget en groeifase.
+
+  - id: 5
+    question: "Hoe meten jullie resultaat?"
+    answer: >
+      We kijken naar zichtbaarheid, verkeer, aanvragen en gedrag op de website.
+      De rapportage blijft praktisch, zodat je weet welke stappen waardevol zijn.

@@ -1,0 +1,115 @@
+# ============================================================
+# BDMNL CONTENT FILE
+# Page: SEO bureau Rotterdam
+# Template: framework/master-template.html
+# Output: pages/seo-bureau-rotterdam/index.html
+# ============================================================
+
+page:
+  service: seo bureau
+  city: Rotterdam
+  output_path: pages/seo-bureau-rotterdam/index.html
+
+seo:
+  meta_title: "SEO bureau Rotterdam | Lokale vindbaarheid | BDMNL"
+  meta_desc: "SEO bureau in Rotterdam nodig? BDMNL versterkt techniek, content en lokale vindbaarheid voor bedrijven die meer aanvragen willen."
+  meta_canonical: "https://bdmnl.nl/seo-bureau-rotterdam/"
+  schema_service_name: "SEO bureau en lokale zoekmachine optimalisatie in Rotterdam"
+  schema_area_served: "Rotterdam"
+  schema_phone: "+31000000000"
+  schema_email: "info@bdmnl.nl"
+
+breadcrumb:
+  parent_label: "SEO"
+  parent_href: "/seo/"
+
+hero:
+  h1: "SEO bureau Rotterdam — BDMNL"
+  intro_p1: >
+    Rotterdamse bedrijven concurreren online op vertrouwen, snelheid en relevantie.
+    BDMNL helpt je website beter gevonden worden met technische SEO, sterke content
+    en een structuur die bezoekers richting contact brengt.
+
+intro:
+  p1: >
+    Rotterdamse bedrijven concurreren online op vertrouwen, snelheid en relevantie.
+    BDMNL helpt je website beter gevonden worden met technische SEO, sterke content
+    en een structuur die bezoekers richting contact brengt.
+  p2: >
+    We kijken verder dan losse zoekwoorden. Je website moet snel laden, logisch
+    lezen, lokale intentie beantwoorden en intern goed verbonden zijn met je
+    belangrijkste diensten.
+
+sections:
+  - id: 1
+    h2: "Lokale SEO voor een concurrerende Rotterdamse markt"
+    p: >
+      Rotterdam is breed, zakelijk en snel. Klanten vergelijken meerdere aanbieders
+      voordat ze contact opnemen. Daarom bouwen we SEO-structuren die niet alleen
+      rankings ondersteunen, maar ook direct vertrouwen geven aan bezoekers.
+    image:
+      src: "/assets/images/seo/rotterdam-erasmusbrug.jpg"
+      alt: "Rotterdam skyline met Erasmusbrug als lokale context voor SEO bureau Rotterdam"
+
+  - id: 2
+    h2: "Techniek, content en interne links als basis"
+    p: >
+      Goede SEO begint met een website die technisch klopt. We verbeteren
+      laadsnelheid, metadata, headings, schema en interne linkstructuur. Daarna
+      versterken we de inhoud met pagina's die aansluiten op echte zoekintentie.
+    image:
+      src: "/assets/images/seo/online-marketing-strategy.jpg"
+      alt: "Strategische online marketing en SEO analyse voor Rotterdamse bedrijven"
+
+  - id: 3
+    h2: "SEO die aanvragen ondersteunt"
+    p: >
+      Zichtbaarheid is pas waardevol wanneer bezoekers begrijpen waarom ze voor
+      jou moeten kiezen. Daarom combineren we lokale SEO met duidelijke
+      bewijsvoering, sterke CTA's en content die menselijk blijft lezen.
+    image:
+      src: "/assets/images/seo/rotterdam-business-strategy.jpg"
+      alt: "Zakelijke strategie voor lokale SEO en online groei in Rotterdam"
+
+cta:
+  headline: "Wil je beter gevonden worden in Rotterdam?"
+  subtext: >
+    Plan een vrijblijvend gesprek. We bekijken je huidige website, lokale kansen
+    en de SEO-structuur die past bij jouw bedrijf.
+  button_label: "Plan een SEO gesprek"
+  button_href: "/contact/"
+
+faq:
+  - id: 1
+    question: "Wat doet een SEO bureau in Rotterdam precies?"
+    answer: >
+      Een SEO bureau verbetert techniek, content en autoriteit zodat je website
+      beter gevonden wordt. Voor Rotterdam kijken we ook naar lokale concurrentie,
+      wijken, zoekintentie en conversiepunten.
+
+  - id: 2
+    question: "Hoe snel zie ik SEO resultaat?"
+    answer: >
+      SEO resultaat hangt af van concurrentie, techniek en bestaande content.
+      Vaak zie je eerst technische verbeteringen en later groei in rankings,
+      verkeer en aanvragen.
+
+  - id: 3
+    question: "Schrijft BDMNL ook SEO-content?"
+    answer: >
+      Ja. BDMNL schrijft SEO-content die natuurlijk leest en aansluit op je
+      diensten. We voorkomen keyword stuffing en bouwen pagina's die bezoekers
+      echt verder helpen.
+
+  - id: 4
+    question: "Is lokale SEO belangrijk voor Rotterdam?"
+    answer: >
+      Ja. In Rotterdam zoeken klanten vaak gericht naar een specialist in de
+      stad of regio. Lokale SEO helpt Google en bezoekers begrijpen waar je
+      actief bent en waarom je relevant bent.
+
+  - id: 5
+    question: "Kan SEO gecombineerd worden met een nieuwe website?"
+    answer: >
+      Zeker. De beste resultaten ontstaan wanneer webdesign, techniek en SEO
+      samen worden opgezet. Zo staat de structuur vanaf de start goed.

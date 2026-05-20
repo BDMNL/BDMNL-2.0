@@ -1,0 +1,118 @@
+# ============================================================
+# BDMNL CONTENT FILE
+# Page: Webshop laten maken Spijkenisse
+# Template: framework/master-template.html
+# Output: pages/webshop-laten-maken-spijkenisse/index.html
+# ============================================================
+
+page:
+  service: webshop laten maken
+  city: Spijkenisse
+  output_path: pages/webshop-laten-maken-spijkenisse/index.html
+
+seo:
+  meta_title: "Webshop laten maken Spijkenisse | BDMNL"
+  meta_desc: "Webshop laten maken in Spijkenisse? BDMNL bouwt snelle, professionele webshops met sterke productpresentatie en conversie."
+  meta_canonical: "https://bdmnl.nl/webshop-laten-maken-spijkenisse/"
+  schema_service_name: "Webshop laten maken en e-commerce ontwikkeling in Spijkenisse"
+  schema_area_served: "Spijkenisse"
+  schema_phone: "+31000000000"
+  schema_email: "info@bdmnl.nl"
+
+breadcrumb:
+  parent_label: "Webshop laten maken"
+  parent_href: "/webshop-laten-maken/"
+
+hero:
+  h1: "Webshop laten maken Spijkenisse — BDMNL"
+  intro_p1: >
+    Een webshop voor Spijkenisse moet vertrouwen geven, snel werken en klanten
+    zonder twijfel naar aankoop of aanvraag begeleiden. BDMNL bouwt webshops
+    die productpresentatie, techniek en conversie samenbrengen.
+
+intro:
+  p1: >
+    Een webshop voor Spijkenisse moet vertrouwen geven, snel werken en klanten
+    zonder twijfel naar aankoop of aanvraag begeleiden. BDMNL bouwt webshops
+    die productpresentatie, techniek en conversie samenbrengen.
+  p2: >
+    We werken voor ondernemers in Spijkenisse en Nissewaard die hun aanbod
+    professioneel online willen verkopen. Van structuur en design tot techniek
+    en vindbaarheid: alles moet logisch en betrouwbaar voelen.
+
+sections:
+  - id: 1
+    h2: "Een webshop die vertrouwen opbouwt"
+    p: >
+      Bezoekers kopen pas wanneer je webshop professioneel voelt. We ontwerpen
+      productpagina's, categorieën en contactmomenten zo dat klanten snel
+      begrijpen wat je aanbiedt, waarom het betrouwbaar is en hoe ze bestellen
+      of een aanvraag doen.
+    image:
+      src: "/assets/images/seo/local-business-interior.jpg"
+      alt: "Premium lokale winkelomgeving als inspiratie voor een webshop in Spijkenisse"
+
+  - id: 2
+    h2: "Snel, mobielvriendelijk en schaalbaar"
+    p: >
+      Een webshop moet technisch sterk zijn. BDMNL bouwt met aandacht voor
+      snelheid, mobiel gebruik, veilige basis, duidelijke checkout en
+      uitbreidbaarheid. Zo kun je later groeien zonder opnieuw te beginnen.
+    image:
+      src: "/assets/images/seo/premium-webdesign-studio.jpg"
+      alt: "Moderne digitale werkplek voor webshop ontwerp en ontwikkeling"
+
+  - id: 3
+    h2: "E-commerce met lokale basis"
+    p: >
+      Ook een webshop heeft lokale context nodig. Klanten uit Spijkenisse,
+      Nissewaard en omgeving willen weten wie achter de webshop zit. We
+      combineren professionele presentatie met vertrouwen, bereikbaarheid en
+      vindbaarheid.
+    image:
+      src: "/assets/images/seo/strategy-meeting-table.jpg"
+      alt: "Strategisch overleg voor e-commerce groei in Spijkenisse"
+
+cta:
+  headline: "Klaar voor een webshop die vertrouwen wekt?"
+  subtext: >
+    Plan een vrijblijvend gesprek. We kijken naar je aanbod, doelgroep en de
+    webshopstructuur die past bij jouw bedrijf in Spijkenisse.
+  button_label: "Vraag webshop advies aan"
+  button_href: "/contact/"
+
+faq:
+  - id: 1
+    question: "Wat kost een webshop laten maken in Spijkenisse?"
+    answer: >
+      De kosten hangen af van het aantal producten, betaalmethoden,
+      koppelingen en maatwerk. BDMNL maakt vooraf een duidelijke offerte zodat
+      je weet waar je aan toe bent.
+
+  - id: 2
+    question: "Kan BDMNL ook productstructuur bepalen?"
+    answer: >
+      Ja. We helpen met categorieën, productpagina's, filters en logische
+      routes naar aankoop of aanvraag. Een goede structuur maakt de webshop
+      prettiger en beter vindbaar.
+
+  - id: 3
+    question: "Wordt mijn webshop mobielvriendelijk?"
+    answer: >
+      Ja. Mobiel gebruik is standaard onderdeel van de opbouw. Producten,
+      navigatie, checkout en contactmomenten moeten ook op telefoon helder en
+      snel werken.
+
+  - id: 4
+    question: "Is SEO belangrijk voor een webshop?"
+    answer: >
+      Zeker. Producten en categorieën moeten goed begrepen worden door Google.
+      We zorgen voor een technische SEO-basis en kunnen later uitbreiden met
+      content en optimalisatie.
+
+  - id: 5
+    question: "Kan de webshop later worden uitgebreid?"
+    answer: >
+      Ja. We bouwen met schaalbaarheid in gedachten. Nieuwe producten,
+      categorieën, landingspagina's of marketingkoppelingen kunnen later worden
+      toegevoegd.

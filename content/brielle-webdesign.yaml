@@ -65,6 +65,9 @@ sections:
       die bij die identiteit past — professioneel, persoonlijk en herkenbaar.
       BDMNL ontwerpt websites die niet alleen mooi zijn, maar ook echt werken
       voor jouw doelgroep in Brielle en omgeving.
+    image:
+      src: "/assets/images/seo/local-business-interior.jpg"
+      alt: "Premium lokale bedrijfsomgeving als sfeerbeeld voor webdesign in Brielle"
 
   - id: 2
     h2: "Technisch sterk, snel en vindbaar in Google"
@@ -74,6 +77,9 @@ sections:
       snelheid, veiligheid en mobiel gebruik. We bouwen met schone code,
       SSL-certificaten, correcte meta-structuur en technische SEO standaard
       ingebouwd. Geen extra kosten, geen excuses — gewoon goed werk.
+    image:
+      src: "/assets/images/seo/premium-webdesign-studio.jpg"
+      alt: "Rustige premium webdesign studio met moderne werkplek"
 
   - id: 3
     h2: "Lokale bedrijven, lokale resultaten"
@@ -83,6 +89,9 @@ sections:
       je wilt een website die je trots op kunt zijn, en je wilt een partner
       die je niet behandelt als een nummer. Bij BDMNL werken we persoonlijk
       samen, van briefing tot oplevering en daarna.
+    image:
+      src: "/assets/images/seo/strategy-meeting-table.jpg"
+      alt: "Strategisch overleg voor lokale bedrijven in Brielle en Voorne-Putten"
 
 # ------------------------------------------------------------
 # CTA BLOCK
