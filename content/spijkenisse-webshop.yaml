@@ -1,0 +1,122 @@
+# ============================================================
+# BDMNL CONTENT FILE
+# Page: Webshop Laten Maken Spijkenisse
+# Template: framework/master-template.html
+# Output: pages/webshop-laten-maken-spijkenisse/index.html
+# ============================================================
+
+page:
+  service: webshop-laten-maken
+  city: Spijkenisse
+  output_path: pages/webshop-laten-maken-spijkenisse/index.html
+
+seo:
+  meta_title: "Webshop Laten Maken Spijkenisse | BDMNL"
+  meta_desc: "Webshop laten maken in Spijkenisse? BDMNL bouwt snelle, conversiegerichte webshops voor ondernemers in Spijkenisse en Voorne-Putten. Vraag offerte aan."
+  meta_canonical: "https://bdmnl.nl/webshop-laten-maken-spijkenisse/"
+  schema_service_name: "Webshop ontwikkeling en e-commerce oplossingen voor bedrijven in Spijkenisse"
+  schema_area_served: "Spijkenisse"
+  schema_phone: "+31000000000"
+  schema_email: "info@bdmnl.nl"
+
+breadcrumb:
+  parent_label: "Webshop laten maken"
+  parent_href: "/webshop-laten-maken/"
+
+hero:
+  h1: "Webshop Laten Maken Spijkenisse — BDMNL"
+  intro_p1: >
+    Wil jij online verkopen vanuit Spijkenisse? BDMNL bouwt professionele
+    webshops die snel laden, goed converteren en eenvoudig te beheren zijn.
+    Van een kleine startende webshop tot een volledig uitgerust e-commerce
+    platform — wij zorgen dat jij online kunt groeien.
+
+intro:
+  p1: >
+    Wil jij online verkopen vanuit Spijkenisse? BDMNL bouwt professionele
+    webshops die snel laden, goed converteren en eenvoudig te beheren zijn.
+    Van een kleine startende webshop tot een volledig uitgerust e-commerce
+    platform — wij zorgen dat jij online kunt groeien.
+  p2: >
+    Een goede webshop is meer dan een lijst met producten. Het is een
+    verkoopinstrument dat 24/7 voor jou werkt. BDMNL combineert strak design,
+    technisch sterke bouw en slimme conversie-optimalisatie voor webshops
+    die daadwerkelijk verkopen.
+
+sections:
+  - id: 1
+    h2: "Een webshop die verkoopt voor jouw bedrijf in Spijkenisse"
+    p: >
+      Elke webshop die BDMNL bouwt is ontworpen met conversie als hoofddoel.
+      Dat betekent een overzichtelijke productstructuur, heldere call-to-actions,
+      een soepel afrekenproces en vertrouwenssignalen op de juiste plek.
+      We bouwen webshops die bezoekers omzetten in klanten — voor ondernemers
+      in Spijkenisse en de Voorne-Putten regio.
+
+  - id: 2
+    h2: "Technisch sterk, snel en veilig"
+    p: >
+      Een trage webshop verliest klanten. Elke seconde laadtijd kost je
+      conversies. BDMNL bouwt webshops die razendsnel laden op alle apparaten,
+      voorzien zijn van SSL-beveiliging, veilige betaalopties en technische
+      SEO als standaard. Jouw klanten in Spijkenisse kunnen veilig en vlot
+      bestellen — op desktop, tablet en mobiel.
+
+  - id: 3
+    h2: "Beheer je webshop zelf, of laat het aan ons over"
+    p: >
+      Na oplevering krijg je een gebruiksvriendelijk beheerpaneel waarmee
+      je zelf producten kunt toevoegen, bestellingen kunt verwerken en
+      content kunt aanpassen. Geen technische kennis vereist. Wil je dat
+      BDMNL het beheer en de doorontwikkeling overneemt? Dat is ook
+      mogelijk — op basis van een helder maandbedrag.
+
+cta:
+  headline: "Klaar om online te verkopen vanuit Spijkenisse?"
+  subtext: >
+    Vraag een vrijblijvende offerte aan. We kijken samen naar jouw producten,
+    doelgroep en wat de beste webshop-aanpak is voor jouw situatie.
+  button_label: "Vraag een offerte aan"
+  button_href: "/contact/"
+
+faq:
+  - id: 1
+    question: "Wat kost een webshop laten maken in Spijkenisse?"
+    answer: >
+      De kosten voor een webshop variëren sterk op basis van het aantal
+      producten, gewenste functionaliteiten en integraties. Een startende
+      webshop bij BDMNL begint vanaf een vast tarief dat op aanvraag
+      beschikbaar is. We leveren altijd een gedetailleerde offerte op maat
+      voordat we starten.
+
+  - id: 2
+    question: "Hoe lang duurt het bouwen van een webshop?"
+    answer: >
+      Een standaard webshop is gemiddeld binnen 4 tot 6 weken gereed na
+      goedkeuring van het ontwerp en aanlevering van producten en content.
+      Voor complexere webshops met maatwerk integraties rekenen we 6 tot
+      10 weken. We werken met een heldere planning en houden ons aan afspraken.
+
+  - id: 3
+    question: "Welk platform gebruikt BDMNL voor webshops?"
+    answer: >
+      We werken met bewezen e-commerce platforms die schaalbaar en beheervriendelijk
+      zijn. De keuze van platform hangt af van jouw situatie, doelstellingen en
+      budget. Tijdens het intakegesprek bespreken we welk platform het beste past
+      bij jouw webshop in Spijkenisse.
+
+  - id: 4
+    question: "Is mijn webshop vindbaar in Google na oplevering?"
+    answer: >
+      Elke webshop die BDMNL bouwt is technisch SEO-proof bij oplevering.
+      Dat betekent correcte productstructuur, snelle laadtijden, mobiel-vriendelijk
+      ontwerp, canonical-tags en schema-markup voor producten. Voor verdere
+      Google-zichtbaarheid bieden we aanvullende SEO-diensten aan.
+
+  - id: 5
+    question: "Kan ik mijn bestaande webshop laten verbeteren?"
+    answer: >
+      Ja. Naast het bouwen van nieuwe webshops helpt BDMNL ook bij het
+      optimaliseren van bestaande webshops. We analyseren conversieknelpunten,
+      laadsnelheid, gebruikerservaring en SEO-prestaties en pakken de
+      verbeterpunten aan die het meeste impact hebben.
