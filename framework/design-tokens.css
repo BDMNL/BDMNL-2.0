@@ -723,232 +723,185 @@ img, svg {
 /* ============================================================
    FOOTER — LOCKED
    ============================================================ */
+/* ============================================================
+   FOOTER v2 — Real BDMNL layout matching www.bdmnl.nl
+   4 columns: Navigatie | Diensten | Kennisbank | Contact
+   Dark navy background #070a26
+   ============================================================ */
+
 .bdmnl-footer {
-  background-color: var(--color-black);
-  color: var(--color-text-inverse);
-  padding-block: var(--section-py);
+  background-color: #070a26;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.bdmnl-footer__main {
+  padding-block: var(--space-16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .bdmnl-footer__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: var(--space-12);
-  padding-bottom: var(--space-12);
-  border-bottom: var(--border-width-thin) solid var(--color-border-dark);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-10);
 }
 
-.bdmnl-footer .bdmnl-logo__text {
-  color: var(--color-white);
-}
-
-.bdmnl-footer__tagline {
-  margin-top: var(--space-4);
-  font-size: var(--text-sm);
-  line-height: var(--leading-relaxed);
-  color: var(--color-grey-500);
-  max-width: 240px;
-}
-
-.bdmnl-footer__nav-title {
-  font-size: var(--text-xs);
-  font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-widest);
-  text-transform: uppercase;
-  color: var(--color-grey-500);
-  margin-bottom: var(--space-4);
-}
-
-.bdmnl-footer__nav-list {
-  list-style: none;
+.bdmnl-footer__col {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
-}
-
-.bdmnl-footer__nav-list a {
-  font-size: var(--text-sm);
-  color: var(--color-grey-300);
-  transition: var(--transition-color);
-}
-
-.bdmnl-footer__nav-list a:hover {
-  color: var(--color-white);
-}
-
-.bdmnl-footer__address {
-  font-style: normal;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  font-size: var(--text-sm);
-  color: var(--color-grey-300);
-}
-
-.bdmnl-footer__address a {
-  color: var(--color-grey-300);
-}
-.bdmnl-footer__address a:hover {
-  color: var(--color-white);
-}
-
-.bdmnl-footer__bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: var(--space-8);
-  flex-wrap: wrap;
   gap: var(--space-4);
 }
 
-.bdmnl-footer__legal {
-  font-size: var(--text-xs);
-  color: var(--color-grey-500);
+.bdmnl-footer__col-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
 }
 
-.bdmnl-footer__legal a {
-  color: var(--color-grey-500);
-  margin-left: var(--space-2);
+.bdmnl-footer__col-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
 }
-.bdmnl-footer__legal a:hover {
+
+.bdmnl-footer__col-list a {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: var(--transition-color);
+}
+
+.bdmnl-footer__col-list a:hover {
   color: var(--color-white);
 }
 
-/* Orange micro-accent in footer */
-.bdmnl-accent {
+.bdmnl-footer__contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bdmnl-footer__contact-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.bdmnl-footer__contact-icon {
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.bdmnl-footer__contact-link {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: var(--transition-color);
+}
+
+a.bdmnl-footer__contact-link:hover {
+  color: var(--color-white);
+}
+
+.bdmnl-footer__bottom-bar {
+  padding-block: var(--space-8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bdmnl-footer__bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.bdmnl-footer__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.bdmnl-footer__social-label {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+}
+
+.bdmnl-footer__social-icons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.bdmnl-footer__social-icon {
+  color: rgba(255, 255, 255, 0.5);
+  transition: var(--transition-color);
+  display: flex;
+  align-items: center;
+}
+
+.bdmnl-footer__social-icon:hover {
+  color: var(--color-white);
+}
+
+.bdmnl-footer__copy {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+}
+
+.bdmnl-footer__legal-bar {
+  padding-block: var(--space-6);
+}
+
+.bdmnl-footer__legal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.bdmnl-footer__legal-nav a {
   font-size: var(--text-xs);
-  font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: var(--color-accent);
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  transition: var(--transition-color);
+}
+
+.bdmnl-footer__legal-nav a:hover {
+  color: var(--color-white);
 }
 
 @media (max-width: 1024px) {
   .bdmnl-footer__grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
   }
 }
 
 @media (max-width: 640px) {
   .bdmnl-footer__grid {
     grid-template-columns: 1fr;
-    gap: var(--space-8);
+    gap: var(--space-6);
   }
-  .bdmnl-footer__bottom {
+  .bdmnl-footer__bottom-inner {
     flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* ============================================================
-   ACCESSIBILITY — LOCKED
-   ============================================================ */
-:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
-  border-radius: var(--radius-sm);
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* ============================================================
-   PRINT — LOCKED
-   ============================================================ */
-@media print {
-  .bdmnl-header,
-  .bdmnl-nav__toggle,
-  .bdmnl-cta-block,
-  .bdmnl-footer {
-    display: none !important;
-  }
-  body.bdmnl-page {
-    font-size: 12pt;
-    color: #000;
-  }
-}
-
-
-/* ============================================================
-   HEADER CONTACT STRIP — LOCKED (added v1.1)
-   Real BDMNL contact details in header
-   ============================================================ */
-.bdmnl-header__contact {
-  display: flex;
-  align-items: center;
-  gap: var(--space-6);
-  margin-left: auto;
-  margin-right: var(--space-8);
-}
-
-.bdmnl-header__phone,
-.bdmnl-header__email {
-  font-size: var(--text-xs);
-  font-weight: var(--weight-medium);
-  letter-spacing: var(--tracking-wide);
-  color: var(--color-text-secondary);
-  text-decoration: none;
-  transition: var(--transition-color);
-  white-space: nowrap;
-}
-
-.bdmnl-header__phone:hover,
-.bdmnl-header__email:hover {
-  color: var(--color-text-primary);
-}
-
-@media (max-width: 1024px) {
-  .bdmnl-header__contact {
-    display: none;
-  }
-}
-
-
-/* ============================================================
-   HEADER v1.2 ADDITIONS — Logo dot, CTA strip, tagline
-   ============================================================ */
-
-/* Orange dot in logo */
-.bdmnl-logo__dot {
-  color: var(--color-accent);
-}
-
-/* Header CTA block (right side: tagline + phone) */
-.bdmnl-header__cta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 2px;
-  flex-shrink: 0;
-}
-
-/* "Samen groeien?" tagline above phone */
-.bdmnl-header__tagline {
-  font-size: var(--text-xs);
-  color: var(--color-text-secondary);
-  letter-spacing: var(--tracking-wide);
-  white-space: nowrap;
-}
-
-/* Footer legal links bottom bar */
-.bdmnl-footer__legal a + a::before {
-  content: none;
-}
-
-@media (max-width: 1024px) {
-  .bdmnl-header__cta {
-    display: none;
-  }
-  .bdmnl-nav__list {
+    align-items: flex-start;
     gap: var(--space-4);
-    flex-wrap: wrap;
+  }
+  .bdmnl-footer__social {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+  .bdmnl-footer__legal-nav {
+    gap: var(--space-4);
+    justify-content: flex-start;
   }
 }
