@@ -910,3 +910,45 @@ img, svg {
     display: none;
   }
 }
+
+
+/* ============================================================
+   HEADER v1.2 ADDITIONS — Logo dot, CTA strip, tagline
+   ============================================================ */
+
+/* Orange dot in logo */
+.bdmnl-logo__dot {
+  color: var(--color-accent);
+}
+
+/* Header CTA block (right side: tagline + phone) */
+.bdmnl-header__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+/* "Samen groeien?" tagline above phone */
+.bdmnl-header__tagline {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  letter-spacing: var(--tracking-wide);
+  white-space: nowrap;
+}
+
+/* Footer legal links bottom bar */
+.bdmnl-footer__legal a + a::before {
+  content: none;
+}
+
+@media (max-width: 1024px) {
+  .bdmnl-header__cta {
+    display: none;
+  }
+  .bdmnl-nav__list {
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+}
