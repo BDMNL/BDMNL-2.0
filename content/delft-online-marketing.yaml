@@ -1,0 +1,123 @@
+# ============================================================
+# BDMNL CONTENT FILE
+# Page: Online Marketing Delft
+# Template: framework/master-template.html
+# Output: pages/online-marketing-delft/index.html
+# ============================================================
+
+page:
+  service: online-marketing
+  city: Delft
+  output_path: pages/online-marketing-delft/index.html
+
+seo:
+  meta_title: "Online Marketing Delft | Meer klanten | BDMNL"
+  meta_desc: "Online marketing bureau in Delft. BDMNL combineert SEO, Google Ads en social media voor meetbare groei van jouw bedrijf in Delft en omgeving."
+  meta_canonical: "https://bdmnl.nl/online-marketing-delft/"
+  schema_service_name: "Online marketing strategie en uitvoering voor bedrijven in Delft"
+  schema_area_served: "Delft"
+  schema_phone: "+31000000000"
+  schema_email: "info@bdmnl.nl"
+
+breadcrumb:
+  parent_label: "Online Marketing"
+  parent_href: "/online-marketing/"
+
+hero:
+  h1: "Online Marketing Delft — Meer klanten met BDMNL"
+  intro_p1: >
+    Jouw bedrijf in Delft verdient een online marketingstrategie die echt
+    werkt. BDMNL combineert SEO, Google Ads en social media marketing tot
+    een samenhangende aanpak die meer bezoekers, meer leads en meer omzet
+    oplevert voor bedrijven in Delft en de regio.
+
+intro:
+  p1: >
+    Jouw bedrijf in Delft verdient een online marketingstrategie die echt
+    werkt. BDMNL combineert SEO, Google Ads en social media marketing tot
+    een samenhangende aanpak die meer bezoekers, meer leads en meer omzet
+    oplevert voor bedrijven in Delft en de regio.
+  p2: >
+    We werken strategisch, niet tactisch. Dat betekent dat we beginnen met
+    jouw bedrijfsdoelen en van daaruit de meest effectieve mix van kanalen
+    en middelen bepalen. Geen losse flodders, maar een gedreven aanpak met
+    meetbare resultaten.
+
+sections:
+  - id: 1
+    h2: "Een complete online marketingstrategie voor Delft"
+    p: >
+      Online marketing is meer dan een Facebook-advertentie of een Google-campagne.
+      Het is het geheel van kanalen, boodschappen en timing dat jouw ideale
+      klant in Delft op het juiste moment bereikt. BDMNL ontwikkelt een
+      strategie op maat — gebaseerd op data, jouw markt en jouw doelen.
+      Van bewustwording tot conversie, wij begeleiden de hele funnel.
+
+  - id: 2
+    h2: "Google Ads die direct resultaat leveren"
+    p: >
+      SEO duurt maanden. Google Ads geeft direct zichtbaarheid voor de
+      zoekopdrachten die tellen. BDMNL beheert Google Ads-campagnes voor
+      bedrijven in Delft met focus op rendement: lage kosten per lead,
+      hoge conversieratio en maximale return on ad spend. We bouwen en
+      optimaliseren campagnes die elke euro verantwoorden.
+
+  - id: 3
+    h2: "Social media marketing die converteert"
+    p: >
+      Social media is niet voor iedereen even relevant — maar voor de
+      bedrijven in Delft waarvoor het werkt, werkt het uitstekend.
+      BDMNL beheert social media campagnes op LinkedIn, Instagram en
+      Facebook die niet alleen bereik genereren, maar ook daadwerkelijk
+      leads en verkopen opleveren. Gerichte targeting op jouw doelgroep
+      in Delft en de regio.
+
+cta:
+  headline: "Klaar om online te groeien in Delft?"
+  subtext: >
+    Plan een gratis strategiegesprek. We kijken samen naar jouw huidige
+    online aanwezigheid en de kansen die er voor jouw Delfts bedrijf liggen.
+  button_label: "Plan een gratis gesprek"
+  button_href: "/contact/"
+
+faq:
+  - id: 1
+    question: "Wat kost online marketing voor een bedrijf in Delft?"
+    answer: >
+      Online marketingkosten variëren sterk op basis van kanalen, doelstellingen
+      en advertentiebudget. BDMNL werkt met transparante maandelijkse pakketten
+      en geeft altijd een gedetailleerde offerte op maat. We bespreken eerlijk
+      wat realistisch is voor jouw budget en doelen in Delft.
+
+  - id: 2
+    question: "Welke online marketingkanalen zijn het meest effectief voor Delft?"
+    answer: >
+      Dat hangt af van jouw branche en doelgroep. Voor B2B-bedrijven in Delft
+      is LinkedIn vaak zeer effectief, gecombineerd met SEO en content.
+      Voor B2C-bedrijven werkt Google Ads en Instagram goed. BDMNL analyseert
+      jouw markt en adviseert de meest rendabele mix voor jouw situatie.
+
+  - id: 3
+    question: "Combineert BDMNL SEO met online marketing?"
+    answer: >
+      Ja, absoluut. SEO en online marketing versterken elkaar. Een goede
+      SEO-basis zorgt voor structureel organisch verkeer, terwijl Google
+      Ads direct bereik geeft. BDMNL integreert beide in een samenhangende
+      strategie zodat jij het meeste uit jouw marketingbudget haalt.
+
+  - id: 4
+    question: "Hoe snel zie ik resultaat van online marketing in Delft?"
+    answer: >
+      Google Ads levert direct resultaat zodra de campagne live gaat.
+      SEO en content marketing vragen meer tijd — doorgaans 3 tot 6 maanden
+      voor zichtbare verbeteringen. Social media campagnes leveren binnen
+      weken meetbare betrokkenheid. We zijn transparant over verwachtingen
+      en rapporteren maandelijks.
+
+  - id: 5
+    question: "Rapporteert BDMNL over online marketingresultaten?"
+    answer: >
+      Ja. Elke maand ontvang je een helder rapport met de prestaties per
+      kanaal: verkeer, leads, conversies, advertentieresultaten en SEO-posities.
+      We bespreken de resultaten, analyseren wat werkt en passen de strategie
+      aan waar nodig. Transparantie is voor ons geen extra service — het is standaard.
