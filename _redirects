@@ -6,3 +6,20 @@
 /online-marketing-delft/*               /pages/online-marketing-delft/:splat                200!
 /webshop-laten-maken-spijkenisse/*      /pages/webshop-laten-maken-spijkenisse/:splat       200!
 /website-laten-maken-rotterdam/*        /pages/website-laten-maken-rotterdam/:splat          200!
+
+# =============================================================
+# PHASE C — URL MISMATCH 301 REDIRECTS (old nested -> flat canonical)
+# Added: migration-first-20-commercial Phase C
+# =============================================================
+
+# webdesign-brielle: old nested -> new flat canonical
+/webdesign/webdesign-brielle/*          /webdesign-brielle/:splat               301!
+
+# webdesign-rotterdam: old nested -> new flat canonical
+/webdesign/webdesign-rotterdam/*        /webdesign-rotterdam/:splat              301!
+
+# online-marketing-delft: old nested -> new flat canonical
+/online-marketing/online-marketing-delft/*  /online-marketing-delft/:splat      301!
+
+# webdesign-rotterdam framework rewrite (200! — serve pages/ version at flat URL)
+/webdesign-rotterdam/*                  /pages/webdesign-rotterdam/:splat        200!
