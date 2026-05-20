@@ -1,0 +1,5 @@
+# BDMNL Generated Pages
+# This folder holds all generated SEO pages.
+# Each page lives in its own subfolder: [service]-[city]/index.html
+# Example: pages/webdesign-rotterdam/index.html
+# DO NOT edit files in this folder manually — use the YAML content files and master template.
