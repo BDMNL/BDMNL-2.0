@@ -1,0 +1,138 @@
+# ============================================================
+# BDMNL CONTENT FILE
+# Page: Webdesign Brielle
+# Template: framework/master-template.html
+# Output: pages/webdesign-brielle/index.html
+# Status: EXAMPLE — replace with final copy before publishing
+# ============================================================
+
+page:
+  service: webdesign
+  city: Brielle
+  output_path: pages/webdesign-brielle/index.html
+
+# ------------------------------------------------------------
+# SEO META — LOCKED LIMITS: title max 60 chars, desc max 155
+# ------------------------------------------------------------
+seo:
+  meta_title: "Webdesign Brielle | Premium websites | BDMNL"
+  meta_desc: "Professioneel webdesign in Brielle. BDMNL bouwt snelle, conversiegerichte websites voor lokale bedrijven in Brielle en de Voorne-Putten regio."
+  meta_canonical: "https://bdmnl.nl/webdesign-brielle/"
+  schema_service_name: "Premium webdesign en website ontwikkeling in Brielle"
+  schema_area_served: "Brielle"
+  schema_phone: "+31000000000"
+  schema_email: "info@bdmnl.nl"
+
+# ------------------------------------------------------------
+# BREADCRUMB
+# ------------------------------------------------------------
+breadcrumb:
+  parent_label: "Webdesign"
+  parent_href: "/webdesign/"
+
+# ------------------------------------------------------------
+# HERO
+# ------------------------------------------------------------
+hero:
+  h1: "Professioneel Webdesign Brielle — BDMNL"
+  intro_p1: >
+    Jouw bedrijf in Brielle verdient een website die opvalt, snel laadt en
+    nieuwe klanten aantrekt. BDMNL ontwerpt en bouwt premium websites voor
+    ondernemers in Brielle en de Voorne-Putten regio die serieus willen groeien.
+
+# ------------------------------------------------------------
+# INTRO SECTION
+# ------------------------------------------------------------
+intro:
+  p1: >
+    Jouw bedrijf in Brielle verdient een website die opvalt, snel laadt en
+    nieuwe klanten aantrekt. BDMNL ontwerpt en bouwt premium websites voor
+    ondernemers in Brielle en de Voorne-Putten regio die serieus willen groeien.
+  p2: >
+    Of je nu een lokale dienstverlener bent, een winkel in het centrum hebt
+    of een groeiend bedrijf runt — wij bouwen een website die bij jouw ambities
+    past. Strak design, technisch sterk, en gebouwd om te scoren in Google.
+
+# ------------------------------------------------------------
+# CONTENT SECTIONS — 3 required
+# ------------------------------------------------------------
+sections:
+  - id: 1
+    h2: "Een website die past bij jouw bedrijf in Brielle"
+    p: >
+      Brielle is een stad met karakter. Historisch, hecht, met een sterk lokaal
+      ondernemersklimaat. Als lokaal bedrijf wil je een digitale aanwezigheid
+      die bij die identiteit past — professioneel, persoonlijk en herkenbaar.
+      BDMNL ontwerpt websites die niet alleen mooi zijn, maar ook echt werken
+      voor jouw doelgroep in Brielle en omgeving.
+
+  - id: 2
+    h2: "Technisch sterk, snel en vindbaar in Google"
+    p: >
+      Een trage website of een site zonder technische SEO kost je dagelijks
+      potentiële klanten. Elke website die BDMNL bouwt is geoptimaliseerd voor
+      snelheid, veiligheid en mobiel gebruik. We bouwen met schone code,
+      SSL-certificaten, correcte meta-structuur en technische SEO standaard
+      ingebouwd. Geen extra kosten, geen excuses — gewoon goed werk.
+
+  - id: 3
+    h2: "Lokale bedrijven, lokale resultaten"
+    p: >
+      We begrijpen dat een bedrijf in Brielle andere behoeften heeft dan een
+      groot stadsbedrijf. Je wilt gevonden worden door mensen uit de regio,
+      je wilt een website die je trots op kunt zijn, en je wilt een partner
+      die je niet behandelt als een nummer. Bij BDMNL werken we persoonlijk
+      samen, van briefing tot oplevering en daarna.
+
+# ------------------------------------------------------------
+# CTA BLOCK
+# ------------------------------------------------------------
+cta:
+  headline: "Klaar voor een website die werkt in Brielle?"
+  subtext: >
+    Vraag een vrijblijvende offerte aan. We kijken samen naar jouw bedrijf
+    en wat een nieuwe website voor jou kan betekenen.
+  button_label: "Vraag een offerte aan"
+  button_href: "/contact/"
+
+# ------------------------------------------------------------
+# FAQ — 5 required
+# ------------------------------------------------------------
+faq:
+  - id: 1
+    question: "Wat kost een website laten maken in Brielle?"
+    answer: >
+      De prijs voor een professionele website hangt af van omvang en functionaliteiten.
+      Een zakelijke website bij BDMNL start vanaf een vast tarief dat op aanvraag
+      beschikbaar is. We zijn volledig transparant over kosten en leveren altijd
+      een gedetailleerde offerte op maat voordat we beginnen.
+
+  - id: 2
+    question: "Maakt BDMNL ook websites voor kleine bedrijven in Brielle?"
+    answer: >
+      Zeker. We werken voor bedrijven van alle groottes — van eenmanszaken en
+      lokale winkeliers tot grotere MKB-bedrijven in de regio Voorne-Putten.
+      Elk bedrijf verdient een goede website, ongeacht de schaal.
+
+  - id: 3
+    question: "Hoe snel is mijn nieuwe website online?"
+    answer: >
+      Een standaard zakelijke website is gemiddeld binnen 3 tot 5 weken
+      gereed na goedkeuring van het ontwerp. We werken met een heldere planning
+      en houden je gedurende het gehele traject op de hoogte van de voortgang.
+
+  - id: 4
+    question: "Is mijn website vindbaar in Google na oplevering?"
+    answer: >
+      Elke website die wij bouwen wordt technisch geoptimaliseerd voor zoekmachines.
+      Dat betekent correcte meta-tags, snelle laadtijden, mobiel-vriendelijk ontwerp
+      en schema-markup. Voor verdere lokale zichtbaarheid in Brielle bieden we
+      aanvullende SEO-diensten aan op basis van jouw doelstellingen.
+
+  - id: 5
+    question: "Kan ik mijn website na oplevering zelf aanpassen?"
+    answer: >
+      Ja. We leveren elke website op met een gebruiksvriendelijk CMS zodat jij
+      zelf teksten en afbeeldingen kunt aanpassen. Bij oplevering geven we een
+      korte training en we staan klaar voor vragen. Wil je dat wij het beheer
+      overnemen? Dat bespreken we graag.
