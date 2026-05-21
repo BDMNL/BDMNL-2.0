@@ -1,0 +1,60 @@
+page:
+  service: hosting
+  city: Dordrecht
+  output_path: pages/hosting-dordrecht/index.html
+seo:
+  meta_title: Hosting Dordrecht | BDMNL
+  meta_desc: Hosting in Dordrecht? BDMNL helpt bedrijven met een premium digitale basis die vertrouwen wekt, snel werkt en aanvragen oplevert.
+  meta_canonical: https://bdmnl.nl/hosting-dordrecht/
+  schema_service_name: Website hosting en onderhoud in Dordrecht
+  schema_area_served: Dordrecht
+breadcrumb:
+  parent_label: Hosting
+  parent_href: /hosting/
+hero:
+  h1: Hosting Dordrecht - BDMNL
+  intro_p1: Jouw bedrijf in Dordrecht verdient hosting die professioneel voelt, snel werkt en vertrouwen opbouwt. BDMNL helpt ondernemers met een premium digitale basis die past bij hun markt en ambities.
+intro:
+  p1: Jouw bedrijf in Dordrecht verdient hosting die professioneel voelt, snel werkt en vertrouwen opbouwt. BDMNL helpt ondernemers met een premium digitale basis die past bij hun markt en ambities.
+  p2: 'We combineren strategie, ontwerp, techniek en lokale vindbaarheid. Voor bedrijven in Dordrecht betekent dat: duidelijke structuur, sterke content en een website die bezoekers helpt de volgende stap te zetten.'
+sections:
+- id: 1
+  h2: Hosting die past bij jouw bedrijf in Dordrecht
+  p: Dordrecht heeft een eigen zakelijke dynamiek. Als ondernemer wil je online professioneel overkomen en vertrouwen wekken bij klanten in de regio. BDMNL zorgt voor een duidelijke basis die past bij je doelgroep en ambities.
+- id: 2
+  h2: Technisch sterk, snel en betrouwbaar
+  p: Een moderne digitale basis moet technisch kloppen. We bouwen met aandacht voor snelheid, veiligheid, mobiel gebruik, structuur en vindbaarheid, zodat jouw bedrijf in Dordrecht klaar is voor groei.
+- id: 3
+  h2: Lokale zichtbaarheid in Dordrecht en omgeving
+  p: Je online aanwezigheid moet aansluiten op de markt. Daarom verwerken we lokale context rond Dordrecht op een natuurlijke manier, zonder keyword stuffing of generieke SEO-teksten.
+images:
+  image_1:
+    src: https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop&auto=format
+    alt: Betrouwbare website hosting infrastructuur voor hosting in Dordrecht
+  image_2:
+    src: https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&h=400&fit=crop&auto=format
+    alt: Technische website ondersteuning voor hosting in Dordrecht
+  image_3:
+    src: https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop&auto=format
+    alt: Hosting en onderhoud overleg voor hosting in Dordrecht
+cta:
+  headline: Klaar voor hosting in Dordrecht?
+  subtext: Plan een vrijblijvend gesprek. We kijken naar jouw bedrijf, doelen en wat hosting voor jou kan betekenen.
+  button_label: Bespreek hosting
+  button_href: https://www.bdmnl.nl/contact/
+faq:
+- id: 1
+  question: Wat kost hosting in Dordrecht?
+  answer: De kosten hangen af van omvang, doelen en gewenste functionaliteiten. BDMNL maakt vooraf een duidelijke offerte op maat, zodat je weet wat nodig is voor jouw bedrijf in Dordrecht.
+- id: 2
+  question: Werkt BDMNL voor lokale bedrijven in Dordrecht?
+  answer: Ja. We werken voor lokale ondernemers en MKB-bedrijven die online professioneler willen overkomen. Daarbij nemen we de markt in Dordrecht en omgeving mee in structuur, tekst en vindbaarheid.
+- id: 3
+  question: Hoe snel kan een project starten?
+  answer: Dat hangt af van planning, content en scope. Na een eerste gesprek kunnen we snel aangeven welke stappen nodig zijn en wanneer ontwerp, bouw of optimalisatie kan starten.
+- id: 4
+  question: Is SEO onderdeel van de aanpak?
+  answer: Ja. Technische SEO, duidelijke headings, metadata en logische structuur zijn standaard onderdeel van de basis. Voor verdere groei kunnen we aanvullende SEO en content uitwerken.
+- id: 5
+  question: Kan ik later verder uitbreiden?
+  answer: Ja. We bouwen met groei in gedachten. Nieuwe pagina's, diensten, content, campagnes of optimalisaties kunnen later worden toegevoegd zonder opnieuw te beginnen.

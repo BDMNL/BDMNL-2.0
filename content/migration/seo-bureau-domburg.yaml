@@ -1,0 +1,60 @@
+page:
+  service: SEO bureau
+  city: Domburg
+  output_path: pages/seo-bureau-domburg/index.html
+seo:
+  meta_title: SEO bureau Domburg | BDMNL
+  meta_desc: SEO bureau in Domburg? BDMNL helpt bedrijven met een premium digitale basis die vertrouwen wekt, snel werkt en aanvragen oplevert.
+  meta_canonical: https://bdmnl.nl/seo-bureau-domburg/
+  schema_service_name: SEO bureau en lokale zoekmachine optimalisatie in Domburg
+  schema_area_served: Domburg
+breadcrumb:
+  parent_label: SEO
+  parent_href: /seo/
+hero:
+  h1: SEO bureau Domburg - BDMNL
+  intro_p1: Jouw bedrijf in Domburg verdient seo bureau die professioneel voelt, snel werkt en vertrouwen opbouwt. BDMNL helpt ondernemers met een premium digitale basis die past bij hun markt en ambities.
+intro:
+  p1: Jouw bedrijf in Domburg verdient seo bureau die professioneel voelt, snel werkt en vertrouwen opbouwt. BDMNL helpt ondernemers met een premium digitale basis die past bij hun markt en ambities.
+  p2: 'We combineren strategie, ontwerp, techniek en lokale vindbaarheid. Voor bedrijven in Domburg betekent dat: duidelijke structuur, sterke content en een website die bezoekers helpt de volgende stap te zetten.'
+sections:
+- id: 1
+  h2: SEO bureau die past bij jouw bedrijf in Domburg
+  p: Domburg heeft een eigen zakelijke dynamiek. Als ondernemer wil je online professioneel overkomen en vertrouwen wekken bij klanten in de regio. BDMNL zorgt voor een duidelijke basis die past bij je doelgroep en ambities.
+- id: 2
+  h2: Technisch sterk, snel en betrouwbaar
+  p: Een moderne digitale basis moet technisch kloppen. We bouwen met aandacht voor snelheid, veiligheid, mobiel gebruik, structuur en vindbaarheid, zodat jouw bedrijf in Domburg klaar is voor groei.
+- id: 3
+  h2: Lokale zichtbaarheid in Domburg en omgeving
+  p: Je online aanwezigheid moet aansluiten op de markt. Daarom verwerken we lokale context rond Domburg op een natuurlijke manier, zonder keyword stuffing of generieke SEO-teksten.
+images:
+  image_1:
+    src: https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop&auto=format
+    alt: SEO strategie en analyse voor seo bureau in Domburg
+  image_2:
+    src: https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&auto=format
+    alt: Technische SEO en contentteam voor seo bureau in Domburg
+  image_3:
+    src: https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop&auto=format
+    alt: Zakelijke SEO strategie voor seo bureau in Domburg
+cta:
+  headline: Klaar voor seo bureau in Domburg?
+  subtext: Plan een vrijblijvend gesprek. We kijken naar jouw bedrijf, doelen en wat seo bureau voor jou kan betekenen.
+  button_label: Plan een SEO gesprek
+  button_href: https://www.bdmnl.nl/contact/
+faq:
+- id: 1
+  question: Wat kost seo bureau in Domburg?
+  answer: De kosten hangen af van omvang, doelen en gewenste functionaliteiten. BDMNL maakt vooraf een duidelijke offerte op maat, zodat je weet wat nodig is voor jouw bedrijf in Domburg.
+- id: 2
+  question: Werkt BDMNL voor lokale bedrijven in Domburg?
+  answer: Ja. We werken voor lokale ondernemers en MKB-bedrijven die online professioneler willen overkomen. Daarbij nemen we de markt in Domburg en omgeving mee in structuur, tekst en vindbaarheid.
+- id: 3
+  question: Hoe snel kan een project starten?
+  answer: Dat hangt af van planning, content en scope. Na een eerste gesprek kunnen we snel aangeven welke stappen nodig zijn en wanneer ontwerp, bouw of optimalisatie kan starten.
+- id: 4
+  question: Is SEO onderdeel van de aanpak?
+  answer: Ja. Technische SEO, duidelijke headings, metadata en logische structuur zijn standaard onderdeel van de basis. Voor verdere groei kunnen we aanvullende SEO en content uitwerken.
+- id: 5
+  question: Kan ik later verder uitbreiden?
+  answer: Ja. We bouwen met groei in gedachten. Nieuwe pagina's, diensten, content, campagnes of optimalisaties kunnen later worden toegevoegd zonder opnieuw te beginnen.
