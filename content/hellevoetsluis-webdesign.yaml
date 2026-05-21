@@ -1,0 +1,62 @@
+page:
+  service: webdesign
+  city: Hellevoetsluis
+  output_path: pages/webdesign-hellevoetsluis/index.html
+seo:
+  meta_title: Webdesign Hellevoetsluis | Premium websites | BDMNL
+  meta_desc: Professioneel webdesign in Hellevoetsluis. BDMNL bouwt snelle, premium websites voor lokale bedrijven en dienstverleners.
+  meta_canonical: https://bdmnl.nl/webdesign-hellevoetsluis/
+  schema_service_name: Premium webdesign en website ontwikkeling in Hellevoetsluis
+  schema_area_served: Hellevoetsluis
+  schema_phone: '+31000000000'
+  schema_email: info@bdmnl.nl
+breadcrumb:
+  parent_label: Webdesign
+  parent_href: /webdesign/
+hero:
+  h1: Professioneel Webdesign Hellevoetsluis — BDMNL
+  intro_p1: Jouw bedrijf in Hellevoetsluis verdient een website die professioneel voelt, snel werkt en vertrouwen opbouwt. BDMNL ontwerpt websites voor ondernemers die online sterker willen overkomen.
+intro:
+  p1: Jouw bedrijf in Hellevoetsluis verdient een website die professioneel voelt, snel werkt en vertrouwen opbouwt. BDMNL ontwerpt websites voor ondernemers die online sterker willen overkomen.
+  p2: 'Van lokale dienstverlening tot recreatie en retail: we bouwen websites die passen bij de markt in Hellevoetsluis en Voorne aan Zee. Strak, technisch sterk en klaar voor verdere groei.'
+sections:
+- id: 1
+  h2: Een website die past bij Hellevoetsluis
+  p: Hellevoetsluis combineert lokale dienstverlening, havenhistorie en recreatie. Je website moet daarom duidelijk, betrouwbaar en herkenbaar zijn voor klanten uit de regio.
+- id: 2
+  h2: Technisch sterk en prettig op mobiel
+  p: Een moderne website moet snel laden en goed werken op elk apparaat. BDMNL bouwt met aandacht voor performance, veiligheid, mobiel gebruik en technische SEO.
+- id: 3
+  h2: Lokale zichtbaarheid met professionele uitstraling
+  p: Je wilt gevonden worden door klanten in Hellevoetsluis, Nieuwenhoorn en omliggende plaatsen. We verwerken lokale relevantie natuurlijk in structuur, content en metadata.
+images:
+  image_1:
+    src: https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=400&fit=crop&auto=format
+    alt: Premium werkplek voor webdesign in Hellevoetsluis
+  image_2:
+    src: https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&h=400&fit=crop&auto=format
+    alt: Rustige webdesign studio met moderne digitale uitstraling
+  image_3:
+    src: https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop&auto=format
+    alt: Strategisch overleg voor lokale website groei in Hellevoetsluis
+cta:
+  headline: Klaar voor webdesign dat vertrouwen wekt?
+  subtext: Vraag een vrijblijvend gesprek aan. We kijken naar jouw bedrijf en wat een nieuwe website in Hellevoetsluis kan betekenen.
+  button_label: Vraag een offerte aan
+  button_href: /contact/
+faq:
+- id: 1
+  question: Wat kost webdesign in Hellevoetsluis?
+  answer: De kosten hangen af van omvang, functionaliteiten en gewenste mate van maatwerk. BDMNL maakt vooraf een duidelijke offerte, afgestemd op jouw bedrijf in Hellevoetsluis.
+- id: 2
+  question: Werkt BDMNL voor lokale bedrijven in Hellevoetsluis?
+  answer: Ja. We werken voor lokale ondernemers en MKB-bedrijven die online professioneler willen overkomen. Daarbij nemen we de markt in Hellevoetsluis en omgeving mee.
+- id: 3
+  question: Hoe snel kan een project starten?
+  answer: Dat hangt af van planning, content en scope. Na een eerste gesprek kunnen we snel aangeven welke stappen nodig zijn en wanneer ontwerp, bouw of optimalisatie kan starten.
+- id: 4
+  question: Is SEO onderdeel van de aanpak?
+  answer: Ja. Technische SEO, duidelijke headings, metadata en logische structuur zijn standaard onderdeel van de basis. Voor verdere groei kunnen we aanvullende SEO en content uitwerken.
+- id: 5
+  question: Kan ik later verder uitbreiden?
+  answer: Ja. We bouwen met groei in gedachten. Nieuwe pagina’s, diensten, content, campagnes of optimalisaties kunnen later worden toegevoegd zonder opnieuw te beginnen.

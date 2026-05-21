@@ -1,0 +1,62 @@
+page:
+  service: online-marketing
+  city: Brielle
+  output_path: pages/online-marketing-brielle/index.html
+seo:
+  meta_title: Online Marketing Brielle | Groei online | BDMNL
+  meta_desc: Online marketing in Brielle? BDMNL combineert SEO, content en campagnes voor meer zichtbaarheid, vertrouwen en aanvragen.
+  meta_canonical: https://bdmnl.nl/online-marketing-brielle/
+  schema_service_name: Online marketing strategie en uitvoering voor bedrijven in Brielle
+  schema_area_served: Brielle
+  schema_phone: '+31000000000'
+  schema_email: info@bdmnl.nl
+breadcrumb:
+  parent_label: Online Marketing
+  parent_href: /online-marketing/
+hero:
+  h1: Online Marketing Brielle — BDMNL
+  intro_p1: Jouw bedrijf in Brielle verdient online marketing die meer doet dan bereik maken. BDMNL combineert website, SEO, content en campagnes tot een duidelijke groeistructuur voor lokale ondernemers.
+intro:
+  p1: Jouw bedrijf in Brielle verdient online marketing die meer doet dan bereik maken. BDMNL combineert website, SEO, content en campagnes tot een duidelijke groeistructuur voor lokale ondernemers.
+  p2: We werken voor bedrijven in Brielle en Voorne-Putten die online professioneler willen overkomen. Geen losse acties, maar een aanpak waarin zichtbaarheid, vertrouwen en aanvragen samenkomen.
+sections:
+- id: 1
+  h2: Online marketing met lokale focus
+  p: Brielle heeft een lokale markt waarin vertrouwen en herkenbaarheid belangrijk zijn. We zorgen dat jouw bedrijf zichtbaar wordt op de plekken waar klanten zoeken, vergelijken en besluiten contact op te nemen.
+- id: 2
+  h2: SEO, content en campagnes in één lijn
+  p: Campagnes werken beter wanneer de website klopt. BDMNL verbindt SEO, content en advertenties met duidelijke landingspagina’s, zodat bezoekers begrijpen wat je aanbiedt en waarom ze voor jou kiezen.
+- id: 3
+  h2: Meetbaar groeien zonder ruis
+  p: We kijken naar verkeer, aanvragen, zichtbaarheid en gedrag op de website. Zo zie je welke kanalen waarde opleveren en waar verbetering nodig is voor groei in Brielle en omgeving.
+images:
+  image_1:
+    src: https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop&auto=format
+    alt: Online marketing strategie voor lokale bedrijven in Brielle
+  image_2:
+    src: https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&auto=format
+    alt: Teamoverleg voor content en campagnes in Brielle
+  image_3:
+    src: https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop&auto=format
+    alt: Strategisch marketingoverleg voor online groei in Voorne-Putten
+cta:
+  headline: Klaar voor meer online groei in Brielle?
+  subtext: Plan een vrijblijvend gesprek. We bekijken je huidige online aanwezigheid en de kansen voor betere zichtbaarheid en aanvragen.
+  button_label: Plan een groeigesprek
+  button_href: /contact/
+faq:
+- id: 1
+  question: Wat kost online marketing in Brielle?
+  answer: De kosten hangen af van omvang, functionaliteiten en gewenste mate van maatwerk. BDMNL maakt vooraf een duidelijke offerte, afgestemd op jouw bedrijf in Brielle.
+- id: 2
+  question: Werkt BDMNL voor lokale bedrijven in Brielle?
+  answer: Ja. We werken voor lokale ondernemers en MKB-bedrijven die online professioneler willen overkomen. Daarbij nemen we de markt in Brielle en omgeving mee.
+- id: 3
+  question: Hoe snel kan een project starten?
+  answer: Dat hangt af van planning, content en scope. Na een eerste gesprek kunnen we snel aangeven welke stappen nodig zijn en wanneer ontwerp, bouw of optimalisatie kan starten.
+- id: 4
+  question: Is SEO onderdeel van de aanpak?
+  answer: Ja. Technische SEO, duidelijke headings, metadata en logische structuur zijn standaard onderdeel van de basis. Voor verdere groei kunnen we aanvullende SEO en content uitwerken.
+- id: 5
+  question: Kan ik later verder uitbreiden?
+  answer: Ja. We bouwen met groei in gedachten. Nieuwe pagina’s, diensten, content, campagnes of optimalisaties kunnen later worden toegevoegd zonder opnieuw te beginnen.

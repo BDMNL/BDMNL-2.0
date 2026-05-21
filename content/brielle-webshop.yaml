@@ -1,0 +1,62 @@
+page:
+  service: webshop-laten-maken
+  city: Brielle
+  output_path: pages/webshop-laten-maken-brielle/index.html
+seo:
+  meta_title: Webshop laten maken Brielle | BDMNL
+  meta_desc: Webshop laten maken in Brielle? BDMNL bouwt snelle, professionele webshops met sterke productpresentatie en conversie.
+  meta_canonical: https://bdmnl.nl/webshop-laten-maken-brielle/
+  schema_service_name: Webshop ontwikkeling en e-commerce oplossingen voor bedrijven in Brielle
+  schema_area_served: Brielle
+  schema_phone: '+31000000000'
+  schema_email: info@bdmnl.nl
+breadcrumb:
+  parent_label: Webshop laten maken
+  parent_href: /webshop-laten-maken/
+hero:
+  h1: Webshop laten maken Brielle — BDMNL
+  intro_p1: Wil je online verkopen vanuit Brielle? BDMNL bouwt webshops die vertrouwen geven, snel werken en klanten zonder twijfel naar aankoop of aanvraag begeleiden.
+intro:
+  p1: Wil je online verkopen vanuit Brielle? BDMNL bouwt webshops die vertrouwen geven, snel werken en klanten zonder twijfel naar aankoop of aanvraag begeleiden.
+  p2: Een goede webshop is meer dan een lijst producten. We combineren productstructuur, ontwerp, techniek en vindbaarheid tot een online winkel die professioneel voelt en schaalbaar blijft.
+sections:
+- id: 1
+  h2: Een webshop die vertrouwen opbouwt
+  p: Klanten kopen pas wanneer je webshop professioneel en betrouwbaar voelt. We ontwerpen productpagina’s, categorieën en contactmomenten zo dat bezoekers snel begrijpen wat je aanbiedt.
+- id: 2
+  h2: Snel, veilig en mobielvriendelijk verkopen
+  p: Een webshop moet technisch sterk zijn. BDMNL bouwt met aandacht voor snelheid, mobiel gebruik, veilige betaalroutes en een duidelijke checkout, zodat klanten soepel kunnen bestellen.
+- id: 3
+  h2: E-commerce met lokale herkenbaarheid
+  p: Ook online verkoop heeft lokale context nodig. Klanten uit Brielle en Voorne-Putten willen weten wie achter de webshop zit. We combineren professionele presentatie met bereikbaarheid en vertrouwen.
+images:
+  image_1:
+    src: https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&h=400&fit=crop&auto=format
+    alt: Premium winkelomgeving als inspiratie voor een webshop in Brielle
+  image_2:
+    src: https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&h=400&fit=crop&auto=format
+    alt: Digitale studio voor webshop ontwerp en ontwikkeling
+  image_3:
+    src: https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop&auto=format
+    alt: Strategisch overleg voor e-commerce groei in Brielle
+cta:
+  headline: Klaar voor een webshop die verkoopt?
+  subtext: Vraag een vrijblijvend gesprek aan. We kijken naar je producten, doelgroep en de webshopstructuur die past bij jouw bedrijf.
+  button_label: Vraag webshop advies aan
+  button_href: /contact/
+faq:
+- id: 1
+  question: Wat kost webshop laten maken in Brielle?
+  answer: De kosten hangen af van omvang, functionaliteiten en gewenste mate van maatwerk. BDMNL maakt vooraf een duidelijke offerte, afgestemd op jouw bedrijf in Brielle.
+- id: 2
+  question: Werkt BDMNL voor lokale bedrijven in Brielle?
+  answer: Ja. We werken voor lokale ondernemers en MKB-bedrijven die online professioneler willen overkomen. Daarbij nemen we de markt in Brielle en omgeving mee.
+- id: 3
+  question: Hoe snel kan een project starten?
+  answer: Dat hangt af van planning, content en scope. Na een eerste gesprek kunnen we snel aangeven welke stappen nodig zijn en wanneer ontwerp, bouw of optimalisatie kan starten.
+- id: 4
+  question: Is SEO onderdeel van de aanpak?
+  answer: Ja. Technische SEO, duidelijke headings, metadata en logische structuur zijn standaard onderdeel van de basis. Voor verdere groei kunnen we aanvullende SEO en content uitwerken.
+- id: 5
+  question: Kan ik later verder uitbreiden?
+  answer: Ja. We bouwen met groei in gedachten. Nieuwe pagina’s, diensten, content, campagnes of optimalisaties kunnen later worden toegevoegd zonder opnieuw te beginnen.
