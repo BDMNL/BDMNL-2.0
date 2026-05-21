@@ -1,0 +1,60 @@
+page:
+  service: branding en design
+  city: Vlissingen
+  output_path: pages/branding-design-vlissingen/index.html
+seo:
+  meta_title: Branding en design Vlissingen | BDMNL
+  meta_desc: Branding en design in Vlissingen? BDMNL helpt bedrijven met een premium digitale basis die vertrouwen wekt, snel werkt en aanvragen oplevert.
+  meta_canonical: https://bdmnl.nl/branding-design-vlissingen/
+  schema_service_name: Branding en design voor bedrijven in Vlissingen
+  schema_area_served: Vlissingen
+breadcrumb:
+  parent_label: Branding & Design
+  parent_href: /branding/
+hero:
+  h1: Branding en Design Vlissingen - BDMNL
+  intro_p1: Jouw bedrijf in Vlissingen verdient branding en design die professioneel voelt, snel werkt en vertrouwen opbouwt. BDMNL helpt ondernemers met een premium digitale basis die past bij hun markt en ambities.
+intro:
+  p1: Jouw bedrijf in Vlissingen verdient branding en design die professioneel voelt, snel werkt en vertrouwen opbouwt. BDMNL helpt ondernemers met een premium digitale basis die past bij hun markt en ambities.
+  p2: 'We combineren strategie, ontwerp, techniek en lokale vindbaarheid. Voor bedrijven in Vlissingen betekent dat: duidelijke structuur, sterke content en een website die bezoekers helpt de volgende stap te zetten.'
+sections:
+- id: 1
+  h2: Branding en design die past bij jouw bedrijf in Vlissingen
+  p: Vlissingen heeft een eigen zakelijke dynamiek. Als ondernemer wil je online professioneel overkomen en vertrouwen wekken bij klanten in de regio. BDMNL zorgt voor een duidelijke basis die past bij je doelgroep en ambities.
+- id: 2
+  h2: Technisch sterk, snel en betrouwbaar
+  p: Een moderne digitale basis moet technisch kloppen. We bouwen met aandacht voor snelheid, veiligheid, mobiel gebruik, structuur en vindbaarheid, zodat jouw bedrijf in Vlissingen klaar is voor groei.
+- id: 3
+  h2: Lokale zichtbaarheid in Vlissingen en omgeving
+  p: Je online aanwezigheid moet aansluiten op de markt. Daarom verwerken we lokale context rond Vlissingen op een natuurlijke manier, zonder keyword stuffing of generieke SEO-teksten.
+images:
+  image_1:
+    src: https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&h=400&fit=crop&auto=format
+    alt: Premium branding en visuele identiteit voor branding en design in Vlissingen
+  image_2:
+    src: https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=400&fit=crop&auto=format
+    alt: Branding studio en merkstrategie voor branding en design in Vlissingen
+  image_3:
+    src: https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop&auto=format
+    alt: Merkstrategie overleg voor branding en design in Vlissingen
+cta:
+  headline: Klaar voor branding en design in Vlissingen?
+  subtext: Plan een vrijblijvend gesprek. We kijken naar jouw bedrijf, doelen en wat branding en design voor jou kan betekenen.
+  button_label: Plan een merkgesprek
+  button_href: https://www.bdmnl.nl/contact/
+faq:
+- id: 1
+  question: Wat kost branding en design in Vlissingen?
+  answer: De kosten hangen af van omvang, doelen en gewenste functionaliteiten. BDMNL maakt vooraf een duidelijke offerte op maat, zodat je weet wat nodig is voor jouw bedrijf in Vlissingen.
+- id: 2
+  question: Werkt BDMNL voor lokale bedrijven in Vlissingen?
+  answer: Ja. We werken voor lokale ondernemers en MKB-bedrijven die online professioneler willen overkomen. Daarbij nemen we de markt in Vlissingen en omgeving mee in structuur, tekst en vindbaarheid.
+- id: 3
+  question: Hoe snel kan een project starten?
+  answer: Dat hangt af van planning, content en scope. Na een eerste gesprek kunnen we snel aangeven welke stappen nodig zijn en wanneer ontwerp, bouw of optimalisatie kan starten.
+- id: 4
+  question: Is SEO onderdeel van de aanpak?
+  answer: Ja. Technische SEO, duidelijke headings, metadata en logische structuur zijn standaard onderdeel van de basis. Voor verdere groei kunnen we aanvullende SEO en content uitwerken.
+- id: 5
+  question: Kan ik later verder uitbreiden?
+  answer: Ja. We bouwen met groei in gedachten. Nieuwe pagina's, diensten, content, campagnes of optimalisaties kunnen later worden toegevoegd zonder opnieuw te beginnen.

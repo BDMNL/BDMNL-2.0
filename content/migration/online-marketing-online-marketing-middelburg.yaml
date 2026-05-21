@@ -1,0 +1,60 @@
+page:
+  service: online marketing
+  city: Middelburg
+  output_path: pages/online-marketing/online-marketing-middelburg/index.html
+seo:
+  meta_title: Online marketing Middelburg | BDMNL
+  meta_desc: Online marketing in Middelburg? BDMNL helpt bedrijven met een premium digitale basis die vertrouwen wekt, snel werkt en aanvragen oplevert.
+  meta_canonical: https://bdmnl.nl/online-marketing/online-marketing-middelburg/
+  schema_service_name: Online marketing strategie en uitvoering in Middelburg
+  schema_area_served: Middelburg
+breadcrumb:
+  parent_label: Online Marketing
+  parent_href: /online-marketing/
+hero:
+  h1: Online Marketing Middelburg - BDMNL
+  intro_p1: Jouw bedrijf in Middelburg verdient online marketing die professioneel voelt, snel werkt en vertrouwen opbouwt. BDMNL helpt ondernemers met een premium digitale basis die past bij hun markt en ambities.
+intro:
+  p1: Jouw bedrijf in Middelburg verdient online marketing die professioneel voelt, snel werkt en vertrouwen opbouwt. BDMNL helpt ondernemers met een premium digitale basis die past bij hun markt en ambities.
+  p2: 'We combineren strategie, ontwerp, techniek en lokale vindbaarheid. Voor bedrijven in Middelburg betekent dat: duidelijke structuur, sterke content en een website die bezoekers helpt de volgende stap te zetten.'
+sections:
+- id: 1
+  h2: Online marketing die past bij jouw bedrijf in Middelburg
+  p: Middelburg heeft een eigen zakelijke dynamiek. Als ondernemer wil je online professioneel overkomen en vertrouwen wekken bij klanten in de regio. BDMNL zorgt voor een duidelijke basis die past bij je doelgroep en ambities.
+- id: 2
+  h2: Technisch sterk, snel en betrouwbaar
+  p: Een moderne digitale basis moet technisch kloppen. We bouwen met aandacht voor snelheid, veiligheid, mobiel gebruik, structuur en vindbaarheid, zodat jouw bedrijf in Middelburg klaar is voor groei.
+- id: 3
+  h2: Lokale zichtbaarheid in Middelburg en omgeving
+  p: Je online aanwezigheid moet aansluiten op de markt. Daarom verwerken we lokale context rond Middelburg op een natuurlijke manier, zonder keyword stuffing of generieke SEO-teksten.
+images:
+  image_1:
+    src: https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop&auto=format
+    alt: Online marketingstrategie voor online marketing in Middelburg
+  image_2:
+    src: https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&auto=format
+    alt: Digitaal teamoverleg voor online marketing in Middelburg
+  image_3:
+    src: https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop&auto=format
+    alt: Marketingoverleg en planning voor online marketing in Middelburg
+cta:
+  headline: Klaar voor online marketing in Middelburg?
+  subtext: Plan een vrijblijvend gesprek. We kijken naar jouw bedrijf, doelen en wat online marketing voor jou kan betekenen.
+  button_label: Plan een groeigesprek
+  button_href: https://www.bdmnl.nl/contact/
+faq:
+- id: 1
+  question: Wat kost online marketing in Middelburg?
+  answer: De kosten hangen af van omvang, doelen en gewenste functionaliteiten. BDMNL maakt vooraf een duidelijke offerte op maat, zodat je weet wat nodig is voor jouw bedrijf in Middelburg.
+- id: 2
+  question: Werkt BDMNL voor lokale bedrijven in Middelburg?
+  answer: Ja. We werken voor lokale ondernemers en MKB-bedrijven die online professioneler willen overkomen. Daarbij nemen we de markt in Middelburg en omgeving mee in structuur, tekst en vindbaarheid.
+- id: 3
+  question: Hoe snel kan een project starten?
+  answer: Dat hangt af van planning, content en scope. Na een eerste gesprek kunnen we snel aangeven welke stappen nodig zijn en wanneer ontwerp, bouw of optimalisatie kan starten.
+- id: 4
+  question: Is SEO onderdeel van de aanpak?
+  answer: Ja. Technische SEO, duidelijke headings, metadata en logische structuur zijn standaard onderdeel van de basis. Voor verdere groei kunnen we aanvullende SEO en content uitwerken.
+- id: 5
+  question: Kan ik later verder uitbreiden?
+  answer: Ja. We bouwen met groei in gedachten. Nieuwe pagina's, diensten, content, campagnes of optimalisaties kunnen later worden toegevoegd zonder opnieuw te beginnen.
