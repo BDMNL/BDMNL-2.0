@@ -1,5 +1,34 @@
 # BDMNL Netlify Redirects
 # Generated pages route — maps clean URLs to /pages/ subfolder
+# =============================================================
+# BDMNL 2.0 — CONTROLLED PHASE-OUT (301 to www.bdmnl.nl)
+# All seo.bdmnl.nl clusters -> BDMNL 2.0 equivalents. Top priority, force.
+# =============================================================
+# Static / hoofdpagina's
+/ https://www.bdmnl.nl/ 301!
+/homepage https://www.bdmnl.nl/ 301!
+/algemene-voorwaarden/* https://www.bdmnl.nl/algemene-voorwaarden 301!
+/contact/* https://www.bdmnl.nl/contact 301!
+/over-bdmnl/* https://www.bdmnl.nl/over-bdmnl 301!
+/privacyverklaring/* https://www.bdmnl.nl/privacybeleid 301!
+/cookiebeleid/* https://www.bdmnl.nl/cookiebeleid 301!
+/gratis-seo-scan/* https://www.bdmnl.nl/diensten/gratis-seo-scan 301!
+/bulldog-media/* https://www.bdmnl.nl/bulldog-media 301!
+# Cluster wildcards (nested variants first, then flat)
+/seo/* https://www.bdmnl.nl/diensten/seo-vindbaarheid 301!
+/seo-bureau-* https://www.bdmnl.nl/diensten/seo-vindbaarheid 301!
+/social-media/* https://www.bdmnl.nl/diensten/social-media-beheer 301!
+/social-media-* https://www.bdmnl.nl/diensten/social-media-beheer 301!
+/online-marketing/* https://www.bdmnl.nl/diensten/online-marketing 301!
+/online-marketing-* https://www.bdmnl.nl/diensten/online-marketing 301!
+/website-laten-maken-* https://www.bdmnl.nl/diensten/websites-webshops 301!
+/webshop-laten-maken-* https://www.bdmnl.nl/diensten/websites-webshops 301!
+/webdesign/* https://www.bdmnl.nl/diensten/websites-webshops 301!
+/webdesign-* https://www.bdmnl.nl/diensten/websites-webshops 301!
+/hosting-* https://www.bdmnl.nl/diensten/hosting-onderhoud 301!
+/branding-design-* https://www.bdmnl.nl/diensten/branding-design 301!
+/reclamebureau/* https://www.bdmnl.nl/diensten/branding-design 301!
+/blog/* https://www.bdmnl.nl/kennisbank 301!
 
 /webdesign-brielle/*                    /pages/webdesign-brielle/:splat                    200!
 /seo-bureau-rotterdam/*                 /pages/seo-bureau-rotterdam/:splat                  200!
