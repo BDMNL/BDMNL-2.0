@@ -1,11 +1,8 @@
-# BDMNL Netlify Redirects
-# Generated pages route — maps clean URLs to /pages/ subfolder
+# BDMNL 2.0 — FINAL PHASE-OUT of seo.bdmnl.nl
+# All paths 301 to www.bdmnl.nl. No 200 pages remain.
 # =============================================================
-# BDMNL 2.0 — CONTROLLED PHASE-OUT (301 to www.bdmnl.nl)
-# All seo.bdmnl.nl clusters -> BDMNL 2.0 equivalents. Top priority, force.
-# =============================================================
+
 # Static / hoofdpagina's
-/ https://www.bdmnl.nl/ 301!
 /homepage https://www.bdmnl.nl/ 301!
 /algemene-voorwaarden/* https://www.bdmnl.nl/algemene-voorwaarden 301!
 /contact/* https://www.bdmnl.nl/contact 301!
@@ -14,7 +11,13 @@
 /cookiebeleid/* https://www.bdmnl.nl/cookiebeleid 301!
 /gratis-seo-scan/* https://www.bdmnl.nl/diensten/gratis-seo-scan 301!
 /bulldog-media/* https://www.bdmnl.nl/bulldog-media 301!
-# Cluster wildcards (nested variants first, then flat)
+/van-bulldog-media-naar-bdmnl/* https://www.bdmnl.nl/bulldog-media 301!
+
+# Kennisbank / blog
+/kennisbank/* https://www.bdmnl.nl/kennisbank 301!
+/blog/* https://www.bdmnl.nl/kennisbank 301!
+
+# Cluster wildcards
 /seo/* https://www.bdmnl.nl/diensten/seo-vindbaarheid 301!
 /seo-bureau-* https://www.bdmnl.nl/diensten/seo-vindbaarheid 301!
 /social-media/* https://www.bdmnl.nl/diensten/social-media-beheer 301!
@@ -28,44 +31,6 @@
 /hosting-* https://www.bdmnl.nl/diensten/hosting-onderhoud 301!
 /branding-design-* https://www.bdmnl.nl/diensten/branding-design 301!
 /reclamebureau/* https://www.bdmnl.nl/diensten/branding-design 301!
-/blog/* https://www.bdmnl.nl/kennisbank 301!
 
-/webdesign-brielle/*                    /pages/webdesign-brielle/:splat                    200!
-/seo-bureau-rotterdam/*                 /pages/seo-bureau-rotterdam/:splat                  200!
-/online-marketing-delft/*               /pages/online-marketing-delft/:splat                200!
-/webshop-laten-maken-spijkenisse/*      /pages/webshop-laten-maken-spijkenisse/:splat       200!
-/website-laten-maken-rotterdam/*        /pages/website-laten-maken-rotterdam/:splat          200!
-
-# =============================================================
-# PHASE C — URL MISMATCH 301 REDIRECTS (old nested -> flat canonical)
-# Added: migration-first-20-commercial Phase C
-# =============================================================
-
-# webdesign-brielle: old nested -> new flat canonical
-/webdesign/webdesign-brielle/*          /webdesign-brielle/:splat               301!
-
-# webdesign-rotterdam: old nested -> new flat canonical
-/webdesign/webdesign-rotterdam/*        /webdesign-rotterdam/:splat              301!
-
-# online-marketing-delft: old nested -> new flat canonical
-/online-marketing/online-marketing-delft/*  /online-marketing-delft/:splat      301!
-
-# webdesign-rotterdam framework rewrite (200! — serve pages/ version at flat URL)
-/webdesign-rotterdam/*                  /pages/webdesign-rotterdam/:splat        200!
-/website-laten-maken-brielle/*                              /pages/website-laten-maken-brielle/:splat                              200!
-/website-laten-maken-spijkenisse/*                              /pages/website-laten-maken-spijkenisse/:splat                              200!
-/website-laten-maken-hellevoetsluis/*                              /pages/website-laten-maken-hellevoetsluis/:splat                              200!
-/website-laten-maken-delft/*                              /pages/website-laten-maken-delft/:splat                              200!
-/seo-bureau-brielle/*                              /pages/seo-bureau-brielle/:splat                              200!
-/seo-bureau-spijkenisse/*                              /pages/seo-bureau-spijkenisse/:splat                              200!
-/seo-bureau-hellevoetsluis/*                              /pages/seo-bureau-hellevoetsluis/:splat                              200!
-/seo-bureau-delft/*                              /pages/seo-bureau-delft/:splat                              200!
-/website-laten-maken-leiden/*                              /pages/website-laten-maken-leiden/:splat                              200!
-/seo-bureau-leiden/*                              /pages/seo-bureau-leiden/:splat                              200!
-/website-laten-maken-dordrecht/*                              /pages/website-laten-maken-dordrecht/:splat                              200!
-/seo-bureau-dordrecht/*                              /pages/seo-bureau-dordrecht/:splat                              200!
-/webshop-laten-maken-rotterdam/*                              /pages/webshop-laten-maken-rotterdam/:splat                              200!
-/website-laten-maken-breda/*                              /pages/website-laten-maken-breda/:splat                              200!
-/online-marketing-brielle/*                              /pages/online-marketing-brielle/:splat                              200!
-/webshop-laten-maken-brielle/*                              /pages/webshop-laten-maken-brielle/:splat                              200!
-/webdesign-hellevoetsluis/*                              /pages/webdesign-hellevoetsluis/:splat                              200!
+# Catch-all — everything else 301 to home
+/* https://www.bdmnl.nl/ 301!
