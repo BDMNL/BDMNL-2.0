@@ -1,6 +1,9 @@
 # BDMNL 2.0 — FINAL PHASE-OUT of seo.bdmnl.nl
-# All paths 301 to www.bdmnl.nl. No 200 pages remain.
+# robots.txt must stay reachable; all other paths 301 to www.bdmnl.nl.
 # =============================================================
+
+# Keep robots.txt served (no redirect) — must be first
+/robots.txt /robots.txt 200!
 
 # Static / hoofdpagina's
 /homepage https://www.bdmnl.nl/ 301!
@@ -32,5 +35,5 @@
 /branding-design-* https://www.bdmnl.nl/diensten/branding-design 301!
 /reclamebureau/* https://www.bdmnl.nl/diensten/branding-design 301!
 
-# Catch-all — everything else 301 to home
+# Catch-all — everything else (incl. sitemap.xml) 301 to home
 /* https://www.bdmnl.nl/ 301!
